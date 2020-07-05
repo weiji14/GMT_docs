@@ -1,8 +1,7 @@
 
 
 <!DOCTYPE html>
-<!--[if IE 8]><html class="no-js lt-ie9" lang="zh-CN" > <![endif]-->
-<!--[if gt IE 8]><!--> <html class="no-js" lang="zh-CN" > <!--<![endif]-->
+<html class="writer-html5" lang="zh-CN" >
 <head>
   <meta charset="utf-8">
   
@@ -10,6 +9,11 @@
   
   <title>DIR参数 &mdash; GMT中文手册</title>
   
+
+  
+  <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../../_static/custom.css" type="text/css" />
 
   
   
@@ -21,25 +25,22 @@
   
 
   
-  <script type="text/javascript" src="../../_static/js/modernizr.min.js"></script>
+  <!--[if lt IE 9]>
+    <script src="../../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
   
     
       <script type="text/javascript" id="documentation_options" data-url_root="../../" src="../../_static/documentation_options.js"></script>
-        <script type="text/javascript" src="../../_static/jquery.js"></script>
-        <script type="text/javascript" src="../../_static/underscore.js"></script>
-        <script type="text/javascript" src="../../_static/doctools.js"></script>
-        <script type="text/javascript" src="../../_static/language_data.js"></script>
-        <script type="text/javascript" src="../../_static/translations.js"></script>
-        <script async="async" type="text/javascript" src="https://cdn.bootcss.com/mathjax/2.7.7/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+        <script src="../../_static/jquery.js"></script>
+        <script src="../../_static/underscore.js"></script>
+        <script src="../../_static/doctools.js"></script>
+        <script src="../../_static/language_data.js"></script>
+        <script src="../../_static/translations.js"></script>
+        <script async="async" src="https://cdn.bootcss.com/mathjax/2.7.7/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
     
     <script type="text/javascript" src="../../_static/js/theme.js"></script>
 
     
-
-  
-  <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
-  <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
-  <link rel="stylesheet" href="../../_static/custom.css" type="text/css" />
     <link rel="index" title="索引" href="../../genindex/" />
     <link rel="search" title="搜索" href="../../search/" />
     <link rel="next" title="FORMAT参数" href="../format/" />
@@ -90,6 +91,7 @@
 
         </div>
 
+        
         <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
           
     
@@ -126,9 +128,9 @@
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="../../dataset/">地学数据集</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../dataset-CN/">中国地学数据集</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../chinese/">中文支持</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../module/">模块手册</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../gallery/">绘图示例</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../api/">API</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../appendix/">附录</a></li>
 </ul>
@@ -156,6 +158,7 @@
     
 
         </div>
+        
       </div>
     </nav>
 
@@ -194,7 +197,7 @@
 
   <ul class="wy-breadcrumbs">
     
-      <li><a href="../../">首页</a> &raquo;</li>
+      <li><a href="../../" class="icon icon-home"></a> &raquo;</li>
         
           <li><a href="../">配置参数</a> &raquo;</li>
         
@@ -222,17 +225,16 @@
   <div class="section" id="dir">
 <h1>DIR参数<a class="headerlink" href="#dir" title="永久链接至标题">¶</a></h1>
 <p>下面列出所有与目录相关的参数，参数的默认值在中括号内列出。</p>
-<dl class="glossary docutils">
-<dt id="term-dir-data"><strong>DIR_DATA</strong></dt>
-<dd><p class="first">存放数据文件的目录，默认值为空。</p>
-<p class="last">GMT在命令中遇到文件名时，首先在当前目录下寻找该文件，若找不到，则会到参数 DIR_DATA 指定的目录中寻找，若找不到，则到环境变量 <code class="docutils literal notranslate"><span class="pre">${GMT_DATADIR}</span></code> 所指定的目录中寻找。</p>
+<dl class="glossary">
+<dt id="term-DIR_DATA"><strong>DIR_DATA</strong></dt><dd><p>存放数据文件的目录，默认值为空。</p>
+<p>GMT在命令中遇到文件名时，首先在当前目录下寻找该文件，若找不到，则会到参数 <strong>DIR_DATA</strong> 指定的目录中寻找，若找不到，则到环境变量 <strong>$GMT_DATADIR</strong> 所指定的目录中寻找。</p>
 </dd>
-<dt id="term-dir-dcw"><strong>DIR_DCW</strong></dt>
-<dd>DCW数据文件的路径，默认值为空，GMT会自动猜测合理的路径值。</dd>
-<dt id="term-dir-gshhg"><strong>DIR_GSHHG</strong></dt>
-<dd>海岸线数据所在路径</dd>
-<dt id="term-dir-cache"><strong>DIR_CACHE</strong></dt>
-<dd>GMT用于存储从GMT服务器下载得到的临时文件的目录</dd>
+<dt id="term-DIR_DCW"><strong>DIR_DCW</strong></dt><dd><p>DCW数据文件的路径，默认值为空，GMT会自动猜测合理的路径值。</p>
+</dd>
+<dt id="term-DIR_GSHHG"><strong>DIR_GSHHG</strong></dt><dd><p>海岸线数据所在路径</p>
+</dd>
+<dt id="term-DIR_CACHE"><strong>DIR_CACHE</strong></dt><dd><p>用于存储从GMT服务器下载的临时文件（以 <strong>&#64;</strong> 开头）的目录 [~/.gmt/cache]</p>
+</dd>
 </dl>
 </div>
 
@@ -279,14 +281,22 @@ gitalk.render('gitalk-container');
 
   <div role="contentinfo">
     <p>
-        &copy; Copyright 2014 - 2020, GMT中文社区.
+        
+        &copy; 版权所有 2014 - 2020, GMT中文社区.
       <span class="lastupdated">
-        最后更新于 2020年07月05日.
+        最后更新于 2020年10月15日.
       </span>
 
     </p>
   </div>
-  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+    
+    
+    
+    Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a
+    
+    <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a>
+    
+    provided by <a href="https://readthedocs.org">Read the Docs</a>. 
 
 </footer>
 
@@ -297,7 +307,6 @@ gitalk.render('gitalk-container');
 
   </div>
   
-
 
   <script type="text/javascript">
       jQuery(function () {

@@ -1,8 +1,7 @@
 
 
 <!DOCTYPE html>
-<!--[if IE 8]><html class="no-js lt-ie9" lang="zh-CN" > <![endif]-->
-<!--[if gt IE 8]><!--> <html class="no-js" lang="zh-CN" > <!--<![endif]-->
+<html class="writer-html5" lang="zh-CN" >
 <head>
   <meta charset="utf-8">
   
@@ -10,6 +9,11 @@
   
   <title>gmtset &mdash; GMT中文手册</title>
   
+
+  
+  <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../../_static/custom.css" type="text/css" />
 
   
   
@@ -21,25 +25,22 @@
   
 
   
-  <script type="text/javascript" src="../../_static/js/modernizr.min.js"></script>
+  <!--[if lt IE 9]>
+    <script src="../../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
   
     
       <script type="text/javascript" id="documentation_options" data-url_root="../../" src="../../_static/documentation_options.js"></script>
-        <script type="text/javascript" src="../../_static/jquery.js"></script>
-        <script type="text/javascript" src="../../_static/underscore.js"></script>
-        <script type="text/javascript" src="../../_static/doctools.js"></script>
-        <script type="text/javascript" src="../../_static/language_data.js"></script>
-        <script type="text/javascript" src="../../_static/translations.js"></script>
-        <script async="async" type="text/javascript" src="https://cdn.bootcss.com/mathjax/2.7.7/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+        <script src="../../_static/jquery.js"></script>
+        <script src="../../_static/underscore.js"></script>
+        <script src="../../_static/doctools.js"></script>
+        <script src="../../_static/language_data.js"></script>
+        <script src="../../_static/translations.js"></script>
+        <script async="async" src="https://cdn.bootcss.com/mathjax/2.7.7/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
     
     <script type="text/javascript" src="../../_static/js/theme.js"></script>
 
     
-
-  
-  <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
-  <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
-  <link rel="stylesheet" href="../../_static/custom.css" type="text/css" />
     <link rel="index" title="索引" href="../../genindex/" />
     <link rel="search" title="搜索" href="../../search/" />
     <link rel="next" title="gmtsimplify" href="../gmtsimplify/" />
@@ -90,6 +91,7 @@
 
         </div>
 
+        
         <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
           
     
@@ -112,6 +114,7 @@
 <li class="toctree-l1"><a class="reference internal" href="../../proj/">地图投影</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../conf/">配置参数</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../dataset/">地学数据集</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../dataset-CN/">中国地学数据集</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../chinese/">中文支持</a></li>
 <li class="toctree-l1 current"><a class="reference internal" href="../">模块手册</a><ul class="current">
 <li class="toctree-l2"><a class="reference internal" href="../basemap/">basemap</a></li>
@@ -187,7 +190,6 @@
 <li class="toctree-l2"><a class="reference internal" href="../xyz2grd/">xyz2grd</a></li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="../../gallery/">绘图示例</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../api/">API</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../appendix/">附录</a></li>
 </ul>
@@ -215,6 +217,7 @@
     
 
         </div>
+        
       </div>
     </nav>
 
@@ -253,7 +256,7 @@
 
   <ul class="wy-breadcrumbs">
     
-      <li><a href="../../">首页</a> &raquo;</li>
+      <li><a href="../../" class="icon icon-home"></a> &raquo;</li>
         
           <li><a href="../">模块手册</a> &raquo;</li>
         
@@ -280,70 +283,65 @@
             
   <div class="section" id="gmtset">
 <span id="index-0"></span><h1>gmtset<a class="headerlink" href="#gmtset" title="永久链接至标题">¶</a></h1>
-<table class="docutils field-list" frame="void" rules="none">
-<col class="field-name" />
-<col class="field-body" />
-<tbody valign="top">
-<tr class="field-odd field"><th class="field-name">官方文档:</th><td class="field-body"><a class="reference external" href="https://docs.generic-mapping-tools.org/6.0/gmtset.html" title="(在 GMT v6.0)"><span>gmtset</span></a></td>
-</tr>
-<tr class="field-even field"><th class="field-name">简介:</th><td class="field-body">修改单个或多个GMT配置参数的值</td>
-</tr>
-</tbody>
-</table>
-<p>该命令用于修改GMT配置参数的值以调整接下来的绘图或者命令的运行。</p>
-<p>该命令修改的参数将对接下来的命令一直有效，直到GMT参数再次被修改或覆盖。若想要参数修改仅对某个命令有效，可以在该命令中使用 <strong>--</strong><em>PARAMETER</em><strong>=</strong><em>value</em> 语法。</p>
+<dl class="field-list simple">
+<dt class="field-odd">官方文档</dt>
+<dd class="field-odd"><p><a class="reference external" href="https://docs.generic-mapping-tools.org/6.1/gmtset.html" title="(在 GMT v6.1)"><span>gmtset</span></a></p>
+</dd>
+<dt class="field-even">简介</dt>
+<dd class="field-even"><p>修改单个或多个GMT配置参数的值</p>
+</dd>
+</dl>
+<p>该模块用于修改GMT配置参数的值以调整接下来的绘图或者命令的运行。</p>
+<p>该模块修改的参数将对接下来的命令一直有效，直到GMT参数再次被修改或覆盖。若想要参数修改仅对某个命令有效，可以在该命令中使用 <strong>--</strong><em>PARAMETER</em><strong>=</strong><em>value</em> 语法。</p>
 <div class="section" id="id1">
 <h2>语法<a class="headerlink" href="#id1" title="永久链接至标题">¶</a></h2>
 <p><strong>gmt set</strong>
 [ <a class="reference internal" href="#c"><span> <strong>-C</strong></span></a></strong> | <a class="reference internal" href="#d"><span> <strong>-D</strong></span></a></strong>[<strong>s</strong>|<strong>u</strong>] | <a class="reference internal" href="#g"><span> <strong>-G</strong></span></a></strong><em>defaultsfile</em> ]
 [ <strong>-</strong>[<strong>BJRXxYycp</strong>]<em>value</em> ]
-PARAMETER1 [=] <em>value1</em>
-PARAMETER2 [=] <em>value2</em>
-PARAMETER3 [=] <em>value3</em></p>
+PARAMETER1 <em>value1</em>
+PARAMETER2 <em>value2</em>
+PARAMETER3 <em>value3</em></p>
 </div>
 <div class="section" id="id2">
 <h2>必选选项<a class="headerlink" href="#id2" title="永久链接至标题">¶</a></h2>
-<dl class="docutils">
-<dt><em>PARAMETER</em><strong>=</strong><em>value</em></dt>
-<dd><p class="first">要修改的GMT配置参数名 <em>PARAMETER</em> 以及想要设置的值 <em>value</em></p>
-<p class="last">参数名和值必须成对存在，二者可以用等号 <strong>=</strong> 连接，也可以省略等号。GMT配置参数见 <a class="reference internal" href="../../conf/"><span class="doc">配置参数</span></a>。</p>
+<dl>
+<dt><em>PARAMETER</em> <em>value</em></dt><dd><p>要修改的GMT配置参数名 <em>PARAMETER</em> 以及想要设置的值 <em>value</em></p>
+<p>参数名和值必须成对存在。GMT配置参数见 <a class="reference internal" href="../../conf/"><span class="doc">配置参数</span></a>。</p>
 </dd>
 </dl>
 </div>
 <div class="section" id="id3">
 <h2>可选选项<a class="headerlink" href="#id3" title="永久链接至标题">¶</a></h2>
-<dl class="docutils" id="c">
-<dt><strong>-C</strong></dt>
-<dd>将 GMT4 创建的 GMT4配置文件 <code class="docutils literal notranslate"><span class="pre">.gmtdefaults4</span></code> 转换为GMT5及之后版本所使用的 <code class="docutils literal notranslate"><span class="pre">gmt.conf</span></code>
-文件，并保留原GMT4配置文件。</dd>
-</dl>
-<dl class="docutils" id="d">
-<dt><strong>-D</strong>[<strong>s</strong>|<strong>u</strong>]</dt>
-<dd><p class="first">在系统默认配置的基础上修改参数值</p>
-<ol class="last arabic simple">
-<li><strong>-D</strong>：使用GMT编译过程中指定的默认参数文件（通常是SI单位制配置文件）</li>
-<li><strong>-Du</strong>：使用US单位制下的默认参数文件</li>
-<li><strong>-Ds</strong>：使用SI单位制下的默认参数文件</li>
-</ol>
+<dl class="simple" id="c">
+<dt><strong>-C</strong></dt><dd><p>将 GMT4 创建的 GMT4配置文件 <code class="file docutils literal notranslate"><span class="pre">.gmtdefaults4</span></code> 转换为GMT5及之后版本所使用的
+<code class="file docutils literal notranslate"><span class="pre">gmt.conf</span></code> 文件，并保留原GMT4配置文件。</p>
 </dd>
 </dl>
-<dl class="docutils" id="g">
-<dt><strong>-G</strong><em>defaultsfile</em></dt>
-<dd>指定要读取并修改的配置文件名 <em>defaultsfile</em></dd>
-<dt><strong>-</strong>[<strong>BJRXxYycp</strong>]<em>value</em></dt>
-<dd><p class="first">强行修改GMT命令历史文件 <strong>gmt.history</strong> 中的值。</p>
-<p class="last">GMT在执行一个命令时会在命令历史文件 <strong>gmt.history</strong> 中记录一些选项的参数值，使得接下来的命令可以不用再提供这个选项的参数值。该选项用于在不执行其他绘图命令的前提下强行修改命令历史，但用处不大。</p>
+<dl class="simple" id="d">
+<dt><strong>-D</strong>[<strong>s</strong>|<strong>u</strong>]</dt><dd><p>在系统默认配置的基础上修改参数值</p>
+<ul class="simple">
+<li><p><strong>-D</strong>：使用GMT编译过程中指定的默认参数文件（通常是SI单位制配置文件）</p></li>
+<li><p><strong>-Du</strong>：使用US单位制下的默认参数文件</p></li>
+<li><p><strong>-Ds</strong>：使用SI单位制下的默认参数文件</p></li>
+</ul>
 </dd>
 </dl>
-<dl class="docutils">
-<dt><strong>-^</strong> 或 <strong>-</strong></dt>
-<dd>显示简短的帮助信息，包括模块简介和基本语法信息（Windows下只能使用 <strong>-</strong>）</dd>
-<dt><strong>-+</strong> 或 <strong>+</strong></dt>
-<dd>显示帮助信息，包括模块简介、基本语法以及模块特有选项的说明</dd>
-<dt><strong>-?</strong> 或无参数</dt>
-<dd>显示完整的帮助信息，包括模块简介、基本语法以及所有选项的说明</dd>
-<dt><strong>--PAR</strong>=<em>value</em></dt>
-<dd>临时修改GMT参数的值，可重复多次使用。参数列表见 <a class="reference external" href="https://docs.generic-mapping-tools.org/6.0/gmt.conf.html" title="(在 GMT v6.0)"><span class="xref std std-doc">gmt.conf</span></a></dd>
+<dl id="g">
+<dt><strong>-G</strong><em>defaultsfile</em></dt><dd><p>指定要读取并修改的配置文件名 <em>defaultsfile</em></p>
+</dd>
+<dt><strong>-</strong>[<strong>BJRXxYycp</strong>]<em>value</em></dt><dd><p>强行修改GMT命令历史文件 <strong>gmt.history</strong> 中的值。</p>
+<p>GMT在执行一个命令时会在命令历史文件 <strong>gmt.history</strong> 中记录一些选项的参数值，使得接下来的命令可以不用再提供这个选项的参数值。该选项用于在不执行其他绘图命令的前提下强行修改命令历史，但用处不大。</p>
+</dd>
+</dl>
+<dl class="simple">
+<dt><strong>-^</strong> 或 <strong>-</strong></dt><dd><p>显示简短的帮助信息，包括模块简介和基本语法信息（Windows下只能使用 <strong>-</strong>）</p>
+</dd>
+<dt><strong>-+</strong> 或 <strong>+</strong></dt><dd><p>显示帮助信息，包括模块简介、基本语法以及模块特有选项的说明</p>
+</dd>
+<dt><strong>-?</strong> 或无参数</dt><dd><p>显示完整的帮助信息，包括模块简介、基本语法以及所有选项的说明</p>
+</dd>
+<dt><strong>--PAR</strong>=<em>value</em></dt><dd><p>临时修改GMT参数的值，可重复多次使用。参数列表见 <a class="reference external" href="https://docs.generic-mapping-tools.org/6.1/gmt.conf.html" title="(在 GMT v6.1)"><span class="xref std std-doc">gmt.conf</span></a></p>
+</dd>
 </dl>
 </div>
 <div class="section" id="id4">
@@ -352,15 +350,11 @@ PARAMETER3 [=] <em>value3</em></p>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>gmt <span class="nb">set</span> FONT_ANNOT_PRIMARY 12p,Helvetica MAP_GRID_CROSS_SIZE_PRIMARY <span class="m">0</span>.2c
 </pre></div>
 </div>
-<p>也可以用等号将参数名和参数值连接起来:</p>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>gmt <span class="nb">set</span> <span class="nv">FONT_ANNOT_PRIMARY</span><span class="o">=</span>12p,Helvetica <span class="nv">MAP_GRID_CROSS_SIZE_PRIMARY</span><span class="o">=</span><span class="m">0</span>.2c
-</pre></div>
-</div>
 </div>
 <div class="section" id="faq">
 <h2>FAQ<a class="headerlink" href="#faq" title="永久链接至标题">¶</a></h2>
 <ol class="arabic">
-<li><p class="first">错误消息:</p>
+<li><p>错误消息:</p>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>gmtset: Warning: parameter xxxx is deprecated. Use xxx instead.
 </pre></div>
 </div>
@@ -370,7 +364,7 @@ PARAMETER3 [=] <em>value3</em></p>
 </div>
 <div class="section" id="id5">
 <h2>相关模块<a class="headerlink" href="#id5" title="永久链接至标题">¶</a></h2>
-<p><a class="reference external" href="https://docs.generic-mapping-tools.org/6.0/gmt.conf.html" title="(在 GMT v6.0)"><span class="xref std std-doc">gmt.conf</span></a>,
+<p><a class="reference external" href="https://docs.generic-mapping-tools.org/6.1/gmt.conf.html" title="(在 GMT v6.1)"><span class="xref std std-doc">gmt.conf</span></a>,
 <a class="reference internal" href="../gmtdefaults/"><span class="doc">gmtdefaults</span></a>,
 <a class="reference internal" href="../gmtget/"><span class="doc">gmtget</span></a></p>
 </div>
@@ -419,14 +413,22 @@ gitalk.render('gitalk-container');
 
   <div role="contentinfo">
     <p>
-        &copy; Copyright 2014 - 2020, GMT中文社区.
+        
+        &copy; 版权所有 2014 - 2020, GMT中文社区.
       <span class="lastupdated">
-        最后更新于 2020年07月05日.
+        最后更新于 2020年10月15日.
       </span>
 
     </p>
   </div>
-  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+    
+    
+    
+    Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a
+    
+    <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a>
+    
+    provided by <a href="https://readthedocs.org">Read the Docs</a>. 
 
 </footer>
 
@@ -437,7 +439,6 @@ gitalk.render('gitalk-container');
 
   </div>
   
-
 
   <script type="text/javascript">
       jQuery(function () {

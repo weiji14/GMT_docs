@@ -1,8 +1,7 @@
 
 
 <!DOCTYPE html>
-<!--[if IE 8]><html class="no-js lt-ie9" lang="zh-CN" > <![endif]-->
-<!--[if gt IE 8]><!--> <html class="no-js" lang="zh-CN" > <!--<![endif]-->
+<html class="writer-html5" lang="zh-CN" >
 <head>
   <meta charset="utf-8">
   
@@ -10,6 +9,11 @@
   
   <title>grdimage &mdash; GMT中文手册</title>
   
+
+  
+  <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../../_static/custom.css" type="text/css" />
 
   
   
@@ -21,25 +25,22 @@
   
 
   
-  <script type="text/javascript" src="../../_static/js/modernizr.min.js"></script>
+  <!--[if lt IE 9]>
+    <script src="../../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
   
     
       <script type="text/javascript" id="documentation_options" data-url_root="../../" src="../../_static/documentation_options.js"></script>
-        <script type="text/javascript" src="../../_static/jquery.js"></script>
-        <script type="text/javascript" src="../../_static/underscore.js"></script>
-        <script type="text/javascript" src="../../_static/doctools.js"></script>
-        <script type="text/javascript" src="../../_static/language_data.js"></script>
-        <script type="text/javascript" src="../../_static/translations.js"></script>
-        <script async="async" type="text/javascript" src="https://cdn.bootcss.com/mathjax/2.7.7/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+        <script src="../../_static/jquery.js"></script>
+        <script src="../../_static/underscore.js"></script>
+        <script src="../../_static/doctools.js"></script>
+        <script src="../../_static/language_data.js"></script>
+        <script src="../../_static/translations.js"></script>
+        <script async="async" src="https://cdn.bootcss.com/mathjax/2.7.7/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
     
     <script type="text/javascript" src="../../_static/js/theme.js"></script>
 
     
-
-  
-  <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
-  <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
-  <link rel="stylesheet" href="../../_static/custom.css" type="text/css" />
     <link rel="index" title="索引" href="../../genindex/" />
     <link rel="search" title="搜索" href="../../search/" />
     <link rel="next" title="grdinfo" href="../grdinfo/" />
@@ -90,6 +91,7 @@
 
         </div>
 
+        
         <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
           
     
@@ -112,6 +114,7 @@
 <li class="toctree-l1"><a class="reference internal" href="../../proj/">地图投影</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../conf/">配置参数</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../dataset/">地学数据集</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../dataset-CN/">中国地学数据集</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../chinese/">中文支持</a></li>
 <li class="toctree-l1 current"><a class="reference internal" href="../">模块手册</a><ul class="current">
 <li class="toctree-l2"><a class="reference internal" href="../basemap/">basemap</a></li>
@@ -185,7 +188,6 @@
 <li class="toctree-l2"><a class="reference internal" href="../xyz2grd/">xyz2grd</a></li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="../../gallery/">绘图示例</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../api/">API</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../appendix/">附录</a></li>
 </ul>
@@ -213,6 +215,7 @@
     
 
         </div>
+        
       </div>
     </nav>
 
@@ -251,7 +254,7 @@
 
   <ul class="wy-breadcrumbs">
     
-      <li><a href="../../">首页</a> &raquo;</li>
+      <li><a href="../../" class="icon icon-home"></a> &raquo;</li>
         
           <li><a href="../">模块手册</a> &raquo;</li>
         
@@ -278,16 +281,14 @@
             
   <div class="section" id="grdimage">
 <span id="index-0"></span><h1>grdimage<a class="headerlink" href="#grdimage" title="永久链接至标题">¶</a></h1>
-<table class="docutils field-list" frame="void" rules="none">
-<col class="field-name" />
-<col class="field-body" />
-<tbody valign="top">
-<tr class="field-odd field"><th class="field-name">官方文档:</th><td class="field-body"><a class="reference external" href="https://docs.generic-mapping-tools.org/6.0/grdimage.html" title="(在 GMT v6.0)"><span>grdimage</span></a></td>
-</tr>
-<tr class="field-even field"><th class="field-name">简介:</th><td class="field-body">绘制网格数据</td>
-</tr>
-</tbody>
-</table>
+<dl class="field-list simple">
+<dt class="field-odd">官方文档</dt>
+<dd class="field-odd"><p><a class="reference external" href="https://docs.generic-mapping-tools.org/6.1/grdimage.html" title="(在 GMT v6.1)"><span>grdimage</span></a></p>
+</dd>
+<dt class="field-even">简介</dt>
+<dd class="field-even"><p>绘制网格数据</p>
+</dd>
+</dl>
 <div class="section" id="id1">
 <h2>语法<a class="headerlink" href="#id1" title="永久链接至标题">¶</a></h2>
 <p><strong>gmt grdimage</strong> <em>grd_z</em> | <em>img</em> | <em>grd_r grd_g grd_b</em>
@@ -307,80 +308,76 @@
 [ <a class="reference internal" href="#y"><span> <strong>-Y</strong></span></a></strong>[<strong>a</strong>|<strong>c</strong>|<strong>f</strong>|<strong>r</strong>][<em>xshift</em>[<strong>u</strong>]] ]
 [ <strong>-f</strong><a class="reference internal" href="../../option/f/"><span class="doc">flags</span></a> ]
 [ <strong>-n</strong><a class="reference internal" href="../../option/n/"><span class="doc">flags</span></a> ]
-[ <strong>-p</strong><a class="reference internal" href="../../option/perspective/"><span class="doc">flags</span></a> ]
+[ <strong>-p</strong><a class="reference internal" href="../../option/p/"><span class="doc">flags</span></a> ]
 [ <strong>-t</strong><a class="reference internal" href="../../option/t/"><span class="doc">transp</span></a> ]
 [ <strong>--PAR</strong>=<em>value</em> ]</p>
 </div>
 <div class="section" id="id2">
 <h2>必选选项<a class="headerlink" href="#id2" title="永久链接至标题">¶</a></h2>
-<dl class="docutils">
-<dt><em>grd_z</em> | <em>img</em> | <em>grd_r grd_g grd_b</em></dt>
-<dd>输入数据文件，可以是一个只包含Z数据的网格文件，或GDAL支持的图片文件，或三个分别包含red、green、blue值的网格文件。</dd>
+<dl class="simple">
+<dt><em>grd_z</em> | <em>img</em> | <em>grd_r grd_g grd_b</em></dt><dd><p>输入数据文件，可以是一个只包含Z数据的网格文件，或GDAL支持的图片文件，或三个分别包含red、green、blue值的网格文件。</p>
+</dd>
 </dl>
-<dl class="docutils" id="j">
-<dt><strong>-J</strong><em>projection</em> <a class="reference internal" href="../../option/J/"><span class="doc">(more …)</span></a></dt>
-<dd>设置地图投影方式。</dd>
+<dl class="simple" id="j">
+<dt><strong>-J</strong><em>projection</em> <a class="reference internal" href="../../option/J/"><span class="doc">(more …)</span></a></dt><dd><p>设置地图投影方式</p>
+</dd>
 </dl>
 </div>
 <div class="section" id="id3">
 <h2>可选选项<a class="headerlink" href="#id3" title="永久链接至标题">¶</a></h2>
 <p id="a"><strong>-A</strong><em>out_img</em>[<strong>=</strong><em>driver</em>]</p>
-<dl class="docutils">
-<dt><code class="docutils literal notranslate"><span class="pre">-A&lt;out_img&gt;[=&lt;driver&gt;]</span></code></dt>
-<dd><p class="first">将图片以光栅格式保存</p>
+<dl>
+<dt><code class="docutils literal notranslate"><span class="pre">-A&lt;out_img&gt;[=&lt;driver&gt;]</span></code></dt><dd><p>将图片以光栅格式保存</p>
 <p>默认图片会以PostScript代码的形式输出，使用此选项可以以其他图片格式保存。文件名中使用后缀 <code class="docutils literal notranslate"><span class="pre">.ppm</span></code> 则会以Portable Pixel Map格式保存。</p>
 <p>若GMT支持GDAL，则可以以更多的光栅格式保存。</p>
-<ol class="last arabic simple">
-<li><code class="docutils literal notranslate"><span class="pre">&lt;out_img&gt;</span></code> 为要保存的文件名</li>
-<li><code class="docutils literal notranslate"><span class="pre">&lt;driver&gt;</span></code> 图片格式，见GDAL的文档</li>
+<ol class="arabic simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">&lt;out_img&gt;</span></code> 为要保存的文件名</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">&lt;driver&gt;</span></code> 图片格式，见GDAL的文档</p></li>
 </ol>
 </dd>
 </dl>
-<dl class="docutils" id="b">
-<dt><strong>-B</strong><em>parameters</em> <a class="reference internal" href="../../option/B/"><span class="doc">(more …)</span></a></dt>
-<dd>设置底图边框和轴属性</dd>
+<dl class="simple" id="b">
+<dt><strong>-B</strong><em>parameters</em> <a class="reference internal" href="../../option/B/"><span class="doc">(more …)</span></a></dt><dd><p>设置底图边框和轴属性</p>
+</dd>
 </dl>
-<dl class="docutils" id="c">
-<dt><strong>-C</strong>[<em>cpt</em> |<em>master</em>[<strong>+i</strong><em>zinc</em>] |<em>color1,color2</em>[,<em>color3</em>,…]]</dt>
-<dd><p class="first">绘制网格文件所使用的CPT。</p>
-<p class="last">也可以直接使用GMT自带的CPT文件名，此时GMT会自动根据网格文件的Z值范围将自带的CPT采样成16级的连续CPT文件。也可以通过 <code class="docutils literal notranslate"><span class="pre">-C&lt;color1&gt;,&lt;color2&gt;[,&lt;color3&gt;,..]</span></code>
+<dl id="c">
+<dt><strong>-C</strong>[<em>cpt</em> |<em>master</em>[<strong>+i</strong><em>zinc</em>] |<em>color1,color2</em>[,<em>color3</em>,…]]</dt><dd><p>绘制网格文件所使用的CPT。</p>
+<p>也可以直接使用GMT自带的CPT文件名，此时GMT会自动根据网格文件的Z值范围将自带的CPT采样成16级的连续CPT文件。也可以通过 <code class="docutils literal notranslate"><span class="pre">-C&lt;color1&gt;,&lt;color2&gt;[,&lt;color3&gt;,..]</span></code>
 的语法构建一个线性连续CPT文件。</p>
 </dd>
 </dl>
-<dl class="docutils" id="d">
-<dt><strong>-D</strong>[<strong>r</strong>]</dt>
-<dd>表明输入的网格文件是需要通过GDAL读取的图片文件，见官方文档。</dd>
-<dt><code class="docutils literal notranslate"><span class="pre">-E[i|&lt;dpi&gt;]</span></code></dt>
-<dd>设置投影后网格的精度，默认值为100。</dd>
-<dt><code class="docutils literal notranslate"><span class="pre">-G[f|b]&lt;color&gt;</span></code></dt>
-<dd><p class="first">该选项仅当生成的图片是黑白图时才可用。</p>
-<p class="last">This option will instead use the image as a transparent mask and paint
+<dl id="d">
+<dt><strong>-D</strong>[<strong>r</strong>]</dt><dd><p>表明输入的网格文件是需要通过GDAL读取的图片文件，见官方文档。</p>
+</dd>
+<dt><code class="docutils literal notranslate"><span class="pre">-E[i|&lt;dpi&gt;]</span></code></dt><dd><p>设置投影后网格的精度，默认值为100。</p>
+</dd>
+<dt><code class="docutils literal notranslate"><span class="pre">-G[f|b]&lt;color&gt;</span></code></dt><dd><p>该选项仅当生成的图片是黑白图时才可用。</p>
+<p>This option will instead use the image as a transparent mask and paint
 the mask (or its inverse, with <strong>-Gb</strong>) with the given color combination.</p>
 </dd>
-<dt><code class="docutils literal notranslate"><span class="pre">-I[&lt;intensfile&gt;|&lt;intensity&gt;|&lt;modifiers&gt;]</span></code></dt>
-<dd><p class="first">增加光照效果</p>
+<dt><code class="docutils literal notranslate"><span class="pre">-I[&lt;intensfile&gt;|&lt;intensity&gt;|&lt;modifiers&gt;]</span></code></dt><dd><p>增加光照效果</p>
 <p>可以通过三种方式设置光照效果:</p>
-<ol class="last arabic simple">
-<li>给定一个Z值范围为(-1,1)的网格文件，该文件可以用 <code class="docutils literal notranslate"><span class="pre">grdgradient</span></code> 生成</li>
-<li>给定一个常数作为光照强度</li>
-<li>不指定光照强度文件，只使用 <code class="docutils literal notranslate"><span class="pre">-I+</span></code> 则会自动调用 <code class="docutils literal notranslate"><span class="pre">grdgradient</span></code>
-并使用参数 <code class="docutils literal notranslate"><span class="pre">-A-45</span> <span class="pre">-Nt1</span></code> 计算输入网格数据的梯度作为光照强度文件。用户可以使用 <code class="docutils literal notranslate"><span class="pre">+a&lt;azimuth&gt;+n&lt;args&gt;</span></code> 以自定义 grdgradient 的 -A 和 -N 选项</li>
+<ol class="arabic simple">
+<li><p>给定一个Z值范围为(-1,1)的网格文件，该文件可以用 <code class="docutils literal notranslate"><span class="pre">grdgradient</span></code> 生成</p></li>
+<li><p>给定一个常数作为光照强度</p></li>
+<li><p>不指定光照强度文件，只使用 <code class="docutils literal notranslate"><span class="pre">-I+</span></code> 则会自动调用 <code class="docutils literal notranslate"><span class="pre">grdgradient</span></code>
+并使用参数 <code class="docutils literal notranslate"><span class="pre">-A-45</span> <span class="pre">-Nt1</span></code> 计算输入网格数据的梯度作为光照强度文件。用户可以使用 <code class="docutils literal notranslate"><span class="pre">+a&lt;azimuth&gt;+n&lt;args&gt;</span></code> 以自定义 grdgradient 的 -A 和 -N 选项</p></li>
 </ol>
 </dd>
-<dt><code class="docutils literal notranslate"><span class="pre">-M</span></code></dt>
-<dd>使用YIQ转换强制将其转换为灰度图。</dd>
-<dt><code class="docutils literal notranslate"><span class="pre">-N</span></code></dt>
-<dd>对于非矩形地图，在地图边界处不对图片做裁剪。</dd>
-<dt><code class="docutils literal notranslate"><span class="pre">-Q</span></code></dt>
-<dd>将值为NaN的节点处设置为透明色</dd>
+<dt><code class="docutils literal notranslate"><span class="pre">-M</span></code></dt><dd><p>使用YIQ转换强制将其转换为灰度图。</p>
+</dd>
+<dt><code class="docutils literal notranslate"><span class="pre">-N</span></code></dt><dd><p>对于非矩形地图，在地图边界处不对图片做裁剪。</p>
+</dd>
+<dt><code class="docutils literal notranslate"><span class="pre">-Q</span></code></dt><dd><p>将值为NaN的节点处设置为透明色</p>
+</dd>
 </dl>
-<dl class="docutils" id="u">
-<dt><strong>-U</strong>[<em>label</em>][<strong>+c</strong>][<strong>+j</strong><em>just</em>][<strong>+o</strong><em>dx</em>/<em>dy</em>] <a class="reference internal" href="../../option/U/"><span class="doc">(more …)</span></a></dt>
-<dd>在图上绘制GMT时间戳logo</dd>
+<dl class="simple" id="u">
+<dt><strong>-U</strong>[<em>label</em>][<strong>+c</strong>][<strong>+j</strong><em>just</em>][<strong>+o</strong><em>dx</em>/<em>dy</em>] <a class="reference internal" href="../../option/U/"><span class="doc">(more …)</span></a></dt><dd><p>在图上绘制GMT时间戳logo</p>
+</dd>
 </dl>
-<dl class="docutils">
-<dt><strong>-t</strong>[<em>transp</em>] <a class="reference internal" href="../../option/t/"><span class="doc">(more …)</span></a></dt>
-<dd>设置图层透明度（百分比）。取值范围为0（不透明）到100（全透明）</dd>
+<dl class="simple">
+<dt><strong>-t</strong>[<em>transp</em>] <a class="reference internal" href="../../option/t/"><span class="doc">(more …)</span></a></dt><dd><p>设置图层透明度（百分比）。取值范围为0（不透明）到100（全透明）</p>
+</dd>
 </dl>
 </div>
 <div class="section" id="id4">
@@ -435,14 +432,22 @@ gitalk.render('gitalk-container');
 
   <div role="contentinfo">
     <p>
-        &copy; Copyright 2014 - 2020, GMT中文社区.
+        
+        &copy; 版权所有 2014 - 2020, GMT中文社区.
       <span class="lastupdated">
-        最后更新于 2020年07月05日.
+        最后更新于 2020年10月15日.
       </span>
 
     </p>
   </div>
-  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+    
+    
+    
+    Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a
+    
+    <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a>
+    
+    provided by <a href="https://readthedocs.org">Read the Docs</a>. 
 
 </footer>
 
@@ -453,7 +458,6 @@ gitalk.render('gitalk-container');
 
   </div>
   
-
 
   <script type="text/javascript">
       jQuery(function () {

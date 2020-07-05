@@ -1,8 +1,7 @@
 
 
 <!DOCTYPE html>
-<!--[if IE 8]><html class="no-js lt-ie9" lang="zh-CN" > <![endif]-->
-<!--[if gt IE 8]><!--> <html class="no-js" lang="zh-CN" > <!--<![endif]-->
+<html class="writer-html5" lang="zh-CN" >
 <head>
   <meta charset="utf-8">
   
@@ -10,6 +9,11 @@
   
   <title>DCW: 世界数字图表 &mdash; GMT中文手册</title>
   
+
+  
+  <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../../_static/custom.css" type="text/css" />
 
   
   
@@ -21,25 +25,22 @@
   
 
   
-  <script type="text/javascript" src="../../_static/js/modernizr.min.js"></script>
+  <!--[if lt IE 9]>
+    <script src="../../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
   
     
       <script type="text/javascript" id="documentation_options" data-url_root="../../" src="../../_static/documentation_options.js"></script>
-        <script type="text/javascript" src="../../_static/jquery.js"></script>
-        <script type="text/javascript" src="../../_static/underscore.js"></script>
-        <script type="text/javascript" src="../../_static/doctools.js"></script>
-        <script type="text/javascript" src="../../_static/language_data.js"></script>
-        <script type="text/javascript" src="../../_static/translations.js"></script>
-        <script async="async" type="text/javascript" src="https://cdn.bootcss.com/mathjax/2.7.7/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+        <script src="../../_static/jquery.js"></script>
+        <script src="../../_static/underscore.js"></script>
+        <script src="../../_static/doctools.js"></script>
+        <script src="../../_static/language_data.js"></script>
+        <script src="../../_static/translations.js"></script>
+        <script async="async" src="https://cdn.bootcss.com/mathjax/2.7.7/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
     
     <script type="text/javascript" src="../../_static/js/theme.js"></script>
 
     
-
-  
-  <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
-  <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
-  <link rel="stylesheet" href="../../_static/custom.css" type="text/css" />
     <link rel="index" title="索引" href="../../genindex/" />
     <link rel="search" title="搜索" href="../../search/" />
     <link rel="next" title="earth_relief: 全球地形起伏数据" href="../earth-relief/" />
@@ -90,6 +91,7 @@
 
         </div>
 
+        
         <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
           
     
@@ -112,7 +114,7 @@
 <li class="toctree-l1"><a class="reference internal" href="../../proj/">地图投影</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../conf/">配置参数</a></li>
 <li class="toctree-l1 current"><a class="reference internal" href="../">地学数据集</a><ul class="current">
-<li class="toctree-l2"><a class="reference internal" href="../overview/">地学数据集</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../overview/">GMT数据概述</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../gshhg/">GSHHG: 全球高分辨率海岸线数据</a></li>
 <li class="toctree-l2 current"><a class="current reference internal" href="#">DCW: 世界数字图表</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="#id1">区域代码</a><ul>
@@ -132,13 +134,16 @@
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="../earth-relief/">earth_relief: 全球地形起伏数据</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../earth-age/">earth_age: 地球洋壳年龄数据</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../earth-images/">earth_day 和 earth_night: 地球昼夜卫星影像</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../earth-mask/">earth_mask: 地球掩膜数据</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../gadm/">GADM: 全球行政区划数据库</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../PB2002/">PB2002: 全球板块边界数据</a></li>
 </ul>
 </li>
+<li class="toctree-l1"><a class="reference internal" href="../../dataset-CN/">中国地学数据集</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../chinese/">中文支持</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../module/">模块手册</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../gallery/">绘图示例</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../api/">API</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../appendix/">附录</a></li>
 </ul>
@@ -166,6 +171,7 @@
     
 
         </div>
+        
       </div>
     </nav>
 
@@ -204,7 +210,7 @@
 
   <ul class="wy-breadcrumbs">
     
-      <li><a href="../../">首页</a> &raquo;</li>
+      <li><a href="../../" class="icon icon-home"></a> &raquo;</li>
         
           <li><a href="../">地学数据集</a> &raquo;</li>
         
@@ -233,25 +239,25 @@
 <h1>DCW: 世界数字图表<a class="headerlink" href="#dcw" title="永久链接至标题">¶</a></h1>
 <div class="figure align-center" id="id11">
 <a class="reference internal image-reference" href="../../_images/dcw.png"><img alt="../../_images/dcw.png" src="../../_images/dcw.png" style="width: 75%;" /></a>
-<p class="caption"><span class="caption-text">DCW: 世界数字图表</span></p>
+<p class="caption"><span class="caption-text">DCW: 世界数字图表</span><a class="headerlink" href="#id11" title="永久链接至图片">¶</a></p>
 </div>
 <p><strong>DCW数据主页</strong>： <a class="reference external" href="http://www.soest.hawaii.edu/wessel/dcw/">http://www.soest.hawaii.edu/wessel/dcw/</a></p>
 <p>DCW，全称为 Digital Chart of the World，即世界数字图表。GMT提供的DCW数据是在原始DCW数据的基础上修改得到的，其中包含了如下行政边界数据：</p>
 <ol class="arabic simple">
-<li>七大洲的洲界</li>
-<li>全球250个国家或地区的边界</li>
-<li>8个大国的省界/州界</li>
+<li><p>七大洲的洲界</p></li>
+<li><p>全球250个国家或地区的边界</p></li>
+<li><p>8个大国的省界/州界</p></li>
 </ol>
 <div class="admonition warning">
-<p class="first admonition-title">警告</p>
-<p class="last">DCW数据提供的中国国界数据不符合中国的领土主张，在正式刊物中发表使用此类国界数据的图件时都可能存在问题。</p>
+<p class="admonition-title">警告</p>
+<p>DCW数据提供的中国国界数据不符合中国的领土主张，在正式刊物中发表使用此类国界数据的图件时都可能存在问题。</p>
 </div>
-<p>GMT的 <a class="reference internal" href="../../module/coast/"><span class="doc">coast</span></a> 模块可以直接绘制DCW数据中提供的行政边界数据，也可以使用 <a class="reference internal" href="../../module/coast/"><span class="doc">coast</span></a> 的 <strong>-M</strong> 选项将边界数据导出为纯文本文件供其它程序使用。</p>
+<p>GMT的 <a class="reference internal" href="../../module/coast/"><span class="doc">coast</span></a> 模块可以直接绘制DCW数据中提供的行政边界数据，也可以使用 <a class="reference internal" href="../../module/coast/"><span class="doc">coast</span></a> 的 <strong>-M</strong> 选项将边界数据导出为纯文本文件供其它程序使用。除此之外，DCW数据中的信息也可以直接用在 <strong>-R</strong> 选项中以通过区域代码的方式指定绘图范围。</p>
 <p>GMT提供的DCW数据默认位于GMT安装目录下的 <strong>share/dcw</strong> 下，其中主要包含了三个文件：</p>
 <ul class="simple">
-<li><code class="file docutils literal notranslate"><span class="pre">dcw-gmt.nc</span></code>: netCDF格式的DCW数据</li>
-<li><a class="reference download internal" download="" href="../../_downloads/d7130ea9354cea6cd45f9d56d0e8beb0/dcw-countries.txt"><code class="xref download docutils literal notranslate"><span class="pre">dcw-countries.txt</span></code></a>: 辅助文件，内含国家代码</li>
-<li><a class="reference download internal" download="" href="../../_downloads/2d83257bed3bc83e90befdf93540d18c/dcw-states.txt"><code class="xref download docutils literal notranslate"><span class="pre">dcw-states.txt</span></code></a>: 辅助文件，内含省界代码</li>
+<li><p><code class="file docutils literal notranslate"><span class="pre">dcw-gmt.nc</span></code>: netCDF格式的DCW数据</p></li>
+<li><p><a class="reference download internal" download="" href="../../_downloads/af706f5ed5c66afcafb133e27916bcdd/dcw-countries.txt"><code class="xref download docutils literal notranslate"><span class="pre">dcw-countries.txt</span></code></a>: 辅助文件，内含国家代码</p></li>
+<li><p><a class="reference download internal" download="" href="../../_downloads/146e012b25569d0e4b42223068f9582c/dcw-states.txt"><code class="xref download docutils literal notranslate"><span class="pre">dcw-states.txt</span></code></a>: 辅助文件，内含省界代码</p></li>
 </ul>
 <div class="section" id="id1">
 <h2>区域代码<a class="headerlink" href="#id1" title="永久链接至标题">¶</a></h2>
@@ -260,22 +266,27 @@
 <h3>洲代码<a class="headerlink" href="#id2" title="永久链接至标题">¶</a></h3>
 <p>七大洲都有各自的代码，其代码分别为:</p>
 <ul class="simple">
-<li><strong>AF</strong>: 非洲（Africa）</li>
-<li><strong>AN</strong>: 南极洲（Antarctica）</li>
-<li><strong>AS</strong>: 亚洲（Asia）</li>
-<li><strong>EU</strong>: 欧洲（Europe）</li>
-<li><strong>OC</strong>: 大洋洲（Oceania）</li>
-<li><strong>NA</strong>: 北美洲（North America）</li>
-<li><strong>SA</strong>: 南美洲（South America）</li>
+<li><p><strong>AF</strong>: 非洲（Africa）</p></li>
+<li><p><strong>AN</strong>: 南极洲（Antarctica）</p></li>
+<li><p><strong>AS</strong>: 亚洲（Asia）</p></li>
+<li><p><strong>EU</strong>: 欧洲（Europe）</p></li>
+<li><p><strong>OC</strong>: 大洋洲（Oceania）</p></li>
+<li><p><strong>NA</strong>: 北美洲（North America）</p></li>
+<li><p><strong>SA</strong>: 南美洲（South America）</p></li>
 </ul>
 </div>
 <div class="section" id="id3">
 <h3>国家代码<a class="headerlink" href="#id3" title="永久链接至标题">¶</a></h3>
-<p>每个国家都有一个国家代码，国家代码可以直接从 <a class="reference external" href="https://en.wikipedia.org/wiki/ISO_3166-1_alpha-2">ISO Country Codes</a> 中查找。也可以从DCW辅助文件 <a class="reference download internal" download="" href="../../_downloads/d7130ea9354cea6cd45f9d56d0e8beb0/dcw-countries.txt"><code class="xref download docutils literal notranslate"><span class="pre">dcw-countries.txt</span></code></a> 中查找，其文件格式为:</p>
+<p>每个国家都有一个国家代码，国家代码可以从如下三个途径查找：</p>
+<ol class="arabic">
+<li><p>在维基百科页面 <a class="reference external" href="https://en.wikipedia.org/wiki/ISO_3166-1_alpha-2">ISO Country Codes</a> 中查找</p></li>
+<li><p>使用命令 <code class="docutils literal notranslate"><span class="pre">gmt</span> <span class="pre">coast</span> <span class="pre">-E+l</span></code> 查看国家代码列表</p></li>
+<li><p>从DCW辅助文件 <a class="reference download internal" download="" href="../../_downloads/af706f5ed5c66afcafb133e27916bcdd/dcw-countries.txt"><code class="xref download docutils literal notranslate"><span class="pre">dcw-countries.txt</span></code></a> 中查找，其文件格式为:</p>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>洲代码 国家代码 国家名
 </pre></div>
 </div>
-<p>也可以使用命令 <code class="docutils literal notranslate"><span class="pre">gmt</span> <span class="pre">coast</span> <span class="pre">-E+l</span></code> 查看国家代码列表。</p>
+</li>
+</ol>
 <p>该文件共计约 250 个国家。文件内容大致如下:</p>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>AS BH Bahrain
 AS BN Brunei
@@ -296,16 +307,16 @@ AS IN India
 <h3>省/州代码<a class="headerlink" href="#id4" title="永久链接至标题">¶</a></h3>
 <p>目前有如下八个国家的省界/州界数据：</p>
 <ul class="simple">
-<li><strong>AR</strong>: 阿根廷</li>
-<li><strong>AU</strong>: 澳大利亚</li>
-<li><strong>BR</strong>: 巴西</li>
-<li><strong>CA</strong>: 加拿大</li>
-<li><strong>US</strong>: 美国</li>
-<li><strong>CN</strong>: 中国</li>
-<li><strong>IN</strong>: 印度</li>
-<li><strong>RU</strong>: 俄罗斯</li>
+<li><p><strong>AR</strong>: 阿根廷</p></li>
+<li><p><strong>AU</strong>: 澳大利亚</p></li>
+<li><p><strong>BR</strong>: 巴西</p></li>
+<li><p><strong>CA</strong>: 加拿大</p></li>
+<li><p><strong>US</strong>: 美国</p></li>
+<li><p><strong>CN</strong>: 中国</p></li>
+<li><p><strong>IN</strong>: 印度</p></li>
+<li><p><strong>RU</strong>: 俄罗斯</p></li>
 </ul>
-<p>省代码可以从 DCW 辅助文件 <a class="reference download internal" download="" href="../../_downloads/2d83257bed3bc83e90befdf93540d18c/dcw-states.txt"><code class="xref download docutils literal notranslate"><span class="pre">dcw-states.txt</span></code></a> 中查找到，其文件格式为:</p>
+<p>省代码可以从 DCW 辅助文件 <a class="reference download internal" download="" href="../../_downloads/146e012b25569d0e4b42223068f9582c/dcw-states.txt"><code class="xref download docutils literal notranslate"><span class="pre">dcw-states.txt</span></code></a> 中查找到，其文件格式为:</p>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>国家代码 省代码 省名
 </pre></div>
 </div>
@@ -353,14 +364,14 @@ CN <span class="m">92</span> Aomen <span class="o">(</span>Macao<span class="o">
 <h2>使用说明<a class="headerlink" href="#id5" title="永久链接至标题">¶</a></h2>
 <p>GMT中至少有两处会使用DCW数据：</p>
 <ol class="arabic simple">
-<li><a class="reference internal" href="../../option/R/"><span class="doc">-R 选项</span></a> 中可以直接使用区域代码以间接指定绘图范围</li>
-<li><a class="reference internal" href="../../module/coast/"><span class="doc">coast</span></a> 模块 <strong>-E</strong><em>code1</em>,<em>code2</em>,… 选项调用 DCW 数据绘制或导出国界/省界</li>
+<li><p><a class="reference internal" href="../../option/R/"><span class="doc">-R 选项</span></a> 中可以直接使用区域代码以间接指定绘图范围</p></li>
+<li><p><a class="reference internal" href="../../module/coast/"><span class="doc">coast</span></a> 模块 <strong>-E</strong><em>code1</em>,<em>code2</em>,… 选项调用 DCW 数据绘制或导出国界/省界</p></li>
 </ol>
 <p>洲代码、国家代码和省代码都由两个字符构成，为了避免可能的冲突，GMT通过如下方式区分：</p>
 <ul class="simple">
-<li>在洲代码前加上 <strong>=</strong> 号表示某个大洲，比如 <strong>=AS</strong> 表示亚洲</li>
-<li>国家代码不需要做任何处理格式，比如 <strong>GB</strong> 表示英国</li>
-<li>省代码的格式为 <em>country</em>.<em>state</em>，即必须在省代码前加上国家代码才可以，比如 <strong>US.TX</strong> 表示美国 Texas 州</li>
+<li><p>在洲代码前加上 <strong>=</strong> 号表示某个大洲，比如 <strong>=AS</strong> 表示亚洲</p></li>
+<li><p>国家代码不需要做任何处理格式，比如 <strong>GB</strong> 表示英国</p></li>
+<li><p>省代码的格式为 <em>country</em>.<em>state</em>，即必须在省代码前加上国家代码才可以，比如 <strong>US.TX</strong> 表示美国 Texas 州</p></li>
 </ul>
 </div>
 <div class="section" id="id6">
@@ -449,14 +460,22 @@ gitalk.render('gitalk-container');
 
   <div role="contentinfo">
     <p>
-        &copy; Copyright 2014 - 2020, GMT中文社区.
+        
+        &copy; 版权所有 2014 - 2020, GMT中文社区.
       <span class="lastupdated">
-        最后更新于 2020年07月05日.
+        最后更新于 2020年10月15日.
       </span>
 
     </p>
   </div>
-  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+    
+    
+    
+    Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a
+    
+    <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a>
+    
+    provided by <a href="https://readthedocs.org">Read the Docs</a>. 
 
 </footer>
 
@@ -467,7 +486,6 @@ gitalk.render('gitalk-container');
 
   </div>
   
-
 
   <script type="text/javascript">
       jQuery(function () {

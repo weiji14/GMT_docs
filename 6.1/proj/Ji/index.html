@@ -1,8 +1,7 @@
 
 
 <!DOCTYPE html>
-<!--[if IE 8]><html class="no-js lt-ie9" lang="zh-CN" > <![endif]-->
-<!--[if gt IE 8]><!--> <html class="no-js" lang="zh-CN" > <!--<![endif]-->
+<html class="writer-html5" lang="zh-CN" >
 <head>
   <meta charset="utf-8">
   
@@ -10,6 +9,11 @@
   
   <title>-Ji：正弦曲线投影 &mdash; GMT中文手册</title>
   
+
+  
+  <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../../_static/custom.css" type="text/css" />
 
   
   
@@ -21,25 +25,22 @@
   
 
   
-  <script type="text/javascript" src="../../_static/js/modernizr.min.js"></script>
+  <!--[if lt IE 9]>
+    <script src="../../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
   
     
       <script type="text/javascript" id="documentation_options" data-url_root="../../" src="../../_static/documentation_options.js"></script>
-        <script type="text/javascript" src="../../_static/jquery.js"></script>
-        <script type="text/javascript" src="../../_static/underscore.js"></script>
-        <script type="text/javascript" src="../../_static/doctools.js"></script>
-        <script type="text/javascript" src="../../_static/language_data.js"></script>
-        <script type="text/javascript" src="../../_static/translations.js"></script>
-        <script async="async" type="text/javascript" src="https://cdn.bootcss.com/mathjax/2.7.7/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+        <script src="../../_static/jquery.js"></script>
+        <script src="../../_static/underscore.js"></script>
+        <script src="../../_static/doctools.js"></script>
+        <script src="../../_static/language_data.js"></script>
+        <script src="../../_static/translations.js"></script>
+        <script async="async" src="https://cdn.bootcss.com/mathjax/2.7.7/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
     
     <script type="text/javascript" src="../../_static/js/theme.js"></script>
 
     
-
-  
-  <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
-  <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
-  <link rel="stylesheet" href="../../_static/custom.css" type="text/css" />
     <link rel="index" title="索引" href="../../genindex/" />
     <link rel="search" title="搜索" href="../../search/" />
     <link rel="next" title="-Jj：Miller圆柱投影" href="../Jj/" />
@@ -90,6 +91,7 @@
 
         </div>
 
+        
         <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
           
     
@@ -141,9 +143,9 @@
 </li>
 <li class="toctree-l1"><a class="reference internal" href="../../conf/">配置参数</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../dataset/">地学数据集</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../dataset-CN/">中国地学数据集</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../chinese/">中文支持</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../module/">模块手册</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../gallery/">绘图示例</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../api/">API</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../appendix/">附录</a></li>
 </ul>
@@ -171,6 +173,7 @@
     
 
         </div>
+        
       </div>
     </nav>
 
@@ -209,7 +212,7 @@
 
   <ul class="wy-breadcrumbs">
     
-      <li><a href="../../">首页</a> &raquo;</li>
+      <li><a href="../../" class="icon icon-home"></a> &raquo;</li>
         
           <li><a href="../">地图投影</a> &raquo;</li>
         
@@ -242,28 +245,31 @@
 <p><strong>-JI</strong>[<em>lon</em>/]<em>width</em>
 或
 <strong>-Ji</strong>[<em>lon</em>/]<em>scale</em></p>
-<p><em>lon</em> 是中心经线，默认值为地图区域的中心。</p>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>gmt coast -Rd -JI4.5i -Bxg30 -Byg15 -Dc -A10000 -Ggray -png GMT_sinusoidal
+<ul class="simple">
+<li><p><em>lon</em> 是中心经线 [默认值为地图区域的中心]</p></li>
+<li><p><em>width</em> 地图宽度</p></li>
+<li><p><em>scale</em> 地图比例尺，即每度在图上的长度或 1:<em>xxxx</em> （图上1厘米对应真实地球 <em>xxxx</em> 厘米）</p></li>
+</ul>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>gmt coast -Rd -JI12c -Bg -Dc -A10000 -Gcoral4 -Sazure3 -png GMT_sinusoidal
 </pre></div>
 </div>
 <div class="figure align-center" id="id1">
 <a class="reference internal image-reference" href="../../_images/Ji-gmtplot-0.png"><img alt="../../_images/Ji-gmtplot-0.png" src="../../_images/Ji-gmtplot-0.png" style="width: 85%;" /></a>
-<p class="caption"><span class="caption-text">使用正弦曲线投影绘制世界地图</span></p>
+<p class="caption"><span class="caption-text">使用正弦曲线投影绘制世界地图</span><a class="headerlink" href="#id1" title="永久链接至图片">¶</a></p>
 </div>
 <p>为了减少形状的畸变，1927年引入了间断正弦曲线投影，即用三个对称的段来覆盖全球。传统上，间断出现在160°W、20°W和60°E处。为了生成间断地图，必须调用 <a class="reference internal" href="../../module/coast/"><span class="doc">coast</span></a>
 三次以分别绘制每段地图并叠加起来。间断正弦曲线投影一般仅用于显示全球不连续数据分布。</p>
-<p>为了生成一个宽度为5.04英寸的间断世界地图，需要设置比例尺为5.04/360 = 0.014，并将每段图沿水平方向偏移其对应的宽度
-(140<span class="math notranslate nohighlight">\(\cdot\)</span>0.014 and 80<span class="math notranslate nohighlight">\(\cdot\)</span>0.014)。</p>
+<p>为了生成一个宽度为14.4 cm英寸的间断世界地图，需要设置比例尺为14.4/360 = 0.04，并将每段图沿水平方向偏移其对应的宽度（140 x 0.04 和 80 x 0.04）。</p>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>gmt begin GMT_sinus_int pdf,png
-gmt coast -R200/340/-90/90 -Ji0.014i -Bxg30 -Byg15 -A10000 -Dc -Gblack
-gmt coast -R-20/60/-90/90 -Ji0.014i -Bxg30 -Byg15 -Dc -A10000 -Gblack -X1.96i
-gmt coast -R60/200/-90/90 -Ji0.014i -Bxg30 -Byg15 -Dc -A10000 -Gblack -X1.12i
+gmt coast -R200/340/-90/90 -Ji0.04c -Bg -A10000 -Dc -Gdarkred -Sazure
+gmt coast -R-20/60/-90/90 -Bg -Dc -A10000 -Gdarkgreen -Sazure -X5.6c
+gmt coast -R60/200/-90/90 -Bg -Dc -A10000 -Gdarkblue -X3.2c
 gmt end
 </pre></div>
 </div>
 <div class="figure align-center" id="id2">
 <a class="reference internal image-reference" href="../../_images/Ji-gmtplot-1.png"><img alt="../../_images/Ji-gmtplot-1.png" src="../../_images/Ji-gmtplot-1.png" style="width: 85%;" /></a>
-<p class="caption"><span class="caption-text">使用间断正弦曲线投影绘制世界地图</span></p>
+<p class="caption"><span class="caption-text">使用间断正弦曲线投影绘制世界地图</span><a class="headerlink" href="#id2" title="永久链接至图片">¶</a></p>
 </div>
 </div>
 
@@ -310,14 +316,22 @@ gitalk.render('gitalk-container');
 
   <div role="contentinfo">
     <p>
-        &copy; Copyright 2014 - 2020, GMT中文社区.
+        
+        &copy; 版权所有 2014 - 2020, GMT中文社区.
       <span class="lastupdated">
-        最后更新于 2020年07月05日.
+        最后更新于 2020年10月15日.
       </span>
 
     </p>
   </div>
-  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+    
+    
+    
+    Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a
+    
+    <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a>
+    
+    provided by <a href="https://readthedocs.org">Read the Docs</a>. 
 
 </footer>
 
@@ -328,7 +342,6 @@ gitalk.render('gitalk-container');
 
   </div>
   
-
 
   <script type="text/javascript">
       jQuery(function () {

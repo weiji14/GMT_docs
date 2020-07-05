@@ -1,8 +1,7 @@
 
 
 <!DOCTYPE html>
-<!--[if IE 8]><html class="no-js lt-ie9" lang="zh-CN" > <![endif]-->
-<!--[if gt IE 8]><!--> <html class="no-js" lang="zh-CN" > <!--<![endif]-->
+<html class="writer-html5" lang="zh-CN" >
 <head>
   <meta charset="utf-8">
   
@@ -10,6 +9,11 @@
   
   <title>image &mdash; GMT中文手册</title>
   
+
+  
+  <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../../_static/custom.css" type="text/css" />
 
   
   
@@ -21,25 +25,22 @@
   
 
   
-  <script type="text/javascript" src="../../_static/js/modernizr.min.js"></script>
+  <!--[if lt IE 9]>
+    <script src="../../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
   
     
       <script type="text/javascript" id="documentation_options" data-url_root="../../" src="../../_static/documentation_options.js"></script>
-        <script type="text/javascript" src="../../_static/jquery.js"></script>
-        <script type="text/javascript" src="../../_static/underscore.js"></script>
-        <script type="text/javascript" src="../../_static/doctools.js"></script>
-        <script type="text/javascript" src="../../_static/language_data.js"></script>
-        <script type="text/javascript" src="../../_static/translations.js"></script>
-        <script async="async" type="text/javascript" src="https://cdn.bootcss.com/mathjax/2.7.7/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+        <script src="../../_static/jquery.js"></script>
+        <script src="../../_static/underscore.js"></script>
+        <script src="../../_static/doctools.js"></script>
+        <script src="../../_static/language_data.js"></script>
+        <script src="../../_static/translations.js"></script>
+        <script async="async" src="https://cdn.bootcss.com/mathjax/2.7.7/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
     
     <script type="text/javascript" src="../../_static/js/theme.js"></script>
 
     
-
-  
-  <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
-  <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
-  <link rel="stylesheet" href="../../_static/custom.css" type="text/css" />
     <link rel="index" title="索引" href="../../genindex/" />
     <link rel="search" title="搜索" href="../../search/" />
     <link rel="next" title="inset" href="../inset/" />
@@ -90,6 +91,7 @@
 
         </div>
 
+        
         <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
           
     
@@ -112,6 +114,7 @@
 <li class="toctree-l1"><a class="reference internal" href="../../proj/">地图投影</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../conf/">配置参数</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../dataset/">地学数据集</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../dataset-CN/">中国地学数据集</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../chinese/">中文支持</a></li>
 <li class="toctree-l1 current"><a class="reference internal" href="../">模块手册</a><ul class="current">
 <li class="toctree-l2"><a class="reference internal" href="../basemap/">basemap</a></li>
@@ -186,7 +189,6 @@
 <li class="toctree-l2"><a class="reference internal" href="../xyz2grd/">xyz2grd</a></li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="../../gallery/">绘图示例</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../api/">API</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../appendix/">附录</a></li>
 </ul>
@@ -214,6 +216,7 @@
     
 
         </div>
+        
       </div>
     </nav>
 
@@ -252,7 +255,7 @@
 
   <ul class="wy-breadcrumbs">
     
-      <li><a href="../../">首页</a> &raquo;</li>
+      <li><a href="../../" class="icon icon-home"></a> &raquo;</li>
         
           <li><a href="../">模块手册</a> &raquo;</li>
         
@@ -279,128 +282,124 @@
             
   <div class="section" id="image">
 <span id="index-0"></span><h1>image<a class="headerlink" href="#image" title="永久链接至标题">¶</a></h1>
-<table class="docutils field-list" frame="void" rules="none">
-<col class="field-name" />
-<col class="field-body" />
-<tbody valign="top">
-<tr class="field-odd field"><th class="field-name">官方文档:</th><td class="field-body"><a class="reference external" href="https://docs.generic-mapping-tools.org/6.0/image.html" title="(在 GMT v6.0)"><span>image</span></a></td>
-</tr>
-<tr class="field-even field"><th class="field-name">简介:</th><td class="field-body">将图片或EPS文件放在图上</td>
-</tr>
-</tbody>
-</table>
+<dl class="field-list simple">
+<dt class="field-odd">官方文档</dt>
+<dd class="field-odd"><p><a class="reference external" href="https://docs.generic-mapping-tools.org/6.1/image.html" title="(在 GMT v6.1)"><span>image</span></a></p>
+</dd>
+<dt class="field-even">简介</dt>
+<dd class="field-even"><p>将图片或EPS文件放在图上</p>
+</dd>
+</dl>
 <p><strong>image</strong> 模块可以读取EPS文件或任意一个光栅图片文件，并将其画在图上。</p>
 <p>该模块的几个主要用途：</p>
 <ul class="simple">
-<li>将多张图合并到一张图上</li>
-<li>将自己单位的 logo 放在 GMT 生成的图上</li>
-<li>将一般图片放在图上</li>
+<li><p>将多张图合并到一张图上</p></li>
+<li><p>将自己单位的 logo 放在 GMT 生成的图上</p></li>
+<li><p>将一般图片放在图上</p></li>
 </ul>
 <div class="section" id="id1">
 <h2>必须选项<a class="headerlink" href="#id1" title="永久链接至标题">¶</a></h2>
-<dl class="docutils">
-<dt><em>imagefile</em></dt>
-<dd><p class="first">EPS文件或其他光栅图片格式（GIF、PNG等）的文件</p>
-<ul class="last simple">
-<li>EPS文件必须包含合适的BoundingBox</li>
-<li>光栅文件的颜色深度可以是1、8、24、32位</li>
-<li>光栅文件是通过GDAL读入的，若安装GMT时未配置GDAL，则该命令只支持EPS文件</li>
+<dl class="simple">
+<dt><em>imagefile</em></dt><dd><p>EPS文件或其他光栅图片格式（GIF、PNG等）的文件</p>
+<ul class="simple">
+<li><p>EPS文件必须包含合适的BoundingBox</p></li>
+<li><p>光栅文件的颜色深度可以是1、8、24、32位</p></li>
+<li><p>光栅文件是通过GDAL读入的，若安装GMT时未配置GDAL，则该命令只支持EPS文件</p></li>
 </ul>
 </dd>
 </dl>
 </div>
 <div class="section" id="id2">
 <h2>可选选项<a class="headerlink" href="#id2" title="永久链接至标题">¶</a></h2>
-<dl class="docutils" id="d">
-<dt><strong>-D</strong>[<strong>g</strong>|<strong>j</strong>|<strong>J</strong>|<strong>n</strong>|<strong>x</strong>]<em>refpoint</em><strong>+r</strong><em>dpi</em><strong>+w</strong>[<strong>-</strong>]<em>width</em>[/<em>height</em>][<strong>+j</strong><em>justify</em>][<strong>+n</strong><em>nx</em>[/<em>ny</em>] ][<strong>+o</strong><em>dx</em>[/<em>dy</em>]]</dt>
-<dd><p class="first">指定图片的尺寸和位置</p>
+<dl id="d">
+<dt><strong>-D</strong>[<strong>g</strong>|<strong>j</strong>|<strong>J</strong>|<strong>n</strong>|<strong>x</strong>]<em>refpoint</em><strong>+r</strong><em>dpi</em><strong>+w</strong>[<strong>-</strong>]<em>width</em>[/<em>height</em>][<strong>+j</strong><em>justify</em>][<strong>+n</strong><em>nx</em>[/<em>ny</em>] ][<strong>+o</strong><em>dx</em>[/<em>dy</em>]]</dt><dd><p>指定图片的尺寸和位置</p>
 <p>简单介绍各子选项的含义，详情见 <a class="reference internal" href="../../basis/embellishment/"><span class="doc">绘制修饰物</span></a></p>
-<ul class="last simple">
-<li><strong>g</strong>|<strong>j</strong>|<strong>J</strong>|<strong>n</strong>|<strong>x</strong>]<em>refpoint</em>指定地图上的参考点<ul>
-<li><strong>g</strong> 指定某地图坐标位参考点</li>
-<li><strong>j</strong>|<strong>J</strong> 通过2字母的对齐方式码指定矩形区域的某个锚点作为参考点</li>
-<li><strong>n</strong> 在归一化坐标系（即0-1）中指定参考点</li>
-<li><strong>x</strong> 在绘图坐标系下指定参考点</li>
+<ul class="simple">
+<li><p><strong>g</strong>|<strong>j</strong>|<strong>J</strong>|<strong>n</strong>|<strong>x</strong>]<em>refpoint</em>指定地图上的参考点</p>
+<ul>
+<li><p><strong>g</strong> 指定某地图坐标位参考点</p></li>
+<li><p><strong>j</strong>|<strong>J</strong> 通过2字母的对齐方式码指定矩形区域的某个锚点作为参考点</p></li>
+<li><p><strong>n</strong> 在归一化坐标系（即0-1）中指定参考点</p></li>
+<li><p><strong>x</strong> 在绘图坐标系下指定参考点</p></li>
 </ul>
 </li>
-<li><strong>+j</strong><em>justify</em> 指定logo上的锚点（默认锚点为logo的左下角(BL)）</li>
-<li><strong>+o</strong><em>dx</em>/<em>dy</em> 在参考点的基础上设置图片的额外偏移量</li>
-<li><strong>+r</strong><em>dpi</em> 指定图片的DPI以间接指定图片的尺寸</li>
-<li><strong>+w</strong>[<strong>-</strong>]<em>width</em>[/<em>height</em>] 直接指定图片的尺寸。若未给定 <em>height</em>
-则按照 <em>width</em> 以及原图的横纵比进行缩放；若 <em>width</em> 为负值，则使用其绝对值作为宽度，并使用PS的图片操作符将图片插值到设备的分辨率</li>
-<li><strong>+n</strong><em>nx</em>[/<em>ny</em>] 使图片在水平方向重复 <em>nx</em> 次，垂直方向重复 <em>ny</em> 次。若省略 <em>ny</em> 则默认其与 <em>nx</em> 相等 [默认值为 <strong>1/1</strong>]</li>
+<li><p><strong>+j</strong><em>justify</em> 指定logo上的锚点（默认锚点为logo的左下角(BL)）</p></li>
+<li><p><strong>+o</strong><em>dx</em>/<em>dy</em> 在参考点的基础上设置图片的额外偏移量</p></li>
+<li><p><strong>+r</strong><em>dpi</em> 指定图片的DPI以间接指定图片的尺寸</p></li>
+<li><p><strong>+w</strong>[<strong>-</strong>]<em>width</em>[/<em>height</em>] 直接指定图片的尺寸。若未给定 <em>height</em>
+则按照 <em>width</em> 以及原图的横纵比进行缩放；若 <em>width</em> 为负值，则使用其绝对值作为宽度，并使用PS的图片操作符将图片插值到设备的分辨率</p></li>
+<li><p><strong>+n</strong><em>nx</em>[/<em>ny</em>] 使图片在水平方向重复 <em>nx</em> 次，垂直方向重复 <em>ny</em> 次。若省略 <em>ny</em> 则默认其与 <em>nx</em> 相等 [默认值为 <strong>1/1</strong>]</p></li>
 </ul>
 </dd>
 </dl>
-<dl class="docutils" id="f">
-<dt><strong>-F</strong>[<strong>+c</strong><em>clearances</em>][<strong>+g</strong><em>fill</em>][<strong>+i</strong>[[<em>gap</em>/]<em>pen</em>]][<strong>+p</strong>[<em>pen</em>]][<strong>+r</strong>[<em>radius</em>]][<strong>+s</strong>[[<em>dx</em>/<em>dy</em>/][<em>shade</em>]]]</dt>
-<dd><p class="first">控制图片的背景面板属性</p>
+<dl id="f">
+<dt><strong>-F</strong>[<strong>+c</strong><em>clearances</em>][<strong>+g</strong><em>fill</em>][<strong>+i</strong>[[<em>gap</em>/]<em>pen</em>]][<strong>+p</strong>[<em>pen</em>]][<strong>+r</strong>[<em>radius</em>]][<strong>+s</strong>[[<em>dx</em>/<em>dy</em>/][<em>shade</em>]]]</dt><dd><p>控制图片的背景面板属性</p>
 <p>若只使用 <strong>-F</strong> 而不使用其它子选项，则会在 GMT logo 周围绘制矩形边框。下面简单介绍各子选项，详细用法见 <a class="reference internal" href="../../basis/embellishment/"><span class="doc">绘制修饰物</span></a></p>
-<ul class="last simple">
-<li><strong>+p</strong><em>pen</em> 指定背景面板的画笔属性（默认画笔属性由 <a class="reference internal" href="../../conf/map/#term-map-frame-pen"><span class="xref std std-term">MAP_FRAME_PEN</span></a> 决定）</li>
-<li><strong>+g</strong><em>fill</em> 设置背景面板的填充色 [默认不填充]</li>
-<li><strong>+c</strong><em>clearances</em> 以设置不同方向的空白间隔</li>
-<li><strong>+i</strong><em>gap</em>/<em>pen</em> 在背景面板内部绘制一个额外的内边框。<em>gap</em> 为外边框与内边界之间的距离 [2p]，默认边界属性由 <a class="reference internal" href="../../conf/map/#term-map-default-pen"><span class="xref std std-term">MAP_DEFAULT_PEN</span></a> 控制</li>
-<li><strong>+r</strong><em>radius</em> 控制圆角矩形边框，圆角矩形半径 <em>radius</em> 默认为 6p</li>
-<li><strong>+s</strong> 绘制背景面板阴影区。<em>dx</em>/<em>dy</em> 是阴影区相对于背景面板的偏移量 [4p/4p]。
-<em>shade</em> 为阴影区的颜色 [gray50]。</li>
+<ul class="simple">
+<li><p><strong>+p</strong><em>pen</em> 指定背景面板的画笔属性（默认画笔属性由 <a class="reference internal" href="../../conf/map/#term-MAP_FRAME_PEN"><span class="xref std std-term">MAP_FRAME_PEN</span></a> 决定）</p></li>
+<li><p><strong>+g</strong><em>fill</em> 设置背景面板的填充色 [默认不填充]</p></li>
+<li><p><strong>+c</strong><em>clearances</em> 以设置不同方向的空白间隔</p></li>
+<li><p><strong>+i</strong><em>gap</em>/<em>pen</em> 在背景面板内部绘制一个额外的内边框。<em>gap</em> 为外边框与内边界之间的距离 [2p]，默认边界属性由 <a class="reference external" href="https://docs.generic-mapping-tools.org/6.1/gmt.conf.html#term-MAP_DEFAULT_PEN" title="(在 GMT v6.1)"><span class="xref std std-term">MAP_DEFAULT_PEN</span></a> 控制</p></li>
+<li><p><strong>+r</strong><em>radius</em> 控制圆角矩形边框，圆角矩形半径 <em>radius</em> 默认为 6p</p></li>
+<li><p><strong>+s</strong> 绘制背景面板阴影区。<em>dx</em>/<em>dy</em> 是阴影区相对于背景面板的偏移量 [4p/4p]。
+<em>shade</em> 为阴影区的颜色 [gray50]。</p></li>
 </ul>
 </dd>
 </dl>
-<dl class="docutils" id="g">
-<dt><strong>-G</strong>[<em>color</em>][<strong>+b</strong>|<strong>+f</strong>|<strong>+t</strong>]</dt>
-<dd><p class="first">修改特定像素值为其它颜色或透明（该选项可重复使用）</p>
-<p class="last">对于1-bit光栅图片，可以通过 <strong>+b</strong> 或 <strong>+f</strong> 指定背景色或前景色为 <em>color</em>。若不给 <em>color</em> 则表示设置背景色或前景色为透明色。对于其它图片而言，还可以使用 <strong>-G</strong><em>color</em><strong>+t</strong> 将颜色 <em>color</em> 设置为透明。</p>
+<dl id="g">
+<dt><strong>-G</strong>[<em>color</em>][<strong>+b</strong>|<strong>+f</strong>|<strong>+t</strong>]</dt><dd><p>修改特定像素值为其它颜色或透明（该选项可重复使用）</p>
+<p>对于1-bit光栅图片，可以通过 <strong>+b</strong> 或 <strong>+f</strong> 指定背景色或前景色为 <em>color</em>。若不给 <em>color</em> 则表示设置背景色或前景色为透明色。对于其它图片而言，还可以使用 <strong>-G</strong><em>color</em><strong>+t</strong> 将颜色 <em>color</em> 设置为透明。</p>
 </dd>
 </dl>
-<dl class="docutils" id="i">
-<dt><strong>-I</strong></dt>
-<dd>绘图前对1-bit图片进行反转，即黑色变白色，白色变黑色</dd>
+<dl class="simple" id="i">
+<dt><strong>-I</strong></dt><dd><p>绘图前对1-bit图片进行反转，即黑色变白色，白色变黑色</p>
+</dd>
 </dl>
-<dl class="docutils" id="j">
-<dt><strong>-J</strong><em>projection</em> <a class="reference internal" href="../../option/J/"><span class="doc">(more …)</span></a></dt>
-<dd>设置地图投影方式。</dd>
+<dl class="simple" id="j">
+<dt><strong>-J</strong><em>projection</em> <a class="reference internal" href="../../option/J/"><span class="doc">(more …)</span></a></dt><dd><p>设置地图投影方式</p>
+</dd>
 </dl>
-<dl class="docutils" id="m">
-<dt><strong>-M</strong></dt>
-<dd>使用YIQ变换将彩图转换成灰度图</dd>
+<dl class="simple" id="m">
+<dt><strong>-M</strong></dt><dd><p>使用YIQ变换将彩图转换成灰度图</p>
+</dd>
 </dl>
-<dl class="docutils" id="r">
-<dt><strong>-R</strong><em>xmin</em>/<em>xmax</em>/<em>ymin</em>/<em>ymax</em>[<strong>+r</strong>][<strong>+u</strong><em>unit</em>] <a class="reference internal" href="../../option/R/"><span class="doc">(more …)</span></a></dt>
-<dd>指定数据范围</dd>
+<dl class="simple" id="r">
+<dt><strong>-R</strong><em>xmin</em>/<em>xmax</em>/<em>ymin</em>/<em>ymax</em>[<strong>+r</strong>][<strong>+u</strong><em>unit</em>] <a class="reference internal" href="../../option/R/"><span class="doc">(more …)</span></a></dt><dd><p>指定数据范围</p>
+</dd>
 </dl>
 <blockquote>
-<div>对于三维透视图 <strong>-p</strong>，可以加上 /<em>zmin</em>/<em>zmax</em> 指定Z轴的范围。</div></blockquote>
-<dl class="docutils" id="u">
-<dt><strong>-U</strong>[<em>label</em>][<strong>+c</strong>][<strong>+j</strong><em>just</em>][<strong>+o</strong><em>dx</em>/<em>dy</em>] <a class="reference internal" href="../../option/U/"><span class="doc">(more …)</span></a></dt>
-<dd>在图上绘制GMT时间戳logo</dd>
+<div><p>对于三维透视图（<a class="reference internal" href="../../option/p/"><span class="doc">-p 选项</span></a>） ，可以加上 /<em>zmin</em>/<em>zmax</em> 指定Z轴的范围。</p>
+</div></blockquote>
+<dl class="simple" id="u">
+<dt><strong>-U</strong>[<em>label</em>][<strong>+c</strong>][<strong>+j</strong><em>just</em>][<strong>+o</strong><em>dx</em>/<em>dy</em>] <a class="reference internal" href="../../option/U/"><span class="doc">(more …)</span></a></dt><dd><p>在图上绘制GMT时间戳logo</p>
+</dd>
 </dl>
-<dl class="docutils" id="v">
-<dt><strong>-V</strong>[<em>level</em>] <a class="reference internal" href="../../option/V/"><span class="doc">(more …)</span></a></dt>
-<dd>设置 verbose 等级 [c]</dd>
+<dl class="simple" id="v">
+<dt><strong>-V</strong>[<em>level</em>] <a class="reference internal" href="../../option/V/"><span class="doc">(more …)</span></a></dt><dd><p>设置 verbose 等级 [<strong>w</strong>]</p>
+</dd>
 </dl>
 <p id="y"><span id="x"></span><strong>-X</strong>[<strong>a</strong>|<strong>c</strong>|<strong>f</strong>|<strong>r</strong>][<em>xshift</em>[<strong>u</strong>]]</p>
-<dl class="docutils">
-<dt><strong>-Y</strong>[<strong>a</strong>|<strong>c</strong>|<strong>f</strong>|<strong>r</strong>][<em>yshift</em>[<strong>u</strong>]] <a class="reference internal" href="../../option/XY/"><span class="doc">(more …)</span></a></dt>
-<dd>移动绘图原点</dd>
+<dl class="simple">
+<dt><strong>-Y</strong>[<strong>a</strong>|<strong>c</strong>|<strong>f</strong>|<strong>r</strong>][<em>yshift</em>[<strong>u</strong>]] <a class="reference internal" href="../../option/XY/"><span class="doc">(more …)</span></a></dt><dd><p>移动绘图原点</p>
+</dd>
 </dl>
-<dl class="docutils">
-<dt><strong>-p</strong>[<strong>x</strong>|<strong>y</strong>|<strong>z</strong>]<em>azim</em>[/<em>elev</em>[/<em>zlevel</em>]][<strong>+w</strong><em>lon0</em>/<em>lat0</em>[/<em>z0</em>]][<strong>+v</strong><em>x0</em>/<em>y0</em>] <a class="reference internal" href="../../option/perspective/"><span class="doc">(more …)</span></a></dt>
-<dd>设置3D透视视角</dd>
+<dl class="simple">
+<dt><strong>-p</strong>[<strong>x</strong>|<strong>y</strong>|<strong>z</strong>]<em>azim</em>[/<em>elev</em>[/<em>zlevel</em>]][<strong>+w</strong><em>lon0</em>/<em>lat0</em>[/<em>z0</em>]][<strong>+v</strong><em>x0</em>/<em>y0</em>] <a class="reference internal" href="../../option/p/"><span class="doc">(more …)</span></a></dt><dd><p>设置3D透视视角</p>
+</dd>
 </dl>
-<dl class="docutils">
-<dt><strong>-t</strong>[<em>transp</em>] <a class="reference internal" href="../../option/t/"><span class="doc">(more …)</span></a></dt>
-<dd>设置图层透明度（百分比）。取值范围为0（不透明）到100（全透明）</dd>
+<dl class="simple">
+<dt><strong>-t</strong>[<em>transp</em>] <a class="reference internal" href="../../option/t/"><span class="doc">(more …)</span></a></dt><dd><p>设置图层透明度（百分比）。取值范围为0（不透明）到100（全透明）</p>
+</dd>
 </dl>
-<dl class="docutils">
-<dt><strong>-^</strong> 或 <strong>-</strong></dt>
-<dd>显示简短的帮助信息，包括模块简介和基本语法信息（Windows下只能使用 <strong>-</strong>）</dd>
-<dt><strong>-+</strong> 或 <strong>+</strong></dt>
-<dd>显示帮助信息，包括模块简介、基本语法以及模块特有选项的说明</dd>
-<dt><strong>-?</strong> 或无参数</dt>
-<dd>显示完整的帮助信息，包括模块简介、基本语法以及所有选项的说明</dd>
-<dt><strong>--PAR</strong>=<em>value</em></dt>
-<dd>临时修改GMT参数的值，可重复多次使用。参数列表见 <a class="reference external" href="https://docs.generic-mapping-tools.org/6.0/gmt.conf.html" title="(在 GMT v6.0)"><span class="xref std std-doc">gmt.conf</span></a></dd>
+<dl class="simple">
+<dt><strong>-^</strong> 或 <strong>-</strong></dt><dd><p>显示简短的帮助信息，包括模块简介和基本语法信息（Windows下只能使用 <strong>-</strong>）</p>
+</dd>
+<dt><strong>-+</strong> 或 <strong>+</strong></dt><dd><p>显示帮助信息，包括模块简介、基本语法以及模块特有选项的说明</p>
+</dd>
+<dt><strong>-?</strong> 或无参数</dt><dd><p>显示完整的帮助信息，包括模块简介、基本语法以及所有选项的说明</p>
+</dd>
+<dt><strong>--PAR</strong>=<em>value</em></dt><dd><p>临时修改GMT参数的值，可重复多次使用。参数列表见 <a class="reference external" href="https://docs.generic-mapping-tools.org/6.1/gmt.conf.html" title="(在 GMT v6.1)"><span class="xref std std-doc">gmt.conf</span></a></p>
+</dd>
 </dl>
 </div>
 <div class="section" id="id3">
@@ -483,14 +482,22 @@ gitalk.render('gitalk-container');
 
   <div role="contentinfo">
     <p>
-        &copy; Copyright 2014 - 2020, GMT中文社区.
+        
+        &copy; 版权所有 2014 - 2020, GMT中文社区.
       <span class="lastupdated">
-        最后更新于 2020年07月05日.
+        最后更新于 2020年10月15日.
       </span>
 
     </p>
   </div>
-  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+    
+    
+    
+    Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a
+    
+    <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a>
+    
+    provided by <a href="https://readthedocs.org">Read the Docs</a>. 
 
 </footer>
 
@@ -501,7 +508,6 @@ gitalk.render('gitalk-container');
 
   </div>
   
-
 
   <script type="text/javascript">
       jQuery(function () {

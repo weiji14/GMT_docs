@@ -1,8 +1,7 @@
 
 
 <!DOCTYPE html>
-<!--[if IE 8]><html class="no-js lt-ie9" lang="zh-CN" > <![endif]-->
-<!--[if gt IE 8]><!--> <html class="no-js" lang="zh-CN" > <!--<![endif]-->
+<html class="writer-html5" lang="zh-CN" >
 <head>
   <meta charset="utf-8">
   
@@ -10,6 +9,11 @@
   
   <title>GADM: 全球行政区划数据库 &mdash; GMT中文手册</title>
   
+
+  
+  <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../../_static/custom.css" type="text/css" />
 
   
   
@@ -21,29 +25,26 @@
   
 
   
-  <script type="text/javascript" src="../../_static/js/modernizr.min.js"></script>
+  <!--[if lt IE 9]>
+    <script src="../../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
   
     
       <script type="text/javascript" id="documentation_options" data-url_root="../../" src="../../_static/documentation_options.js"></script>
-        <script type="text/javascript" src="../../_static/jquery.js"></script>
-        <script type="text/javascript" src="../../_static/underscore.js"></script>
-        <script type="text/javascript" src="../../_static/doctools.js"></script>
-        <script type="text/javascript" src="../../_static/language_data.js"></script>
-        <script type="text/javascript" src="../../_static/translations.js"></script>
-        <script async="async" type="text/javascript" src="https://cdn.bootcss.com/mathjax/2.7.7/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+        <script src="../../_static/jquery.js"></script>
+        <script src="../../_static/underscore.js"></script>
+        <script src="../../_static/doctools.js"></script>
+        <script src="../../_static/language_data.js"></script>
+        <script src="../../_static/translations.js"></script>
+        <script async="async" src="https://cdn.bootcss.com/mathjax/2.7.7/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
     
     <script type="text/javascript" src="../../_static/js/theme.js"></script>
 
     
-
-  
-  <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
-  <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
-  <link rel="stylesheet" href="../../_static/custom.css" type="text/css" />
     <link rel="index" title="索引" href="../../genindex/" />
     <link rel="search" title="搜索" href="../../search/" />
     <link rel="next" title="PB2002: 全球板块边界数据" href="../PB2002/" />
-    <link rel="prev" title="earth_relief: 全球地形起伏数据" href="../earth-relief/" /> 
+    <link rel="prev" title="earth_mask: 地球掩膜数据" href="../earth-mask/" /> 
 </head>
 
 <body class="wy-body-for-nav">
@@ -90,6 +91,7 @@
 
         </div>
 
+        
         <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
           
     
@@ -112,10 +114,13 @@
 <li class="toctree-l1"><a class="reference internal" href="../../proj/">地图投影</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../conf/">配置参数</a></li>
 <li class="toctree-l1 current"><a class="reference internal" href="../">地学数据集</a><ul class="current">
-<li class="toctree-l2"><a class="reference internal" href="../overview/">地学数据集</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../overview/">GMT数据概述</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../gshhg/">GSHHG: 全球高分辨率海岸线数据</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../dcw/">DCW: 世界数字图表</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../earth-relief/">earth_relief: 全球地形起伏数据</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../earth-age/">earth_age: 地球洋壳年龄数据</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../earth-images/">earth_day 和 earth_night: 地球昼夜卫星影像</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../earth-mask/">earth_mask: 地球掩膜数据</a></li>
 <li class="toctree-l2 current"><a class="current reference internal" href="#">GADM: 全球行政区划数据库</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="#id1">数据下载</a></li>
 <li class="toctree-l3"><a class="reference internal" href="#id2">数据格式及转换</a><ul>
@@ -136,9 +141,9 @@
 <li class="toctree-l2"><a class="reference internal" href="../PB2002/">PB2002: 全球板块边界数据</a></li>
 </ul>
 </li>
+<li class="toctree-l1"><a class="reference internal" href="../../dataset-CN/">中国地学数据集</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../chinese/">中文支持</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../module/">模块手册</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../gallery/">绘图示例</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../api/">API</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../appendix/">附录</a></li>
 </ul>
@@ -166,6 +171,7 @@
     
 
         </div>
+        
       </div>
     </nav>
 
@@ -204,7 +210,7 @@
 
   <ul class="wy-breadcrumbs">
     
-      <li><a href="../../">首页</a> &raquo;</li>
+      <li><a href="../../" class="icon icon-home"></a> &raquo;</li>
         
           <li><a href="../">地学数据集</a> &raquo;</li>
         
@@ -234,15 +240,15 @@
 <p><strong>GADM主页</strong>：<a class="reference external" href="https://gadm.org/">https://gadm.org/</a></p>
 <p>GADM，全称Database of Global Administrative Areas，是一个高精度的全球行政区划数据库。其包含了全球所有国家和地区的国界、省界、市界、区界等多个级别的行政区划边界数据。</p>
 <div class="admonition warning">
-<p class="first admonition-title">警告</p>
-<p class="last">GADM提供的中国国界数据不符合中国的领土主张，省界、市界、区界等数据也不一定是最新的版本。在正式刊物中发表使用此类数据的图件时需格外谨慎。</p>
+<p class="admonition-title">警告</p>
+<p>GADM提供的中国国界数据不符合中国的领土主张，省界、市界、区界等数据也不一定是最新的版本。在正式刊物中发表使用此类数据的图件时需格外谨慎。</p>
 </div>
 <div class="section" id="id1">
 <h2>数据下载<a class="headerlink" href="#id1" title="永久链接至标题">¶</a></h2>
 <p>GADM提供了两种下载方式：</p>
 <ol class="arabic simple">
-<li>下载全球所有国家和地区的所有数据 <a class="reference external" href="https://gadm.org/download_world.html">https://gadm.org/download_world.html</a></li>
-<li>按国家下载 <a class="reference external" href="https://gadm.org/download_country_v3.html">https://gadm.org/download_country_v3.html</a></li>
+<li><p>下载全球所有国家和地区的所有数据 <a class="reference external" href="https://gadm.org/download_world.html">https://gadm.org/download_world.html</a></p></li>
+<li><p>按国家下载 <a class="reference external" href="https://gadm.org/download_country_v3.html">https://gadm.org/download_country_v3.html</a></p></li>
 </ol>
 <p>由于全球数据量巨大，建议根据需要按照国家下载数据。</p>
 <p>需要说明的是，GADM 中对country 的定义为“any entity with <a class="reference external" href="http://zh.wikipedia.org/wiki/ISO_3166-1">an ISO country code</a>”。因而如果想要下载完整的中国数据，实际上需要下载China、Hong Kong、Macao和Taiwan
@@ -253,15 +259,17 @@
 <h2>数据格式及转换<a class="headerlink" href="#id2" title="永久链接至标题">¶</a></h2>
 <p>对于每个数据，GADM提供了5种不同的格式：</p>
 <ul class="simple">
-<li>Geopackage：可以被GDAL/OGR、ArcGIS、QGIS等软件读取</li>
-<li>Shapefile：可直接用于ArcGIS等软件</li>
-<li>KMZ：可直接在Google Earth中打开</li>
-<li>R (sp)：可直接用于R语言绘图</li>
-<li>R (sf)：可直接用于R语言绘图</li>
+<li><p>Geopackage：可以被GDAL/OGR、ArcGIS、QGIS等软件读取</p></li>
+<li><p>Shapefile：可直接用于ArcGIS等软件</p></li>
+<li><p>KMZ：可直接在Google Earth中打开</p></li>
+<li><p>R (sp)：可直接用于R语言绘图</p></li>
+<li><p>R (sf)：可直接用于R语言绘图</p></li>
 </ul>
 <p>如果在安装GMT时，GMT已经正确链接了GDAL库，则Shapefile格式的数据可以直接用于绘图。实际绘图时，可能只想要一小部分数据（比如某个省/州的界线），这种情况下，则需要将数据转换成纯文本文件，以方便从数据中提取出需要的部分。</p>
 <p>GDAL 的 <a class="reference external" href="https://www.gdal.org/ogr2ogr.html">ogr2ogr</a> 可以实现多种地理数据格式之间的互相转换。该软件的安装及介绍见
-<a class="reference external" href="https://gmt-china.org/blog/gdal-ogr/">GDAL/OGR: 地理空间数据格式转换神器</a>。本文使用的是 GDAL 2.4.2，其他版本的GDAL可能用法略有不同。</p>
+<a class="reference external" href="https://gmt-china.org/blog/gdal-ogr/">GDAL/OGR: 地理空间数据格式转换神器</a>。</p>
+<p>下面的示例使用了 GADM v3.6，在GDAL 2.4.2 和 3.1.2 下测试通过，其它版本的GDAL
+也许用法略有不同。</p>
 <div class="section" id="geopackagegmt">
 <h3>Geopackage转GMT<a class="headerlink" href="#geopackagegmt" title="永久链接至标题">¶</a></h3>
 <p>以United States数据为例，解压得到文件 <code class="file docutils literal notranslate"><span class="pre">gadm36_USA.gpkg</span></code>。使用如下命令查看文件的信息:</p>
@@ -299,9 +307,9 @@ ogr2ogr -f OGR_GMT gadm36_USA_2.gmt gadm36_USA_2.shp
 <p>提取得到的数据文件的文件名类似 <code class="file docutils literal notranslate"><span class="pre">gadm36_USA_0.gmt</span></code>，其中 <strong>USA</strong> 为国家/地区代码，<strong>0</strong> 表示行政等级。</p>
 <p>以美国数据为例，其数据包含了三个等级：</p>
 <ul class="simple">
-<li>0级：即国界</li>
-<li>1级：即州界</li>
-<li>2级：即县界</li>
+<li><p>0级：即国界</p></li>
+<li><p>1级：即州界</p></li>
+<li><p>2级：即县界</p></li>
 </ul>
 </div>
 <div class="section" id="id4">
@@ -327,7 +335,8 @@ ogr2ogr -f OGR_GMT gadm36_USA_2.gmt gadm36_USA_2.shp
 <div class="figure align-center">
 <a class="reference internal image-reference" href="../../_images/gadm_level1.png"><img alt="../../_images/gadm_level1.png" src="../../_images/gadm_level1.png" style="width: 80%;" /></a>
 </div>
-<p>此处绘制了美国本土48个州的州界数据。如果只想要绘制某个州，可以用文本编辑器打开USA的1级数据文件，在注释行中有清晰地标记出每段数据是哪个州的边界，因而可以很方便地提取出来。或利用如下命令将某个州界从Shapefile中提取出来:</p>
+<p>此处绘制了美国本土48个州的州界数据。如果只想要绘制某个州，可以用文本编辑器打开USA的1级数据文件，在注释行中有清晰地标记出每段数据是哪个州的边界，因而可以很方便地提取出来。</p>
+<p>也可以利用如下命令将某个州界从Shapefile中提取出来:</p>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>ogr2ogr -f OGR_GMT Alabama.gmt gadm36_USA_1.shp -where <span class="s2">&quot;NAME_1 = &#39;ALABAMA&#39;&quot;</span>
 </pre></div>
 </div>
@@ -384,7 +393,7 @@ gitalk.render('gitalk-container');
         <a href="../PB2002/" class="btn btn-neutral float-right" title="PB2002: 全球板块边界数据" accesskey="n" rel="next">下页 <span class="fa fa-arrow-circle-right"></span></a>
       
       
-        <a href="../earth-relief/" class="btn btn-neutral float-left" title="earth_relief: 全球地形起伏数据" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> 上页</a>
+        <a href="../earth-mask/" class="btn btn-neutral float-left" title="earth_mask: 地球掩膜数据" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> 上页</a>
       
     </div>
   
@@ -393,14 +402,22 @@ gitalk.render('gitalk-container');
 
   <div role="contentinfo">
     <p>
-        &copy; Copyright 2014 - 2020, GMT中文社区.
+        
+        &copy; 版权所有 2014 - 2020, GMT中文社区.
       <span class="lastupdated">
-        最后更新于 2020年07月05日.
+        最后更新于 2020年10月15日.
       </span>
 
     </p>
   </div>
-  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+    
+    
+    
+    Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a
+    
+    <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a>
+    
+    provided by <a href="https://readthedocs.org">Read the Docs</a>. 
 
 </footer>
 
@@ -411,7 +428,6 @@ gitalk.render('gitalk-container');
 
   </div>
   
-
 
   <script type="text/javascript">
       jQuery(function () {

@@ -1,8 +1,7 @@
 
 
 <!DOCTYPE html>
-<!--[if IE 8]><html class="no-js lt-ie9" lang="zh-CN" > <![endif]-->
-<!--[if gt IE 8]><!--> <html class="no-js" lang="zh-CN" > <!--<![endif]-->
+<html class="writer-html5" lang="zh-CN" >
 <head>
   <meta charset="utf-8">
   
@@ -10,6 +9,11 @@
   
   <title>makecpt &mdash; GMT中文手册</title>
   
+
+  
+  <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../../_static/custom.css" type="text/css" />
 
   
   
@@ -21,25 +25,22 @@
   
 
   
-  <script type="text/javascript" src="../../_static/js/modernizr.min.js"></script>
+  <!--[if lt IE 9]>
+    <script src="../../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
   
     
       <script type="text/javascript" id="documentation_options" data-url_root="../../" src="../../_static/documentation_options.js"></script>
-        <script type="text/javascript" src="../../_static/jquery.js"></script>
-        <script type="text/javascript" src="../../_static/underscore.js"></script>
-        <script type="text/javascript" src="../../_static/doctools.js"></script>
-        <script type="text/javascript" src="../../_static/language_data.js"></script>
-        <script type="text/javascript" src="../../_static/translations.js"></script>
-        <script async="async" type="text/javascript" src="https://cdn.bootcss.com/mathjax/2.7.7/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+        <script src="../../_static/jquery.js"></script>
+        <script src="../../_static/underscore.js"></script>
+        <script src="../../_static/doctools.js"></script>
+        <script src="../../_static/language_data.js"></script>
+        <script src="../../_static/translations.js"></script>
+        <script async="async" src="https://cdn.bootcss.com/mathjax/2.7.7/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
     
     <script type="text/javascript" src="../../_static/js/theme.js"></script>
 
     
-
-  
-  <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
-  <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
-  <link rel="stylesheet" href="../../_static/custom.css" type="text/css" />
     <link rel="index" title="索引" href="../../genindex/" />
     <link rel="search" title="搜索" href="../../search/" />
     <link rel="next" title="mapproject" href="../mapproject/" />
@@ -90,6 +91,7 @@
 
         </div>
 
+        
         <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
           
     
@@ -112,6 +114,7 @@
 <li class="toctree-l1"><a class="reference internal" href="../../proj/">地图投影</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../conf/">配置参数</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../dataset/">地学数据集</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../dataset-CN/">中国地学数据集</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../chinese/">中文支持</a></li>
 <li class="toctree-l1 current"><a class="reference internal" href="../">模块手册</a><ul class="current">
 <li class="toctree-l2"><a class="reference internal" href="../basemap/">basemap</a></li>
@@ -182,7 +185,6 @@
 <li class="toctree-l2"><a class="reference internal" href="../xyz2grd/">xyz2grd</a></li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="../../gallery/">绘图示例</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../api/">API</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../appendix/">附录</a></li>
 </ul>
@@ -210,6 +212,7 @@
     
 
         </div>
+        
       </div>
     </nav>
 
@@ -248,7 +251,7 @@
 
   <ul class="wy-breadcrumbs">
     
-      <li><a href="../../">首页</a> &raquo;</li>
+      <li><a href="../../" class="icon icon-home"></a> &raquo;</li>
         
           <li><a href="../">模块手册</a> &raquo;</li>
         
@@ -275,36 +278,32 @@
             
   <div class="section" id="makecpt">
 <span id="index-0"></span><h1>makecpt<a class="headerlink" href="#makecpt" title="永久链接至标题">¶</a></h1>
-<table class="docutils field-list" frame="void" rules="none">
-<col class="field-name" />
-<col class="field-body" />
-<tbody valign="top">
-<tr class="field-odd field"><th class="field-name">官方文档:</th><td class="field-body"><a class="reference external" href="https://docs.generic-mapping-tools.org/6.0/makecpt.html" title="(在 GMT v6.0)"><span>makecpt</span></a></td>
-</tr>
-<tr class="field-even field"><th class="field-name">简介:</th><td class="field-body">制作GMT CPT文件</td>
-</tr>
-</tbody>
-</table>
+<dl class="field-list simple">
+<dt class="field-odd">官方文档</dt>
+<dd class="field-odd"><p><a class="reference external" href="https://docs.generic-mapping-tools.org/6.1/makecpt.html" title="(在 GMT v6.1)"><span>makecpt</span></a></p>
+</dd>
+<dt class="field-even">简介</dt>
+<dd class="field-even"><p>制作GMT CPT文件</p>
+</dd>
+</dl>
 <div class="section" id="id1">
 <h2>选项<a class="headerlink" href="#id1" title="永久链接至标题">¶</a></h2>
-<dl class="docutils">
-<dt><code class="docutils literal notranslate"><span class="pre">-A[+]&lt;transparency&gt;</span></code></dt>
-<dd>为所有的颜色切片设置相同的透明度， <code class="docutils literal notranslate"><span class="pre">&lt;transparency&gt;</span></code> 的取值范围是0到100。加上 <code class="docutils literal notranslate"><span class="pre">+</span></code> 则该透明度同时应用于前景色、背景色和NaN颜色。</dd>
-<dt><code class="docutils literal notranslate"><span class="pre">-C&lt;cpt&gt;</span></code></dt>
-<dd><p class="first">指定要进行插值的主CPT文件，默认值是 <code class="docutils literal notranslate"><span class="pre">rainbow</span></code> 。</p>
-<p class="last">可以是GMT自带的CPT文件，也可以是用户自定义的CPT文件，也可以是通过 <code class="docutils literal notranslate"><span class="pre">-C&lt;color1&gt;,&lt;color2&gt;[,&lt;color3&gt;]</span></code> 语法指定一个线性连续变化的颜色列表。</p>
+<dl>
+<dt><code class="docutils literal notranslate"><span class="pre">-A[+]&lt;transparency&gt;</span></code></dt><dd><p>为所有的颜色切片设置相同的透明度， <code class="docutils literal notranslate"><span class="pre">&lt;transparency&gt;</span></code> 的取值范围是0到100。加上 <code class="docutils literal notranslate"><span class="pre">+</span></code> 则该透明度同时应用于前景色、背景色和NaN颜色。</p>
 </dd>
-<dt><code class="docutils literal notranslate"><span class="pre">-T&lt;z_min&gt;/&lt;z_max&gt;[/&lt;z_inc&gt;[+]]</span></code> 或 <code class="docutils literal notranslate"><span class="pre">-T&lt;ztable&gt;</span></code></dt>
-<dd><p class="first">定义要生成的CPT文件的Z值范围及Z值间隔</p>
-<ul class="last simple">
-<li>若使用了 <code class="docutils literal notranslate"><span class="pre">-C</span></code> 选项且 <code class="docutils literal notranslate"><span class="pre">&lt;z_inc&gt;</span></code> 未指定，则Z值间隔的数目与输入的主CPT文件相同。</li>
-<li>若 <code class="docutils literal notranslate"><span class="pre">&lt;z_inc&gt;</span></code> 后有 <code class="docutils literal notranslate"><span class="pre">+</span></code> ，则将 <code class="docutils literal notranslate"><span class="pre">&lt;z_inc&gt;</span></code> 解释为Z值间隔的数目而不是Z值间隔</li>
-<li>也可以指定文件 <code class="docutils literal notranslate"><span class="pre">&lt;ztable&gt;</span></code> ，其中每行一个Z值</li>
-<li>若不使用 <code class="docutils literal notranslate"><span class="pre">-T</span></code> 选项，则默认使用主CPT文件中的Z值范围</li>
+<dt><code class="docutils literal notranslate"><span class="pre">-C&lt;cpt&gt;</span></code></dt><dd><p>指定要进行插值的主CPT文件，默认值是 <code class="docutils literal notranslate"><span class="pre">rainbow</span></code> 。</p>
+<p>可以是GMT自带的CPT文件，也可以是用户自定义的CPT文件，也可以是通过 <code class="docutils literal notranslate"><span class="pre">-C&lt;color1&gt;,&lt;color2&gt;[,&lt;color3&gt;]</span></code> 语法指定一个线性连续变化的颜色列表。</p>
+</dd>
+<dt><code class="docutils literal notranslate"><span class="pre">-T&lt;z_min&gt;/&lt;z_max&gt;[/&lt;z_inc&gt;[+]]</span></code> 或 <code class="docutils literal notranslate"><span class="pre">-T&lt;ztable&gt;</span></code></dt><dd><p>定义要生成的CPT文件的Z值范围及Z值间隔</p>
+<ul class="simple">
+<li><p>若使用了 <code class="docutils literal notranslate"><span class="pre">-C</span></code> 选项且 <code class="docutils literal notranslate"><span class="pre">&lt;z_inc&gt;</span></code> 未指定，则Z值间隔的数目与输入的主CPT文件相同。</p></li>
+<li><p>若 <code class="docutils literal notranslate"><span class="pre">&lt;z_inc&gt;</span></code> 后有 <code class="docutils literal notranslate"><span class="pre">+</span></code> ，则将 <code class="docutils literal notranslate"><span class="pre">&lt;z_inc&gt;</span></code> 解释为Z值间隔的数目而不是Z值间隔</p></li>
+<li><p>也可以指定文件 <code class="docutils literal notranslate"><span class="pre">&lt;ztable&gt;</span></code> ，其中每行一个Z值</p></li>
+<li><p>若不使用 <code class="docutils literal notranslate"><span class="pre">-T</span></code> 选项，则默认使用主CPT文件中的Z值范围</p></li>
 </ul>
 </dd>
-<dt><code class="docutils literal notranslate"><span class="pre">-Z</span></code></dt>
-<dd>生成连续CPT文件。默认生成不连续CPT文件，即每个Z值切片内为同一颜色</dd>
+<dt><code class="docutils literal notranslate"><span class="pre">-Z</span></code></dt><dd><p>生成连续CPT文件。默认生成不连续CPT文件，即每个Z值切片内为同一颜色</p>
+</dd>
 </dl>
 </div>
 </div>
@@ -352,14 +351,22 @@ gitalk.render('gitalk-container');
 
   <div role="contentinfo">
     <p>
-        &copy; Copyright 2014 - 2020, GMT中文社区.
+        
+        &copy; 版权所有 2014 - 2020, GMT中文社区.
       <span class="lastupdated">
-        最后更新于 2020年07月05日.
+        最后更新于 2020年10月15日.
       </span>
 
     </p>
   </div>
-  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+    
+    
+    
+    Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a
+    
+    <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a>
+    
+    provided by <a href="https://readthedocs.org">Read the Docs</a>. 
 
 </footer>
 
@@ -370,7 +377,6 @@ gitalk.render('gitalk-container');
 
   </div>
   
-
 
   <script type="text/javascript">
       jQuery(function () {

@@ -1,8 +1,7 @@
 
 
 <!DOCTYPE html>
-<!--[if IE 8]><html class="no-js lt-ie9" lang="zh-CN" > <![endif]-->
-<!--[if gt IE 8]><!--> <html class="no-js" lang="zh-CN" > <!--<![endif]-->
+<html class="writer-html5" lang="zh-CN" >
 <head>
   <meta charset="utf-8">
   
@@ -10,6 +9,11 @@
   
   <title>grdsample &mdash; GMT中文手册</title>
   
+
+  
+  <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../../_static/custom.css" type="text/css" />
 
   
   
@@ -21,25 +25,22 @@
   
 
   
-  <script type="text/javascript" src="../../_static/js/modernizr.min.js"></script>
+  <!--[if lt IE 9]>
+    <script src="../../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
   
     
       <script type="text/javascript" id="documentation_options" data-url_root="../../" src="../../_static/documentation_options.js"></script>
-        <script type="text/javascript" src="../../_static/jquery.js"></script>
-        <script type="text/javascript" src="../../_static/underscore.js"></script>
-        <script type="text/javascript" src="../../_static/doctools.js"></script>
-        <script type="text/javascript" src="../../_static/language_data.js"></script>
-        <script type="text/javascript" src="../../_static/translations.js"></script>
-        <script async="async" type="text/javascript" src="https://cdn.bootcss.com/mathjax/2.7.7/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+        <script src="../../_static/jquery.js"></script>
+        <script src="../../_static/underscore.js"></script>
+        <script src="../../_static/doctools.js"></script>
+        <script src="../../_static/language_data.js"></script>
+        <script src="../../_static/translations.js"></script>
+        <script async="async" src="https://cdn.bootcss.com/mathjax/2.7.7/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
     
     <script type="text/javascript" src="../../_static/js/theme.js"></script>
 
     
-
-  
-  <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
-  <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
-  <link rel="stylesheet" href="../../_static/custom.css" type="text/css" />
     <link rel="index" title="索引" href="../../genindex/" />
     <link rel="search" title="搜索" href="../../search/" />
     <link rel="next" title="grdtrack" href="../grdtrack/" />
@@ -90,6 +91,7 @@
 
         </div>
 
+        
         <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
           
     
@@ -112,6 +114,7 @@
 <li class="toctree-l1"><a class="reference internal" href="../../proj/">地图投影</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../conf/">配置参数</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../dataset/">地学数据集</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../dataset-CN/">中国地学数据集</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../chinese/">中文支持</a></li>
 <li class="toctree-l1 current"><a class="reference internal" href="../">模块手册</a><ul class="current">
 <li class="toctree-l2"><a class="reference internal" href="../basemap/">basemap</a></li>
@@ -156,7 +159,8 @@
 <li class="toctree-l3"><a class="reference internal" href="#id3">可选选项</a></li>
 <li class="toctree-l3"><a class="reference internal" href="#id4">注意事项</a></li>
 <li class="toctree-l3"><a class="reference internal" href="#id5">示例</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#id6">相关模块</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id6">参考文献</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id7">相关模块</a></li>
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="../grdtrack/">grdtrack</a></li>
@@ -187,7 +191,6 @@
 <li class="toctree-l2"><a class="reference internal" href="../xyz2grd/">xyz2grd</a></li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="../../gallery/">绘图示例</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../api/">API</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../appendix/">附录</a></li>
 </ul>
@@ -215,6 +218,7 @@
     
 
         </div>
+        
       </div>
     </nav>
 
@@ -253,7 +257,7 @@
 
   <ul class="wy-breadcrumbs">
     
-      <li><a href="../../">首页</a> &raquo;</li>
+      <li><a href="../../" class="icon icon-home"></a> &raquo;</li>
         
           <li><a href="../">模块手册</a> &raquo;</li>
         
@@ -280,23 +284,21 @@
             
   <div class="section" id="grdsample">
 <span id="index-0"></span><h1>grdsample<a class="headerlink" href="#grdsample" title="永久链接至标题">¶</a></h1>
-<table class="docutils field-list" frame="void" rules="none">
-<col class="field-name" />
-<col class="field-body" />
-<tbody valign="top">
-<tr class="field-odd field"><th class="field-name">官方文档:</th><td class="field-body"><a class="reference external" href="https://docs.generic-mapping-tools.org/6.0/grdsample.html" title="(在 GMT v6.0)"><span>grdsample</span></a></td>
-</tr>
-<tr class="field-even field"><th class="field-name">简介:</th><td class="field-body">对网格文件做重采样</td>
-</tr>
-</tbody>
-</table>
+<dl class="field-list simple">
+<dt class="field-odd">官方文档</dt>
+<dd class="field-odd"><p><a class="reference external" href="https://docs.generic-mapping-tools.org/6.1/grdsample.html" title="(在 GMT v6.1)"><span>grdsample</span></a></p>
+</dd>
+<dt class="field-even">简介</dt>
+<dd class="field-even"><p>对网格文件做重采样</p>
+</dd>
+</dl>
 <p><strong>grdsample</strong> 模块读取一个网格文件，并对其做插值以生成一个新的网格文件。新旧网格文件可能的区别在于：</p>
 <ul class="simple">
-<li>不同的配准方式（<strong>-r</strong> 或 <strong>-T</strong>）</li>
-<li>不同的网格间隔或网格节点数（<strong>-I</strong>）</li>
-<li>不同的网格范围（<strong>-R</strong>）</li>
+<li><p>不同的配准方式（<strong>-r</strong> 或 <strong>-T</strong>）</p></li>
+<li><p>不同的网格间隔或网格节点数（<strong>-I</strong>）</p></li>
+<li><p>不同的网格范围（<strong>-R</strong>）</p></li>
 </ul>
-<p>网格文件插值方式有多重，默认使用 bicubic 插值，可以使用 <strong>-n</strong> 选项设置其它插值方式。该模块可以安全地将粗网格插值为细网格；反之，将细网格插值为粗网格时，则可能存在混叠效应，因而需要在插值前使用 <a class="reference external" href="https://docs.generic-mapping-tools.org/6.0/grdfft.html" title="(在 GMT v6.0)"><span class="xref std std-doc">grdfft</span></a> 或 <a class="reference external" href="https://docs.generic-mapping-tools.org/6.0/grdfilter.html" title="(在 GMT v6.0)"><span class="xref std std-doc">grdfilter</span></a>
+<p>网格文件插值方式有多种，默认使用 bicubic 插值，可以使用 <strong>-n</strong> 选项设置其它插值方式。该模块可以安全地将粗网格插值为细网格；反之，将细网格插值为粗网格时，则可能存在混叠效应，因而需要在插值前使用 <a class="reference external" href="https://docs.generic-mapping-tools.org/6.1/grdfft.html" title="(在 GMT v6.1)"><span class="xref std std-doc">grdfft</span></a> 或 <a class="reference external" href="https://docs.generic-mapping-tools.org/6.1/grdfilter.html" title="(在 GMT v6.1)"><span class="xref std std-doc">grdfilter</span></a>
 对网格文件做滤波。</p>
 <p>若省略 <strong>-R</strong> 选项，则输出网格与输入网格的区域范围相同；若省略 <strong>-I</strong> 选项，则输出网格间距与输入网格间距相同。<strong>-r</strong> 和 <strong>-T</strong> 均可用于修改网格配准方式。若省略这两个选项，则输出网格的配准方式与输入网格相同。</p>
 <div class="section" id="id1">
@@ -314,79 +316,80 @@
 </div>
 <div class="section" id="id2">
 <h2>必选选项<a class="headerlink" href="#id2" title="永久链接至标题">¶</a></h2>
-<dl class="docutils">
-<dt><em>in_grdfile</em></dt>
-<dd>要重采样的2D网格文件</dd>
+<dl class="simple">
+<dt><em>in_grdfile</em></dt><dd><p>要重采样的2D网格文件</p>
+</dd>
 </dl>
-<p id="g"><strong>-G</strong><em>out_grdfile</em></p>
+<dl class="simple" id="g">
+<dt><strong>-G</strong><em>out_grdfile</em></dt><dd><p>输出的网格文件名</p>
+</dd>
+</dl>
 </div>
 <div class="section" id="id3">
 <h2>可选选项<a class="headerlink" href="#id3" title="永久链接至标题">¶</a></h2>
-<dl class="docutils">
-<dt><strong>-I</strong><em>xinc</em>[<em>unit</em>][<strong>+e</strong>|<strong>n</strong>][/<em>yinc</em>[<em>unit</em>][<strong>+e</strong>|<strong>n</strong>]]</dt>
-<dd><p class="first">指定X和Y方向的网格间隔</p>
+<dl>
+<dt><strong>-I</strong><em>xinc</em>[<strong>+e</strong>|<strong>n</strong>][/<em>yinc</em>[<strong>+e</strong>|<strong>n</strong>]]</dt><dd><p>指定X和Y方向的网格间隔</p>
 <ul class="simple">
-<li><em>xinc</em> X方向的网格间隔</li>
-<li><em>yinc</em> Y方向的网格间隔</li>
-<li><em>unit</em> 网格间隔的单位。对于地理坐标系而言默认值为度，也可设置为其他距离单位</li>
-<li><strong>+e</strong> 微调X和Y方向范围的最大值，使得其是网格间隔的整数倍（默认会微调网格间隔以适应给定的数据范围）</li>
-<li><strong>+n</strong> 表明 <em>xinc</em> 和 <em>yinc</em> 不是网格间隔，而是X和Y方向的节点数。此时会根据节点数、网格区域范围以及网格配准方式重新计算网格间隔。</li>
+<li><p><em>xinc</em> 和 <em>yinc</em> 为 X 和 Y 方向的网格间隔。对于地理坐标，可以指定网格间隔单位 [默认单位为度]</p></li>
+<li><p><strong>+e</strong> 微调X和Y方向范围的最大值，使得其是网格间隔的整数倍（默认会微调网格间隔以适应给定的数据范围）</p></li>
+<li><p><strong>+n</strong> 表明 <em>xinc</em> 和 <em>yinc</em> 不是网格间隔，而是X和Y方向的节点数。此时会根据节点数、网格区域范围以及网格配准方式重新计算网格间隔。</p></li>
 </ul>
 <p>注意：</p>
-<ul class="last simple">
-<li>若 <em>yinc</em> 设置为0，则表示其与 <em>xinc</em> 相同</li>
-<li>若使用 <strong>-R</strong><em>grdfile</em> 选项，则网格间隔和配准方式已经根据网格文件自动初始化，此时依然可以使用 <strong>-I</strong> 和 <strong>-r</strong> 覆盖相应的值</li>
+<ul class="simple">
+<li><p>若 <em>yinc</em> 设置为0，则表示其与 <em>xinc</em> 相同</p></li>
+<li><p>若使用 <strong>-R</strong><em>grdfile</em> 选项，则网格间隔和配准方式已经根据网格文件自动初始化，此时依然可以使用 <strong>-I</strong> 和 <strong>-r</strong> 覆盖相应的值</p></li>
 </ul>
 </dd>
 </dl>
-<dl class="docutils" id="r">
-<dt><strong>-R</strong><em>xmin</em>/<em>xmax</em>/<em>ymin</em>/<em>ymax</em>[<strong>+r</strong>][<strong>+u</strong><em>unit</em>] <a class="reference internal" href="../../option/R/"><span class="doc">(more …)</span></a></dt>
-<dd>指定数据范围</dd>
+<dl class="simple" id="r">
+<dt><strong>-R</strong><em>xmin</em>/<em>xmax</em>/<em>ymin</em>/<em>ymax</em>[<strong>+r</strong>][<strong>+u</strong><em>unit</em>] <a class="reference internal" href="../../option/R/"><span class="doc">(more …)</span></a></dt><dd><p>指定数据范围</p>
+</dd>
 </dl>
 <blockquote>
-<div>若只使用 <strong>-R</strong> 选项，则等效于使用 <strong>grdcut</strong> 或 <strong>grdedit -S</strong>。</div></blockquote>
-<dl class="docutils" id="t">
-<dt><strong>-T</strong></dt>
-<dd>交换网格文件的配准方式。即若输入是网格线配准，则输出为像素点配准；若输入是像素点配准，则输出为网格线配准。</dd>
+<div><p>若只使用 <strong>-R</strong> 选项，则等效于使用 <a class="reference internal" href="../grdcut/"><span class="doc">grdcut</span></a> 或 <a class="reference internal" href="../grdedit/"><span class="doc">grdedit</span></a> <strong>-S</strong>。</p>
+</div></blockquote>
+<dl class="simple" id="t">
+<dt><strong>-T</strong></dt><dd><p>交换网格文件的配准方式。即若输入是网格线配准，则输出为像素点配准；若输入是像素点配准，则输出为网格线配准。注意，转换配准方式会导致高频信息的丢失，详情见 <a class="reference internal" href="../../grid/registration/"><span class="doc">网格配准</span></a>。</p>
+</dd>
 </dl>
-<dl class="docutils" id="v">
-<dt><strong>-V</strong>[<em>level</em>] <a class="reference internal" href="../../option/V/"><span class="doc">(more …)</span></a></dt>
-<dd>设置 verbose 等级 [c]</dd>
+<dl class="simple" id="v">
+<dt><strong>-V</strong>[<em>level</em>] <a class="reference internal" href="../../option/V/"><span class="doc">(more …)</span></a></dt><dd><p>设置 verbose 等级 [<strong>w</strong>]</p>
+</dd>
 </dl>
-<dl class="docutils">
-<dt><strong>-f</strong>[<strong>i</strong>|<strong>o</strong>]<em>colinfo</em> <a class="reference internal" href="../../option/f/"><span class="doc">(more …)</span></a></dt>
-<dd>指定输入或输出列的数据类型</dd>
+<dl class="simple">
+<dt><strong>-f</strong>[<strong>i</strong>|<strong>o</strong>]<em>colinfo</em> <a class="reference internal" href="../../option/f/"><span class="doc">(more …)</span></a></dt><dd><p>指定输入或输出列的数据类型</p>
+</dd>
 </dl>
-<dl class="docutils">
-<dt><strong>-n</strong>[<strong>b</strong>|<strong>c</strong>|<strong>l</strong>|<strong>n</strong>][<strong>+a</strong>][<strong>+b</strong><em>BC</em>][<strong>+c</strong>][<strong>+t</strong><em>threshold</em>] <a class="reference internal" href="../../option/n/"><span class="doc">(more …)</span></a></dt>
-<dd>设置网格文件的插值方式</dd>
+<dl class="simple">
+<dt><strong>-n</strong>[<strong>b</strong>|<strong>c</strong>|<strong>l</strong>|<strong>n</strong>][<strong>+a</strong>][<strong>+b</strong><em>BC</em>][<strong>+c</strong>][<strong>+t</strong><em>threshold</em>] <a class="reference internal" href="../../option/n/"><span class="doc">(more …)</span></a></dt><dd><p>设置网格文件的插值方式</p>
+</dd>
 </dl>
-<dl class="docutils">
-<dt><strong>-r</strong>[<strong>g</strong>|<strong>p</strong>] <a class="reference internal" href="../../option/nodereg/"><span class="doc">(more …)</span></a></dt>
-<dd>设置网格配置方式 [默认为网格线配准]</dd>
+<dl class="simple">
+<dt><strong>-r</strong>[<strong>g</strong>|<strong>p</strong>] <a class="reference internal" href="../../option/nodereg/"><span class="doc">(more …)</span></a></dt><dd><p>设置网格配置方式 [默认为网格线配准]</p>
+</dd>
 </dl>
-<dl class="docutils">
-<dt><strong>-x</strong>[[-]<em>n</em>] <a class="reference internal" href="../../option/x/"><span class="doc">(more …)</span></a></dt>
-<dd>限制多核算法中能使用的核数（需要GMT开启OpenMP支持）</dd>
+<dl class="simple">
+<dt><strong>-x</strong>[[-]<em>n</em>] <a class="reference internal" href="../../option/x/"><span class="doc">(more …)</span></a></dt><dd><p>限制多核算法中能使用的核数（需要GMT开启OpenMP支持）</p>
+</dd>
 </dl>
-<dl class="docutils">
-<dt><strong>-^</strong> 或 <strong>-</strong></dt>
-<dd>显示简短的帮助信息，包括模块简介和基本语法信息（Windows下只能使用 <strong>-</strong>）</dd>
-<dt><strong>-+</strong> 或 <strong>+</strong></dt>
-<dd>显示帮助信息，包括模块简介、基本语法以及模块特有选项的说明</dd>
-<dt><strong>-?</strong> 或无参数</dt>
-<dd>显示完整的帮助信息，包括模块简介、基本语法以及所有选项的说明</dd>
-<dt><strong>--PAR</strong>=<em>value</em></dt>
-<dd>临时修改GMT参数的值，可重复多次使用。参数列表见 <a class="reference external" href="https://docs.generic-mapping-tools.org/6.0/gmt.conf.html" title="(在 GMT v6.0)"><span class="xref std std-doc">gmt.conf</span></a></dd>
+<dl class="simple">
+<dt><strong>-^</strong> 或 <strong>-</strong></dt><dd><p>显示简短的帮助信息，包括模块简介和基本语法信息（Windows下只能使用 <strong>-</strong>）</p>
+</dd>
+<dt><strong>-+</strong> 或 <strong>+</strong></dt><dd><p>显示帮助信息，包括模块简介、基本语法以及模块特有选项的说明</p>
+</dd>
+<dt><strong>-?</strong> 或无参数</dt><dd><p>显示完整的帮助信息，包括模块简介、基本语法以及所有选项的说明</p>
+</dd>
+<dt><strong>--PAR</strong>=<em>value</em></dt><dd><p>临时修改GMT参数的值，可重复多次使用。参数列表见 <a class="reference external" href="https://docs.generic-mapping-tools.org/6.1/gmt.conf.html" title="(在 GMT v6.1)"><span class="xref std std-doc">gmt.conf</span></a></p>
+</dd>
 </dl>
 </div>
 <div class="section" id="id4">
 <h2>注意事项<a class="headerlink" href="#id4" title="永久链接至标题">¶</a></h2>
-<ol class="arabic simple">
-<li>网格插值过程中可能会导致插值后的值出现失真或意外值。例如，使用样条插值可能会导致插值后的数据的最大最小值超过原始数据的最大最小值。若这一结果不可接受，可以通过给 <strong>-n</strong> 选项加上 <strong>+c</strong> 以对超过原始数据最值的部分做裁剪。</li>
-<li>若某个插值点不位于输入数据的网格节点上，则插值时若该节点周围的节点值为NaN，则该节点的值也会被插值为NaN。默认的bicubic插值算法会生成连续的一阶导数但需要周围4x4个节点。bilinear插值算法只需要周围的2x2个节点，但其只是零阶连续。若光滑性很重要，则使用bicubic算法；若需要尽量避免NaN值的传播，则使用bilinear算法。</li>
-<li>除了插值之外，还可以使用 <a class="reference internal" href="../grd2xyz/"><span class="doc">grd2xyz</span></a> 将网格数据转换为表数据，然后将输出交给 <a class="reference external" href="https://docs.generic-mapping-tools.org/6.0/surface.html" title="(在 GMT v6.0)"><span class="xref std std-doc">surface</span></a> 或 <a class="reference external" href="https://docs.generic-mapping-tools.org/6.0/greenspline.html" title="(在 GMT v6.0)"><span class="xref std std-doc">greenspline</span></a> 重新网格化。</li>
-</ol>
+<ul class="simple">
+<li><p>网格插值过程中可能会导致插值后的值出现失真或意外值。例如，使用样条插值可能会导致插值后的数据的最大最小值超过原始数据的最大最小值。若这一结果不可接受，可以通过给 <strong>-n</strong> 选项加上 <strong>+c</strong> 以对超过原始数据最值的部分做裁剪。</p></li>
+<li><p>若某个插值点不在输入数据的网格节点上，则插值时若该节点周围的节点值为NaN，则该节点的值也会被插值为NaN。默认的bicubic插值算法会生成连续的一阶导数但需要周围4x4个节点。bilinear插值算法只需要周围的2x2个节点，但其只是零阶连续。若光滑性很重要，则使用bicubic算法；若需要尽量避免NaN值的传播，则使用bilinear算法。</p></li>
+<li><p>除了插值之外，还可以使用 <a class="reference internal" href="../grd2xyz/"><span class="doc">grd2xyz</span></a> 将网格数据转换为表数据，然后将输出交给 <a class="reference external" href="https://docs.generic-mapping-tools.org/6.1/surface.html" title="(在 GMT v6.1)"><span class="xref std std-doc">surface</span></a> 或 <a class="reference external" href="https://docs.generic-mapping-tools.org/6.1/greenspline.html" title="(在 GMT v6.1)"><span class="xref std std-doc">greenspline</span></a> 重新网格化。</p></li>
+</ul>
 </div>
 <div class="section" id="id5">
 <h2>示例<a class="headerlink" href="#id5" title="永久链接至标题">¶</a></h2>
@@ -400,12 +403,17 @@
 </div>
 </div>
 <div class="section" id="id6">
-<h2>相关模块<a class="headerlink" href="#id6" title="永久链接至标题">¶</a></h2>
+<h2>参考文献<a class="headerlink" href="#id6" title="永久链接至标题">¶</a></h2>
+<p>Marks, K. M., and W. H. F. Smith, 2007, Some remarks on resolving seamounts in satellite gravity,
+<em>Geophys. Res. Lett., 34 (L03307)</em>, <a class="reference external" href="http://doi.org/10.1029/2006GL028857">http://doi.org/10.1029/2006GL028857</a>.</p>
+</div>
+<div class="section" id="id7">
+<h2>相关模块<a class="headerlink" href="#id7" title="永久链接至标题">¶</a></h2>
 <p><a class="reference internal" href="../grdedit/"><span class="doc">grdedit</span></a>,
-<a class="reference external" href="https://docs.generic-mapping-tools.org/6.0/grdfft.html" title="(在 GMT v6.0)"><span class="xref std std-doc">grdfft</span></a>,
-<a class="reference external" href="https://docs.generic-mapping-tools.org/6.0/grdfilter.html" title="(在 GMT v6.0)"><span class="xref std std-doc">grdfilter</span></a>,
-<a class="reference external" href="https://docs.generic-mapping-tools.org/6.0/greenspline.html" title="(在 GMT v6.0)"><span class="xref std std-doc">greenspline</span></a>,
-<a class="reference external" href="https://docs.generic-mapping-tools.org/6.0/surface.html" title="(在 GMT v6.0)"><span class="xref std std-doc">surface</span></a></p>
+<a class="reference external" href="https://docs.generic-mapping-tools.org/6.1/grdfft.html" title="(在 GMT v6.1)"><span class="xref std std-doc">grdfft</span></a>,
+<a class="reference external" href="https://docs.generic-mapping-tools.org/6.1/grdfilter.html" title="(在 GMT v6.1)"><span class="xref std std-doc">grdfilter</span></a>,
+<a class="reference external" href="https://docs.generic-mapping-tools.org/6.1/greenspline.html" title="(在 GMT v6.1)"><span class="xref std std-doc">greenspline</span></a>,
+<a class="reference external" href="https://docs.generic-mapping-tools.org/6.1/surface.html" title="(在 GMT v6.1)"><span class="xref std std-doc">surface</span></a></p>
 </div>
 </div>
 
@@ -452,14 +460,22 @@ gitalk.render('gitalk-container');
 
   <div role="contentinfo">
     <p>
-        &copy; Copyright 2014 - 2020, GMT中文社区.
+        
+        &copy; 版权所有 2014 - 2020, GMT中文社区.
       <span class="lastupdated">
-        最后更新于 2020年07月05日.
+        最后更新于 2020年10月15日.
       </span>
 
     </p>
   </div>
-  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+    
+    
+    
+    Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a
+    
+    <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a>
+    
+    provided by <a href="https://readthedocs.org">Read the Docs</a>. 
 
 </footer>
 
@@ -470,7 +486,6 @@ gitalk.render('gitalk-container');
 
   </div>
   
-
 
   <script type="text/javascript">
       jQuery(function () {

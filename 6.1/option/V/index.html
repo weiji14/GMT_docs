@@ -1,8 +1,7 @@
 
 
 <!DOCTYPE html>
-<!--[if IE 8]><html class="no-js lt-ie9" lang="zh-CN" > <![endif]-->
-<!--[if gt IE 8]><!--> <html class="no-js" lang="zh-CN" > <!--<![endif]-->
+<html class="writer-html5" lang="zh-CN" >
 <head>
   <meta charset="utf-8">
   
@@ -10,6 +9,11 @@
   
   <title>-V 选项 &mdash; GMT中文手册</title>
   
+
+  
+  <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../../_static/custom.css" type="text/css" />
 
   
   
@@ -21,25 +25,22 @@
   
 
   
-  <script type="text/javascript" src="../../_static/js/modernizr.min.js"></script>
+  <!--[if lt IE 9]>
+    <script src="../../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
   
     
       <script type="text/javascript" id="documentation_options" data-url_root="../../" src="../../_static/documentation_options.js"></script>
-        <script type="text/javascript" src="../../_static/jquery.js"></script>
-        <script type="text/javascript" src="../../_static/underscore.js"></script>
-        <script type="text/javascript" src="../../_static/doctools.js"></script>
-        <script type="text/javascript" src="../../_static/language_data.js"></script>
-        <script type="text/javascript" src="../../_static/translations.js"></script>
-        <script async="async" type="text/javascript" src="https://cdn.bootcss.com/mathjax/2.7.7/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+        <script src="../../_static/jquery.js"></script>
+        <script src="../../_static/underscore.js"></script>
+        <script src="../../_static/doctools.js"></script>
+        <script src="../../_static/language_data.js"></script>
+        <script src="../../_static/translations.js"></script>
+        <script async="async" src="https://cdn.bootcss.com/mathjax/2.7.7/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
     
     <script type="text/javascript" src="../../_static/js/theme.js"></script>
 
     
-
-  
-  <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
-  <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
-  <link rel="stylesheet" href="../../_static/custom.css" type="text/css" />
     <link rel="index" title="索引" href="../../genindex/" />
     <link rel="search" title="搜索" href="../../search/" />
     <link rel="next" title="-X 和 -Y 选项" href="../XY/" />
@@ -90,6 +91,7 @@
 
         </div>
 
+        
         <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
           
     
@@ -127,7 +129,7 @@
 <li class="toctree-l2"><a class="reference internal" href="../distcal/">-j 选项</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../l/">-l 选项</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../n/">-n 选项</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../perspective/">-p 选项</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../p/">-p 选项</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../q/">-q 选项</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../nodereg/">-r 选项</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../s/">-s 选项</a></li>
@@ -139,9 +141,9 @@
 <li class="toctree-l1"><a class="reference internal" href="../../proj/">地图投影</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../conf/">配置参数</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../dataset/">地学数据集</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../dataset-CN/">中国地学数据集</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../chinese/">中文支持</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../module/">模块手册</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../gallery/">绘图示例</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../api/">API</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../appendix/">附录</a></li>
 </ul>
@@ -169,6 +171,7 @@
     
 
         </div>
+        
       </div>
     </nav>
 
@@ -207,7 +210,7 @@
 
   <ul class="wy-breadcrumbs">
     
-      <li><a href="../../">首页</a> &raquo;</li>
+      <li><a href="../../" class="icon icon-home"></a> &raquo;</li>
         
           <li><a href="../">标准选项</a> &raquo;</li>
         
@@ -234,18 +237,18 @@
             
   <div class="section" id="v">
 <h1>-V 选项<a class="headerlink" href="#v" title="永久链接至标题">¶</a></h1>
-<p><strong>-V</strong> 选项可以控制命令的verbose等级以输出不同等级的命令执行信息到标准错误流，比如正在读取的文件名、读入的数据行数等。显示这些信息可以帮助用户判断命令是否执行正确。</p>
+<p><strong>-V</strong> 选项控制命令的verbose等级，以输出不同等级的命令执行信息，比如正在读取的文件名、读入的数据行数等。输出这些信息可以帮助用户判断命令是否执行正确。</p>
 <p>verbose 共有7个等级，等级越高输出的信息越多，高等级会在低等级的基础上输出更多的信息。7个等级从低到高分别为：</p>
 <ul class="simple">
-<li><strong>-Vq</strong>：<strong>q</strong>uiet 模式，不输出任何错误和警告信息</li>
-<li><strong>-Ve</strong>：<strong>e</strong>rror 模式，仅输出错误信息。</li>
-<li><strong>-Vw</strong>：<strong>w</strong>arning 模式，输出警告信息。GMT默认使用该模式</li>
-<li><strong>-Vt</strong>：<strong>t</strong>iming 模式，会输出某些计算量极大的算法的运行耗时</li>
-<li><strong>-Vi</strong>：<strong>i</strong>nformation 模式，输出GMT运行信息，与只使用 <strong>-V</strong> 等效</li>
-<li><strong>-Vc</strong>：<strong>c</strong>ompatibility 模式，额外输出数据兼容性相关的警告信息。仅当 <a class="reference internal" href="../../conf/misc/#term-gmt-compatibility"><span class="xref std std-term">GMT_COMPATIBILITY</span></a> 值为 <strong>4</strong> 即兼容模式时才默认为该模式</li>
-<li><strong>-Vd</strong>：<strong>d</strong>ebug 模式，会输出大量调试信息</li>
+<li><p><strong>-Vq</strong>：<strong>q</strong>uiet 模式，不输出任何错误和警告信息</p></li>
+<li><p><strong>-Ve</strong>：<strong>e</strong>rror 模式，仅输出错误信息</p></li>
+<li><p><strong>-Vw</strong>：<strong>w</strong>arning 模式，输出警告信息。GMT默认使用该模式</p></li>
+<li><p><strong>-Vt</strong>：<strong>t</strong>iming 模式，对于某些计算量极大的算法会输出其运行耗时</p></li>
+<li><p><strong>-Vi</strong>：<strong>i</strong>nformation 模式，输出GMT运行信息，与只使用 <strong>-V</strong> 等效</p></li>
+<li><p><strong>-Vc</strong>：<strong>c</strong>ompatibility 模式，输出GMT兼容性相关的警告信息。仅当 <a class="reference internal" href="../../conf/misc/#term-GMT_COMPATIBILITY"><span class="xref std std-term">GMT_COMPATIBILITY</span></a> 值为 <strong>4</strong> （即兼容模式）时才有效</p></li>
+<li><p><strong>-Vd</strong>：<strong>d</strong>ebug 模式，会输出大量调试信息</p></li>
 </ul>
-<p><strong>-V</strong> 选项仅对当前命令有效，若希望所有命令都具有某个 verbose 级别，可以通过设置 GMT 参数 <a class="reference internal" href="../../conf/misc/#term-gmt-verbose"><span class="xref std std-term">GMT_VERBOSE</span></a> 的值来实现。</p>
+<p><strong>-V</strong> 选项仅对当前命令有效，若希望所有命令都具有某个 verbose 级别，可以通过修改 GMT 参数 <a class="reference internal" href="../../conf/misc/#term-GMT_VERBOSE"><span class="xref std std-term">GMT_VERBOSE</span></a> 的值来实现。</p>
 </div>
 
 
@@ -291,14 +294,22 @@ gitalk.render('gitalk-container');
 
   <div role="contentinfo">
     <p>
-        &copy; Copyright 2014 - 2020, GMT中文社区.
+        
+        &copy; 版权所有 2014 - 2020, GMT中文社区.
       <span class="lastupdated">
-        最后更新于 2020年07月05日.
+        最后更新于 2020年10月15日.
       </span>
 
     </p>
   </div>
-  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+    
+    
+    
+    Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a
+    
+    <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a>
+    
+    provided by <a href="https://readthedocs.org">Read the Docs</a>. 
 
 </footer>
 
@@ -309,7 +320,6 @@ gitalk.render('gitalk-container');
 
   </div>
   
-
 
   <script type="text/javascript">
       jQuery(function () {

@@ -1,8 +1,7 @@
 
 
 <!DOCTYPE html>
-<!--[if IE 8]><html class="no-js lt-ie9" lang="zh-CN" > <![endif]-->
-<!--[if gt IE 8]><!--> <html class="no-js" lang="zh-CN" > <!--<![endif]-->
+<html class="writer-html5" lang="zh-CN" >
 <head>
   <meta charset="utf-8">
   
@@ -10,6 +9,11 @@
   
   <title>绘制地形起伏 &mdash; GMT中文手册</title>
   
+
+  
+  <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../../_static/custom.css" type="text/css" />
 
   
   
@@ -21,25 +25,22 @@
   
 
   
-  <script type="text/javascript" src="../../_static/js/modernizr.min.js"></script>
+  <!--[if lt IE 9]>
+    <script src="../../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
   
     
       <script type="text/javascript" id="documentation_options" data-url_root="../../" src="../../_static/documentation_options.js"></script>
-        <script type="text/javascript" src="../../_static/jquery.js"></script>
-        <script type="text/javascript" src="../../_static/underscore.js"></script>
-        <script type="text/javascript" src="../../_static/doctools.js"></script>
-        <script type="text/javascript" src="../../_static/language_data.js"></script>
-        <script type="text/javascript" src="../../_static/translations.js"></script>
-        <script async="async" type="text/javascript" src="https://cdn.bootcss.com/mathjax/2.7.7/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+        <script src="../../_static/jquery.js"></script>
+        <script src="../../_static/underscore.js"></script>
+        <script src="../../_static/doctools.js"></script>
+        <script src="../../_static/language_data.js"></script>
+        <script src="../../_static/translations.js"></script>
+        <script async="async" src="https://cdn.bootcss.com/mathjax/2.7.7/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
     
     <script type="text/javascript" src="../../_static/js/theme.js"></script>
 
     
-
-  
-  <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
-  <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
-  <link rel="stylesheet" href="../../_static/custom.css" type="text/css" />
     <link rel="index" title="索引" href="../../genindex/" />
     <link rel="search" title="搜索" href="../../search/" />
     <link rel="next" title="理解图层" href="../layers/" />
@@ -90,6 +91,7 @@
 
         </div>
 
+        
         <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
           
     
@@ -138,9 +140,9 @@
 <li class="toctree-l1"><a class="reference internal" href="../../proj/">地图投影</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../conf/">配置参数</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../dataset/">地学数据集</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../dataset-CN/">中国地学数据集</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../chinese/">中文支持</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../module/">模块手册</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../gallery/">绘图示例</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../api/">API</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../appendix/">附录</a></li>
 </ul>
@@ -168,6 +170,7 @@
     
 
         </div>
+        
       </div>
     </nav>
 
@@ -206,7 +209,7 @@
 
   <ul class="wy-breadcrumbs">
     
-      <li><a href="../../">首页</a> &raquo;</li>
+      <li><a href="../../" class="icon icon-home"></a> &raquo;</li>
         
           <li><a href="../">入门教程</a> &raquo;</li>
         
@@ -253,16 +256,12 @@ gmt end show
 </div>
 <div class="figure align-center" id="id7">
 <a class="reference internal image-reference" href="../../_images/earth-relief-gmtplot-01.png"><img alt="../../_images/earth-relief-gmtplot-01.png" src="../../_images/earth-relief-gmtplot-01.png" style="width: 100%;" /></a>
-<p class="caption"><span class="caption-text">全球地形起伏图</span></p>
+<p class="caption"><span class="caption-text">全球地形起伏图</span><a class="headerlink" href="#id7" title="永久链接至图片">¶</a></p>
 </div>
 </div>
 <div class="section" id="id4">
 <h2>绘图区域地形起伏图<a class="headerlink" href="#id4" title="永久链接至标题">¶</a></h2>
 <p>想要绘制区域地形起伏？只需要在 <strong>grdimage</strong> 模块中使用 <strong>-R</strong> 选项指定区域经纬度范围即可。这里我们设置了绘图区域为118°E至125°E、20°N至26°N。由于绘图区域比较小，所以我们选用了更高精度的 30 弧秒的地形起伏数据。</p>
-<div class="admonition note">
-<p class="first admonition-title">注解</p>
-<p class="last">30弧秒的地形起伏数据大小约为800Mb。第一次使用该数据时GMT会自动从服务器下载该文件，因而会很耗时，请耐心等待。</p>
-</div>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>gmt begin taiwan_relief png,pdf
 gmt grdimage @earth_relief_30s -JM15c -R118/125/20/26 -Baf -BWSen
 gmt end show
@@ -270,7 +269,7 @@ gmt end show
 </div>
 <div class="figure align-center" id="id8">
 <a class="reference internal image-reference" href="../../_images/earth-relief-gmtplot-1.png"><img alt="../../_images/earth-relief-gmtplot-1.png" src="../../_images/earth-relief-gmtplot-1.png" style="width: 70%;" /></a>
-<p class="caption"><span class="caption-text">台湾区域地形图</span></p>
+<p class="caption"><span class="caption-text">台湾区域地形图</span><a class="headerlink" href="#id8" title="永久链接至图片">¶</a></p>
 </div>
 </div>
 <div class="section" id="id5">
@@ -284,7 +283,7 @@ gmt end show
 </div>
 <div class="figure align-center" id="id9">
 <a class="reference internal image-reference" href="../../_images/earth-relief-gmtplot-2.png"><img alt="../../_images/earth-relief-gmtplot-2.png" src="../../_images/earth-relief-gmtplot-2.png" style="width: 70%;" /></a>
-<p class="caption"><span class="caption-text">带光照效果的台湾区域地形图</span></p>
+<p class="caption"><span class="caption-text">带光照效果的台湾区域地形图</span><a class="headerlink" href="#id9" title="永久链接至图片">¶</a></p>
 </div>
 <p>增加光照效果本质上是计算了每个点沿着某个方位角的方向梯度，然后根据每个点的方向梯度的正负以及振幅调节该点颜色的亮度值。对于向阳处，其方向梯度为正值，则增加该点颜色的亮度；对于背阴处，其方向梯度为负值，则降低该点颜色的亮度。由此达到增加光照效果、增强立体感的目的。</p>
 </div>
@@ -325,7 +324,7 @@ gmt end show
 <div class="section" id="cpt">
 <h2>制作CPT文件<a class="headerlink" href="#cpt" title="永久链接至标题">¶</a></h2>
 <p>上面的示例中使用的是GMT的默认CPT文件。用户也可以使用 <a class="reference internal" href="../../module/makecpt/"><span class="doc">makecpt</span></a> 或
-<a class="reference external" href="https://docs.generic-mapping-tools.org/6.0/grd2cpt.html" title="(在 GMT v6.0)"><span>grd2cpt</span></a> 制作CPT文件。</p>
+<a class="reference external" href="https://docs.generic-mapping-tools.org/6.1/grd2cpt.html" title="(在 GMT v6.1)"><span>grd2cpt</span></a> 制作CPT文件。</p>
 <p>下面的示例中，我们使用 <a class="reference internal" href="../../module/makecpt/"><span class="doc">makecpt</span></a> 模块在GMT内置CPT <strong>globe</strong> 的基础上生成了一个-8000到8000范围内的新CPT文件。生成的CPT文件将作为当前CPT文件，供接下来的 <strong>grdimage</strong> 和 <strong>colorbar</strong> 命令使用。</p>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>gmt begin taiwan_relief png,pdf
 gmt basemap -JM15c -R118/125/20/26 -Baf -BWSen
@@ -384,14 +383,22 @@ gitalk.render('gitalk-container');
 
   <div role="contentinfo">
     <p>
-        &copy; Copyright 2014 - 2020, GMT中文社区.
+        
+        &copy; 版权所有 2014 - 2020, GMT中文社区.
       <span class="lastupdated">
-        最后更新于 2020年07月05日.
+        最后更新于 2020年10月15日.
       </span>
 
     </p>
   </div>
-  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+    
+    
+    
+    Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a
+    
+    <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a>
+    
+    provided by <a href="https://readthedocs.org">Read the Docs</a>. 
 
 </footer>
 
@@ -402,7 +409,6 @@ gitalk.render('gitalk-container');
 
   </div>
   
-
 
   <script type="text/javascript">
       jQuery(function () {

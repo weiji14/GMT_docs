@@ -1,8 +1,7 @@
 
 
 <!DOCTYPE html>
-<!--[if IE 8]><html class="no-js lt-ie9" lang="zh-CN" > <![endif]-->
-<!--[if gt IE 8]><!--> <html class="no-js" lang="zh-CN" > <!--<![endif]-->
+<html class="writer-html5" lang="zh-CN" >
 <head>
   <meta charset="utf-8">
   
@@ -10,6 +9,11 @@
   
   <title>标准选项 &mdash; GMT中文手册</title>
   
+
+  
+  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/custom.css" type="text/css" />
 
   
   
@@ -21,25 +25,22 @@
   
 
   
-  <script type="text/javascript" src="../_static/js/modernizr.min.js"></script>
+  <!--[if lt IE 9]>
+    <script src="../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
   
     
       <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
-        <script type="text/javascript" src="../_static/jquery.js"></script>
-        <script type="text/javascript" src="../_static/underscore.js"></script>
-        <script type="text/javascript" src="../_static/doctools.js"></script>
-        <script type="text/javascript" src="../_static/language_data.js"></script>
-        <script type="text/javascript" src="../_static/translations.js"></script>
-        <script async="async" type="text/javascript" src="https://cdn.bootcss.com/mathjax/2.7.7/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+        <script src="../_static/jquery.js"></script>
+        <script src="../_static/underscore.js"></script>
+        <script src="../_static/doctools.js"></script>
+        <script src="../_static/language_data.js"></script>
+        <script src="../_static/translations.js"></script>
+        <script async="async" src="https://cdn.bootcss.com/mathjax/2.7.7/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
     
     <script type="text/javascript" src="../_static/js/theme.js"></script>
 
     
-
-  
-  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
-  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
-  <link rel="stylesheet" href="../_static/custom.css" type="text/css" />
     <link rel="index" title="索引" href="../genindex/" />
     <link rel="search" title="搜索" href="../search/" />
     <link rel="next" title="-R 选项" href="R/" />
@@ -90,6 +91,7 @@
 
         </div>
 
+        
         <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
           
     
@@ -127,7 +129,7 @@
 <li class="toctree-l2"><a class="reference internal" href="distcal/">-j 选项</a></li>
 <li class="toctree-l2"><a class="reference internal" href="l/">-l 选项</a></li>
 <li class="toctree-l2"><a class="reference internal" href="n/">-n 选项</a></li>
-<li class="toctree-l2"><a class="reference internal" href="perspective/">-p 选项</a></li>
+<li class="toctree-l2"><a class="reference internal" href="p/">-p 选项</a></li>
 <li class="toctree-l2"><a class="reference internal" href="q/">-q 选项</a></li>
 <li class="toctree-l2"><a class="reference internal" href="nodereg/">-r 选项</a></li>
 <li class="toctree-l2"><a class="reference internal" href="s/">-s 选项</a></li>
@@ -139,9 +141,9 @@
 <li class="toctree-l1"><a class="reference internal" href="../proj/">地图投影</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../conf/">配置参数</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../dataset/">地学数据集</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../dataset-CN/">中国地学数据集</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../chinese/">中文支持</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../module/">模块手册</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../gallery/">绘图示例</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../api/">API</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../appendix/">附录</a></li>
 </ul>
@@ -169,6 +171,7 @@
     
 
         </div>
+        
       </div>
     </nav>
 
@@ -207,7 +210,7 @@
 
   <ul class="wy-breadcrumbs">
     
-      <li><a href="../">首页</a> &raquo;</li>
+      <li><a href="../" class="icon icon-home"></a> &raquo;</li>
         
       <li>标准选项</li>
     
@@ -233,100 +236,100 @@
   <div class="section" id="id1">
 <h1>标准选项<a class="headerlink" href="#id1" title="永久链接至标题">¶</a></h1>
 <p>GMT 有100多个模块，每个模块的具体效果由模块的众多选项来决定。不同的模块有不同的选项，这其中有一些选项是标准选项，即这些选项在所有的命令里都具有完全相同的意义。故而把这些通用的选项单独拿出来介绍。</p>
-<p>GMT 中的选项都是以 <code class="docutils literal notranslate"><span class="pre">-</span></code> 加一个字符的形式构成，通常这个字符是经过精心挑选的，使得用户很容易根据字符记住该选项的作用。</p>
+<p>GMT 中的选项都是以 <strong>-</strong> 加一个字符的形式构成，通常这个字符是经过精心挑选的，使得用户很容易根据字符记住该选项的作用。</p>
 <p>本章将介绍 GMT 中标准选项的用法。由于标准选项在所有 GMT 模块中的用法是一样的，所以在模块手册中介绍每个模块的具体语法时，将不再详细介绍这些标准选项。</p>
-<table border="1" class="docutils align-center" id="id2">
+<table class="docutils align-center" id="id2">
 <caption><span class="caption-text">GMT标准选项列表</span><a class="headerlink" href="#id2" title="永久链接至表格">¶</a></caption>
 <colgroup>
-<col width="37%" />
-<col width="63%" />
+<col style="width: 37%" />
+<col style="width: 63%" />
 </colgroup>
-<thead valign="bottom">
-<tr class="row-odd"><th class="head"><strong>选项</strong></th>
-<th class="head">说明</th>
+<thead>
+<tr class="row-odd"><th class="head"><p><strong>选项</strong></p></th>
+<th class="head"><p>说明</p></th>
 </tr>
 </thead>
-<tbody valign="top">
-<tr class="row-even"><td><a class="reference internal" href="B/"><span class="doc">-B</span></a></td>
-<td>定义底图边框和轴的刻度、标注、标签等属性</td>
+<tbody>
+<tr class="row-even"><td><p><a class="reference internal" href="B/"><span class="doc">-B</span></a></p></td>
+<td><p>定义底图边框和轴的刻度、标注、标签等属性</p></td>
 </tr>
-<tr class="row-odd"><td><a class="reference internal" href="J/"><span class="doc">-J</span></a></td>
-<td>选择地图投影方式或坐标变换</td>
+<tr class="row-odd"><td><p><a class="reference internal" href="J/"><span class="doc">-J</span></a></p></td>
+<td><p>选择地图投影方式或坐标变换</p></td>
 </tr>
-<tr class="row-even"><td><a class="reference internal" href="R/"><span class="doc">-R</span></a></td>
-<td>指定区域范围</td>
+<tr class="row-even"><td><p><a class="reference internal" href="R/"><span class="doc">-R</span></a></p></td>
+<td><p>指定区域范围</p></td>
 </tr>
-<tr class="row-odd"><td><a class="reference internal" href="U/"><span class="doc">-U</span></a></td>
-<td>在图上绘制时间戳</td>
+<tr class="row-odd"><td><p><a class="reference internal" href="U/"><span class="doc">-U</span></a></p></td>
+<td><p>在图上绘制时间戳</p></td>
 </tr>
-<tr class="row-even"><td><a class="reference internal" href="V/"><span class="doc">-V</span></a></td>
-<td>详细报告模式</td>
+<tr class="row-even"><td><p><a class="reference internal" href="V/"><span class="doc">-V</span></a></p></td>
+<td><p>详细报告模式</p></td>
 </tr>
-<tr class="row-odd"><td><a class="reference internal" href="XY/"><span class="doc">-X</span></a></td>
-<td>移动X方向上的绘图原点</td>
+<tr class="row-odd"><td><p><a class="reference internal" href="XY/"><span class="doc">-X</span></a></p></td>
+<td><p>移动X方向上的绘图原点</p></td>
 </tr>
-<tr class="row-even"><td><a class="reference internal" href="XY/"><span class="doc">-Y</span></a></td>
-<td>移动Y方向上的绘图原点</td>
+<tr class="row-even"><td><p><a class="reference internal" href="XY/"><span class="doc">-Y</span></a></p></td>
+<td><p>移动Y方向上的绘图原点</p></td>
 </tr>
-<tr class="row-odd"><td><a class="reference internal" href="a/"><span class="doc">-a</span></a></td>
-<td>将非空间数据与某些列联系在一起</td>
+<tr class="row-odd"><td><p><a class="reference internal" href="a/"><span class="doc">-a</span></a></p></td>
+<td><p>将非空间数据与某些列联系在一起</p></td>
 </tr>
-<tr class="row-even"><td><a class="reference internal" href="binary/"><span class="doc">-b</span></a></td>
-<td>控制二进制的输入或输出</td>
+<tr class="row-even"><td><p><a class="reference internal" href="binary/"><span class="doc">-b</span></a></p></td>
+<td><p>控制二进制的输入或输出</p></td>
 </tr>
-<tr class="row-odd"><td><a class="reference internal" href="c/"><span class="doc">-c</span></a></td>
-<td>选择特定的子图</td>
+<tr class="row-odd"><td><p><a class="reference internal" href="c/"><span class="doc">-c</span></a></p></td>
+<td><p>选择特定的子图</p></td>
 </tr>
-<tr class="row-even"><td><a class="reference internal" href="d/"><span class="doc">-d</span></a></td>
-<td>将输入或输出中的 <em>nodata</em> 替换成NaN</td>
+<tr class="row-even"><td><p><a class="reference internal" href="d/"><span class="doc">-d</span></a></p></td>
+<td><p>将输入或输出中的 <em>nodata</em> 替换成NaN</p></td>
 </tr>
-<tr class="row-odd"><td><a class="reference internal" href="e/"><span class="doc">-e</span></a></td>
-<td>仅处理与指定 pattern 匹配的数据</td>
+<tr class="row-odd"><td><p><a class="reference internal" href="e/"><span class="doc">-e</span></a></p></td>
+<td><p>仅处理与指定 pattern 匹配的数据</p></td>
 </tr>
-<tr class="row-even"><td><a class="reference internal" href="f/"><span class="doc">-f</span></a></td>
-<td>设置ASCII输入或输出的格式</td>
+<tr class="row-even"><td><p><a class="reference internal" href="f/"><span class="doc">-f</span></a></p></td>
+<td><p>设置ASCII输入或输出的格式</p></td>
 </tr>
-<tr class="row-odd"><td><a class="reference internal" href="g/"><span class="doc">-g</span></a></td>
-<td>根据数据间断对数据进行分段</td>
+<tr class="row-odd"><td><p><a class="reference internal" href="g/"><span class="doc">-g</span></a></p></td>
+<td><p>根据数据间断对数据进行分段</p></td>
 </tr>
-<tr class="row-even"><td><a class="reference internal" href="h/"><span class="doc">-h</span></a></td>
-<td>跳过数据的文件头段记录</td>
+<tr class="row-even"><td><p><a class="reference internal" href="h/"><span class="doc">-h</span></a></p></td>
+<td><p>跳过数据的文件头段记录</p></td>
 </tr>
-<tr class="row-odd"><td><a class="reference internal" href="io/"><span class="doc">-i</span></a></td>
-<td>选择输入列</td>
+<tr class="row-odd"><td><p><a class="reference internal" href="io/"><span class="doc">-i</span></a></p></td>
+<td><p>选择输入列</p></td>
 </tr>
-<tr class="row-even"><td><a class="reference internal" href="distcal/"><span class="doc">-j</span></a></td>
-<td>确定球面距离的计算方式</td>
+<tr class="row-even"><td><p><a class="reference internal" href="distcal/"><span class="doc">-j</span></a></p></td>
+<td><p>确定球面距离的计算方式</p></td>
 </tr>
-<tr class="row-odd"><td><a class="reference internal" href="l/"><span class="doc">-l</span></a></td>
-<td>为当前绘制的符号或线条添加图例记录</td>
+<tr class="row-odd"><td><p><a class="reference internal" href="l/"><span class="doc">-l</span></a></p></td>
+<td><p>为当前绘制的符号或线条添加图例记录</p></td>
 </tr>
-<tr class="row-even"><td><a class="reference internal" href="n/"><span class="doc">-n</span></a></td>
-<td>设置网格插值方式</td>
+<tr class="row-even"><td><p><a class="reference internal" href="n/"><span class="doc">-n</span></a></p></td>
+<td><p>设置网格插值方式</p></td>
 </tr>
-<tr class="row-odd"><td><a class="reference internal" href="io/"><span class="doc">-o</span></a></td>
-<td>选择输出列</td>
+<tr class="row-odd"><td><p><a class="reference internal" href="io/"><span class="doc">-o</span></a></p></td>
+<td><p>选择输出列</p></td>
 </tr>
-<tr class="row-even"><td><a class="reference internal" href="perspective/"><span class="doc">-p</span></a></td>
-<td>控制3D视角图</td>
+<tr class="row-even"><td><p><a class="reference internal" href="p/"><span class="doc">-p</span></a></p></td>
+<td><p>控制3D视角图</p></td>
 </tr>
-<tr class="row-odd"><td><a class="reference internal" href="q/"><span class="doc">-q</span></a></td>
-<td>对输入/输出数据做行选择或数据范围选择</td>
+<tr class="row-odd"><td><p><a class="reference internal" href="q/"><span class="doc">-q</span></a></p></td>
+<td><p>对输入/输出数据做行选择或数据范围选择</p></td>
 </tr>
-<tr class="row-even"><td><a class="reference internal" href="nodereg/"><span class="doc">-r</span></a></td>
-<td>设置网格配准方式</td>
+<tr class="row-even"><td><p><a class="reference internal" href="nodereg/"><span class="doc">-r</span></a></p></td>
+<td><p>设置网格配准方式</p></td>
 </tr>
-<tr class="row-odd"><td><a class="reference internal" href="s/"><span class="doc">-s</span></a></td>
-<td>控制NaN记录的处理方式</td>
+<tr class="row-odd"><td><p><a class="reference internal" href="s/"><span class="doc">-s</span></a></p></td>
+<td><p>控制NaN记录的处理方式</p></td>
 </tr>
-<tr class="row-even"><td><a class="reference internal" href="t/"><span class="doc">-t</span></a></td>
-<td>设置图层透明度</td>
+<tr class="row-even"><td><p><a class="reference internal" href="t/"><span class="doc">-t</span></a></p></td>
+<td><p>设置图层透明度</p></td>
 </tr>
-<tr class="row-odd"><td><a class="reference internal" href="x/"><span class="doc">-x</span></a></td>
-<td>设置并行的核数（仅限于支持并行的模块）</td>
+<tr class="row-odd"><td><p><a class="reference internal" href="x/"><span class="doc">-x</span></a></p></td>
+<td><p>设置并行的核数（仅限于支持并行的模块）</p></td>
 </tr>
-<tr class="row-even"><td><a class="reference internal" href="colon/"><span class="doc">-:</span></a></td>
-<td>输入数据是 <em>y</em>/<em>x</em> 而不是 <em>x</em>/<em>y</em></td>
+<tr class="row-even"><td><p><a class="reference internal" href="colon/"><span class="doc">-:</span></a></p></td>
+<td><p>输入数据是 <em>y</em>/<em>x</em> 而不是 <em>x</em>/<em>y</em></p></td>
 </tr>
 </tbody>
 </table>
@@ -377,14 +380,22 @@ gitalk.render('gitalk-container');
 
   <div role="contentinfo">
     <p>
-        &copy; Copyright 2014 - 2020, GMT中文社区.
+        
+        &copy; 版权所有 2014 - 2020, GMT中文社区.
       <span class="lastupdated">
-        最后更新于 2020年07月05日.
+        最后更新于 2020年10月15日.
       </span>
 
     </p>
   </div>
-  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+    
+    
+    
+    Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a
+    
+    <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a>
+    
+    provided by <a href="https://readthedocs.org">Read the Docs</a>. 
 
 </footer>
 
@@ -395,7 +406,6 @@ gitalk.render('gitalk-container');
 
   </div>
   
-
 
   <script type="text/javascript">
       jQuery(function () {

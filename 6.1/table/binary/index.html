@@ -1,8 +1,7 @@
 
 
 <!DOCTYPE html>
-<!--[if IE 8]><html class="no-js lt-ie9" lang="zh-CN" > <![endif]-->
-<!--[if gt IE 8]><!--> <html class="no-js" lang="zh-CN" > <!--<![endif]-->
+<html class="writer-html5" lang="zh-CN" >
 <head>
   <meta charset="utf-8">
   
@@ -10,6 +9,11 @@
   
   <title>二进制表 &mdash; GMT中文手册</title>
   
+
+  
+  <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../../_static/custom.css" type="text/css" />
 
   
   
@@ -21,25 +25,22 @@
   
 
   
-  <script type="text/javascript" src="../../_static/js/modernizr.min.js"></script>
+  <!--[if lt IE 9]>
+    <script src="../../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
   
     
       <script type="text/javascript" id="documentation_options" data-url_root="../../" src="../../_static/documentation_options.js"></script>
-        <script type="text/javascript" src="../../_static/jquery.js"></script>
-        <script type="text/javascript" src="../../_static/underscore.js"></script>
-        <script type="text/javascript" src="../../_static/doctools.js"></script>
-        <script type="text/javascript" src="../../_static/language_data.js"></script>
-        <script type="text/javascript" src="../../_static/translations.js"></script>
-        <script async="async" type="text/javascript" src="https://cdn.bootcss.com/mathjax/2.7.7/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+        <script src="../../_static/jquery.js"></script>
+        <script src="../../_static/underscore.js"></script>
+        <script src="../../_static/doctools.js"></script>
+        <script src="../../_static/language_data.js"></script>
+        <script src="../../_static/translations.js"></script>
+        <script async="async" src="https://cdn.bootcss.com/mathjax/2.7.7/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
     
     <script type="text/javascript" src="../../_static/js/theme.js"></script>
 
     
-
-  
-  <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
-  <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
-  <link rel="stylesheet" href="../../_static/custom.css" type="text/css" />
     <link rel="index" title="索引" href="../../genindex/" />
     <link rel="search" title="搜索" href="../../search/" />
     <link rel="next" title="netCDF表" href="../netcdf/" />
@@ -90,6 +91,7 @@
 
         </div>
 
+        
         <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
           
     
@@ -109,7 +111,9 @@
 <li class="toctree-l2"><a class="reference internal" href="../ascii/">ASCII表</a></li>
 <li class="toctree-l2 current"><a class="current reference internal" href="#">二进制表</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../netcdf/">netCDF表</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../ogr/">兼容OGR的GMT矢量数据格式</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../shapefile/">Shapefile格式</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../ogrgmt/">OGR/GMT矢量数据格式</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../ogr2ogr/">用ogr2ogr实现数据转换</a></li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="../../grid/">网格文件</a></li>
@@ -118,9 +122,9 @@
 <li class="toctree-l1"><a class="reference internal" href="../../proj/">地图投影</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../conf/">配置参数</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../dataset/">地学数据集</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../dataset-CN/">中国地学数据集</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../chinese/">中文支持</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../module/">模块手册</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../gallery/">绘图示例</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../api/">API</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../appendix/">附录</a></li>
 </ul>
@@ -148,6 +152,7 @@
     
 
         </div>
+        
       </div>
     </nav>
 
@@ -186,7 +191,7 @@
 
   <ul class="wy-breadcrumbs">
     
-      <li><a href="../../">首页</a> &raquo;</li>
+      <li><a href="../../" class="icon icon-home"></a> &raquo;</li>
         
           <li><a href="../">表数据</a> &raquo;</li>
         
@@ -215,8 +220,7 @@
 <h1>二进制表<a class="headerlink" href="#id1" title="永久链接至标题">¶</a></h1>
 <p>简单地说，ASCII表与二进制表的区别在于前者使用 <code class="docutils literal notranslate"><span class="pre">fprintf</span></code> 输出而后者使用
 <code class="docutils literal notranslate"><span class="pre">fwrite</span></code> 输出。二进制表的文件大小通常比对应的ASCII表小很多，且读写速度更快。对于有大量输入输出需求的任意而言，可以将表数据以二进制表的形式保存，以提高数据文件的读写效率。</p>
-<p>GMT在读取二进制表数据时，是无法猜测数据的具体格式的。因而需要使用
-<a class="reference internal" href="../../option/binary/"><span class="doc">-b 选项</span></a> 告诉GMT要读入的数据中有多少个字段，每个字段的数据类型等。</p>
+<p>在写表数据时，可以使用 <a class="reference internal" href="../../option/binary/"><span class="doc">-b 选项</span></a> 告诉GMT要将数据以二进制格式写出，并指定二进制文件的具体数据格式。同理，在读取二进制表数据时，GMT是无法猜测数据的具体格式的。因而需要使用 <a class="reference internal" href="../../option/binary/"><span class="doc">-b 选项</span></a> 告诉GMT要读入的数据中有多少个字段，每个字段的数据类型等。</p>
 <p>二进制表中也可以有文件头记录，用 <a class="reference internal" href="../../option/h/"><span class="doc">-h 选项</span></a> 可以指定要跳过的字节数。二进制表中通常用一个值为NaN的记录作为数据段头记录来标记每段数据的开始。</p>
 </div>
 
@@ -263,14 +267,22 @@ gitalk.render('gitalk-container');
 
   <div role="contentinfo">
     <p>
-        &copy; Copyright 2014 - 2020, GMT中文社区.
+        
+        &copy; 版权所有 2014 - 2020, GMT中文社区.
       <span class="lastupdated">
-        最后更新于 2020年07月05日.
+        最后更新于 2020年10月15日.
       </span>
 
     </p>
   </div>
-  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+    
+    
+    
+    Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a
+    
+    <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a>
+    
+    provided by <a href="https://readthedocs.org">Read the Docs</a>. 
 
 </footer>
 
@@ -281,7 +293,6 @@ gitalk.render('gitalk-container');
 
   </div>
   
-
 
   <script type="text/javascript">
       jQuery(function () {

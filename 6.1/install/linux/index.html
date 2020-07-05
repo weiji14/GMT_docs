@@ -1,8 +1,7 @@
 
 
 <!DOCTYPE html>
-<!--[if IE 8]><html class="no-js lt-ie9" lang="zh-CN" > <![endif]-->
-<!--[if gt IE 8]><!--> <html class="no-js" lang="zh-CN" > <!--<![endif]-->
+<html class="writer-html5" lang="zh-CN" >
 <head>
   <meta charset="utf-8">
   
@@ -10,6 +9,11 @@
   
   <title>Linux 下安装 GMT &mdash; GMT中文手册</title>
   
+
+  
+  <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../../_static/custom.css" type="text/css" />
 
   
   
@@ -21,25 +25,22 @@
   
 
   
-  <script type="text/javascript" src="../../_static/js/modernizr.min.js"></script>
+  <!--[if lt IE 9]>
+    <script src="../../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
   
     
       <script type="text/javascript" id="documentation_options" data-url_root="../../" src="../../_static/documentation_options.js"></script>
-        <script type="text/javascript" src="../../_static/jquery.js"></script>
-        <script type="text/javascript" src="../../_static/underscore.js"></script>
-        <script type="text/javascript" src="../../_static/doctools.js"></script>
-        <script type="text/javascript" src="../../_static/language_data.js"></script>
-        <script type="text/javascript" src="../../_static/translations.js"></script>
-        <script async="async" type="text/javascript" src="https://cdn.bootcss.com/mathjax/2.7.7/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+        <script src="../../_static/jquery.js"></script>
+        <script src="../../_static/underscore.js"></script>
+        <script src="../../_static/doctools.js"></script>
+        <script src="../../_static/language_data.js"></script>
+        <script src="../../_static/translations.js"></script>
+        <script async="async" src="https://cdn.bootcss.com/mathjax/2.7.7/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
     
     <script type="text/javascript" src="../../_static/js/theme.js"></script>
 
     
-
-  
-  <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
-  <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
-  <link rel="stylesheet" href="../../_static/custom.css" type="text/css" />
     <link rel="index" title="索引" href="../../genindex/" />
     <link rel="search" title="搜索" href="../../search/" />
     <link rel="next" title="Windows 下安装 GMT" href="../windows/" />
@@ -90,6 +91,7 @@
 
         </div>
 
+        
         <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
           
     
@@ -125,9 +127,9 @@
 <li class="toctree-l1"><a class="reference internal" href="../../proj/">地图投影</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../conf/">配置参数</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../dataset/">地学数据集</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../dataset-CN/">中国地学数据集</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../chinese/">中文支持</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../module/">模块手册</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../gallery/">绘图示例</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../api/">API</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../appendix/">附录</a></li>
 </ul>
@@ -155,6 +157,7 @@
     
 
         </div>
+        
       </div>
     </nav>
 
@@ -193,7 +196,7 @@
 
   <ul class="wy-breadcrumbs">
     
-      <li><a href="../../">首页</a> &raquo;</li>
+      <li><a href="../../" class="icon icon-home"></a> &raquo;</li>
         
           <li><a href="../">安装</a> &raquo;</li>
         
@@ -220,12 +223,12 @@
             
   <div class="section" id="linux-gmt">
 <h1>Linux 下安装 GMT<a class="headerlink" href="#linux-gmt" title="永久链接至标题">¶</a></h1>
-<p>尽管大多数Linux发行版都提供了GMT二进制包，可以直接通过软件包管理器 <strong>apt-get</strong>
+<p>尽管大多数Linux发行版都提供了GMT二进制包，可以直接通过软件包管理器 <strong>apt</strong>
 或 <strong>yum</strong> 安装，但发行版提供的GMT版本都很老，不建议使用。</p>
 <p>针对Fedora/RHEL/CentOS用户，GMT的官方RPM仓库提供了最新版本的GMT。</p>
 <div class="section" id="fedora">
 <h2>Fedora<a class="headerlink" href="#fedora" title="永久链接至标题">¶</a></h2>
-<p><strong>Fedora 30</strong> 及之后版本的用户，可以启用
+<p><strong>Fedora 31</strong> 及之后版本的用户，可以启用
 <a class="reference external" href="https://copr.fedorainfracloud.org/coprs/genericmappingtools/gmt/">GMT官方RPM仓库</a>
 以安装GMT最新版本:</p>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="c1"># 启用GMT官方RPM仓库</span>
@@ -251,9 +254,9 @@ dnf install ffmpeg
 </pre></div>
 </div>
 <div class="admonition note">
-<p class="first admonition-title">注解</p>
+<p class="admonition-title">注解</p>
 <p>如果你已经安装了Fedora系统仓库提供的GMT软件包，你必须在使用GMT官方仓库前卸载旧的GMT安装包。使用如下命令:</p>
-<div class="last highlight-bash notranslate"><div class="highlight"><pre><span></span>dnf remove GMT dcw-gmt gshhg-gmt-nc4 gshhg-gmt-nc4-full gshhg-gmt-nc4-high
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>dnf remove GMT dcw-gmt gshhg-gmt-nc4 gshhg-gmt-nc4-full gshhg-gmt-nc4-high
 </pre></div>
 </div>
 </div>
@@ -297,28 +300,28 @@ yum install ffmpeg
 </pre></div>
 </div>
 <div class="admonition note">
-<p class="first admonition-title">注解</p>
+<p class="admonition-title">注解</p>
 <p>如果你已经安装了EPEL仓库提供的GMT软件包，你必须在使用GMT官方仓库前卸载旧的GMT安装包。使用如下命令:</p>
-<div class="last highlight-bash notranslate"><div class="highlight"><pre><span></span>yum remove GMT dcw-gmt gshhg-gmt-nc4 gshhg-gmt-nc4-full gshhg-gmt-nc4-high
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>yum remove GMT dcw-gmt gshhg-gmt-nc4 gshhg-gmt-nc4-full gshhg-gmt-nc4-high
 </pre></div>
 </div>
 </div>
 </div>
 <div class="section" id="ubuntu-debian">
 <h2>Ubuntu/Debian用户<a class="headerlink" href="#ubuntu-debian" title="永久链接至标题">¶</a></h2>
-<p>Ubuntu 20.04 (Focal Fossa) 和 Debian 11 (测试版）用户可以直接使用如下命令安装GMT:</p>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>sudo apt-get install gmt gmt-dcw gmt-gshhg
-sudo apt-get install ghostscript gdal-bin graphicsmagick ffmpeg
+<p>Ubuntu 和 Debian 用户可以直接使用如下命令安装GMT:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>sudo apt install gmt gmt-dcw gmt-gshhg
+sudo apt install ghostscript gdal-bin graphicsmagick ffmpeg
 </pre></div>
 </div>
 <div class="admonition warning">
-<p class="first admonition-title">警告</p>
-<p>以上命令在老版本的Ubuntu/Debian上会安装GMT 5.x。</p>
-<p>对于老版本Ubuntu/Debian用户，有如下几种选择：</p>
-<ol class="last arabic simple">
-<li>使用 GMT 5.x</li>
-<li>升级系统到Ubuntu 20.04 或 Debian 11</li>
-<li>编译GMT源码以安装最新版，具体编译方法见 <a class="reference internal" href="../build-source/"><span class="doc">Linux/macOS 下编译GMT源码</span></a></li>
+<p class="admonition-title">警告</p>
+<p>由于Ubuntu和Debian自身的软件更新规则，通常以上命令安装的都是老版本的GMT，比如GMT 5.4 或者 GMT 6.0.0，而不是GMT的最新版本。</p>
+<p>针对这种情况，有如下几种选择：</p>
+<ol class="arabic simple">
+<li><p>使用老版本 GMT</p></li>
+<li><p>使用其它Linux发行版</p></li>
+<li><p>编译GMT源码以安装最新版，具体编译方法见 <a class="reference internal" href="../build-source/"><span class="doc">Linux/macOS 下编译GMT源码</span></a></p></li>
 </ol>
 </div>
 </div>
@@ -393,14 +396,22 @@ gitalk.render('gitalk-container');
 
   <div role="contentinfo">
     <p>
-        &copy; Copyright 2014 - 2020, GMT中文社区.
+        
+        &copy; 版权所有 2014 - 2020, GMT中文社区.
       <span class="lastupdated">
-        最后更新于 2020年07月05日.
+        最后更新于 2020年10月15日.
       </span>
 
     </p>
   </div>
-  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+    
+    
+    
+    Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a
+    
+    <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a>
+    
+    provided by <a href="https://readthedocs.org">Read the Docs</a>. 
 
 </footer>
 
@@ -411,7 +422,6 @@ gitalk.render('gitalk-container');
 
   </div>
   
-
 
   <script type="text/javascript">
       jQuery(function () {

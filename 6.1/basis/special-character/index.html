@@ -1,8 +1,7 @@
 
 
 <!DOCTYPE html>
-<!--[if IE 8]><html class="no-js lt-ie9" lang="zh-CN" > <![endif]-->
-<!--[if gt IE 8]><!--> <html class="no-js" lang="zh-CN" > <!--<![endif]-->
+<html class="writer-html5" lang="zh-CN" >
 <head>
   <meta charset="utf-8">
   
@@ -10,6 +9,11 @@
   
   <title>特殊字符 &mdash; GMT中文手册</title>
   
+
+  
+  <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../../_static/custom.css" type="text/css" />
 
   
   
@@ -21,25 +25,22 @@
   
 
   
-  <script type="text/javascript" src="../../_static/js/modernizr.min.js"></script>
+  <!--[if lt IE 9]>
+    <script src="../../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
   
     
       <script type="text/javascript" id="documentation_options" data-url_root="../../" src="../../_static/documentation_options.js"></script>
-        <script type="text/javascript" src="../../_static/jquery.js"></script>
-        <script type="text/javascript" src="../../_static/underscore.js"></script>
-        <script type="text/javascript" src="../../_static/doctools.js"></script>
-        <script type="text/javascript" src="../../_static/language_data.js"></script>
-        <script type="text/javascript" src="../../_static/translations.js"></script>
-        <script async="async" type="text/javascript" src="https://cdn.bootcss.com/mathjax/2.7.7/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+        <script src="../../_static/jquery.js"></script>
+        <script src="../../_static/underscore.js"></script>
+        <script src="../../_static/doctools.js"></script>
+        <script src="../../_static/language_data.js"></script>
+        <script src="../../_static/translations.js"></script>
+        <script async="async" src="https://cdn.bootcss.com/mathjax/2.7.7/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
     
     <script type="text/javascript" src="../../_static/js/theme.js"></script>
 
     
-
-  
-  <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
-  <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
-  <link rel="stylesheet" href="../../_static/custom.css" type="text/css" />
     <link rel="index" title="索引" href="../../genindex/" />
     <link rel="search" title="搜索" href="../../search/" />
     <link rel="next" title="转义序列" href="../escape-character/" />
@@ -90,6 +91,7 @@
 
         </div>
 
+        
         <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
           
     
@@ -124,6 +126,7 @@
 <li class="toctree-l2"><a class="reference internal" href="../anchor/">锚点</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../embellishment/">绘制修饰物</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../io-format/">数据类型</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../input-files/">寻找输入文件</a></li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="../../table/">表数据</a></li>
@@ -133,9 +136,9 @@
 <li class="toctree-l1"><a class="reference internal" href="../../proj/">地图投影</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../conf/">配置参数</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../dataset/">地学数据集</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../dataset-CN/">中国地学数据集</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../chinese/">中文支持</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../module/">模块手册</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../gallery/">绘图示例</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../api/">API</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../appendix/">附录</a></li>
 </ul>
@@ -163,6 +166,7 @@
     
 
         </div>
+        
       </div>
     </nav>
 
@@ -201,7 +205,7 @@
 
   <ul class="wy-breadcrumbs">
     
-      <li><a href="../../">首页</a> &raquo;</li>
+      <li><a href="../../" class="icon icon-home"></a> &raquo;</li>
         
           <li><a href="../">GMT基础</a> &raquo;</li>
         
@@ -228,19 +232,19 @@
             
   <div class="section" id="id1">
 <h1>特殊字符<a class="headerlink" href="#id1" title="永久链接至标题">¶</a></h1>
-<p>除了键盘上可以直接输入的一般字符之外，GMT还可以打印一些常用的特殊字符，如大小写的希腊字母、加减号、大于等于号等一些特殊符号。</p>
+<p>除了键盘上可以直接输入的一般字符之外，GMT还可以打印一些常用的特殊字符，如大小写的希腊字母、加减号、大于等于号等。</p>
 <p>这些特殊字符无法通过键盘直接输入，GMT中可以通过输入八进制码的方式指定特殊字符。</p>
 <div class="section" id="id2">
 <h2>八进制码指定特殊字符<a class="headerlink" href="#id2" title="永久链接至标题">¶</a></h2>
 <p>GMT中可以用一个三位的八进制码指定一个特殊字符。八进制码与特殊字符之间的对应关系，可以通过查询下表得到：</p>
 <div class="figure align-center" id="id6">
 <a class="reference internal image-reference" href="../../_images/GMT_stand+_iso+.png"><img alt="../../_images/GMT_stand+_iso+.png" src="../../_images/GMT_stand+_iso+.png" style="width: 100%;" /></a>
-<p class="caption"><span class="caption-text">ISOLation1+ 和 Standard+ 编码下的八进制码</span></p>
+<p class="caption"><span class="caption-text">ISOLation1+ 和 Standard+ 编码下的八进制码</span><a class="headerlink" href="#id6" title="永久链接至图片">¶</a></p>
 </div>
 <p><strong>下载：</strong>
-<a class="reference download internal" download="" href="../../_downloads/c41d045025d9d01538a3519676dcfcc5/GMT_stand+_iso+.pdf"><code class="xref download docutils literal notranslate"><span class="pre">八进制码表</span> <span class="pre">PDF版</span></code></a> |
-<a class="reference download internal" download="" href="../../_downloads/87db8a20a7be9d9bcddbfcb4f1aeb78a/GMT_stand+_iso+.png"><code class="xref download docutils literal notranslate"><span class="pre">八进制码表</span> <span class="pre">PNG版</span></code></a></p>
-<p><strong>左右两张表分别是什么？该用哪一张</strong>
+<a class="reference download internal" download="" href="../../_downloads/4674f00ee1e5534750aab6962189317b/GMT_stand+_iso+.pdf"><code class="xref download docutils literal notranslate"><span class="pre">八进制码表</span> <span class="pre">PDF版</span></code></a> |
+<a class="reference download internal" download="" href="../../_downloads/49b55f898345dcc1b08b455a936d95a6/GMT_stand+_iso+.png"><code class="xref download docutils literal notranslate"><span class="pre">八进制码表</span> <span class="pre">PNG版</span></code></a></p>
+<p><strong>左右两张表分别是什么？该用哪一张？</strong>
 GMT支持多种字符编码，其中最常用的编码是 <strong>Standard+</strong>和
 <strong>ISOLation1+</strong>。通常，GMT的默认字符编码是 <strong>ISOLatin1+</strong>，所以只需要看左表即可；如果当前字符编码是 <strong>Standard+</strong>，则需要查询右表。可以通过 <code class="docutils literal notranslate"><span class="pre">gmt</span> <span class="pre">get</span> <span class="pre">PS_CHAR_ENCODING</span></code> 命令查到你所安装的GMT的默认字符编码方式。</p>
 <p><strong>这张表如何查询呢？</strong>
@@ -251,21 +255,21 @@ GMT支持多种字符编码，其中最常用的编码是 <strong>Standard+</str
 <p>如果文本使用了12号字体（Symbol）或34号字体（ZapfDingbats），则此时八进制码具有不同的含义。需要查询下表：</p>
 <div class="figure align-center" id="id7">
 <a class="reference internal image-reference" href="../../_images/GMT_symbol_dingbats.png"><img alt="../../_images/GMT_symbol_dingbats.png" src="../../_images/GMT_symbol_dingbats.png" style="width: 100%;" /></a>
-<p class="caption"><span class="caption-text">Symbol和Pifont字体八进制码</span></p>
+<p class="caption"><span class="caption-text">Symbol和Pifont字体八进制码</span><a class="headerlink" href="#id7" title="永久链接至图片">¶</a></p>
 </div>
 <p>当文本字体为12号字体（Symbol字符集）时，应查询左表，例如字符 <code class="docutils literal notranslate"><span class="pre">λ</span></code> 对应的八进制码为 <code class="docutils literal notranslate"><span class="pre">\154</span></code>。当文本字体为34号字体（Pifont ZapfDingbats）时，应查询右表。</p>
 <p><strong>下载：</strong>
-<a class="reference download internal" download="" href="../../_downloads/08b2ea3f1b845104c4fb0bae75ba380b/GMT_symbol_dingbats.pdf"><code class="xref download docutils literal notranslate"><span class="pre">特殊字体八进制码</span> <span class="pre">PDF版</span></code></a> |
-<a class="reference download internal" download="" href="../../_downloads/e343248a913ac45f94c68193b3bec2b7/GMT_symbol_dingbats.png"><code class="xref download docutils literal notranslate"><span class="pre">特殊字体八进制码</span> <span class="pre">PNG版</span></code></a></p>
+<a class="reference download internal" download="" href="../../_downloads/3865d768a5e77f0b8e4bb34f2a9825f9/GMT_symbol_dingbats.pdf"><code class="xref download docutils literal notranslate"><span class="pre">特殊字体八进制码</span> <span class="pre">PDF版</span></code></a> |
+<a class="reference download internal" download="" href="../../_downloads/f314a8609bd2a25ddf66cd4c48d1644b/GMT_symbol_dingbats.png"><code class="xref download docutils literal notranslate"><span class="pre">特殊字体八进制码</span> <span class="pre">PNG版</span></code></a></p>
 </div>
 <div class="section" id="id4">
 <h2>特殊字符小结<a class="headerlink" href="#id4" title="永久链接至标题">¶</a></h2>
 <p>GMT中特殊字符可以通过八进制码的方式输入。想要输入特殊字符，首先需要找到该字符对应的八进制码。从上面四张表中找到自己需要的特殊符号的八进制码及其位于哪张表内。总共分四种情况：</p>
 <ol class="arabic simple">
-<li>字符在 <strong>ISOLatin1+</strong> 表内：可以直接使用该字符对应的八进制码</li>
-<li>字符在 <strong>Standard+</strong> 表内：该表内的字符是与 <strong>ISOLatin1+</strong> 中的字符完全重合的，建议在 <strong>ISOLatin1+</strong> 表中找到自己需要的字符，然后使用其对应的八进制吗</li>
-<li>字符在 <strong>Symbol</strong> 表内：将文本字体设置为12号字体，并使用该字符对应的八进制码</li>
-<li>字符在 <strong>ZapfDingbats</strong> 表内：将文本字体设置为34号字体，并使用该字符对应的八进制码</li>
+<li><p>字符在 <strong>ISOLatin1+</strong> 表内：可以直接使用该字符对应的八进制码</p></li>
+<li><p>字符在 <strong>Standard+</strong> 表内：该表内的字符是与 <strong>ISOLatin1+</strong> 中的字符完全重合的，建议在 <strong>ISOLatin1+</strong> 表中找到自己需要的字符，然后使用其对应的八进制吗</p></li>
+<li><p>字符在 <strong>Symbol</strong> 表内：将文本字体设置为12号字体，并使用该字符对应的八进制码</p></li>
+<li><p>字符在 <strong>ZapfDingbats</strong> 表内：将文本字体设置为34号字体，并使用该字符对应的八进制码</p></li>
 </ol>
 </div>
 <div class="section" id="id5">
@@ -283,8 +287,8 @@ GMT的是 <code class="docutils literal notranslate"><span class="pre">5</span> 
 <span class="nb">echo</span> <span class="m">5</span> <span class="m">2</span> <span class="s1">&#39;\261 234&#39;</span> <span class="p">|</span> gmt text -Jx1c -R0/10/0/4 -Baf -pdf <span class="nb">test</span>
 
 <span class="c1">#. 3. 使用EOF输入字符串</span>
-gmt text -JX10c/10c -R0/10/0/10 -F+f15p,12 -pdf <span class="nb">test</span> <span class="s">&lt;&lt; EOF</span>
-<span class="s">5 5 \141</span>
+gmt text -Jx1c -R0/10/0/4 -Baf -pdf <span class="nb">test</span> <span class="s">&lt;&lt; EOF</span>
+<span class="s">5 2 \261 234</span>
 <span class="s">EOF</span>
 
 <span class="c1">#. 4. 从文本文件中读取字符串</span>
@@ -292,7 +296,7 @@ gmt text input.txt -JX10c/10c -R0/10/0/10 -F+f15p,12 -pdf <span class="nb">test<
 </pre></div>
 </div>
 <p>输入希腊字母，此时需要指定文本使用12号字体（即 <strong>-F+f15p,12</strong> 选项）:</p>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="nb">echo</span> <span class="m">5</span> <span class="m">5</span> <span class="s1">&#39;\141&#39;</span> <span class="p">|</span> gmt text -JX10c/10c -R0/10/0/10 -F+f15p,12 -pdf <span class="nb">test</span>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="nb">echo</span> <span class="m">5</span> <span class="m">5</span> <span class="s1">&#39;\141&#39;</span> <span class="p">|</span> gmt text -JX10c/10c -R0/10/0/10 -Baf -F+f15p,12 -pdf <span class="nb">test</span>
 </pre></div>
 </div>
 <p>如果需要在一堆正常字符中插入一个Symbol表中的特殊字符，可以使用转义字符（下一节会详细介绍） <strong>&#64;~</strong> 或 <strong>&#64;%12%</strong> 临时将字体Symbol字体。例如:</p>
@@ -345,14 +349,22 @@ gitalk.render('gitalk-container');
 
   <div role="contentinfo">
     <p>
-        &copy; Copyright 2014 - 2020, GMT中文社区.
+        
+        &copy; 版权所有 2014 - 2020, GMT中文社区.
       <span class="lastupdated">
-        最后更新于 2020年07月05日.
+        最后更新于 2020年10月15日.
       </span>
 
     </p>
   </div>
-  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+    
+    
+    
+    Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a
+    
+    <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a>
+    
+    provided by <a href="https://readthedocs.org">Read the Docs</a>. 
 
 </footer>
 
@@ -363,7 +375,6 @@ gitalk.render('gitalk-container');
 
   </div>
   
-
 
   <script type="text/javascript">
       jQuery(function () {

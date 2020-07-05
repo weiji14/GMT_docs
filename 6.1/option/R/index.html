@@ -1,8 +1,7 @@
 
 
 <!DOCTYPE html>
-<!--[if IE 8]><html class="no-js lt-ie9" lang="zh-CN" > <![endif]-->
-<!--[if gt IE 8]><!--> <html class="no-js" lang="zh-CN" > <!--<![endif]-->
+<html class="writer-html5" lang="zh-CN" >
 <head>
   <meta charset="utf-8">
   
@@ -10,6 +9,11 @@
   
   <title>-R 选项 &mdash; GMT中文手册</title>
   
+
+  
+  <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../../_static/custom.css" type="text/css" />
 
   
   
@@ -21,25 +25,22 @@
   
 
   
-  <script type="text/javascript" src="../../_static/js/modernizr.min.js"></script>
+  <!--[if lt IE 9]>
+    <script src="../../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
   
     
       <script type="text/javascript" id="documentation_options" data-url_root="../../" src="../../_static/documentation_options.js"></script>
-        <script type="text/javascript" src="../../_static/jquery.js"></script>
-        <script type="text/javascript" src="../../_static/underscore.js"></script>
-        <script type="text/javascript" src="../../_static/doctools.js"></script>
-        <script type="text/javascript" src="../../_static/language_data.js"></script>
-        <script type="text/javascript" src="../../_static/translations.js"></script>
-        <script async="async" type="text/javascript" src="https://cdn.bootcss.com/mathjax/2.7.7/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+        <script src="../../_static/jquery.js"></script>
+        <script src="../../_static/underscore.js"></script>
+        <script src="../../_static/doctools.js"></script>
+        <script src="../../_static/language_data.js"></script>
+        <script src="../../_static/translations.js"></script>
+        <script async="async" src="https://cdn.bootcss.com/mathjax/2.7.7/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
     
     <script type="text/javascript" src="../../_static/js/theme.js"></script>
 
     
-
-  
-  <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
-  <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
-  <link rel="stylesheet" href="../../_static/custom.css" type="text/css" />
     <link rel="index" title="索引" href="../../genindex/" />
     <link rel="search" title="搜索" href="../../search/" />
     <link rel="next" title="-J 选项" href="../J/" />
@@ -90,6 +91,7 @@
 
         </div>
 
+        
         <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
           
     
@@ -136,7 +138,7 @@
 <li class="toctree-l2"><a class="reference internal" href="../distcal/">-j 选项</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../l/">-l 选项</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../n/">-n 选项</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../perspective/">-p 选项</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../p/">-p 选项</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../q/">-q 选项</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../nodereg/">-r 选项</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../s/">-s 选项</a></li>
@@ -148,9 +150,9 @@
 <li class="toctree-l1"><a class="reference internal" href="../../proj/">地图投影</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../conf/">配置参数</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../dataset/">地学数据集</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../dataset-CN/">中国地学数据集</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../chinese/">中文支持</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../module/">模块手册</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../gallery/">绘图示例</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../api/">API</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../appendix/">附录</a></li>
 </ul>
@@ -178,6 +180,7 @@
     
 
         </div>
+        
       </div>
     </nav>
 
@@ -216,7 +219,7 @@
 
   <ul class="wy-breadcrumbs">
     
-      <li><a href="../../">首页</a> &raquo;</li>
+      <li><a href="../../" class="icon icon-home"></a> &raquo;</li>
         
           <li><a href="../">标准选项</a> &raquo;</li>
         
@@ -248,52 +251,50 @@
 <h2>五种方式<a class="headerlink" href="#id1" title="永久链接至标题">¶</a></h2>
 <p>可以用五种方式指定数据范围。</p>
 <ol class="arabic">
-<li><p class="first"><strong>-R</strong><em>xmin</em>/<em>xmax</em>/<em>ymin</em>/<em>ymax</em></p>
+<li><p><strong>-R</strong><em>xmin</em>/<em>xmax</em>/<em>ymin</em>/<em>ymax</em></p>
 <p>通过给定X方向和Y方向的最大最小值来指定数据范围，是最常见的指定数据范围的方式。常用于指定笛卡尔数据的范围以及经线和纬线是直线的投影方式下的地理区域。例如 <strong>-R0/360/-90/90</strong> 表示X方向范围是0到360，Y方向范围是-90到90。</p>
 </li>
-<li><p class="first"><strong>-R</strong><em>xlleft</em>/<em>ylleft</em>/<em>xuright</em>/<em>yuright</em><strong>+r</strong></p>
+<li><p><strong>-R</strong><em>xlleft</em>/<em>ylleft</em>/<em>xuright</em>/<em>yuright</em><strong>+r</strong></p>
 <p>通过给定矩形区域的左下角坐标 (<em>xlleft</em>, <em>ylleft</em>) 和右上角坐标 (<em>xuright</em>, <em>yuright</em>)
 来指定数据范围。例如 <strong>-R-90/20/-65/30+r</strong>。这种形式通常用于倾斜的地图投影中，此时不适合将经线和纬线作为地图边界。使用这种形式可以保证底图为矩形，尽管经线和纬线可能不是直线。</p>
 </li>
-<li><p class="first"><strong>-R</strong><em>gridfile</em></p>
+<li><p><strong>-R</strong><em>gridfile</em></p>
 <p>该方式会直接从2D网格文件 <em>gridfile</em> 中提取数据范围信息。对于某些模块，该方式不仅会从网格中读取范围信息，还会读入网格间隔和网格配准信息（见 <a class="reference internal" href="../nodereg/"><span class="doc">-r 选项</span></a>）。</p>
 </li>
-<li><p class="first"><strong>-R</strong><em>code1</em>,<em>code2</em>,<em>…</em>[<strong>+e</strong>|<strong>r</strong>|<strong>R</strong>[<em>incs</em>]]</p>
-<p>通过直接指定区域代码 <em>code1</em>、<em>code2</em> 等间接指定研究区域范围。</p>
-<p>区域代码可以表示某个大洲、某个国家、某个州或省，详情见 <a class="reference internal" href="../../dataset/dcw/"><span class="doc">DCW: 世界数字图表</span></a> 一节。</p>
-<p><strong>+r</strong>|<strong>+R</strong><em>incs</em> 用于对通过区域代码得到的研究区域范围进一步扩张或缩减。其中 <strong>+r</strong> 表示调整区域范围使得范围是 <em>incs</em> 的整数倍，
+<li><p><strong>-R</strong><em>code1</em>,<em>code2</em>,<em>…</em>[<strong>+e</strong>|<strong>r</strong>|<strong>R</strong>[<em>incs</em>]]</p>
+<p>通过直接指定区域代码 <em>code1</em>、<em>code2</em> 等间接指定研究区域范围。区域代码可以表示某个大洲、某个国家、某个州或省，详情见 <a class="reference internal" href="../../dataset/dcw/"><span class="doc">DCW: 世界数字图表</span></a> 一节。</p>
+<p><strong>+e</strong>|<strong>+r</strong>|<strong>+R</strong><em>incs</em> 用于对通过区域代码得到的研究区域范围进一步扩张或缩减。其中 <strong>+r</strong> 表示调整区域范围使得范围是 <em>incs</em> 的整数倍，
+<strong>+e</strong> 与 <strong>+r</strong> 类似，但其保证了至少向外扩展0.25倍的 <em>incs</em>，
 <strong>+R</strong> 表示 <em>incs</em> 被解释为区域范围向外扩展的增量。其中 <em>incs</em> 有三种形式：</p>
 <ol class="arabic simple">
-<li><em>inc</em>：四个边具有相同的增量</li>
-<li><em>xinc</em>/<em>yinc</em>：X和Y方向具有不同的增量</li>
-<li><em>winc</em>/<em>einc</em>/<em>sinc</em>/<em>ninc</em>：上下左右四个边具有不同的增量</li>
+<li><p><em>inc</em>：四个边具有相同的增量</p></li>
+<li><p><em>xinc</em>/<em>yinc</em>：X和Y方向具有不同的增量</p></li>
+<li><p><em>winc</em>/<em>einc</em>/<em>sinc</em>/<em>ninc</em>：上下左右四个边具有不同的增量</p></li>
 </ol>
 <p>例如 <strong>-RFR+r1</strong> 表示取法国国界对应的区域范围并将其调整到最近的整数度数。</p>
 </li>
-<li><p class="first"><strong>-R</strong><em>anchor</em><em>x0</em>/<em>y0</em>/<em>nx</em>/<em>ny</em></p>
+<li><p><strong>-R</strong><em>anchor</em><em>x0</em>/<em>y0</em>/<em>nx</em>/<em>ny</em></p>
 <p>该方法仅可用于创建新的网格文件。通过指定网格文件中某个特定点（由 <em>anchor</em> 决定，见 <a class="reference internal" href="../../basis/anchor/"><span class="doc">锚点</span></a> 一节）的坐标（由 <em>x0</em>/<em>y0</em> 决定），X和Y方向的网格点数（由 <em>nx</em>/<em>ny</em> 决定），以及X和Y方向的网格间隔（通常由 <strong>-I</strong><em>xinc</em>/<em>yinc</em> 选项决定），即可指定网格文件的区域范围。</p>
 </li>
 </ol>
-<p><a class="reference download internal" download="" href="../../_downloads/2f4a967acda807a02d41f7d7b8a1f3f1/R-gmtplot-0.sh"><code class="xref download docutils literal notranslate"><span class="pre">Source</span> <span class="pre">Code</span></code></a></p>
+<p><a class="reference download internal" download="" href="../../_downloads/57fb8ccfe96b1e37e2220f1c52524f84/R-gmtplot-0.sh"><code class="xref download docutils literal notranslate"><span class="pre">Source</span> <span class="pre">Code</span></code></a></p>
 <div class="figure align-center" id="id6">
 <img alt="../../_images/R-gmtplot-0.png" src="../../_images/R-gmtplot-0.png" />
-<p class="caption"><span class="caption-text"><strong>-R</strong> 选项指定数据范围</span></p>
+<p class="caption"><span class="caption-text"><strong>-R</strong> 选项指定数据范围。</span><a class="headerlink" href="#id6" title="永久链接至图片">¶</a></p>
 </div>
-<ol class="loweralpha simple">
-<li>指定每个维度的极值；(b) 指定左下角和右上角的坐标。</li>
-</ol>
+<p>(左) 指定每个维度的极值；(右) 指定左下角和右上角的坐标。</p>
 </div>
 <div class="section" id="id2">
 <h2>六种坐标<a class="headerlink" href="#id2" title="永久链接至标题">¶</a></h2>
 <p>GMT的坐标轴可以是多种类型，比如地图的经纬度轴、一般的笛卡尔轴、时间轴等等。不同类型的轴需要用不同类型的数据来指定数据的范围。
-<strong>-R</strong> 选项可以使用五种不同的方式来指定数据范围：</p>
+<strong>-R</strong> 选项可以使用六种不同的方式来指定数据范围：</p>
 <ol class="arabic simple">
-<li><a class="reference internal" href="../../basis/io-format/#float-coordinates"><span class="std std-ref">一般浮点坐标</span></a></li>
-<li><a class="reference internal" href="../../basis/io-format/#geographic-coordinates"><span class="std std-ref">地理坐标</span></a></li>
-<li><a class="reference internal" href="../../basis/io-format/#absolute-time-coordinates"><span class="std std-ref">绝对时间坐标</span></a></li>
-<li><a class="reference internal" href="../../basis/io-format/#relative-time-coordinates"><span class="std std-ref">相对时间坐标</span></a></li>
-<li>投影后坐标</li>
-<li>弧度坐标</li>
+<li><p><a class="reference internal" href="../../basis/io-format/#float-coordinates"><span class="std std-ref">一般浮点坐标</span></a></p></li>
+<li><p><a class="reference internal" href="../../basis/io-format/#geographic-coordinates"><span class="std std-ref">地理坐标</span></a></p></li>
+<li><p><a class="reference internal" href="../../basis/io-format/#absolute-time-coordinates"><span class="std std-ref">绝对时间坐标</span></a></p></li>
+<li><p><a class="reference internal" href="../../basis/io-format/#relative-time-coordinates"><span class="std std-ref">相对时间坐标</span></a></p></li>
+<li><p>投影后坐标</p></li>
+<li><p>弧度坐标</p></li>
 </ol>
 <p>其中地理坐标、浮点坐标、绝对时间坐标和相对时间坐标在 <a class="reference internal" href="../../basis/io-format/"><span class="doc">数据类型</span></a>
 中已经介绍过，此处不再赘述。</p>
@@ -301,20 +302,20 @@
 <h3>地理坐标<a class="headerlink" href="#id3" title="永久链接至标题">¶</a></h3>
 <p>对于常用的地图范围，GMT提供了两个简化写法：</p>
 <ul class="simple">
-<li><strong>-Rg</strong> 等效于 <strong>-R0/360/-90/90</strong></li>
-<li><strong>-Rd</strong> 等效于 <strong>-R-180/180/-90/90</strong></li>
+<li><p><strong>-Rg</strong> 等效于 <strong>-R0/360/-90/90</strong></p></li>
+<li><p><strong>-Rd</strong> 等效于 <strong>-R-180/180/-90/90</strong></p></li>
 </ul>
 <p>GMT 对于地理投影和线性投影的默认设置有很大区别。有些时候数据是地理坐标，但是因为某些原因不能选择地理投影，只能选择线性投影（<strong>-JX</strong> 或 <strong>-Jx</strong>），此时可以通过如下几种方式表明当前数据是地理坐标下的数据，而不是简单的笛卡尔坐标：</p>
 <ol class="arabic simple">
-<li>使用 <strong>-Rg</strong> 而不是 <strong>0/360/-90/90</strong></li>
-<li>使用 <strong>-Rd</strong> 而不是 <strong>-180/180/-90/90</strong></li>
-<li>使用 <strong>-Rg</strong><em>xmin</em>/<em>xmax</em>/<em>ymin</em>/<em>ymax</em> 表明是某个有限范围的地理区域</li>
-<li>在范围后加后缀 <strong>W|E|S|N</strong> 或更通用的 <strong>D|G</strong>，比如 <strong>-R0/360G/-90/90N</strong></li>
-<li>使用 <strong>-fg</strong> 选项表明输入数据是地理坐标，见 <a class="reference internal" href="../f/"><span class="doc">-f 选项</span></a></li>
+<li><p>使用 <strong>-Rg</strong> 而不是 <strong>0/360/-90/90</strong></p></li>
+<li><p>使用 <strong>-Rd</strong> 而不是 <strong>-180/180/-90/90</strong></p></li>
+<li><p>使用 <strong>-Rg</strong><em>xmin</em>/<em>xmax</em>/<em>ymin</em>/<em>ymax</em> 表明是某个有限范围的地理区域</p></li>
+<li><p>在范围后加后缀 <strong>W|E|S|N</strong> 或更通用的 <strong>D|G</strong>，比如 <strong>-R0/360G/-90/90N</strong></p></li>
+<li><p>使用 <strong>-fg</strong> 选项表明输入数据是地理坐标，见 <a class="reference internal" href="../f/"><span class="doc">-f 选项</span></a></p></li>
 </ol>
 <div class="admonition note">
-<p class="first admonition-title">注解</p>
-<p class="last">推荐使用 <strong>-fg</strong> 这种方式来指定输入数据的类型。</p>
+<p class="admonition-title">注解</p>
+<p>推荐使用 <strong>-fg</strong> 这种方式来指定输入数据的类型。</p>
 </div>
 </div>
 <div class="section" id="id4">
@@ -378,14 +379,22 @@ gitalk.render('gitalk-container');
 
   <div role="contentinfo">
     <p>
-        &copy; Copyright 2014 - 2020, GMT中文社区.
+        
+        &copy; 版权所有 2014 - 2020, GMT中文社区.
       <span class="lastupdated">
-        最后更新于 2020年07月05日.
+        最后更新于 2020年10月15日.
       </span>
 
     </p>
   </div>
-  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+    
+    
+    
+    Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a
+    
+    <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a>
+    
+    provided by <a href="https://readthedocs.org">Read the Docs</a>. 
 
 </footer>
 
@@ -396,7 +405,6 @@ gitalk.render('gitalk-container');
 
   </div>
   
-
 
   <script type="text/javascript">
       jQuery(function () {

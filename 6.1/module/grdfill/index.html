@@ -1,8 +1,7 @@
 
 
 <!DOCTYPE html>
-<!--[if IE 8]><html class="no-js lt-ie9" lang="zh-CN" > <![endif]-->
-<!--[if gt IE 8]><!--> <html class="no-js" lang="zh-CN" > <!--<![endif]-->
+<html class="writer-html5" lang="zh-CN" >
 <head>
   <meta charset="utf-8">
   
@@ -10,6 +9,11 @@
   
   <title>grdfill &mdash; GMT中文手册</title>
   
+
+  
+  <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../../_static/custom.css" type="text/css" />
 
   
   
@@ -21,25 +25,22 @@
   
 
   
-  <script type="text/javascript" src="../../_static/js/modernizr.min.js"></script>
+  <!--[if lt IE 9]>
+    <script src="../../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
   
     
       <script type="text/javascript" id="documentation_options" data-url_root="../../" src="../../_static/documentation_options.js"></script>
-        <script type="text/javascript" src="../../_static/jquery.js"></script>
-        <script type="text/javascript" src="../../_static/underscore.js"></script>
-        <script type="text/javascript" src="../../_static/doctools.js"></script>
-        <script type="text/javascript" src="../../_static/language_data.js"></script>
-        <script type="text/javascript" src="../../_static/translations.js"></script>
-        <script async="async" type="text/javascript" src="https://cdn.bootcss.com/mathjax/2.7.7/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+        <script src="../../_static/jquery.js"></script>
+        <script src="../../_static/underscore.js"></script>
+        <script src="../../_static/doctools.js"></script>
+        <script src="../../_static/language_data.js"></script>
+        <script src="../../_static/translations.js"></script>
+        <script async="async" src="https://cdn.bootcss.com/mathjax/2.7.7/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
     
     <script type="text/javascript" src="../../_static/js/theme.js"></script>
 
     
-
-  
-  <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
-  <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
-  <link rel="stylesheet" href="../../_static/custom.css" type="text/css" />
     <link rel="index" title="索引" href="../../genindex/" />
     <link rel="search" title="搜索" href="../../search/" />
     <link rel="next" title="grdimage" href="../grdimage/" />
@@ -90,6 +91,7 @@
 
         </div>
 
+        
         <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
           
     
@@ -112,6 +114,7 @@
 <li class="toctree-l1"><a class="reference internal" href="../../proj/">地图投影</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../conf/">配置参数</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../dataset/">地学数据集</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../dataset-CN/">中国地学数据集</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../chinese/">中文支持</a></li>
 <li class="toctree-l1 current"><a class="reference internal" href="../">模块手册</a><ul class="current">
 <li class="toctree-l2"><a class="reference internal" href="../basemap/">basemap</a></li>
@@ -186,7 +189,6 @@
 <li class="toctree-l2"><a class="reference internal" href="../xyz2grd/">xyz2grd</a></li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="../../gallery/">绘图示例</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../api/">API</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../appendix/">附录</a></li>
 </ul>
@@ -214,6 +216,7 @@
     
 
         </div>
+        
       </div>
     </nav>
 
@@ -252,7 +255,7 @@
 
   <ul class="wy-breadcrumbs">
     
-      <li><a href="../../">首页</a> &raquo;</li>
+      <li><a href="../../" class="icon icon-home"></a> &raquo;</li>
         
           <li><a href="../">模块手册</a> &raquo;</li>
         
@@ -279,16 +282,13 @@
             
   <div class="section" id="grdfill">
 <span id="index-0"></span><h1>grdfill<a class="headerlink" href="#grdfill" title="永久链接至标题">¶</a></h1>
-<table class="docutils field-list" frame="void" rules="none">
-<col class="field-name" />
-<col class="field-body" />
-<tbody valign="top">
-<tr class="field-odd field"><th class="field-name">官方文档:</th><td class="field-body"><a class="reference external" href="https://docs.generic-mapping-tools.org/6.0/grdfill.html" title="(在 GMT v6.0)"><span>grdfill</span></a></td>
-</tr>
-<tr class="field-even field"><th class="field-name">简介:</th><td class="field-body"></td>
-</tr>
-</tbody>
-</table>
+<dl class="field-list simple">
+<dt class="field-odd">官方文档</dt>
+<dd class="field-odd"><p><a class="reference external" href="https://docs.generic-mapping-tools.org/6.1/grdfill.html" title="(在 GMT v6.1)"><span>grdfill</span></a></p>
+</dd>
+<dt class="field-even">简介</dt>
+<dd class="field-even"><p></p></dd>
+</dl>
 <p><strong>grdfill</strong> 模块读入一个文件数据，并向数据中的“洞”填充数据。“洞”通常指值为NaN的节点，但用户也可以使用其它准则指定“洞”。</p>
 <div class="section" id="id1">
 <h2>语法<a class="headerlink" href="#id1" title="永久链接至标题">¶</a></h2>
@@ -303,60 +303,60 @@
 </div>
 <div class="section" id="id2">
 <h2>必须选项<a class="headerlink" href="#id2" title="永久链接至标题">¶</a></h2>
-<dl class="docutils">
-<dt><em>ingrid</em></dt>
-<dd>输入网格文件</dd>
+<dl class="simple">
+<dt><em>ingrid</em></dt><dd><p>输入网格文件</p>
+</dd>
 </dl>
-<dl class="docutils" id="a">
-<dt><strong>-A</strong><em>mode</em>[<em>arg</em>]</dt>
-<dd><p class="first">填充“洞”所使用的算法</p>
+<dl id="a">
+<dt><strong>-A</strong><em>mode</em>[<em>arg</em>]</dt><dd><p>填充“洞”所使用的算法</p>
 <p>目前支持两种算法：</p>
-<ul class="last simple">
-<li><strong>c</strong><em>value</em> 使用某个常数填充</li>
-<li><strong>n</strong>[<em>radius</em>] 使用nearest neighbor算法，<em>radius</em> 为搜索半径（单位是节点数）</li>
+<ul class="simple">
+<li><p><strong>c</strong><em>value</em> 使用某个常数填充“洞”</p></li>
+<li><p><strong>n</strong>[<em>radius</em>] 使用最近的非NaN值填充“洞”，默认的搜索半径为半径默认取 <span class="math notranslate nohighlight">\(r^2 = \sqrt{X^2 + Y^2}\)</span>，其中 X 和 Y
+分别是X方向和Y方向的网格数目。也可以指定 <em>radius</em> 为搜索半径（单位是节点数）。</p></li>
 </ul>
 </dd>
 </dl>
-<dl class="docutils" id="g">
-<dt><strong>-G</strong><em>outgrid</em></dt>
-<dd>输出网格文件</dd>
+<dl class="simple" id="g">
+<dt><strong>-G</strong><em>outgrid</em></dt><dd><p>输出网格文件</p>
+</dd>
 </dl>
 </div>
 <div class="section" id="id3">
 <h2>可选选项<a class="headerlink" href="#id3" title="永久链接至标题">¶</a></h2>
-<dl class="docutils" id="n">
-<dt><strong>-N</strong>[<em>nodata</em>]</dt>
-<dd>所有值等于 <em>nodata</em> 的节点都被认为为“hole”，默认值为NaN</dd>
-</dl>
-<dl class="docutils" id="r">
-<dt><strong>-R</strong><em>xmin</em>/<em>xmax</em>/<em>ymin</em>/<em>ymax</em>[<strong>+r</strong>][<strong>+u</strong><em>unit</em>] <a class="reference internal" href="../../option/R/"><span class="doc">(more …)</span></a></dt>
-<dd>指定数据范围</dd>
-</dl>
-<blockquote>
-<div>该选项定义了要处理了子区域范围。</div></blockquote>
-<dl class="docutils" id="l">
-<dt><strong>-L</strong>[<strong>p</strong>]</dt>
-<dd><p class="first">不填充“洞”，仅列出每个“洞”所处的子区域的范围</p>
-<p class="last"><strong>-G</strong> 选项会被忽略。<strong>-Lp</strong> 表示输出每个子区域对应的闭合多边形。</p>
+<dl class="simple" id="n">
+<dt><strong>-N</strong>[<em>nodata</em>]</dt><dd><p>所有值等于 <em>nodata</em> 的节点都被认为为“hole”，默认值为NaN</p>
 </dd>
 </dl>
-<dl class="docutils" id="v">
-<dt><strong>-V</strong>[<em>level</em>] <a class="reference internal" href="../../option/V/"><span class="doc">(more …)</span></a></dt>
-<dd>设置 verbose 等级 [c]</dd>
+<dl class="simple" id="r">
+<dt><strong>-R</strong><em>xmin</em>/<em>xmax</em>/<em>ymin</em>/<em>ymax</em>[<strong>+r</strong>][<strong>+u</strong><em>unit</em>] <a class="reference internal" href="../../option/R/"><span class="doc">(more …)</span></a></dt><dd><p>指定数据范围</p>
+</dd>
 </dl>
-<dl class="docutils">
-<dt><strong>-f</strong>[<strong>i</strong>|<strong>o</strong>]<em>colinfo</em> <a class="reference internal" href="../../option/f/"><span class="doc">(more …)</span></a></dt>
-<dd>指定输入或输出列的数据类型</dd>
+<blockquote>
+<div><p>该选项定义了要处理了子区域范围。</p>
+</div></blockquote>
+<dl id="l">
+<dt><strong>-L</strong>[<strong>p</strong>]</dt><dd><p>不填充“洞”，仅列出每个“洞”所处的子区域的范围</p>
+<p><strong>-G</strong> 选项会被忽略。<strong>-Lp</strong> 表示输出每个子区域对应的闭合多边形。</p>
+</dd>
 </dl>
-<dl class="docutils">
-<dt><strong>-^</strong> 或 <strong>-</strong></dt>
-<dd>显示简短的帮助信息，包括模块简介和基本语法信息（Windows下只能使用 <strong>-</strong>）</dd>
-<dt><strong>-+</strong> 或 <strong>+</strong></dt>
-<dd>显示帮助信息，包括模块简介、基本语法以及模块特有选项的说明</dd>
-<dt><strong>-?</strong> 或无参数</dt>
-<dd>显示完整的帮助信息，包括模块简介、基本语法以及所有选项的说明</dd>
-<dt><strong>--PAR</strong>=<em>value</em></dt>
-<dd>临时修改GMT参数的值，可重复多次使用。参数列表见 <a class="reference external" href="https://docs.generic-mapping-tools.org/6.0/gmt.conf.html" title="(在 GMT v6.0)"><span class="xref std std-doc">gmt.conf</span></a></dd>
+<dl class="simple" id="v">
+<dt><strong>-V</strong>[<em>level</em>] <a class="reference internal" href="../../option/V/"><span class="doc">(more …)</span></a></dt><dd><p>设置 verbose 等级 [<strong>w</strong>]</p>
+</dd>
+</dl>
+<dl class="simple">
+<dt><strong>-f</strong>[<strong>i</strong>|<strong>o</strong>]<em>colinfo</em> <a class="reference internal" href="../../option/f/"><span class="doc">(more …)</span></a></dt><dd><p>指定输入或输出列的数据类型</p>
+</dd>
+</dl>
+<dl class="simple">
+<dt><strong>-^</strong> 或 <strong>-</strong></dt><dd><p>显示简短的帮助信息，包括模块简介和基本语法信息（Windows下只能使用 <strong>-</strong>）</p>
+</dd>
+<dt><strong>-+</strong> 或 <strong>+</strong></dt><dd><p>显示帮助信息，包括模块简介、基本语法以及模块特有选项的说明</p>
+</dd>
+<dt><strong>-?</strong> 或无参数</dt><dd><p>显示完整的帮助信息，包括模块简介、基本语法以及所有选项的说明</p>
+</dd>
+<dt><strong>--PAR</strong>=<em>value</em></dt><dd><p>临时修改GMT参数的值，可重复多次使用。参数列表见 <a class="reference external" href="https://docs.generic-mapping-tools.org/6.1/gmt.conf.html" title="(在 GMT v6.1)"><span class="xref std std-doc">gmt.conf</span></a></p>
+</dd>
 </dl>
 </div>
 <div class="section" id="id4">
@@ -430,14 +430,22 @@ gitalk.render('gitalk-container');
 
   <div role="contentinfo">
     <p>
-        &copy; Copyright 2014 - 2020, GMT中文社区.
+        
+        &copy; 版权所有 2014 - 2020, GMT中文社区.
       <span class="lastupdated">
-        最后更新于 2020年07月05日.
+        最后更新于 2020年10月15日.
       </span>
 
     </p>
   </div>
-  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+    
+    
+    
+    Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a
+    
+    <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a>
+    
+    provided by <a href="https://readthedocs.org">Read the Docs</a>. 
 
 </footer>
 
@@ -448,7 +456,6 @@ gitalk.render('gitalk-container');
 
   </div>
   
-
 
   <script type="text/javascript">
       jQuery(function () {

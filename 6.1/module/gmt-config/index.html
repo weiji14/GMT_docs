@@ -1,8 +1,7 @@
 
 
 <!DOCTYPE html>
-<!--[if IE 8]><html class="no-js lt-ie9" lang="zh-CN" > <![endif]-->
-<!--[if gt IE 8]><!--> <html class="no-js" lang="zh-CN" > <!--<![endif]-->
+<html class="writer-html5" lang="zh-CN" >
 <head>
   <meta charset="utf-8">
   
@@ -10,6 +9,11 @@
   
   <title>gmt-config &mdash; GMT中文手册</title>
   
+
+  
+  <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../../_static/custom.css" type="text/css" />
 
   
   
@@ -21,25 +25,22 @@
   
 
   
-  <script type="text/javascript" src="../../_static/js/modernizr.min.js"></script>
+  <!--[if lt IE 9]>
+    <script src="../../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
   
     
       <script type="text/javascript" id="documentation_options" data-url_root="../../" src="../../_static/documentation_options.js"></script>
-        <script type="text/javascript" src="../../_static/jquery.js"></script>
-        <script type="text/javascript" src="../../_static/underscore.js"></script>
-        <script type="text/javascript" src="../../_static/doctools.js"></script>
-        <script type="text/javascript" src="../../_static/language_data.js"></script>
-        <script type="text/javascript" src="../../_static/translations.js"></script>
-        <script async="async" type="text/javascript" src="https://cdn.bootcss.com/mathjax/2.7.7/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+        <script src="../../_static/jquery.js"></script>
+        <script src="../../_static/underscore.js"></script>
+        <script src="../../_static/doctools.js"></script>
+        <script src="../../_static/language_data.js"></script>
+        <script src="../../_static/translations.js"></script>
+        <script async="async" src="https://cdn.bootcss.com/mathjax/2.7.7/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
     
     <script type="text/javascript" src="../../_static/js/theme.js"></script>
 
     
-
-  
-  <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
-  <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
-  <link rel="stylesheet" href="../../_static/custom.css" type="text/css" />
     <link rel="index" title="索引" href="../../genindex/" />
     <link rel="search" title="搜索" href="../../search/" />
     <link rel="next" title="gmtconnect" href="../gmtconnect/" />
@@ -90,6 +91,7 @@
 
         </div>
 
+        
         <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
           
     
@@ -112,6 +114,7 @@
 <li class="toctree-l1"><a class="reference internal" href="../../proj/">地图投影</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../conf/">配置参数</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../dataset/">地学数据集</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../dataset-CN/">中国地学数据集</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../chinese/">中文支持</a></li>
 <li class="toctree-l1 current"><a class="reference internal" href="../">模块手册</a><ul class="current">
 <li class="toctree-l2"><a class="reference internal" href="../basemap/">basemap</a></li>
@@ -183,7 +186,6 @@
 <li class="toctree-l2"><a class="reference internal" href="../xyz2grd/">xyz2grd</a></li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="../../gallery/">绘图示例</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../api/">API</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../appendix/">附录</a></li>
 </ul>
@@ -211,6 +213,7 @@
     
 
         </div>
+        
       </div>
     </nav>
 
@@ -249,7 +252,7 @@
 
   <ul class="wy-breadcrumbs">
     
-      <li><a href="../../">首页</a> &raquo;</li>
+      <li><a href="../../" class="icon icon-home"></a> &raquo;</li>
         
           <li><a href="../">模块手册</a> &raquo;</li>
         
@@ -284,49 +287,49 @@
 </div>
 <div class="section" id="id2">
 <h2>可选选项<a class="headerlink" href="#id2" title="永久链接至标题">¶</a></h2>
-<dl class="docutils">
-<dt><strong>--help</strong></dt>
-<dd>显示此帮助信息并退出</dd>
-<dt><strong>--all</strong></dt>
-<dd>显示全部选项的值</dd>
-<dt><strong>--bits</strong></dt>
-<dd>库文件是32位还是64位</dd>
-<dt><strong>--cc</strong></dt>
-<dd>编译过程中使用的C编译器</dd>
-<dt><strong>--cflags</strong></dt>
-<dd>C预处理器和编译器的CFLAGS，例如 <code class="docutils literal notranslate"><span class="pre">-I/opt/GMT/include/gmt</span></code></dd>
-<dt><strong>--datadir</strong></dt>
-<dd>GMT 数据目录，默认为空</dd>
-<dt><strong>--dataserver</strong></dt>
-<dd>GMT数据服务器网址</dd>
-<dt><strong>--dcw</strong></dt>
-<dd>DCW 数据的位置（可能为空）</dd>
-<dt><strong>--dep-libs</strong></dt>
-<dd>GMT 函数库依赖的其它函数库</dd>
-<dt><strong>--gshhg</strong></dt>
-<dd>GSHHG 数据的位置</dd>
-<dt><strong>--has-fftw</strong></dt>
-<dd>编译过程中是否链接了 FFTW</dd>
-<dt><strong>--has-gdal</strong></dt>
-<dd>编译过程中是否链接了 GDAL</dd>
-<dt><strong>--has-pcre</strong></dt>
-<dd>编译过程中是否链接了 PCRE</dd>
-<dt><strong>--has-lapack</strong></dt>
-<dd>编译过程中是否链接了 LAPACK</dd>
-<dt><strong>--has-openmp</strong></dt>
-<dd>编译过程中是否开启了 OpenMP 支持</dd>
-<dt><strong>--includedir</strong></dt>
-<dd>include 目录所在位置</dd>
-<dt><strong>--libdir</strong></dt>
-<dd>library 目录所在位置</dd>
-<dt><strong>--libs</strong></dt>
-<dd>链接GMT函数库所需的信息，例如 <code class="docutils literal notranslate"><span class="pre">-L/opt/GMT/lib64</span> <span class="pre">-lgmt</span></code></dd>
-<dt><strong>--plugindir</strong></dt>
-<dd>GMT 插件目录</dd>
-<dt><strong>--prefix</strong></dt>
-<dd>GMT 安装目录</dd>
-<dt><strong>--version</strong></dt>
-<dd>GMT 版本</dd>
+<dl class="simple">
+<dt><strong>--help</strong></dt><dd><p>显示此帮助信息并退出</p>
+</dd>
+<dt><strong>--all</strong></dt><dd><p>显示全部选项的值</p>
+</dd>
+<dt><strong>--bits</strong></dt><dd><p>库文件是32位还是64位</p>
+</dd>
+<dt><strong>--cc</strong></dt><dd><p>编译过程中使用的C编译器</p>
+</dd>
+<dt><strong>--cflags</strong></dt><dd><p>C预处理器和编译器的CFLAGS，例如 <code class="docutils literal notranslate"><span class="pre">-I/opt/GMT/include/gmt</span></code></p>
+</dd>
+<dt><strong>--datadir</strong></dt><dd><p>GMT 数据目录，默认为空</p>
+</dd>
+<dt><strong>--dataserver</strong></dt><dd><p>GMT数据服务器网址</p>
+</dd>
+<dt><strong>--dcw</strong></dt><dd><p>DCW 数据的位置（可能为空）</p>
+</dd>
+<dt><strong>--dep-libs</strong></dt><dd><p>GMT 函数库依赖的其它函数库</p>
+</dd>
+<dt><strong>--gshhg</strong></dt><dd><p>GSHHG 数据的位置</p>
+</dd>
+<dt><strong>--has-fftw</strong></dt><dd><p>编译过程中是否链接了 FFTW</p>
+</dd>
+<dt><strong>--has-gdal</strong></dt><dd><p>编译过程中是否链接了 GDAL</p>
+</dd>
+<dt><strong>--has-pcre</strong></dt><dd><p>编译过程中是否链接了 PCRE</p>
+</dd>
+<dt><strong>--has-lapack</strong></dt><dd><p>编译过程中是否链接了 LAPACK</p>
+</dd>
+<dt><strong>--has-openmp</strong></dt><dd><p>编译过程中是否开启了 OpenMP 支持</p>
+</dd>
+<dt><strong>--includedir</strong></dt><dd><p>include 目录所在位置</p>
+</dd>
+<dt><strong>--libdir</strong></dt><dd><p>library 目录所在位置</p>
+</dd>
+<dt><strong>--libs</strong></dt><dd><p>链接GMT函数库所需的信息，例如 <code class="docutils literal notranslate"><span class="pre">-L/opt/GMT/lib64</span> <span class="pre">-lgmt</span></code></p>
+</dd>
+<dt><strong>--plugindir</strong></dt><dd><p>GMT 插件目录</p>
+</dd>
+<dt><strong>--prefix</strong></dt><dd><p>GMT 安装目录</p>
+</dd>
+<dt><strong>--version</strong></dt><dd><p>GMT 版本</p>
+</dd>
 </dl>
 </div>
 </div>
@@ -374,14 +377,22 @@ gitalk.render('gitalk-container');
 
   <div role="contentinfo">
     <p>
-        &copy; Copyright 2014 - 2020, GMT中文社区.
+        
+        &copy; 版权所有 2014 - 2020, GMT中文社区.
       <span class="lastupdated">
-        最后更新于 2020年07月05日.
+        最后更新于 2020年10月15日.
       </span>
 
     </p>
   </div>
-  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+    
+    
+    
+    Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a
+    
+    <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a>
+    
+    provided by <a href="https://readthedocs.org">Read the Docs</a>. 
 
 </footer>
 
@@ -392,7 +403,6 @@ gitalk.render('gitalk-container');
 
   </div>
   
-
 
   <script type="text/javascript">
       jQuery(function () {

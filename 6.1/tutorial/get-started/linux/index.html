@@ -1,8 +1,7 @@
 
 
 <!DOCTYPE html>
-<!--[if IE 8]><html class="no-js lt-ie9" lang="zh-CN" > <![endif]-->
-<!--[if gt IE 8]><!--> <html class="no-js" lang="zh-CN" > <!--<![endif]-->
+<html class="writer-html5" lang="zh-CN" >
 <head>
   <meta charset="utf-8">
   
@@ -10,6 +9,11 @@
   
   <title>GMT初探: Linux篇 &mdash; GMT中文手册</title>
   
+
+  
+  <link rel="stylesheet" href="../../../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../../../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../../../_static/custom.css" type="text/css" />
 
   
   
@@ -21,25 +25,22 @@
   
 
   
-  <script type="text/javascript" src="../../../_static/js/modernizr.min.js"></script>
+  <!--[if lt IE 9]>
+    <script src="../../../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
   
     
       <script type="text/javascript" id="documentation_options" data-url_root="../../../" src="../../../_static/documentation_options.js"></script>
-        <script type="text/javascript" src="../../../_static/jquery.js"></script>
-        <script type="text/javascript" src="../../../_static/underscore.js"></script>
-        <script type="text/javascript" src="../../../_static/doctools.js"></script>
-        <script type="text/javascript" src="../../../_static/language_data.js"></script>
-        <script type="text/javascript" src="../../../_static/translations.js"></script>
-        <script async="async" type="text/javascript" src="https://cdn.bootcss.com/mathjax/2.7.7/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+        <script src="../../../_static/jquery.js"></script>
+        <script src="../../../_static/underscore.js"></script>
+        <script src="../../../_static/doctools.js"></script>
+        <script src="../../../_static/language_data.js"></script>
+        <script src="../../../_static/translations.js"></script>
+        <script async="async" src="https://cdn.bootcss.com/mathjax/2.7.7/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
     
     <script type="text/javascript" src="../../../_static/js/theme.js"></script>
 
     
-
-  
-  <link rel="stylesheet" href="../../../_static/css/theme.css" type="text/css" />
-  <link rel="stylesheet" href="../../../_static/pygments.css" type="text/css" />
-  <link rel="stylesheet" href="../../../_static/custom.css" type="text/css" />
     <link rel="index" title="索引" href="../../../genindex/" />
     <link rel="search" title="搜索" href="../../../search/" />
     <link rel="next" title="GMT初探: macOS篇" href="../macos/" />
@@ -90,6 +91,7 @@
 
         </div>
 
+        
         <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
           
     
@@ -142,9 +144,9 @@
 <li class="toctree-l1"><a class="reference internal" href="../../../proj/">地图投影</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../../conf/">配置参数</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../../dataset/">地学数据集</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../dataset-CN/">中国地学数据集</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../../chinese/">中文支持</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../../module/">模块手册</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../../gallery/">绘图示例</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../../api/">API</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../../appendix/">附录</a></li>
 </ul>
@@ -172,6 +174,7 @@
     
 
         </div>
+        
       </div>
     </nav>
 
@@ -210,7 +213,7 @@
 
   <ul class="wy-breadcrumbs">
     
-      <li><a href="../../../">首页</a> &raquo;</li>
+      <li><a href="../../../" class="icon icon-home"></a> &raquo;</li>
         
           <li><a href="../../">入门教程</a> &raquo;</li>
         
@@ -246,7 +249,7 @@
 <div class="section" id="gmt">
 <h2>运行GMT<a class="headerlink" href="#gmt" title="永久链接至标题">¶</a></h2>
 <p>启动终端后，敲入 <code class="docutils literal notranslate"><span class="pre">gmt</span></code> 以执行GMT命令。你将看到GMT的欢迎界面信息，类似于:</p>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>    GMT - The Generic Mapping Tools, Version <span class="m">6</span>.1.0 <span class="o">[</span><span class="m">64</span>-bit<span class="o">]</span> <span class="o">[</span><span class="m">8</span> cores<span class="o">]</span>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>    GMT - The Generic Mapping Tools, Version <span class="m">6</span>.1.1 <span class="o">[</span><span class="m">64</span>-bit<span class="o">]</span> <span class="o">[</span><span class="m">8</span> cores<span class="o">]</span>
     <span class="o">(</span>c<span class="o">)</span> <span class="m">1991</span>-2020 The GMT Team <span class="o">(</span>https://www.generic-mapping-tools.org/team.html<span class="o">)</span>.
 
     Supported in part by the US National Science Foundation <span class="o">(</span>http://www.nsf.gov/<span class="o">)</span>
@@ -287,8 +290,8 @@ options:
 </div>
 <p>该命令会在当前目录生成一个GMT模板脚本，并保存到Bash脚本文件 <code class="file docutils literal notranslate"><span class="pre">myplot.sh</span></code> 中。</p>
 <div class="admonition note">
-<p class="first admonition-title">注解</p>
-<p class="last">本手册中所有示例均使用Bash脚本，要求读者对Bash脚本及Unix命令行有最基本的了解。不了解的用户请阅读网络上Bash相关教程，或本手册中 <a class="reference internal" href="../../scripting/"><span class="doc">脚本编程</span></a> 一节。</p>
+<p class="admonition-title">注解</p>
+<p>本手册中所有示例均使用Bash脚本，要求读者对Bash脚本及Unix命令行有最基本的了解。不了解的用户请阅读网络上Bash相关教程，或本手册中 <a class="reference internal" href="../../scripting/"><span class="doc">脚本编程</span></a> 一节。</p>
 </div>
 </div>
 <div class="section" id="id3">
@@ -332,15 +335,15 @@ gmt end show
 </pre></div>
 </div>
 <p>待脚本执行完成后，会自动用阅读器（通常是evince）打开生成的PDF格式的图片文件。你将看到如下图所示的图片。</p>
-<p><a class="reference download internal" download="" href="../../../_downloads/997b4e9fa18e2670635ab714219bb231/linux-gmtplot-0.sh"><code class="xref download docutils literal notranslate"><span class="pre">Source</span> <span class="pre">Code</span></code></a></p>
+<p><a class="reference download internal" download="" href="../../../_downloads/6a5e17dd9d0491747d1e0e30b1503b6d/linux-gmtplot-0.sh"><code class="xref download docutils literal notranslate"><span class="pre">Source</span> <span class="pre">Code</span></code></a></p>
 <div class="figure align-center">
 <a class="reference internal image-reference" href="../../../_images/linux-gmtplot-0.png"><img alt="../../../_images/linux-gmtplot-0.png" src="../../../_images/linux-gmtplot-0.png" style="width: 75%;" /></a>
 </div>
 <p>这基本上就是运行GMT脚本的基本流程，即：</p>
 <ul class="simple">
-<li>生成脚本模板</li>
-<li>编辑脚本，添加GMT绘图命令</li>
-<li>运行脚本并查看绘图效果</li>
+<li><p>生成脚本模板</p></li>
+<li><p>编辑脚本，添加GMT绘图命令</p></li>
+<li><p>运行脚本并查看绘图效果</p></li>
 </ul>
 </div>
 </div>
@@ -388,14 +391,22 @@ gitalk.render('gitalk-container');
 
   <div role="contentinfo">
     <p>
-        &copy; Copyright 2014 - 2020, GMT中文社区.
+        
+        &copy; 版权所有 2014 - 2020, GMT中文社区.
       <span class="lastupdated">
-        最后更新于 2020年07月05日.
+        最后更新于 2020年10月15日.
       </span>
 
     </p>
   </div>
-  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+    
+    
+    
+    Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a
+    
+    <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a>
+    
+    provided by <a href="https://readthedocs.org">Read the Docs</a>. 
 
 </footer>
 
@@ -406,7 +417,6 @@ gitalk.render('gitalk-container');
 
   </div>
   
-
 
   <script type="text/javascript">
       jQuery(function () {

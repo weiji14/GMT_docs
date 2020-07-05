@@ -4,7 +4,7 @@ Windows 下的 GMT 中文支持
 ghostscript 的中文支持
 ----------------------
 
-通常，在 ``C:\Program Files\gs\gs9.26\examples\cjk`` 目录下可以找到文件 ``gscjk_ag.ps``\ 。
+以ghostscript9.26为例，在其安装目录 ``C:\Program Files\gs\gs9.26\examples\cjk`` 下可以找到文件 ``gscjk_ag.ps``\ 。
 
 .. note::
 
@@ -12,7 +12,7 @@ ghostscript 的中文支持
    cidmap 的选项，选中该选项则表示会为当前系统自动生成中文所需的 cidmap 文件。
    默认该选项是被选中的，一定 **不要** 将该选项取消；
 
-启动 cmd，键入如下命令::
+启动 cmd，键入如下命令(第一行中的ghostscript安装目录请根据实际情况修改)::
 
     cd "C:\Program Files\gs\gs9.26\bin"
     gswin64.exe ..\examples\cjk\gscjk_ag.ps
@@ -117,6 +117,9 @@ GMT 中文测试
 
 .. note::
 
-   若使用记事本编辑 bat 文件，则保存时应注意编码方式为 ANSI、Unicode 或
-   Unicode big endian，若使用 UTF-8 编码则会出现乱码；另外，很多编辑器默认将文本
-   文件以 UTF-8 编码保存，需要将编辑器的默认编码修改为 GB-2321、ANSI或GB-EUC。
+   使用记事本的用户，应注意含中文的bat文件和输入数据文件都应以ANSI编码保存，
+   使用其编码方式则极可能出现乱码。
+
+   Visual Studio Code 用户，应注意确保含中文的bat文件和输入数据文件都采用
+   GB2312编码方式。在Visual Studio Code右下角状态栏中可以查看并修改当前文件的
+   编码方式。

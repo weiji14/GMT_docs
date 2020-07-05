@@ -1,8 +1,7 @@
 
 
 <!DOCTYPE html>
-<!--[if IE 8]><html class="no-js lt-ie9" lang="zh-CN" > <![endif]-->
-<!--[if gt IE 8]><!--> <html class="no-js" lang="zh-CN" > <!--<![endif]-->
+<html class="writer-html5" lang="zh-CN" >
 <head>
   <meta charset="utf-8">
   
@@ -10,6 +9,11 @@
   
   <title>-Jcyl_stere：圆柱立体投影 &mdash; GMT中文手册</title>
   
+
+  
+  <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../../_static/custom.css" type="text/css" />
 
   
   
@@ -21,25 +25,22 @@
   
 
   
-  <script type="text/javascript" src="../../_static/js/modernizr.min.js"></script>
+  <!--[if lt IE 9]>
+    <script src="../../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
   
     
       <script type="text/javascript" id="documentation_options" data-url_root="../../" src="../../_static/documentation_options.js"></script>
-        <script type="text/javascript" src="../../_static/jquery.js"></script>
-        <script type="text/javascript" src="../../_static/underscore.js"></script>
-        <script type="text/javascript" src="../../_static/doctools.js"></script>
-        <script type="text/javascript" src="../../_static/language_data.js"></script>
-        <script type="text/javascript" src="../../_static/translations.js"></script>
-        <script async="async" type="text/javascript" src="https://cdn.bootcss.com/mathjax/2.7.7/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+        <script src="../../_static/jquery.js"></script>
+        <script src="../../_static/underscore.js"></script>
+        <script src="../../_static/doctools.js"></script>
+        <script src="../../_static/language_data.js"></script>
+        <script src="../../_static/translations.js"></script>
+        <script async="async" src="https://cdn.bootcss.com/mathjax/2.7.7/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
     
     <script type="text/javascript" src="../../_static/js/theme.js"></script>
 
     
-
-  
-  <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
-  <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
-  <link rel="stylesheet" href="../../_static/custom.css" type="text/css" />
     <link rel="index" title="索引" href="../../genindex/" />
     <link rel="search" title="搜索" href="../../search/" />
     <link rel="next" title="-Jd：等距圆锥投影" href="../Jd/" />
@@ -90,6 +91,7 @@
 
         </div>
 
+        
         <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
           
     
@@ -141,9 +143,9 @@
 </li>
 <li class="toctree-l1"><a class="reference internal" href="../../conf/">配置参数</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../dataset/">地学数据集</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../dataset-CN/">中国地学数据集</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../chinese/">中文支持</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../module/">模块手册</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../gallery/">绘图示例</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../api/">API</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../appendix/">附录</a></li>
 </ul>
@@ -171,6 +173,7 @@
     
 
         </div>
+        
       </div>
     </nav>
 
@@ -209,7 +212,7 @@
 
   <ul class="wy-breadcrumbs">
     
-      <li><a href="../../">首页</a> &raquo;</li>
+      <li><a href="../../" class="icon icon-home"></a> &raquo;</li>
         
           <li><a href="../">地图投影</a> &raquo;</li>
         
@@ -237,54 +240,55 @@
   <div class="section" id="jcyl-stere">
 <h1>-Jcyl_stere：圆柱立体投影<a class="headerlink" href="#jcyl-stere" title="永久链接至标题">¶</a></h1>
 <p>维基链接：<a class="reference external" href="https://en.wikipedia.org/wiki/Gall_stereographic_projection">https://en.wikipedia.org/wiki/Gall_stereographic_projection</a></p>
-<p>圆柱立体投影不像其他的圆柱投影那样显著，但由于其相对简单且能够克服其他圆柱投影的缺点（比如高纬度的畸变），故而仍然被使用。立体投影是透视投影，将整个球沿着赤道上的对跖点投影到一个圆柱上。该圆柱于两条距赤道等间距的标准纬线处穿过球体。</p>
+<p>圆柱立体投影不像其它的圆柱投影那样令人关注，但由于其相对简单且能够克服其它圆柱投影的缺点（比如高纬度的畸变），故而仍然被使用。立体投影是透视投影，将整个球沿着赤道上的对跖点投影到一个圆柱上。该圆柱于两条距赤道等间距的标准纬线处穿过球体。</p>
 <p>该投影的参数为：</p>
 <p><strong>-JCyl_stere</strong>/[<em>lon</em>[/<em>lat</em>]]/<em>width</em>
 或
 <strong>-Jcyl_stere</strong>/[<em>lon</em>[/<em>lat</em>]]/<em>scale</em></p>
 <ul class="simple">
-<li><em>lon</em> 中心经线，若省略则使用区域的中心经线</li>
-<li><em>lat</em> 标准纬线，默认是赤道。若使用，则必须指定中心经线</li>
+<li><p><em>lon</em> 中心经线 [默认为绘图区域的中心经线]</p></li>
+<li><p><em>lat</em> 标准纬线 [默认是赤道。若使用，则必须指定中心经线]</p></li>
+<li><p><em>width</em> 地图宽度</p></li>
+<li><p><em>scale</em> 地图比例尺，即每度在图上的长度或 1:<em>xxxx</em> （图上1厘米对应真实地球 <em>xxxx</em> 厘米）</p></li>
 </ul>
 <p>一些比较流行的标准纬线的选择如下：</p>
-<table border="1" class="docutils">
+<table class="docutils align-default">
 <colgroup>
-<col width="81%" />
-<col width="19%" />
+<col style="width: 81%" />
+<col style="width: 19%" />
 </colgroup>
-<thead valign="bottom">
-<tr class="row-odd"><th class="head">&#160;</th>
-<th class="head">&#160;</th>
+<thead>
+<tr class="row-odd"><th class="head"></th>
+<th class="head"></th>
 </tr>
 </thead>
-<tbody valign="top">
-<tr class="row-even"><td>Miller’s modified Gall</td>
-<td>66.159467°</td>
+<tbody>
+<tr class="row-even"><td><p>Miller’s modified Gall</p></td>
+<td><p>66.159467°</p></td>
 </tr>
-<tr class="row-odd"><td>Kamenetskiy’s First</td>
-<td>55°</td>
+<tr class="row-odd"><td><p>Kamenetskiy’s First</p></td>
+<td><p>55°</p></td>
 </tr>
-<tr class="row-even"><td>Gall’s stereographic</td>
-<td>45°</td>
+<tr class="row-even"><td><p>Gall’s stereographic</p></td>
+<td><p>45°</p></td>
 </tr>
-<tr class="row-odd"><td>Bolshoi Sovietskii Atlas Mira or Kamenetskiy’s Second</td>
-<td>30°</td>
+<tr class="row-odd"><td><p>Bolshoi Sovietskii Atlas Mira or Kamenetskiy’s Second</p></td>
+<td><p>30°</p></td>
 </tr>
-<tr class="row-even"><td>Braun’s cylindrical</td>
-<td>0°</td>
+<tr class="row-even"><td><p>Braun’s cylindrical</p></td>
+<td><p>0°</p></td>
 </tr>
 </tbody>
 </table>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>gmt begin GMT_gall_stereo pdf,png
 gmt <span class="nb">set</span> FORMAT_GEO_MAP dddA
-gmt coast -R-180/180/-60/80 -JCyl_stere/0/45/4.5i -Bxa60f30g30 -Bya30g30 -Dc -A5000 <span class="se">\</span>
-            -Wblack -Gseashell4 -Santiquewhite1
+gmt coast -R-180/180/-60/80 -JCyl_stere/0/45/12c -Bxa60f30g30 -Bya30g30 -A5000 -Wblack -Gseashell4 -Santiquewhite1
 gmt end
 </pre></div>
 </div>
 <div class="figure align-center" id="id1">
 <a class="reference internal image-reference" href="../../_images/Jcyl_stere-gmtplot-0.png"><img alt="../../_images/Jcyl_stere-gmtplot-0.png" src="../../_images/Jcyl_stere-gmtplot-0.png" style="width: 85%;" /></a>
-<p class="caption"><span class="caption-text">使用Gall立体投影绘制世界地图</span></p>
+<p class="caption"><span class="caption-text">使用Gall立体投影绘制世界地图</span><a class="headerlink" href="#id1" title="永久链接至图片">¶</a></p>
 </div>
 </div>
 
@@ -331,14 +335,22 @@ gitalk.render('gitalk-container');
 
   <div role="contentinfo">
     <p>
-        &copy; Copyright 2014 - 2020, GMT中文社区.
+        
+        &copy; 版权所有 2014 - 2020, GMT中文社区.
       <span class="lastupdated">
-        最后更新于 2020年07月05日.
+        最后更新于 2020年10月15日.
       </span>
 
     </p>
   </div>
-  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+    
+    
+    
+    Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a
+    
+    <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a>
+    
+    provided by <a href="https://readthedocs.org">Read the Docs</a>. 
 
 </footer>
 
@@ -349,7 +361,6 @@ gitalk.render('gitalk-container');
 
   </div>
   
-
 
   <script type="text/javascript">
       jQuery(function () {

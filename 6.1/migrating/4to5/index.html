@@ -1,8 +1,7 @@
 
 
 <!DOCTYPE html>
-<!--[if IE 8]><html class="no-js lt-ie9" lang="zh-CN" > <![endif]-->
-<!--[if gt IE 8]><!--> <html class="no-js" lang="zh-CN" > <!--<![endif]-->
+<html class="writer-html5" lang="zh-CN" >
 <head>
   <meta charset="utf-8">
   
@@ -10,6 +9,11 @@
   
   <title>GMT4 → GMT5 &mdash; GMT中文手册</title>
   
+
+  
+  <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../../_static/custom.css" type="text/css" />
 
   
   
@@ -21,25 +25,22 @@
   
 
   
-  <script type="text/javascript" src="../../_static/js/modernizr.min.js"></script>
+  <!--[if lt IE 9]>
+    <script src="../../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
   
     
       <script type="text/javascript" id="documentation_options" data-url_root="../../" src="../../_static/documentation_options.js"></script>
-        <script type="text/javascript" src="../../_static/jquery.js"></script>
-        <script type="text/javascript" src="../../_static/underscore.js"></script>
-        <script type="text/javascript" src="../../_static/doctools.js"></script>
-        <script type="text/javascript" src="../../_static/language_data.js"></script>
-        <script type="text/javascript" src="../../_static/translations.js"></script>
-        <script async="async" type="text/javascript" src="https://cdn.bootcss.com/mathjax/2.7.7/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+        <script src="../../_static/jquery.js"></script>
+        <script src="../../_static/underscore.js"></script>
+        <script src="../../_static/doctools.js"></script>
+        <script src="../../_static/language_data.js"></script>
+        <script src="../../_static/translations.js"></script>
+        <script async="async" src="https://cdn.bootcss.com/mathjax/2.7.7/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
     
     <script type="text/javascript" src="../../_static/js/theme.js"></script>
 
     
-
-  
-  <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
-  <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
-  <link rel="stylesheet" href="../../_static/custom.css" type="text/css" />
     <link rel="index" title="索引" href="../../genindex/" />
     <link rel="search" title="搜索" href="../../search/" />
     <link rel="next" title="GMT5 → GMT6" href="../5to6/" />
@@ -90,6 +91,7 @@
 
         </div>
 
+        
         <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
           
     
@@ -117,9 +119,9 @@
 <li class="toctree-l1"><a class="reference internal" href="../../proj/">地图投影</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../conf/">配置参数</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../dataset/">地学数据集</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../dataset-CN/">中国地学数据集</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../chinese/">中文支持</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../module/">模块手册</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../gallery/">绘图示例</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../api/">API</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../appendix/">附录</a></li>
 </ul>
@@ -147,6 +149,7 @@
     
 
         </div>
+        
       </div>
     </nav>
 
@@ -185,7 +188,7 @@
 
   <ul class="wy-breadcrumbs">
     
-      <li><a href="../../">首页</a> &raquo;</li>
+      <li><a href="../../" class="icon icon-home"></a> &raquo;</li>
         
           <li><a href="../">版本迁移</a> &raquo;</li>
         
@@ -218,8 +221,8 @@
 <p>为了解决这个问题，GMT5对源码做了大量改写。GMT5中只提供 <strong>gmt</strong> 这一个命令/可执行文件。GMT4中的所有<strong>命令</strong>在GMT5中都变成了 <strong>gmt</strong> 命令的<strong>模块</strong>。所有模块都以 <strong>gmt</strong> <em>module</em> <em>options</em> 的形式进行调用。例如，GMT4中的命令 <strong>psbasemap</strong> 在GMT5中应写为 <strong>gmt psbasemap</strong>。</p>
 <p>因而，将GMT4脚本迁移到GMT5下，只需要遵循如下步骤：</p>
 <ol class="arabic simple">
-<li>将所有GMT4命令前加上 <strong>gmt</strong>，即 <strong>psbasemap</strong> 改成 <strong>gmt psbasemap</strong></li>
-<li>保存并执行脚本。若出现报错，则找到最早的报错信息并查询当前GMT版本对应的文档，检查是否语法存在变化，并进一步更正。</li>
+<li><p>将所有GMT4命令前加上 <strong>gmt</strong>，即 <strong>psbasemap</strong> 改成 <strong>gmt psbasemap</strong></p></li>
+<li><p>保存并执行脚本。若出现报错，则找到最早的报错信息并查询当前GMT版本对应的文档，检查是否语法存在变化，并进一步更正。</p></li>
 </ol>
 <p>GMT提供了脚本 <strong>gmt5syntax</strong>，可以自动在GMT4命令前加上 <strong>gmt</strong>，该脚本位于
 GMT的 <code class="file docutils literal notranslate"><span class="pre">share/tools</span></code> 目录下。该脚本的使用方法也很简单:</p>
@@ -228,10 +231,9 @@ GMT的 <code class="file docutils literal notranslate"><span class="pre">share/t
 </div>
 <p>如果不愿意修改原脚本，GMT还为旧命令提供了软链接，使得依然可以直接使用 <strong>psbasemap</strong> 等命令，但极其不推荐这一方法。为旧命令生成软链接有多种方法，用户可任选其一即可：</p>
 <ol class="arabic">
-<li><p class="first">如果你是自行编译GMT源码并安装，则可以在 <code class="file docutils literal notranslate"><span class="pre">cmake/ConfigUser.cmake</span></code> 中加上
-<code class="docutils literal notranslate"><span class="pre">set</span> <span class="pre">(GMT_INSTALL_MODULE_LINKS</span> <span class="pre">TRUE)</span></code> 再进行编译安装</p>
-</li>
-<li><p class="first">GMT提供了一个脚本，可以用于检查软连接是否存在，同时也可以创建或删除软连接。对于已经安装GMT的用户，可以执行以下命令以检查软连接是否已经存在:</p>
+<li><p>如果你是自行编译GMT源码并安装，则可以在 <code class="file docutils literal notranslate"><span class="pre">cmake/ConfigUser.cmake</span></code> 中加上
+<code class="docutils literal notranslate"><span class="pre">set</span> <span class="pre">(GMT_INSTALL_MODULE_LINKS</span> <span class="pre">TRUE)</span></code> 再进行编译安装</p></li>
+<li><p>GMT提供了一个脚本，可以用于检查软连接是否存在，同时也可以创建或删除软连接。对于已经安装GMT的用户，可以执行以下命令以检查软连接是否已经存在:</p>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="k">$(</span>gmt --show-sharedir<span class="k">)</span>/tools/gmt_links.sh
 </pre></div>
 </div>
@@ -244,13 +246,13 @@ GMT的 <code class="file docutils literal notranslate"><span class="pre">share/t
 </pre></div>
 </div>
 </li>
-<li><p class="first">对于Bash用户，可以直接在Bash脚本、终端或者Bash配置文件中加入如下语句:</p>
+<li><p>对于Bash用户，可以直接在Bash脚本、终端或者Bash配置文件中加入如下语句:</p>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="nb">source</span> <span class="k">$(</span>gmt --show-sharedir<span class="k">)</span>/tools/gmt_functions.sh
 </pre></div>
 </div>
 <p>该脚本会为所有旧命令构建一个等效的bash函数。</p>
 </li>
-<li><p class="first">对于csh用户，可以直接在csh脚本、终端或者csh配置文件中加入如下语句:</p>
+<li><p>对于csh用户，可以直接在csh脚本、终端或者csh配置文件中加入如下语句:</p>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="nb">source</span> <span class="sb">`</span>gmt --show-sharedir<span class="sb">`</span>/tools/gmt_aliases.csh
 </pre></div>
 </div>
@@ -302,14 +304,22 @@ gitalk.render('gitalk-container');
 
   <div role="contentinfo">
     <p>
-        &copy; Copyright 2014 - 2020, GMT中文社区.
+        
+        &copy; 版权所有 2014 - 2020, GMT中文社区.
       <span class="lastupdated">
-        最后更新于 2020年07月05日.
+        最后更新于 2020年10月15日.
       </span>
 
     </p>
   </div>
-  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+    
+    
+    
+    Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a
+    
+    <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a>
+    
+    provided by <a href="https://readthedocs.org">Read the Docs</a>. 
 
 </footer>
 
@@ -320,7 +330,6 @@ gitalk.render('gitalk-container');
 
   </div>
   
-
 
   <script type="text/javascript">
       jQuery(function () {

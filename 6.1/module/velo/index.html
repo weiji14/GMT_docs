@@ -1,8 +1,7 @@
 
 
 <!DOCTYPE html>
-<!--[if IE 8]><html class="no-js lt-ie9" lang="zh-CN" > <![endif]-->
-<!--[if gt IE 8]><!--> <html class="no-js" lang="zh-CN" > <!--<![endif]-->
+<html class="writer-html5" lang="zh-CN" >
 <head>
   <meta charset="utf-8">
   
@@ -10,6 +9,11 @@
   
   <title>velo &mdash; GMT中文手册</title>
   
+
+  
+  <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../../_static/custom.css" type="text/css" />
 
   
   
@@ -21,25 +25,22 @@
   
 
   
-  <script type="text/javascript" src="../../_static/js/modernizr.min.js"></script>
+  <!--[if lt IE 9]>
+    <script src="../../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
   
     
       <script type="text/javascript" id="documentation_options" data-url_root="../../" src="../../_static/documentation_options.js"></script>
-        <script type="text/javascript" src="../../_static/jquery.js"></script>
-        <script type="text/javascript" src="../../_static/underscore.js"></script>
-        <script type="text/javascript" src="../../_static/doctools.js"></script>
-        <script type="text/javascript" src="../../_static/language_data.js"></script>
-        <script type="text/javascript" src="../../_static/translations.js"></script>
-        <script async="async" type="text/javascript" src="https://cdn.bootcss.com/mathjax/2.7.7/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+        <script src="../../_static/jquery.js"></script>
+        <script src="../../_static/underscore.js"></script>
+        <script src="../../_static/doctools.js"></script>
+        <script src="../../_static/language_data.js"></script>
+        <script src="../../_static/translations.js"></script>
+        <script async="async" src="https://cdn.bootcss.com/mathjax/2.7.7/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
     
     <script type="text/javascript" src="../../_static/js/theme.js"></script>
 
     
-
-  
-  <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
-  <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
-  <link rel="stylesheet" href="../../_static/custom.css" type="text/css" />
     <link rel="index" title="索引" href="../../genindex/" />
     <link rel="search" title="搜索" href="../../search/" />
     <link rel="next" title="xyz2grd" href="../xyz2grd/" />
@@ -90,6 +91,7 @@
 
         </div>
 
+        
         <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
           
     
@@ -112,6 +114,7 @@
 <li class="toctree-l1"><a class="reference internal" href="../../proj/">地图投影</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../conf/">配置参数</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../dataset/">地学数据集</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../dataset-CN/">中国地学数据集</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../chinese/">中文支持</a></li>
 <li class="toctree-l1 current"><a class="reference internal" href="../">模块手册</a><ul class="current">
 <li class="toctree-l2"><a class="reference internal" href="../basemap/">basemap</a></li>
@@ -184,7 +187,6 @@
 <li class="toctree-l2"><a class="reference internal" href="../xyz2grd/">xyz2grd</a></li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="../../gallery/">绘图示例</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../api/">API</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../appendix/">附录</a></li>
 </ul>
@@ -212,6 +214,7 @@
     
 
         </div>
+        
       </div>
     </nav>
 
@@ -250,7 +253,7 @@
 
   <ul class="wy-breadcrumbs">
     
-      <li><a href="../../">首页</a> &raquo;</li>
+      <li><a href="../../" class="icon icon-home"></a> &raquo;</li>
         
           <li><a href="../">模块手册</a> &raquo;</li>
         
@@ -277,112 +280,105 @@
             
   <div class="section" id="velo">
 <span id="index-0"></span><h1>velo<a class="headerlink" href="#velo" title="永久链接至标题">¶</a></h1>
-<table class="docutils field-list" frame="void" rules="none">
-<col class="field-name" />
-<col class="field-body" />
-<tbody valign="top">
-<tr class="field-odd field"><th class="field-name">官方文档:</th><td class="field-body"><a class="reference external" href="https://docs.generic-mapping-tools.org/6.0/supplements/geodesy/velo.html" title="(在 GMT v6.0)"><span>velo</span></a></td>
-</tr>
-<tr class="field-even field"><th class="field-name">简介:</th><td class="field-body">在地图上绘制三种符号：矢量（向量）、十字线和旋转饼图</td>
-</tr>
-</tbody>
-</table>
+<dl class="field-list simple">
+<dt class="field-odd">官方文档</dt>
+<dd class="field-odd"><p><a class="reference external" href="https://docs.generic-mapping-tools.org/6.1/supplements/geodesy/velo.html" title="(在 GMT v6.1)"><span>velo</span></a></p>
+</dd>
+<dt class="field-even">简介</dt>
+<dd class="field-even"><p>在地图上绘制三种符号：矢量（向量）、十字线和旋转饼图</p>
+</dd>
+</dl>
 <div class="section" id="s">
 <h2>-S选项<a class="headerlink" href="#s" title="永久链接至标题">¶</a></h2>
 <p><code class="docutils literal notranslate"><span class="pre">-S</span></code> 选项决定要绘制哪一种符号，及其输入数据的格式。</p>
-<dl class="docutils">
-<dt><code class="docutils literal notranslate"><span class="pre">-Se&lt;velscale&gt;/&lt;confidence&gt;/&lt;fontsize&gt;</span></code></dt>
-<dd><p class="first">绘制矢量，并可选择用椭圆表示不确定度。输入数据中每列的含义为：</p>
+<dl>
+<dt><code class="docutils literal notranslate"><span class="pre">-Se&lt;velscale&gt;/&lt;confidence&gt;/&lt;fontsize&gt;</span></code></dt><dd><p>绘制矢量，并可选择用椭圆表示不确定度。输入数据中每列的含义为：</p>
 <ol class="arabic simple">
-<li>起点的经度</li>
-<li>起点的纬度</li>
-<li>矢量的东向分量</li>
-<li>矢量的北向分量</li>
-<li>东向分量的不确定度（1-sigma）</li>
-<li>北向分量的不确定度（1-sigma）</li>
-<li>东向分量和北向分量的correlation</li>
-<li>名称（可选）</li>
+<li><p>起点的经度</p></li>
+<li><p>起点的纬度</p></li>
+<li><p>矢量的东向分量</p></li>
+<li><p>矢量的北向分量</p></li>
+<li><p>东向分量的不确定度（1-sigma）</p></li>
+<li><p>北向分量的不确定度（1-sigma）</p></li>
+<li><p>东向分量和北向分量的correlation</p></li>
+<li><p>名称（可选）</p></li>
 </ol>
 <p>说明：</p>
-<ol class="last arabic simple">
-<li><code class="docutils literal notranslate"><span class="pre">&lt;velscale&gt;</span></code> 控制了矢量的缩放比例，其对应了速度值为1的箭头的长度，默认单位由参数 <code class="docutils literal notranslate"><span class="pre">PROJ_LENGTH_UNIT</span></code> 决定，也可以自己添加长度单位 <code class="docutils literal notranslate"><span class="pre">i|c|p</span></code></li>
-<li><code class="docutils literal notranslate"><span class="pre">&lt;confidence&gt;</span></code> 设置了椭圆的2D置信区间的极限，比如0.95代表95%置信区间</li>
-<li><code class="docutils literal notranslate"><span class="pre">&lt;fontsize&gt;</span></code> 是名称的文本字号</li>
-<li>椭圆的填充色由 <code class="docutils literal notranslate"><span class="pre">-G</span></code> 选项控制</li>
-<li>椭圆的轮廓以及矢量的画笔属性由 <code class="docutils literal notranslate"><span class="pre">-W</span></code> 选项控</li>
-</ol>
-</dd>
-<dt><code class="docutils literal notranslate"><span class="pre">-Sr&lt;velscale&gt;/&lt;confidence&gt;/&lt;fontsize&gt;</span></code></dt>
-<dd><p class="first">与 <code class="docutils literal notranslate"><span class="pre">-Se</span></code> 类似，区别在于输入文件不同：</p>
-<ol class="last arabic simple">
-<li>起点的经度</li>
-<li>起点的纬度</li>
-<li>矢量的东向分量</li>
-<li>矢量的北向分量</li>
-<li>椭圆的半长轴</li>
-<li>椭圆的半短轴</li>
-<li>椭圆的长轴相对于水平方向逆时针旋转的角度</li>
-<li>名称（可选）</li>
-</ol>
-</dd>
-<dt><code class="docutils literal notranslate"><span class="pre">-Sn&lt;barscale&gt;</span></code></dt>
-<dd><p class="first">绘制各向异性矢量， <code class="docutils literal notranslate"><span class="pre">&lt;barscale&gt;</span></code> 是各向异性矢量的缩放比例。输入数据中每列的含义为：</p>
-<ol class="last arabic simple">
-<li>经度</li>
-<li>纬度</li>
-<li>各向异性矢量的东向分量</li>
-<li>各向异性矢量的北向分量</li>
-</ol>
-</dd>
-<dt><code class="docutils literal notranslate"><span class="pre">-Sw&lt;wedge_scale&gt;/&lt;wedge_mag&gt;</span></code></dt>
-<dd><p class="first">绘制旋转饼图。输入数据中每列的含义为：</p>
 <ol class="arabic simple">
-<li>经度</li>
-<li>纬度</li>
-<li>旋转饼图的旋转角度（弧度制）</li>
-<li>旋转饼图的不确定度（弧度制）</li>
+<li><p><code class="docutils literal notranslate"><span class="pre">&lt;velscale&gt;</span></code> 控制了矢量的缩放比例，其对应了速度值为1的箭头的长度，默认单位由参数 <code class="docutils literal notranslate"><span class="pre">PROJ_LENGTH_UNIT</span></code> 决定，也可以自己添加长度单位 <code class="docutils literal notranslate"><span class="pre">i|c|p</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">&lt;confidence&gt;</span></code> 设置了椭圆的2D置信区间的极限，比如0.95代表95%置信区间</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">&lt;fontsize&gt;</span></code> 是名称的文本字号</p></li>
+<li><p>椭圆的填充色由 <code class="docutils literal notranslate"><span class="pre">-G</span></code> 选项控制</p></li>
+<li><p>椭圆的轮廓以及矢量的画笔属性由 <code class="docutils literal notranslate"><span class="pre">-W</span></code> 选项控</p></li>
 </ol>
-<p class="last">旋转饼图由两个同心扇形组成。一个扇形是旋转饼图本身（下称饼图扇形），另一个扇形则表示旋转饼图的不确定度（下称不确定度扇形）。两个扇形的半径由 <code class="docutils literal notranslate"><span class="pre">&lt;wedge_scale&gt;</span></code> 给出。两个扇形的角度分别为旋转饼图的旋转角度和不确定度乘以 <code class="docutils literal notranslate"><span class="pre">&lt;wedge_mag&gt;</span></code> 。饼图的填充色由 <code class="docutils literal notranslate"><span class="pre">-G</span></code> 选项控制， 不确定度的颜色由 <code class="docutils literal notranslate"><span class="pre">-E</span></code> 控制。饼图扇形从正北开始，顺时针旋转。不确定度扇形从旋转饼图的结束开始，向顺时针和逆时针两个方向旋转，两个方向旋转的角度均为不确定度的 2 倍。</p>
 </dd>
-<dt><code class="docutils literal notranslate"><span class="pre">-Sx&lt;cross_scale&gt;</span></code></dt>
-<dd><p class="first">绘制应变十字线。 <code class="docutils literal notranslate"><span class="pre">&lt;cross_scale&gt;</span></code> 控制十字线的大小。输入文件中每列的含义为：</p>
-<ol class="last arabic simple">
-<li>经度</li>
-<li>纬度</li>
-<li>eps1：应变张量的扩张本征值，扩张为正</li>
-<li>eps2： 应变张量的压缩本征值，扩张为正</li>
-<li>eps2的方位角（北方向顺时针旋转的角度）</li>
+<dt><code class="docutils literal notranslate"><span class="pre">-Sr&lt;velscale&gt;/&lt;confidence&gt;/&lt;fontsize&gt;</span></code></dt><dd><p>与 <code class="docutils literal notranslate"><span class="pre">-Se</span></code> 类似，区别在于输入文件不同：</p>
+<ol class="arabic simple">
+<li><p>起点的经度</p></li>
+<li><p>起点的纬度</p></li>
+<li><p>矢量的东向分量</p></li>
+<li><p>矢量的北向分量</p></li>
+<li><p>椭圆的半长轴</p></li>
+<li><p>椭圆的半短轴</p></li>
+<li><p>椭圆的长轴相对于水平方向逆时针旋转的角度</p></li>
+<li><p>名称（可选）</p></li>
+</ol>
+</dd>
+<dt><code class="docutils literal notranslate"><span class="pre">-Sn&lt;barscale&gt;</span></code></dt><dd><p>绘制各向异性矢量， <code class="docutils literal notranslate"><span class="pre">&lt;barscale&gt;</span></code> 是各向异性矢量的缩放比例。输入数据中每列的含义为：</p>
+<ol class="arabic simple">
+<li><p>经度</p></li>
+<li><p>纬度</p></li>
+<li><p>各向异性矢量的东向分量</p></li>
+<li><p>各向异性矢量的北向分量</p></li>
+</ol>
+</dd>
+<dt><code class="docutils literal notranslate"><span class="pre">-Sw&lt;wedge_scale&gt;/&lt;wedge_mag&gt;</span></code></dt><dd><p>绘制旋转饼图。输入数据中每列的含义为：</p>
+<ol class="arabic simple">
+<li><p>经度</p></li>
+<li><p>纬度</p></li>
+<li><p>旋转饼图的旋转角度（弧度制）</p></li>
+<li><p>旋转饼图的不确定度（弧度制）</p></li>
+</ol>
+<p>旋转饼图由两个同心扇形组成。一个扇形是旋转饼图本身（下称饼图扇形），另一个扇形则表示旋转饼图的不确定度（下称不确定度扇形）。两个扇形的半径由 <code class="docutils literal notranslate"><span class="pre">&lt;wedge_scale&gt;</span></code> 给出。两个扇形的角度分别为旋转饼图的旋转角度和不确定度乘以 <code class="docutils literal notranslate"><span class="pre">&lt;wedge_mag&gt;</span></code> 。饼图的填充色由 <code class="docutils literal notranslate"><span class="pre">-G</span></code> 选项控制， 不确定度的颜色由 <code class="docutils literal notranslate"><span class="pre">-E</span></code> 控制。饼图扇形从正北开始，顺时针旋转。不确定度扇形从旋转饼图的结束开始，向顺时针和逆时针两个方向旋转，两个方向旋转的角度均为不确定度的 2 倍。</p>
+</dd>
+<dt><code class="docutils literal notranslate"><span class="pre">-Sx&lt;cross_scale&gt;</span></code></dt><dd><p>绘制应变十字线。 <code class="docutils literal notranslate"><span class="pre">&lt;cross_scale&gt;</span></code> 控制十字线的大小。输入文件中每列的含义为：</p>
+<ol class="arabic simple">
+<li><p>经度</p></li>
+<li><p>纬度</p></li>
+<li><p>eps1：应变张量的扩张本征值，扩张为正</p></li>
+<li><p>eps2： 应变张量的压缩本征值，扩张为正</p></li>
+<li><p>eps2的方位角（北方向顺时针旋转的角度）</p></li>
 </ol>
 </dd>
 </dl>
 </div>
 <div class="section" id="id1">
 <h2>选项<a class="headerlink" href="#id1" title="永久链接至标题">¶</a></h2>
-<dl class="docutils">
-<dt><code class="docutils literal notranslate"><span class="pre">-A&lt;params&gt;</span></code></dt>
-<dd>修改矢量的属性，见 <a class="reference internal" href="../../basis/vector/"><span class="doc">绘制矢量/箭头</span></a> 一节</dd>
-<dt><code class="docutils literal notranslate"><span class="pre">-D&lt;sigma_scale&gt;</span></code></dt>
-<dd>控制 <code class="docutils literal notranslate"><span class="pre">-Se</span></code> 和 <code class="docutils literal notranslate"><span class="pre">-Sr</span></code> 中速度不确定度以及 <code class="docutils literal notranslate"><span class="pre">-Sw</span></code> 中旋转不确定度的缩放。该参数可以与 <code class="docutils literal notranslate"><span class="pre">&lt;confidence&gt;</span></code> 一起控制不确定度的绘制</dd>
-<dt><code class="docutils literal notranslate"><span class="pre">-F&lt;fill&gt;</span></code></dt>
-<dd>控制边框和标注的颜色</dd>
-<dt><code class="docutils literal notranslate"><span class="pre">-E&lt;fill&gt;</span></code></dt>
-<dd>控制 <code class="docutils literal notranslate"><span class="pre">-Sw</span></code> 中饼图不确定度的填充</dd>
-<dt><code class="docutils literal notranslate"><span class="pre">-G&lt;fill&gt;</span></code></dt>
-<dd>控制颜色？</dd>
-<dt><code class="docutils literal notranslate"><span class="pre">-L</span></code></dt>
-<dd>绘制线段。使用该选择，则椭圆和断层面会根据 <code class="docutils literal notranslate"><span class="pre">-W</span></code> 选项绘制轮廓</dd>
-<dt><code class="docutils literal notranslate"><span class="pre">-N</span></code></dt>
-<dd>不跳过区域范围外的符号</dd>
-<dt><code class="docutils literal notranslate"><span class="pre">-W&lt;pen&gt;</span></code></dt>
-<dd>设置速度箭头、椭圆轮廓以及断层边界的颜色</dd>
+<dl class="simple">
+<dt><code class="docutils literal notranslate"><span class="pre">-A&lt;params&gt;</span></code></dt><dd><p>修改矢量的属性，见 <a class="reference internal" href="../../basis/vector/"><span class="doc">绘制矢量/箭头</span></a> 一节</p>
+</dd>
+<dt><code class="docutils literal notranslate"><span class="pre">-D&lt;sigma_scale&gt;</span></code></dt><dd><p>控制 <code class="docutils literal notranslate"><span class="pre">-Se</span></code> 和 <code class="docutils literal notranslate"><span class="pre">-Sr</span></code> 中速度不确定度以及 <code class="docutils literal notranslate"><span class="pre">-Sw</span></code> 中旋转不确定度的缩放。该参数可以与 <code class="docutils literal notranslate"><span class="pre">&lt;confidence&gt;</span></code> 一起控制不确定度的绘制</p>
+</dd>
+<dt><code class="docutils literal notranslate"><span class="pre">-F&lt;fill&gt;</span></code></dt><dd><p>控制边框和标注的颜色</p>
+</dd>
+<dt><code class="docutils literal notranslate"><span class="pre">-E&lt;fill&gt;</span></code></dt><dd><p>控制 <code class="docutils literal notranslate"><span class="pre">-Sw</span></code> 中饼图不确定度的填充</p>
+</dd>
+<dt><code class="docutils literal notranslate"><span class="pre">-G&lt;fill&gt;</span></code></dt><dd><p>控制颜色？</p>
+</dd>
+<dt><code class="docutils literal notranslate"><span class="pre">-L</span></code></dt><dd><p>绘制线段。使用该选择，则椭圆和断层面会根据 <code class="docutils literal notranslate"><span class="pre">-W</span></code> 选项绘制轮廓</p>
+</dd>
+<dt><code class="docutils literal notranslate"><span class="pre">-N</span></code></dt><dd><p>不跳过区域范围外的符号</p>
+</dd>
+<dt><code class="docutils literal notranslate"><span class="pre">-W&lt;pen&gt;</span></code></dt><dd><p>设置速度箭头、椭圆轮廓以及断层边界的颜色</p>
+</dd>
 </dl>
-<dl class="docutils" id="u">
-<dt><strong>-U</strong>[<em>label</em>][<strong>+c</strong>][<strong>+j</strong><em>just</em>][<strong>+o</strong><em>dx</em>/<em>dy</em>] <a class="reference internal" href="../../option/U/"><span class="doc">(more …)</span></a></dt>
-<dd>在图上绘制GMT时间戳logo</dd>
+<dl class="simple" id="u">
+<dt><strong>-U</strong>[<em>label</em>][<strong>+c</strong>][<strong>+j</strong><em>just</em>][<strong>+o</strong><em>dx</em>/<em>dy</em>] <a class="reference internal" href="../../option/U/"><span class="doc">(more …)</span></a></dt><dd><p>在图上绘制GMT时间戳logo</p>
+</dd>
 </dl>
-<dl class="docutils">
-<dt><strong>-t</strong>[<em>transp</em>] <a class="reference internal" href="../../option/t/"><span class="doc">(more …)</span></a></dt>
-<dd>设置图层透明度（百分比）。取值范围为0（不透明）到100（全透明）</dd>
+<dl class="simple">
+<dt><strong>-t</strong>[<em>transp</em>] <a class="reference internal" href="../../option/t/"><span class="doc">(more …)</span></a></dt><dd><p>设置图层透明度（百分比）。取值范围为0（不透明）到100（全透明）</p>
+</dd>
 </dl>
 </div>
 <div class="section" id="id2">
@@ -412,7 +408,7 @@ gmt end
 </div>
 <div class="figure align-center" id="id3">
 <img alt="../../_images/velo-gmtplot-0.png" src="../../_images/velo-gmtplot-0.png" />
-<p class="caption"><span class="caption-text">velo示例图1</span></p>
+<p class="caption"><span class="caption-text">velo示例图1</span><a class="headerlink" href="#id3" title="永久链接至图片">¶</a></p>
 </div>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="ch">#!/bin/bash</span>
 
@@ -443,7 +439,7 @@ gmt end
 </div>
 <div class="figure align-center" id="id4">
 <img alt="../../_images/velo-gmtplot-1.png" src="../../_images/velo-gmtplot-1.png" />
-<p class="caption"><span class="caption-text">velo示例图2</span></p>
+<p class="caption"><span class="caption-text">velo示例图2</span><a class="headerlink" href="#id4" title="永久链接至图片">¶</a></p>
 </div>
 <p>下面的示例展示了如何绘制应变十字线:</p>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>gmt begin <span class="nb">test</span> pdf
@@ -499,14 +495,22 @@ gitalk.render('gitalk-container');
 
   <div role="contentinfo">
     <p>
-        &copy; Copyright 2014 - 2020, GMT中文社区.
+        
+        &copy; 版权所有 2014 - 2020, GMT中文社区.
       <span class="lastupdated">
-        最后更新于 2020年07月05日.
+        最后更新于 2020年10月15日.
       </span>
 
     </p>
   </div>
-  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+    
+    
+    
+    Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a
+    
+    <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a>
+    
+    provided by <a href="https://readthedocs.org">Read the Docs</a>. 
 
 </footer>
 
@@ -517,7 +521,6 @@ gitalk.render('gitalk-container');
 
   </div>
   
-
 
   <script type="text/javascript">
       jQuery(function () {

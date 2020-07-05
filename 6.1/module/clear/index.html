@@ -1,8 +1,7 @@
 
 
 <!DOCTYPE html>
-<!--[if IE 8]><html class="no-js lt-ie9" lang="zh-CN" > <![endif]-->
-<!--[if gt IE 8]><!--> <html class="no-js" lang="zh-CN" > <!--<![endif]-->
+<html class="writer-html5" lang="zh-CN" >
 <head>
   <meta charset="utf-8">
   
@@ -10,6 +9,11 @@
   
   <title>clear &mdash; GMT中文手册</title>
   
+
+  
+  <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../../_static/custom.css" type="text/css" />
 
   
   
@@ -21,25 +25,22 @@
   
 
   
-  <script type="text/javascript" src="../../_static/js/modernizr.min.js"></script>
+  <!--[if lt IE 9]>
+    <script src="../../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
   
     
       <script type="text/javascript" id="documentation_options" data-url_root="../../" src="../../_static/documentation_options.js"></script>
-        <script type="text/javascript" src="../../_static/jquery.js"></script>
-        <script type="text/javascript" src="../../_static/underscore.js"></script>
-        <script type="text/javascript" src="../../_static/doctools.js"></script>
-        <script type="text/javascript" src="../../_static/language_data.js"></script>
-        <script type="text/javascript" src="../../_static/translations.js"></script>
-        <script async="async" type="text/javascript" src="https://cdn.bootcss.com/mathjax/2.7.7/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+        <script src="../../_static/jquery.js"></script>
+        <script src="../../_static/underscore.js"></script>
+        <script src="../../_static/doctools.js"></script>
+        <script src="../../_static/language_data.js"></script>
+        <script src="../../_static/translations.js"></script>
+        <script async="async" src="https://cdn.bootcss.com/mathjax/2.7.7/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
     
     <script type="text/javascript" src="../../_static/js/theme.js"></script>
 
     
-
-  
-  <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
-  <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
-  <link rel="stylesheet" href="../../_static/custom.css" type="text/css" />
     <link rel="index" title="索引" href="../../genindex/" />
     <link rel="search" title="搜索" href="../../search/" />
     <link rel="next" title="clip" href="../clip/" />
@@ -90,6 +91,7 @@
 
         </div>
 
+        
         <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
           
     
@@ -112,6 +114,7 @@
 <li class="toctree-l1"><a class="reference internal" href="../../proj/">地图投影</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../conf/">配置参数</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../dataset/">地学数据集</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../dataset-CN/">中国地学数据集</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../chinese/">中文支持</a></li>
 <li class="toctree-l1 current"><a class="reference internal" href="../">模块手册</a><ul class="current">
 <li class="toctree-l2"><a class="reference internal" href="../basemap/">basemap</a></li>
@@ -185,7 +188,6 @@
 <li class="toctree-l2"><a class="reference internal" href="../xyz2grd/">xyz2grd</a></li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="../../gallery/">绘图示例</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../api/">API</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../appendix/">附录</a></li>
 </ul>
@@ -213,6 +215,7 @@
     
 
         </div>
+        
       </div>
     </nav>
 
@@ -251,7 +254,7 @@
 
   <ul class="wy-breadcrumbs">
     
-      <li><a href="../../">首页</a> &raquo;</li>
+      <li><a href="../../" class="icon icon-home"></a> &raquo;</li>
         
           <li><a href="../">模块手册</a> &raquo;</li>
         
@@ -278,47 +281,51 @@
             
   <div class="section" id="clear">
 <span id="index-0"></span><h1>clear<a class="headerlink" href="#clear" title="永久链接至标题">¶</a></h1>
-<table class="docutils field-list" frame="void" rules="none">
-<col class="field-name" />
-<col class="field-body" />
-<tbody valign="top">
-<tr class="field-odd field"><th class="field-name">官方文档:</th><td class="field-body"><a class="reference external" href="https://docs.generic-mapping-tools.org/6.0/clear.html" title="(在 GMT v6.0)"><span>clear</span></a></td>
-</tr>
-<tr class="field-even field"><th class="field-name">简介:</th><td class="field-body">删除缓存目录、数据目录或会话目录，以及当前配置文件</td>
-</tr>
-</tbody>
-</table>
+<dl class="field-list simple">
+<dt class="field-odd">官方文档</dt>
+<dd class="field-odd"><p><a class="reference external" href="https://docs.generic-mapping-tools.org/6.1/clear.html" title="(在 GMT v6.1)"><span>clear</span></a></p>
+</dd>
+<dt class="field-even">简介</dt>
+<dd class="field-even"><p>删除缓存目录、数据目录或会话目录，以及当前配置文件</p>
+</dd>
+</dl>
 <div class="section" id="id1">
 <h2>语法<a class="headerlink" href="#id1" title="永久链接至标题">¶</a></h2>
 <p><strong>gmt clear</strong>
-<strong>all</strong> | <strong>cache</strong> | <strong>data</strong> | <strong>sessions</strong> | <strong>settings</strong>
+<strong>all</strong> | <strong>cache</strong> | <strong>data</strong>[=<em>planet</em>] | <strong>sessions</strong> | <strong>settings</strong>
 [ <a class="reference internal" href="#v"><span> <strong>-V</strong></span></a></strong>[<em>level</em>] ]</p>
 </div>
 <div class="section" id="id2">
 <h2>可选选项<a class="headerlink" href="#id2" title="永久链接至标题">¶</a></h2>
-<dl class="docutils">
-<dt><strong>all</strong></dt>
-<dd>删除所有项目，包括缓存目录（<strong>~/.gmt/cache</strong>）、数据目录（<strong>~/.gmt/server</strong>）、会话目录（<strong>~/.gmt/sessions</strong>）以及当前配置文件</dd>
-<dt><strong>cache</strong></dt>
-<dd>删除GMT缓存目录（默认为<strong>~/.gmt/cache</strong>）及其内容</dd>
-<dt><strong>data</strong></dt>
-<dd>删除GMT数据目录（默认为<strong>~/.gmt/server</strong>）及其内容</dd>
-<dt><strong>sessions</strong></dt>
-<dd>删除GMT会话目录（默认为<strong>~/.gmt/sessions</strong>）及其内容</dd>
-<dt><strong>settings</strong></dt>
-<dd>现代模式下删除当前会话的GMT配置参数文件（即 gmt.conf），使得所有参数回到GMT系统默认值。</dd>
+<dl>
+<dt><strong>all</strong></dt><dd><p>删除所有项目，包括缓存目录（<strong>~/.gmt/cache</strong>）、数据目录（<strong>~/.gmt/server</strong>）、会话目录（<strong>~/.gmt/sessions</strong>）以及当前配置文件</p>
+</dd>
+<dt><strong>cache</strong></dt><dd><p>删除GMT缓存目录（默认为<strong>~/.gmt/cache</strong>）及其内容</p>
+</dd>
+<dt><strong>data</strong>[=<em>planet</em>]</dt><dd><p>删除GMT数据目录（默认为<strong>~/.gmt/server</strong>）及其内容。加上 =<em>planet</em> 则只删除特定星球的数据。目前 <em>planet</em>
+只可以取 <strong>earth</strong>。</p>
+</dd>
+<dt><strong>sessions</strong></dt><dd><p>删除GMT会话目录（默认为<strong>~/.gmt/sessions</strong>）及其内容。</p>
+<div class="admonition note">
+<p class="admonition-title">注解</p>
+<p>正常情况下，GMT在执行 <strong>gmt end</strong> 时会自动删除当前会话目录。但若GMT由于各种原因意外退出导致 <strong>gmt end</strong> 没有执行，则可能会导致残留会话目录。</p>
+<p>因而可以不定期地执行 <strong>gmt clear sessions</strong> 删除残留的会话目录。</p>
+</div>
+</dd>
+<dt><strong>settings</strong></dt><dd><p>现代模式下删除当前会话的GMT配置参数文件（即 gmt.conf），使得所有参数回到GMT系统默认值。</p>
+</dd>
 </dl>
-<dl class="docutils" id="v">
-<dt><strong>-V</strong>[<em>level</em>] <a class="reference internal" href="../../option/V/"><span class="doc">(more …)</span></a></dt>
-<dd>设置 verbose 等级 [c]</dd>
+<dl class="simple" id="v">
+<dt><strong>-V</strong>[<em>level</em>] <a class="reference internal" href="../../option/V/"><span class="doc">(more …)</span></a></dt><dd><p>设置 verbose 等级 [<strong>w</strong>]</p>
+</dd>
 </dl>
-<dl class="docutils">
-<dt><strong>-^</strong> 或 <strong>-</strong></dt>
-<dd>显示简短的帮助信息，包括模块简介和基本语法信息（Windows下只能使用 <strong>-</strong>）</dd>
-<dt><strong>-+</strong> 或 <strong>+</strong></dt>
-<dd>显示帮助信息，包括模块简介、基本语法以及模块特有选项的说明</dd>
-<dt><strong>-?</strong> 或无参数</dt>
-<dd>显示完整的帮助信息，包括模块简介、基本语法以及所有选项的说明</dd>
+<dl class="simple">
+<dt><strong>-^</strong> 或 <strong>-</strong></dt><dd><p>显示简短的帮助信息，包括模块简介和基本语法信息（Windows下只能使用 <strong>-</strong>）</p>
+</dd>
+<dt><strong>-+</strong> 或 <strong>+</strong></dt><dd><p>显示帮助信息，包括模块简介、基本语法以及模块特有选项的说明</p>
+</dd>
+<dt><strong>-?</strong> 或无参数</dt><dd><p>显示完整的帮助信息，包括模块简介、基本语法以及所有选项的说明</p>
+</dd>
 </dl>
 </div>
 <div class="section" id="id3">
@@ -329,6 +336,10 @@
 </div>
 <p>删除现代模式会话下的当前配置参数文件:</p>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>gmt clear settings
+</pre></div>
+</div>
+<p>删除所有地球相关数据:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>gmt clear <span class="nv">data</span><span class="o">=</span>earth
 </pre></div>
 </div>
 </div>
@@ -387,14 +398,22 @@ gitalk.render('gitalk-container');
 
   <div role="contentinfo">
     <p>
-        &copy; Copyright 2014 - 2020, GMT中文社区.
+        
+        &copy; 版权所有 2014 - 2020, GMT中文社区.
       <span class="lastupdated">
-        最后更新于 2020年07月05日.
+        最后更新于 2020年10月15日.
       </span>
 
     </p>
   </div>
-  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+    
+    
+    
+    Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a
+    
+    <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a>
+    
+    provided by <a href="https://readthedocs.org">Read the Docs</a>. 
 
 </footer>
 
@@ -405,7 +424,6 @@ gitalk.render('gitalk-container');
 
   </div>
   
-
 
   <script type="text/javascript">
       jQuery(function () {

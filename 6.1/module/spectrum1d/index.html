@@ -1,8 +1,7 @@
 
 
 <!DOCTYPE html>
-<!--[if IE 8]><html class="no-js lt-ie9" lang="zh-CN" > <![endif]-->
-<!--[if gt IE 8]><!--> <html class="no-js" lang="zh-CN" > <!--<![endif]-->
+<html class="writer-html5" lang="zh-CN" >
 <head>
   <meta charset="utf-8">
   
@@ -10,6 +9,11 @@
   
   <title>spectrum1d &mdash; GMT中文手册</title>
   
+
+  
+  <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../../_static/custom.css" type="text/css" />
 
   
   
@@ -21,25 +25,22 @@
   
 
   
-  <script type="text/javascript" src="../../_static/js/modernizr.min.js"></script>
+  <!--[if lt IE 9]>
+    <script src="../../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
   
     
       <script type="text/javascript" id="documentation_options" data-url_root="../../" src="../../_static/documentation_options.js"></script>
-        <script type="text/javascript" src="../../_static/jquery.js"></script>
-        <script type="text/javascript" src="../../_static/underscore.js"></script>
-        <script type="text/javascript" src="../../_static/doctools.js"></script>
-        <script type="text/javascript" src="../../_static/language_data.js"></script>
-        <script type="text/javascript" src="../../_static/translations.js"></script>
-        <script async="async" type="text/javascript" src="https://cdn.bootcss.com/mathjax/2.7.7/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+        <script src="../../_static/jquery.js"></script>
+        <script src="../../_static/underscore.js"></script>
+        <script src="../../_static/doctools.js"></script>
+        <script src="../../_static/language_data.js"></script>
+        <script src="../../_static/translations.js"></script>
+        <script async="async" src="https://cdn.bootcss.com/mathjax/2.7.7/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
     
     <script type="text/javascript" src="../../_static/js/theme.js"></script>
 
     
-
-  
-  <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
-  <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
-  <link rel="stylesheet" href="../../_static/custom.css" type="text/css" />
     <link rel="index" title="索引" href="../../genindex/" />
     <link rel="search" title="搜索" href="../../search/" />
     <link rel="next" title="subplot" href="../subplot/" />
@@ -90,6 +91,7 @@
 
         </div>
 
+        
         <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
           
     
@@ -112,6 +114,7 @@
 <li class="toctree-l1"><a class="reference internal" href="../../proj/">地图投影</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../conf/">配置参数</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../dataset/">地学数据集</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../dataset-CN/">中国地学数据集</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../chinese/">中文支持</a></li>
 <li class="toctree-l1 current"><a class="reference internal" href="../">模块手册</a><ul class="current">
 <li class="toctree-l2"><a class="reference internal" href="../basemap/">basemap</a></li>
@@ -183,7 +186,6 @@
 <li class="toctree-l2"><a class="reference internal" href="../xyz2grd/">xyz2grd</a></li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="../../gallery/">绘图示例</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../api/">API</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../appendix/">附录</a></li>
 </ul>
@@ -211,6 +213,7 @@
     
 
         </div>
+        
       </div>
     </nav>
 
@@ -249,7 +252,7 @@
 
   <ul class="wy-breadcrumbs">
     
-      <li><a href="../../">首页</a> &raquo;</li>
+      <li><a href="../../" class="icon icon-home"></a> &raquo;</li>
         
           <li><a href="../">模块手册</a> &raquo;</li>
         
@@ -276,16 +279,14 @@
             
   <div class="section" id="spectrum1d">
 <span id="index-0"></span><h1>spectrum1d<a class="headerlink" href="#spectrum1d" title="永久链接至标题">¶</a></h1>
-<table class="docutils field-list" frame="void" rules="none">
-<col class="field-name" />
-<col class="field-body" />
-<tbody valign="top">
-<tr class="field-odd field"><th class="field-name">官方文档:</th><td class="field-body"><a class="reference external" href="https://docs.generic-mapping-tools.org/6.0/spectrum1d.html" title="(在 GMT v6.0)"><span>spectrum1d</span></a></td>
-</tr>
-<tr class="field-even field"><th class="field-name">简介:</th><td class="field-body">计算一个时间序列的自功率谱，或两个时间序列的互功率谱</td>
-</tr>
-</tbody>
-</table>
+<dl class="field-list simple">
+<dt class="field-odd">官方文档</dt>
+<dd class="field-odd"><p><a class="reference external" href="https://docs.generic-mapping-tools.org/6.1/spectrum1d.html" title="(在 GMT v6.1)"><span>spectrum1d</span></a></p>
+</dd>
+<dt class="field-even">简介</dt>
+<dd class="field-even"><p>计算一个时间序列的自功率谱，或两个时间序列的互功率谱</p>
+</dd>
+</dl>
 <p><code class="docutils literal notranslate"><span class="pre">spectrum1d</span></code> 从标准输入流或数据文件中读取一列或两列数据。这些数据被当作是采样间隔为 <code class="docutils literal notranslate"><span class="pre">&lt;dt&gt;</span></code> 的等间隔的时间序列。spectrum1d 采用Welch方法，即加窗多段平均周期图法，计算输出自功率或互功率谱密度。其输出的功率谱的标准差，是用
 Bendat和Piersol提供的算法。</p>
 <p><code class="docutils literal notranslate"><span class="pre">spectrum1d</span></code> 的输出文件有三列:</p>
@@ -296,37 +297,37 @@ Bendat和Piersol提供的算法。</p>
 <p><code class="docutils literal notranslate"><span class="pre">spectrum1d</span></code> 的输出文件的文件名是使用统一的前缀 <code class="docutils literal notranslate"><span class="pre">name_stem</span></code> 。如果使用了
 <code class="docutils literal notranslate"><span class="pre">-C</span></code> 选项，那么将会有8个文件输出，否则只生成一个功率谱文件（ <code class="docutils literal notranslate"><span class="pre">.xpower</span></code> ）。这些文件默认是以ASCII码格式，除非用 <code class="docutils literal notranslate"><span class="pre">-bo</span></code> 选项指定为二进制格式输出。这8个文件介绍如下：</p>
 <ol class="arabic simple">
-<li><code class="docutils literal notranslate"><span class="pre">name_stem.xpower</span></code>: X(t)的功率谱。单位是 <code class="docutils literal notranslate"><span class="pre">X*X*dt</span></code> 。</li>
-<li><code class="docutils literal notranslate"><span class="pre">name_stem.ypower</span></code>: Y(t)的功率谱。单位是 <code class="docutils literal notranslate"><span class="pre">Y*Y*dt</span></code> 。</li>
-<li><code class="docutils literal notranslate"><span class="pre">name_stem.cpower</span></code>: 一致性（coherent）的功率谱。单位和 ypower 一样。</li>
-<li><code class="docutils literal notranslate"><span class="pre">name_stem.npower</span></code>: 噪声的功率谱。单位和 ypower 一样。</li>
-<li><code class="docutils literal notranslate"><span class="pre">name_stem.gain</span></code>: 增益谱，或传输函数的模。单位是 <code class="docutils literal notranslate"><span class="pre">Y/X</span></code></li>
-<li><code class="docutils literal notranslate"><span class="pre">name_stem.phase</span></code>: 相位谱，或传输函数的相位。单位是弧度。</li>
-<li><code class="docutils literal notranslate"><span class="pre">name_stem.admit</span></code>: 导纳（Admittance）谱，或传输函数的实部。单位是 <code class="docutils literal notranslate"><span class="pre">Y/X</span></code> 。</li>
-<li><code class="docutils literal notranslate"><span class="pre">name_stem.coh</span></code>: （平方）相干谱，或者线性相关系数（它是频率的函数）。i
-无单位，取值范围为 <code class="docutils literal notranslate"><span class="pre">[0,1]</span></code> 。信噪比 <code class="docutils literal notranslate"><span class="pre">SNR=coh/(1-coh)</span></code> 。当 coh=0.5 时，SNR=1。</li>
+<li><p><code class="docutils literal notranslate"><span class="pre">name_stem.xpower</span></code>: X(t)的功率谱。单位是 <code class="docutils literal notranslate"><span class="pre">X*X*dt</span></code> 。</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">name_stem.ypower</span></code>: Y(t)的功率谱。单位是 <code class="docutils literal notranslate"><span class="pre">Y*Y*dt</span></code> 。</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">name_stem.cpower</span></code>: 一致性（coherent）的功率谱。单位和 ypower 一样。</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">name_stem.npower</span></code>: 噪声的功率谱。单位和 ypower 一样。</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">name_stem.gain</span></code>: 增益谱，或传输函数的模。单位是 <code class="docutils literal notranslate"><span class="pre">Y/X</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">name_stem.phase</span></code>: 相位谱，或传输函数的相位。单位是弧度。</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">name_stem.admit</span></code>: 导纳（Admittance）谱，或传输函数的实部。单位是 <code class="docutils literal notranslate"><span class="pre">Y/X</span></code> 。</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">name_stem.coh</span></code>: （平方）相干谱，或者线性相关系数（它是频率的函数）。i
+无单位，取值范围为 <code class="docutils literal notranslate"><span class="pre">[0,1]</span></code> 。信噪比 <code class="docutils literal notranslate"><span class="pre">SNR=coh/(1-coh)</span></code> 。当 coh=0.5 时，SNR=1。</p></li>
 </ol>
 <p>除非使用 <code class="docutils literal notranslate"><span class="pre">-T</span></code> 选项，否则以上文件会以单个文件单列的形式输出。</p>
 <div class="section" id="id1">
 <h2>选项<a class="headerlink" href="#id1" title="永久链接至标题">¶</a></h2>
-<dl class="docutils">
-<dt><code class="docutils literal notranslate"><span class="pre">-S&lt;segment_size&gt;</span></code></dt>
-<dd><code class="docutils literal notranslate"><span class="pre">&lt;segment_size&gt;</span></code> 是一个2的指数数值，用于控制Welch方法中分段平均时的窗口长度。它也决定了功率谱密度的最小频率分辨率和最大频率分辨率，即
-<code class="docutils literal notranslate"><span class="pre">1.0/(segment_size*dt)</span></code> 和 <code class="docutils literal notranslate"><span class="pre">1.0/(2*dt)</span></code> （即Nyquist频率）。在功率谱密度中的一个标准误差大约为 <code class="docutils literal notranslate"><span class="pre">1.0/(n_data/segment_size)</span></code> ，比如 segment_size=256，那么就需要25600个数据点去计算一个误差棒的10%。互功率谱误差棒的计算则需要更多数据点，而且是相干性的函数，比较复杂。</dd>
-<dt><code class="docutils literal notranslate"><span class="pre">table</span></code></dt>
-<dd>输入文件名。它是ASCII类型的一列数据或两列数据。如果是一列数据文件，就计算自功率谱；如果是两列，就计算互功率谱。若未指定文件名， <code class="docutils literal notranslate"><span class="pre">spectrum1d</span></code> 会从标准输入流中读取数据。</dd>
-<dt><code class="docutils literal notranslate"><span class="pre">-C[xycnpago]</span></code></dt>
-<dd>默认会输出全部8个文件。使用该选项可以指定输出8个文件中的某些文件。x=xpower、y=ypower、c=cpower、n=npower、p=phase、a=admit、g=gain、o=coh。</dd>
-<dt><code class="docutils literal notranslate"><span class="pre">-D&lt;dt&gt;</span></code></dt>
-<dd>设置读入的时间序列的时间采样间隔，默认值是1。</dd>
-<dt><code class="docutils literal notranslate"><span class="pre">-L[m|h]</span></code></dt>
-<dd>不去除信号中的线性趋势。默认情况下，在对信号进行变换处理前会先去掉其中的线性趋势。 <code class="docutils literal notranslate"><span class="pre">m</span></code> 表示去掉数据的均值， <code class="docutils literal notranslate"><span class="pre">h</span></code> 表示去掉数据的中值。</dd>
-<dt><code class="docutils literal notranslate"><span class="pre">-N[name_stem]</span></code></dt>
-<dd>输出文件名的前缀，默认为 <code class="docutils literal notranslate"><span class="pre">spectrum</span></code> 。若不使用此选项，则输出的8个文件会合到一个文件里。</dd>
-<dt><code class="docutils literal notranslate"><span class="pre">-T</span></code></dt>
-<dd>不让单个分量的结果输出到标准输出流。</dd>
-<dt><code class="docutils literal notranslate"><span class="pre">-W</span></code></dt>
-<dd>输出文件中第一列是波长而不是频率。默认输出时第一列是频率。</dd>
+<dl class="simple">
+<dt><code class="docutils literal notranslate"><span class="pre">-S&lt;segment_size&gt;</span></code></dt><dd><p><code class="docutils literal notranslate"><span class="pre">&lt;segment_size&gt;</span></code> 是一个2的指数数值，用于控制Welch方法中分段平均时的窗口长度。它也决定了功率谱密度的最小频率分辨率和最大频率分辨率，即
+<code class="docutils literal notranslate"><span class="pre">1.0/(segment_size*dt)</span></code> 和 <code class="docutils literal notranslate"><span class="pre">1.0/(2*dt)</span></code> （即Nyquist频率）。在功率谱密度中的一个标准误差大约为 <code class="docutils literal notranslate"><span class="pre">1.0/(n_data/segment_size)</span></code> ，比如 segment_size=256，那么就需要25600个数据点去计算一个误差棒的10%。互功率谱误差棒的计算则需要更多数据点，而且是相干性的函数，比较复杂。</p>
+</dd>
+<dt><code class="docutils literal notranslate"><span class="pre">table</span></code></dt><dd><p>输入文件名。它是ASCII类型的一列数据或两列数据。如果是一列数据文件，就计算自功率谱；如果是两列，就计算互功率谱。若未指定文件名， <code class="docutils literal notranslate"><span class="pre">spectrum1d</span></code> 会从标准输入流中读取数据。</p>
+</dd>
+<dt><code class="docutils literal notranslate"><span class="pre">-C[xycnpago]</span></code></dt><dd><p>默认会输出全部8个文件。使用该选项可以指定输出8个文件中的某些文件。x=xpower、y=ypower、c=cpower、n=npower、p=phase、a=admit、g=gain、o=coh。</p>
+</dd>
+<dt><code class="docutils literal notranslate"><span class="pre">-D&lt;dt&gt;</span></code></dt><dd><p>设置读入的时间序列的时间采样间隔，默认值是1。</p>
+</dd>
+<dt><code class="docutils literal notranslate"><span class="pre">-L[m|h]</span></code></dt><dd><p>不去除信号中的线性趋势。默认情况下，在对信号进行变换处理前会先去掉其中的线性趋势。 <code class="docutils literal notranslate"><span class="pre">m</span></code> 表示去掉数据的均值， <code class="docutils literal notranslate"><span class="pre">h</span></code> 表示去掉数据的中值。</p>
+</dd>
+<dt><code class="docutils literal notranslate"><span class="pre">-N[name_stem]</span></code></dt><dd><p>输出文件名的前缀，默认为 <code class="docutils literal notranslate"><span class="pre">spectrum</span></code> 。若不使用此选项，则输出的8个文件会合到一个文件里。</p>
+</dd>
+<dt><code class="docutils literal notranslate"><span class="pre">-T</span></code></dt><dd><p>不让单个分量的结果输出到标准输出流。</p>
+</dd>
+<dt><code class="docutils literal notranslate"><span class="pre">-W</span></code></dt><dd><p>输出文件中第一列是波长而不是频率。默认输出时第一列是频率。</p>
+</dd>
 </dl>
 </div>
 <div class="section" id="id2">
@@ -385,14 +386,22 @@ gitalk.render('gitalk-container');
 
   <div role="contentinfo">
     <p>
-        &copy; Copyright 2014 - 2020, GMT中文社区.
+        
+        &copy; 版权所有 2014 - 2020, GMT中文社区.
       <span class="lastupdated">
-        最后更新于 2020年07月05日.
+        最后更新于 2020年10月15日.
       </span>
 
     </p>
   </div>
-  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+    
+    
+    
+    Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a
+    
+    <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a>
+    
+    provided by <a href="https://readthedocs.org">Read the Docs</a>. 
 
 </footer>
 
@@ -403,7 +412,6 @@ gitalk.render('gitalk-container');
 
   </div>
   
-
 
   <script type="text/javascript">
       jQuery(function () {

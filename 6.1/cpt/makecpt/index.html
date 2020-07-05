@@ -1,8 +1,7 @@
 
 
 <!DOCTYPE html>
-<!--[if IE 8]><html class="no-js lt-ie9" lang="zh-CN" > <![endif]-->
-<!--[if gt IE 8]><!--> <html class="no-js" lang="zh-CN" > <!--<![endif]-->
+<html class="writer-html5" lang="zh-CN" >
 <head>
   <meta charset="utf-8">
   
@@ -10,6 +9,11 @@
   
   <title>制作CPT &mdash; GMT中文手册</title>
   
+
+  
+  <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../../_static/custom.css" type="text/css" />
 
   
   
@@ -21,25 +25,22 @@
   
 
   
-  <script type="text/javascript" src="../../_static/js/modernizr.min.js"></script>
+  <!--[if lt IE 9]>
+    <script src="../../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
   
     
       <script type="text/javascript" id="documentation_options" data-url_root="../../" src="../../_static/documentation_options.js"></script>
-        <script type="text/javascript" src="../../_static/jquery.js"></script>
-        <script type="text/javascript" src="../../_static/underscore.js"></script>
-        <script type="text/javascript" src="../../_static/doctools.js"></script>
-        <script type="text/javascript" src="../../_static/language_data.js"></script>
-        <script type="text/javascript" src="../../_static/translations.js"></script>
-        <script async="async" type="text/javascript" src="https://cdn.bootcss.com/mathjax/2.7.7/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+        <script src="../../_static/jquery.js"></script>
+        <script src="../../_static/underscore.js"></script>
+        <script src="../../_static/doctools.js"></script>
+        <script src="../../_static/language_data.js"></script>
+        <script src="../../_static/translations.js"></script>
+        <script async="async" src="https://cdn.bootcss.com/mathjax/2.7.7/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
     
     <script type="text/javascript" src="../../_static/js/theme.js"></script>
 
     
-
-  
-  <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
-  <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
-  <link rel="stylesheet" href="../../_static/custom.css" type="text/css" />
     <link rel="index" title="索引" href="../../genindex/" />
     <link rel="search" title="搜索" href="../../search/" />
     <link rel="next" title="使用CPT" href="../usage/" />
@@ -90,6 +91,7 @@
 
         </div>
 
+        
         <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
           
     
@@ -124,9 +126,9 @@
 <li class="toctree-l1"><a class="reference internal" href="../../proj/">地图投影</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../conf/">配置参数</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../dataset/">地学数据集</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../dataset-CN/">中国地学数据集</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../chinese/">中文支持</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../module/">模块手册</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../gallery/">绘图示例</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../api/">API</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../appendix/">附录</a></li>
 </ul>
@@ -154,6 +156,7 @@
     
 
         </div>
+        
       </div>
     </nav>
 
@@ -192,7 +195,7 @@
 
   <ul class="wy-breadcrumbs">
     
-      <li><a href="../../">首页</a> &raquo;</li>
+      <li><a href="../../" class="icon icon-home"></a> &raquo;</li>
         
           <li><a href="../">CPT文件</a> &raquo;</li>
         
@@ -219,14 +222,14 @@
             
   <div class="section" id="cpt">
 <h1>制作CPT<a class="headerlink" href="#cpt" title="永久链接至标题">¶</a></h1>
-<p>GMT模块 <a class="reference internal" href="../../module/makecpt/"><span class="doc">makecpt</span></a> 和 <a class="reference external" href="https://docs.generic-mapping-tools.org/6.0/grd2cpt.html" title="(在 GMT v6.0)"><span>grd2cpt</span></a> 可以内置CPT文件为基础，针对用户自己的数据制作专门的CPT文件；也可以将用户自定义CPT重新调整为一个新的范围、颜色倒转甚至屏蔽部分颜色的新色标文件。比如某个内置CPT文件定义了从0到1颜色从蓝色变成红色，用 <a class="reference internal" href="../../module/makecpt/"><span class="doc">makecpt</span></a> 可以制作一个从1000到3000颜色从蓝色变成红色的CPT文件。不同的是，
-<a class="reference internal" href="../../module/makecpt/"><span class="doc">makecpt</span></a> 常用于已知极值范围的表数据，而 <a class="reference external" href="https://docs.generic-mapping-tools.org/6.0/grd2cpt.html" title="(在 GMT v6.0)"><span>grd2cpt</span></a> 常用于将cpt适用于一个或多个格网数据。此外，两者均可通过以下方式翻转颜色：</p>
+<p>GMT模块 <a class="reference internal" href="../../module/makecpt/"><span class="doc">makecpt</span></a> 和 <a class="reference external" href="https://docs.generic-mapping-tools.org/6.1/grd2cpt.html" title="(在 GMT v6.1)"><span>grd2cpt</span></a> 可以内置CPT文件为基础，针对用户自己的数据制作专门的CPT文件；也可以将用户自定义CPT重新调整为一个新的范围、颜色倒转甚至屏蔽部分颜色的新色标文件。比如某个内置CPT文件定义了从0到1颜色从蓝色变成红色，用 <a class="reference internal" href="../../module/makecpt/"><span class="doc">makecpt</span></a> 可以制作一个从1000到3000颜色从蓝色变成红色的CPT文件。不同的是，
+<a class="reference internal" href="../../module/makecpt/"><span class="doc">makecpt</span></a> 常用于已知极值范围的表数据，而 <a class="reference external" href="https://docs.generic-mapping-tools.org/6.1/grd2cpt.html" title="(在 GMT v6.1)"><span>grd2cpt</span></a> 常用于将cpt适用于一个或多个格网数据。此外，两者均可通过以下方式翻转颜色：</p>
 <ol class="arabic simple">
-<li>利用 <code class="docutils literal notranslate"><span class="pre">-Iz</span></code> 选项倒转CPT的z值指向（不包括前景色、背景色）。用于数据的正负颜色表示和惯例不符的情况（比如用正值表示海平面以下的深度，而不是惯常的负高程）。</li>
-<li>利用 <code class="docutils literal notranslate"><span class="pre">-Ic</span></code> 选项翻转颜色的顺序，包括前景色和背景色（与 <code class="docutils literal notranslate"><span class="pre">colorbar</span></code> 的宽度设为负值效果一致）。</li>
-<li><code class="docutils literal notranslate"><span class="pre">-Icz</span></code> 表示以上两种效果的叠加，即颜色顺序不变，只调转了前景色和背景色</li>
-<li>利用 <code class="docutils literal notranslate"><span class="pre">-G</span></code> 选项提取主CPT的一部分颜色</li>
-<li>最后，将初始的内置CPT或修改后的CPT拉伸为自定义数据范围</li>
+<li><p>利用 <code class="docutils literal notranslate"><span class="pre">-Iz</span></code> 选项倒转CPT的z值指向（不包括前景色、背景色）。用于数据的正负颜色表示和惯例不符的情况（比如用正值表示海平面以下的深度，而不是惯常的负高程）。</p></li>
+<li><p>利用 <code class="docutils literal notranslate"><span class="pre">-Ic</span></code> 选项翻转颜色的顺序，包括前景色和背景色（与 <code class="docutils literal notranslate"><span class="pre">colorbar</span></code> 的宽度设为负值效果一致）。</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">-Icz</span></code> 表示以上两种效果的叠加，即颜色顺序不变，只调转了前景色和背景色</p></li>
+<li><p>利用 <code class="docutils literal notranslate"><span class="pre">-G</span></code> 选项提取主CPT的一部分颜色</p></li>
+<li><p>最后，将初始的内置CPT或修改后的CPT拉伸为自定义数据范围</p></li>
 </ol>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="ch">#!/bin/bash</span>
 <span class="nv">SIZE</span><span class="o">=</span>w15c/0.25c
@@ -252,8 +255,8 @@ gmt end
 <img alt="../../_images/makecpt-gmtplot-0.png" src="../../_images/makecpt-gmtplot-0.png" />
 </div>
 <p>注：这些CPT的调整选项顺序也是有优先级的。比如 <code class="docutils literal notranslate"><span class="pre">-Iz</span></code> 使用后，所有其他的更改都是基于z值反向的前提进行的。</p>
-<p>CPT文件可以在 <a class="reference internal" href="../../module/grdimage/"><span class="doc">grdimage</span></a>、<a class="reference internal" href="../../module/plot/"><span class="doc">plot</span></a>、<a class="reference external" href="https://docs.generic-mapping-tools.org/6.0/plot3d.html" title="(在 GMT v6.0)"><span>plot3d</span></a>
-等命令中使用。通常，你可以使用 <a class="reference internal" href="../../module/makecpt/"><span class="doc">makecpt</span></a> 或 <a class="reference external" href="https://docs.generic-mapping-tools.org/6.0/grd2cpt.html" title="(在 GMT v6.0)"><span>grd2cpt</span></a>
+<p>CPT文件可以在 <a class="reference internal" href="../../module/grdimage/"><span class="doc">grdimage</span></a>、<a class="reference internal" href="../../module/plot/"><span class="doc">plot</span></a>、<a class="reference external" href="https://docs.generic-mapping-tools.org/6.1/plot3d.html" title="(在 GMT v6.1)"><span>plot3d</span></a>
+等命令中使用。通常，你可以使用 <a class="reference internal" href="../../module/makecpt/"><span class="doc">makecpt</span></a> 或 <a class="reference external" href="https://docs.generic-mapping-tools.org/6.1/grd2cpt.html" title="(在 GMT v6.1)"><span>grd2cpt</span></a>
 对已有的CPT（比如GMT内置的CPT）文件进行重采样，并适应你目前所使用的数据范围。当然，也可以自己手写CPT文件，或使用 <code class="docutils literal notranslate"><span class="pre">awk</span></code> 、
 <code class="docutils literal notranslate"><span class="pre">perl</span></code> 之类的文本处理工具自动生成CPT文件。由于GMT中可以用多种方式来指定颜色，因而GMT自带的或用户自己的CPT文件中通常含有如下注释语句:</p>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="c1"># COLOR_MODEL = model</span>
@@ -272,7 +275,7 @@ CPT文件。该选项本质上是在CPT文件中加上一个特殊的注释行:<
 </pre></div>
 </div>
 <p>GMT在CPT中看到这一注释行时就会将该CPT当作时周期性CPT文件。</p>
-<p><a class="reference download internal" download="" href="../../_downloads/b85da03b7623e214f8ddb6a7a377ef6c/makecpt-gmtplot-1.sh"><code class="xref download docutils literal notranslate"><span class="pre">Source</span> <span class="pre">Code</span></code></a></p>
+<p><a class="reference download internal" download="" href="../../_downloads/770e389ad85ddf1c67dd05fd11d2a775/makecpt-gmtplot-1.sh"><code class="xref download docutils literal notranslate"><span class="pre">Source</span> <span class="pre">Code</span></code></a></p>
 <div class="figure align-center">
 <img alt="../../_images/makecpt-gmtplot-1.png" src="../../_images/makecpt-gmtplot-1.png" />
 </div>
@@ -282,7 +285,7 @@ CPT文件。该选项本质上是在CPT文件中加上一个特殊的注释行:<
 <p>GMT 内置的 CPT 文件都是动态的。</p>
 <p>所有动态CPT文件都按照两种方式中的一种进行了归一化：</p>
 <ol class="arabic">
-<li><p class="first">如果为存在分界（hinge）的区域填色（如地形颜色在高程为0的海岸线处发生非连续的分界）那么CPT的z值在一侧为-1到0；另一侧为0到1；分界线上为0。CPT文件中对分界线的值注释如下:</p>
+<li><p>如果为存在分界（hinge）的区域填色（如地形颜色在高程为0的海岸线处发生非连续的分界）那么CPT的z值在一侧为-1到0；另一侧为0到1；分界线上为0。CPT文件中对分界线的值注释如下:</p>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="c1"># HINGE = &lt;hinge-value&gt;</span>
 </pre></div>
 </div>
@@ -290,15 +293,14 @@ CPT文件。该选项本质上是在CPT文件中加上一个特殊的注释行:<
 <code class="docutils literal notranslate"><span class="pre">polar</span></code> <code class="docutils literal notranslate"><span class="pre">red2green</span></code> <code class="docutils literal notranslate"><span class="pre">relief</span></code> <code class="docutils literal notranslate"><span class="pre">sealand</span></code> <code class="docutils literal notranslate"><span class="pre">split</span></code> <code class="docutils literal notranslate"><span class="pre">terra</span></code>
 <code class="docutils literal notranslate"><span class="pre">topo</span></code> <code class="docutils literal notranslate"><span class="pre">world</span></code></p>
 </li>
-<li><p class="first">如果不存在颜色的分界，则CPT的z值归一化为0到1之间。实际使用中，CPT的z值会拉伸到用户指定的范围，包括两种拉伸模式：</p>
+<li><p>如果不存在颜色的分界，则CPT的z值归一化为0到1之间。实际使用中，CPT的z值会拉伸到用户指定的范围，包括两种拉伸模式：</p>
 <ol class="arabic">
-<li><p class="first">默认指定一个数值范围，实际应用中（如地形渲染）再拉伸到真实值。见CPT文件中的RANGE注释:</p>
+<li><p>默认指定一个数值范围，实际应用中（如地形渲染）再拉伸到真实值。见CPT文件中的RANGE注释:</p>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="c1"># RANGE = &lt;zmin/zmax&gt;</span>
 </pre></div>
 </div>
 </li>
-<li><p class="first">若未给定范围，则扩展到数据的极限值</p>
-</li>
+<li><p>若未给定范围，则扩展到数据的极限值</p></li>
 </ol>
 </li>
 </ol>
@@ -362,14 +364,22 @@ gitalk.render('gitalk-container');
 
   <div role="contentinfo">
     <p>
-        &copy; Copyright 2014 - 2020, GMT中文社区.
+        
+        &copy; 版权所有 2014 - 2020, GMT中文社区.
       <span class="lastupdated">
-        最后更新于 2020年07月05日.
+        最后更新于 2020年10月15日.
       </span>
 
     </p>
   </div>
-  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+    
+    
+    
+    Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a
+    
+    <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a>
+    
+    provided by <a href="https://readthedocs.org">Read the Docs</a>. 
 
 </footer>
 
@@ -380,7 +390,6 @@ gitalk.render('gitalk-container');
 
   </div>
   
-
 
   <script type="text/javascript">
       jQuery(function () {

@@ -1,8 +1,7 @@
 
 
 <!DOCTYPE html>
-<!--[if IE 8]><html class="no-js lt-ie9" lang="zh-CN" > <![endif]-->
-<!--[if gt IE 8]><!--> <html class="no-js" lang="zh-CN" > <!--<![endif]-->
+<html class="writer-html5" lang="zh-CN" >
 <head>
   <meta charset="utf-8">
   
@@ -10,6 +9,11 @@
   
   <title>begin &mdash; GMT中文手册</title>
   
+
+  
+  <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../../_static/custom.css" type="text/css" />
 
   
   
@@ -21,25 +25,22 @@
   
 
   
-  <script type="text/javascript" src="../../_static/js/modernizr.min.js"></script>
+  <!--[if lt IE 9]>
+    <script src="../../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
   
     
       <script type="text/javascript" id="documentation_options" data-url_root="../../" src="../../_static/documentation_options.js"></script>
-        <script type="text/javascript" src="../../_static/jquery.js"></script>
-        <script type="text/javascript" src="../../_static/underscore.js"></script>
-        <script type="text/javascript" src="../../_static/doctools.js"></script>
-        <script type="text/javascript" src="../../_static/language_data.js"></script>
-        <script type="text/javascript" src="../../_static/translations.js"></script>
-        <script async="async" type="text/javascript" src="https://cdn.bootcss.com/mathjax/2.7.7/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+        <script src="../../_static/jquery.js"></script>
+        <script src="../../_static/underscore.js"></script>
+        <script src="../../_static/doctools.js"></script>
+        <script src="../../_static/language_data.js"></script>
+        <script src="../../_static/translations.js"></script>
+        <script async="async" src="https://cdn.bootcss.com/mathjax/2.7.7/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
     
     <script type="text/javascript" src="../../_static/js/theme.js"></script>
 
     
-
-  
-  <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
-  <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
-  <link rel="stylesheet" href="../../_static/custom.css" type="text/css" />
     <link rel="index" title="索引" href="../../genindex/" />
     <link rel="search" title="搜索" href="../../search/" />
     <link rel="next" title="clear" href="../clear/" />
@@ -90,6 +91,7 @@
 
         </div>
 
+        
         <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
           
     
@@ -112,6 +114,7 @@
 <li class="toctree-l1"><a class="reference internal" href="../../proj/">地图投影</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../conf/">配置参数</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../dataset/">地学数据集</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../dataset-CN/">中国地学数据集</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../chinese/">中文支持</a></li>
 <li class="toctree-l1 current"><a class="reference internal" href="../">模块手册</a><ul class="current">
 <li class="toctree-l2"><a class="reference internal" href="../basemap/">basemap</a></li>
@@ -187,7 +190,6 @@
 <li class="toctree-l2"><a class="reference internal" href="../xyz2grd/">xyz2grd</a></li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="../../gallery/">绘图示例</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../api/">API</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../appendix/">附录</a></li>
 </ul>
@@ -215,6 +217,7 @@
     
 
         </div>
+        
       </div>
     </nav>
 
@@ -253,7 +256,7 @@
 
   <ul class="wy-breadcrumbs">
     
-      <li><a href="../../">首页</a> &raquo;</li>
+      <li><a href="../../" class="icon icon-home"></a> &raquo;</li>
         
           <li><a href="../">模块手册</a> &raquo;</li>
         
@@ -280,18 +283,16 @@
             
   <div class="section" id="begin">
 <span id="index-0"></span><h1>begin<a class="headerlink" href="#begin" title="永久链接至标题">¶</a></h1>
-<table class="docutils field-list" frame="void" rules="none">
-<col class="field-name" />
-<col class="field-body" />
-<tbody valign="top">
-<tr class="field-odd field"><th class="field-name">官方文档:</th><td class="field-body"><a class="reference external" href="https://docs.generic-mapping-tools.org/6.0/begin.html" title="(在 GMT v6.0)"><span>begin</span></a></td>
-</tr>
-<tr class="field-even field"><th class="field-name">简介:</th><td class="field-body">初始化一个新的GMT现代模式会话</td>
-</tr>
-</tbody>
-</table>
+<dl class="field-list simple">
+<dt class="field-odd">官方文档</dt>
+<dd class="field-odd"><p><a class="reference external" href="https://docs.generic-mapping-tools.org/6.1/begin.html" title="(在 GMT v6.1)"><span>begin</span></a></p>
+</dd>
+<dt class="field-even">简介</dt>
+<dd class="field-even"><p>初始化一个新的GMT现代模式会话</p>
+</dd>
+</dl>
 <p>在GMT现代模式下，一个GMT绘图总是以 <strong>gmt begin</strong> 开始，以 <strong>gmt end</strong> 结束。</p>
-<p><strong>begin</strong> 模块告诉GMT要开始一个新的现代模式会话。如果你的脚本只绘制一张图，那么你可以直接指定要生成的图片的文件名和文件格式。如果你的脚本绘制多张图，则你需要使用 <a class="reference internal" href="../figure/"><span class="doc">figure</span></a> 来分别为每张图指定文件名和文件格式。现代会话模式下，每个会话均独立于其他进程，每个会话负责管理各自的配置参数、命令历史等，因而可以同时执行多个GMT会话而不会互相干扰。</p>
+<p><strong>begin</strong> 模块告诉GMT要开始一个新的现代模式会话。如果你的脚本只绘制一张图，那么你可以直接指定要生成的图片的文件名和文件格式。如果你的脚本绘制多张图，则你需要使用 <a class="reference internal" href="../figure/"><span class="doc">figure</span></a> 来分别为每张图指定文件名和文件格式。现代会话模式下，每个会话互相独立，每个会话负责管理各自的配置参数、命令历史等，因而可以同时执行多个GMT会话而不会互相干扰。</p>
 <p>除了可以指定图片文件名和文件格式之外，还可以通过 <em>options</em> 指定生成图片过程中所使用的 <a class="reference internal" href="../psconvert/"><span class="doc">psconvert</span></a> 选项。</p>
 <div class="section" id="id1">
 <h2>语法<a class="headerlink" href="#id1" title="永久链接至标题">¶</a></h2>
@@ -299,67 +300,70 @@
 [ <em>prefix</em> ]
 [ <em>formats</em> ]
 [ <em>options</em> ]
+[ <a class="reference internal" href="#c"><span> <strong>-C</strong></span></a></strong> ]
 [ <a class="reference internal" href="#v"><span> <strong>-V</strong></span></a></strong>[<em>level</em>] ]</p>
 </div>
 <div class="section" id="id2">
 <h2>可选选项<a class="headerlink" href="#id2" title="永久链接至标题">¶</a></h2>
-<dl class="docutils">
-<dt><em>prefix</em></dt>
-<dd><p class="first">图片文件名前缀，默认值为 <strong>gmtsession</strong>。图片文件名后缀由 <em>formats</em> 自动决定。</p>
+<dl>
+<dt><em>prefix</em></dt><dd><p>图片文件名前缀，默认值为 <strong>gmtsession</strong>。图片文件名后缀由 <em>formats</em> 自动决定。</p>
 <p>如果一个GMT会话只用于进行计算而不绘图，或者需要绘制多张图，则不需要指定该参数。</p>
-<div class="last admonition note">
-<p class="first admonition-title">注解</p>
-<p class="last">文件名中应尽量避免出现空格。若存在空格，则文件名必须用单引号括起来。</p>
+<div class="admonition note">
+<p class="admonition-title">注解</p>
+<p>文件名中应尽量避免出现空格。若存在空格，则文件名必须用单引号括起来。</p>
 </div>
 </dd>
 </dl>
-<dl class="docutils" id="fig-formats">
-<dt><em>formats</em></dt>
-<dd><p class="first">图片文件格式。多个格式之间可以用逗号分开。默认图片格式为 <strong>pdf</strong>，由参数 <a class="reference internal" href="../../conf/misc/#term-gmt-graphics-format"><span class="xref std std-term">GMT_GRAPHICS_FORMAT</span></a> 控制。</p>
+<dl id="fig-formats">
+<dt><em>formats</em></dt><dd><p>图片文件格式。多个格式之间可以用逗号分开。默认图片格式为 <strong>pdf</strong>，由参数 <a class="reference internal" href="../../conf/misc/#term-GMT_GRAPHICS_FORMAT"><span class="xref std std-term">GMT_GRAPHICS_FORMAT</span></a> 控制。</p>
 <p>GMT支持输出如下矢量图片格式：</p>
 <ul class="simple">
-<li><code class="docutils literal notranslate"><span class="pre">pdf</span></code>：<a class="reference external" href="https://zh.wikipedia.org/wiki/可移植文档格式">Portable Document Format</a> [默认格式]</li>
-<li><code class="docutils literal notranslate"><span class="pre">ps</span></code>： <a class="reference external" href="https://zh.wikipedia.org/wiki/PostScript">Plain PostScript</a></li>
-<li><code class="docutils literal notranslate"><span class="pre">eps</span></code>：<a class="reference external" href="https://zh.wikipedia.org/wiki/EPS">Encapsulated PostScript</a></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">pdf</span></code>：<a class="reference external" href="https://zh.wikipedia.org/wiki/可移植文档格式">Portable Document Format</a> [默认格式]</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">ps</span></code>： <a class="reference external" href="https://zh.wikipedia.org/wiki/PostScript">Plain PostScript</a></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">eps</span></code>：<a class="reference external" href="https://zh.wikipedia.org/wiki/EPS">Encapsulated PostScript</a></p></li>
 </ul>
 <p>GMT支持输出如下位图图片格式：</p>
-<ul class="last simple">
-<li><code class="docutils literal notranslate"><span class="pre">bmp</span></code>：<a class="reference external" href="https://zh.wikipedia.org/wiki/BMP">Microsoft Bit Map</a></li>
-<li><code class="docutils literal notranslate"><span class="pre">jpg</span></code>：<a class="reference external" href="https://zh.wikipedia.org/wiki/JPEG">Joint Photographic Experts Group Format</a></li>
-<li><code class="docutils literal notranslate"><span class="pre">png</span></code>：<a class="reference external" href="https://zh.wikipedia.org/wiki/PNG">Portable Network Graphics</a> （不透明背景）</li>
-<li><code class="docutils literal notranslate"><span class="pre">PNG</span></code>：<a class="reference external" href="https://zh.wikipedia.org/wiki/PNG">Portable Network Graphics</a> （透明背景）</li>
-<li><code class="docutils literal notranslate"><span class="pre">ppm</span></code>：<a class="reference external" href="https://zh.wikipedia.org/wiki/PBM格式">Portable Pixel Map</a></li>
-<li><code class="docutils literal notranslate"><span class="pre">tif</span></code>：<a class="reference external" href="https://zh.wikipedia.org/wiki/TIFF">Tagged Image Format File</a></li>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">bmp</span></code>：<a class="reference external" href="https://zh.wikipedia.org/wiki/BMP">Microsoft Bit Map</a></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">jpg</span></code>：<a class="reference external" href="https://zh.wikipedia.org/wiki/JPEG">Joint Photographic Experts Group Format</a></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">png</span></code>：<a class="reference external" href="https://zh.wikipedia.org/wiki/PNG">Portable Network Graphics</a> （不透明背景）</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">PNG</span></code>：<a class="reference external" href="https://zh.wikipedia.org/wiki/PNG">Portable Network Graphics</a> （透明背景）</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">ppm</span></code>：<a class="reference external" href="https://zh.wikipedia.org/wiki/PBM格式">Portable Pixel Map</a></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">tif</span></code>：<a class="reference external" href="https://zh.wikipedia.org/wiki/TIFF">Tagged Image Format File</a></p></li>
 </ul>
 </dd>
-<dt><em>options</em></dt>
-<dd><p class="first">GMT现代模式本质上是先生成PS文件，再通过调用 <a class="reference internal" href="../psconvert/"><span class="doc">psconvert</span></a> 自动转换成用户指定的图片格式。此处可以设置要传递给模块 <a class="reference internal" href="../psconvert/"><span class="doc">psconvert</span></a> 的选项，多个选项之间用逗号分隔。</p>
+<dt><em>options</em></dt><dd><p>GMT现代模式本质上是先生成PS文件，再通过调用 <a class="reference internal" href="../psconvert/"><span class="doc">psconvert</span></a> 自动转换成用户指定的图片格式。此处可以设置要传递给模块 <a class="reference internal" href="../psconvert/"><span class="doc">psconvert</span></a> 的选项，多个选项之间用逗号分隔。</p>
 <p>默认值为 <strong>A</strong>，表示将 <strong>-A</strong> 选项传给 <a class="reference internal" href="../psconvert/"><span class="doc">psconvert</span></a>。</p>
 <p>其他可选的选项包括：</p>
 <ul class="simple">
-<li><strong>A</strong>[<em>args</em>]: 裁剪图片</li>
-<li><strong>C</strong><em>args</em>: 额外传递给Ghostscript的选项</li>
-<li><strong>D</strong><em>dir</em>: 指定图片的输出目录</li>
-<li><strong>E</strong><em>dpi</em>: 设置图片分辨率</li>
-<li><strong>H</strong><em>factor</em>: 对图片做平滑以避免混叠</li>
-<li><strong>M</strong><em>args</em>: 为当前图片叠加前景图片或背景图片</li>
-<li><strong>Q</strong><em>args</em>: 设置图像和文本的抗锯齿选项</li>
-<li><strong>S</strong> : 把 Ghostscript 命令输出到标准错误输出，且不删除所有中间文件</li>
+<li><p><strong>A</strong>[<em>args</em>]: 裁剪图片</p></li>
+<li><p><strong>C</strong><em>args</em>: 额外传递给Ghostscript的选项</p></li>
+<li><p><strong>D</strong><em>dir</em>: 指定图片的输出目录</p></li>
+<li><p><strong>E</strong><em>dpi</em>: 设置图片分辨率</p></li>
+<li><p><strong>H</strong><em>factor</em>: 对图片做平滑以避免混叠</p></li>
+<li><p><strong>M</strong><em>args</em>: 为当前图片叠加前景图片或背景图片</p></li>
+<li><p><strong>Q</strong><em>args</em>: 设置图像和文本的抗锯齿选项</p></li>
+<li><p><strong>S</strong> : 把 Ghostscript 命令输出到标准错误输出，且不删除所有中间文件</p></li>
 </ul>
-<p class="last">详细解释见 <a class="reference internal" href="../psconvert/"><span class="doc">psconvert</span></a> 的说明文档。</p>
+<p>详细解释见 <a class="reference internal" href="../psconvert/"><span class="doc">psconvert</span></a> 的说明文档。</p>
 </dd>
 </dl>
-<dl class="docutils" id="v">
-<dt><strong>-V</strong>[<em>level</em>] <a class="reference internal" href="../../option/V/"><span class="doc">(more …)</span></a></dt>
-<dd>设置 verbose 等级 [c]</dd>
+<dl id="c">
+<dt><strong>-C</strong></dt><dd><p>启动一个“干净”的会话。所有已存在的 gmt.conf 都会被忽略，而不会影响到该会话。</p>
+<p>默认情况下，若当前目录或 <code class="file docutils literal notranslate"><span class="pre">~/.gmt</span></code> 等目录下存在 gmt.conf 文件，启动的会话会继承 gmt.conf 文件中的设置，使用该选项则忽略所有已存在的设置。</p>
+</dd>
 </dl>
-<dl class="docutils">
-<dt><strong>-^</strong> 或 <strong>-</strong></dt>
-<dd>显示简短的帮助信息，包括模块简介和基本语法信息（Windows下只能使用 <strong>-</strong>）</dd>
-<dt><strong>-+</strong> 或 <strong>+</strong></dt>
-<dd>显示帮助信息，包括模块简介、基本语法以及模块特有选项的说明</dd>
-<dt><strong>-?</strong> 或无参数</dt>
-<dd>显示完整的帮助信息，包括模块简介、基本语法以及所有选项的说明</dd>
+<dl class="simple" id="v">
+<dt><strong>-V</strong>[<em>level</em>] <a class="reference internal" href="../../option/V/"><span class="doc">(more …)</span></a></dt><dd><p>设置 verbose 等级 [<strong>w</strong>]</p>
+</dd>
+</dl>
+<dl class="simple">
+<dt><strong>-^</strong> 或 <strong>-</strong></dt><dd><p>显示简短的帮助信息，包括模块简介和基本语法信息（Windows下只能使用 <strong>-</strong>）</p>
+</dd>
+<dt><strong>-+</strong> 或 <strong>+</strong></dt><dd><p>显示帮助信息，包括模块简介、基本语法以及模块特有选项的说明</p>
+</dd>
+<dt><strong>-?</strong> 或无参数</dt><dd><p>显示完整的帮助信息，包括模块简介、基本语法以及所有选项的说明</p>
+</dd>
 </dl>
 </div>
 <div class="section" id="id4">
@@ -385,7 +389,7 @@ gmt end show
 </div>
 <div class="section" id="ps">
 <h2>PS文件注意事项<a class="headerlink" href="#ps" title="永久链接至标题">¶</a></h2>
-<p>如果用户想要输出PS格式的图片，则应额外留意画布尺寸。对于其他图片格式而言，GMT默认使用无穷大（10米x10米）的画布。而对于PS格式而言，GMT则默认使用A4大小的画布。若用户绘制的图片超过A4纸张的大小，则可能会造成显示不完全。针对这种情况，建议用户修改参数 <a class="reference external" href="https://docs.generic-mapping-tools.org/6.0/gmt.conf.html#ps-media" title="(在 GMT v6.0)"><span class="xref std std-ref">PS_MEDIA</span></a> 以显式指定纸张大小。例如:</p>
+<p>如果用户想要输出PS格式的图片，则应额外留意画布尺寸。对于其他图片格式而言，GMT默认使用无穷大（10米x10米）的画布。而对于PS格式而言，GMT则默认使用A4大小的画布。若用户绘制的图片超过A4纸张的大小，则可能会造成显示不完全。针对这种情况，建议用户修改参数 <a class="reference internal" href="../../conf/ps/#term-PS_MEDIA"><span class="xref std std-term">PS_MEDIA</span></a> 以显式指定纸张大小。例如:</p>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>gmt begin map ps
 gmt <span class="nb">set</span> PS_MEDIA A3
 gmt ...
@@ -397,7 +401,8 @@ gmt end
 <h2>UNIX shell 注意事项<a class="headerlink" href="#unix-shell" title="永久链接至标题">¶</a></h2>
 <p>现代模式的工作原理是，在使用 <strong>gmt begin</strong> 时利用父进程ID创建唯一的会话目录，并将很多信息保存到该会话目录中。脚本中接下来的命令拥有共同的父进程ID，因而接下来的命令可以向唯一会话目录中写入信息或读取信息，以实现多个命令之间的互相通信。然而，UNIX下某些shell的实现不完全统一，脚本执行过程中父进程ID可能出现变化，后面执行的命令无法正确获取前面命令的父进程ID，因而导致命令之间的信息交流出现错误。最常见的情况是在使用UNIX管道时，可能会生成子shell进而导致父进程ID出现变化。</p>
 <p>如果你在GMT现代模式脚本中使用了管道，执行过程中出现了类似无法找到目录 <code class="docutils literal notranslate"><span class="pre">gmt6.#####</span></code>
-这样的错误，这极有可能是你所使用的UNIX shell存在此类问题。解决办法是，在脚本开始的地方设置环境变量 <strong>GMT_SESSION_NAME</strong> 为进程ID。在Bash shell应该是:</p>
+这样的错误，这极有可能是你所使用的UNIX shell存在此类问题。解决办法是，在脚本开始的地方设置环境变量 <strong>GMT_SESSION_NAME</strong> 为进程ID。</p>
+<p>在Bash shell应该是（其中，<code class="docutils literal notranslate"><span class="pre">$$</span></code> 是特殊变量，用于表示当前进程ID）:</p>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="nb">export</span> <span class="nv">GMT_SESSION_NAME</span><span class="o">=</span><span class="nv">$$</span>
 gmt begin
 gmt ...
@@ -406,6 +411,13 @@ gmt end show
 </div>
 <p>在C shell中应该是:</p>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>setenv GMT_SESSION_NAME <span class="nv">$$</span>
+gmt begin
+gmt ..
+gmt end show
+</pre></div>
+</div>
+<p>在Batch脚本中应该是（Batch中无法直接获取进程ID，此时可以随便给 <strong>GMT_SESSION_NAME</strong> 一个数字）:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="nb">set</span> <span class="nv">GMT_SESSION_NAME</span><span class="o">=</span><span class="m">97401</span>
 gmt begin
 gmt ..
 gmt end show
@@ -467,14 +479,22 @@ gitalk.render('gitalk-container');
 
   <div role="contentinfo">
     <p>
-        &copy; Copyright 2014 - 2020, GMT中文社区.
+        
+        &copy; 版权所有 2014 - 2020, GMT中文社区.
       <span class="lastupdated">
-        最后更新于 2020年07月05日.
+        最后更新于 2020年10月15日.
       </span>
 
     </p>
   </div>
-  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+    
+    
+    
+    Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a
+    
+    <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a>
+    
+    provided by <a href="https://readthedocs.org">Read the Docs</a>. 
 
 </footer>
 
@@ -485,7 +505,6 @@ gitalk.render('gitalk-container');
 
   </div>
   
-
 
   <script type="text/javascript">
       jQuery(function () {

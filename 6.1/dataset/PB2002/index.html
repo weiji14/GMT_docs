@@ -1,8 +1,7 @@
 
 
 <!DOCTYPE html>
-<!--[if IE 8]><html class="no-js lt-ie9" lang="zh-CN" > <![endif]-->
-<!--[if gt IE 8]><!--> <html class="no-js" lang="zh-CN" > <!--<![endif]-->
+<html class="writer-html5" lang="zh-CN" >
 <head>
   <meta charset="utf-8">
   
@@ -10,6 +9,11 @@
   
   <title>PB2002: 全球板块边界数据 &mdash; GMT中文手册</title>
   
+
+  
+  <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../../_static/custom.css" type="text/css" />
 
   
   
@@ -21,28 +25,25 @@
   
 
   
-  <script type="text/javascript" src="../../_static/js/modernizr.min.js"></script>
+  <!--[if lt IE 9]>
+    <script src="../../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
   
     
       <script type="text/javascript" id="documentation_options" data-url_root="../../" src="../../_static/documentation_options.js"></script>
-        <script type="text/javascript" src="../../_static/jquery.js"></script>
-        <script type="text/javascript" src="../../_static/underscore.js"></script>
-        <script type="text/javascript" src="../../_static/doctools.js"></script>
-        <script type="text/javascript" src="../../_static/language_data.js"></script>
-        <script type="text/javascript" src="../../_static/translations.js"></script>
-        <script async="async" type="text/javascript" src="https://cdn.bootcss.com/mathjax/2.7.7/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+        <script src="../../_static/jquery.js"></script>
+        <script src="../../_static/underscore.js"></script>
+        <script src="../../_static/doctools.js"></script>
+        <script src="../../_static/language_data.js"></script>
+        <script src="../../_static/translations.js"></script>
+        <script async="async" src="https://cdn.bootcss.com/mathjax/2.7.7/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
     
     <script type="text/javascript" src="../../_static/js/theme.js"></script>
 
     
-
-  
-  <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
-  <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
-  <link rel="stylesheet" href="../../_static/custom.css" type="text/css" />
     <link rel="index" title="索引" href="../../genindex/" />
     <link rel="search" title="搜索" href="../../search/" />
-    <link rel="next" title="中文支持" href="../../chinese/" />
+    <link rel="next" title="中国地学数据集" href="../../dataset-CN/" />
     <link rel="prev" title="GADM: 全球行政区划数据库" href="../gadm/" /> 
 </head>
 
@@ -90,6 +91,7 @@
 
         </div>
 
+        
         <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
           
     
@@ -112,10 +114,13 @@
 <li class="toctree-l1"><a class="reference internal" href="../../proj/">地图投影</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../conf/">配置参数</a></li>
 <li class="toctree-l1 current"><a class="reference internal" href="../">地学数据集</a><ul class="current">
-<li class="toctree-l2"><a class="reference internal" href="../overview/">地学数据集</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../overview/">GMT数据概述</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../gshhg/">GSHHG: 全球高分辨率海岸线数据</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../dcw/">DCW: 世界数字图表</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../earth-relief/">earth_relief: 全球地形起伏数据</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../earth-age/">earth_age: 地球洋壳年龄数据</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../earth-images/">earth_day 和 earth_night: 地球昼夜卫星影像</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../earth-mask/">earth_mask: 地球掩膜数据</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../gadm/">GADM: 全球行政区划数据库</a></li>
 <li class="toctree-l2 current"><a class="current reference internal" href="#">PB2002: 全球板块边界数据</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="#id1">数据下载</a></li>
@@ -125,9 +130,9 @@
 </li>
 </ul>
 </li>
+<li class="toctree-l1"><a class="reference internal" href="../../dataset-CN/">中国地学数据集</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../chinese/">中文支持</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../module/">模块手册</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../gallery/">绘图示例</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../api/">API</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../appendix/">附录</a></li>
 </ul>
@@ -155,6 +160,7 @@
     
 
         </div>
+        
       </div>
     </nav>
 
@@ -193,7 +199,7 @@
 
   <ul class="wy-breadcrumbs">
     
-      <li><a href="../../">首页</a> &raquo;</li>
+      <li><a href="../../" class="icon icon-home"></a> &raquo;</li>
         
           <li><a href="../">地学数据集</a> &raquo;</li>
         
@@ -222,9 +228,9 @@
 <h1>PB2002: 全球板块边界数据<a class="headerlink" href="#pb2002" title="永久链接至标题">¶</a></h1>
 <p>PB2002 是常用的一个全球板块边界数据，其包含了14个大板块和38个小板块，共计52个板块的边界数据。</p>
 <ul class="simple">
-<li>官方网站: <a class="reference external" href="http://peterbird.name/publications/2003_PB2002/2003_PB2002.htm">http://peterbird.name/publications/2003_PB2002/2003_PB2002.htm</a></li>
-<li>原始数据下载地址: <a class="reference external" href="http://peterbird.name/oldFTP/PB2002/">http://peterbird.name/oldFTP/PB2002/</a></li>
-<li>数据格式说明: <a class="reference external" href="http://peterbird.name/oldFTP/PB2002/2001GC000252_readme.txt">http://peterbird.name/oldFTP/PB2002/2001GC000252_readme.txt</a></li>
+<li><p>官方网站: <a class="reference external" href="http://peterbird.name/publications/2003_PB2002/2003_PB2002.htm">http://peterbird.name/publications/2003_PB2002/2003_PB2002.htm</a></p></li>
+<li><p>原始数据下载地址: <a class="reference external" href="http://peterbird.name/oldFTP/PB2002/">http://peterbird.name/oldFTP/PB2002/</a></p></li>
+<li><p>数据格式说明: <a class="reference external" href="http://peterbird.name/oldFTP/PB2002/2001GC000252_readme.txt">http://peterbird.name/oldFTP/PB2002/2001GC000252_readme.txt</a></p></li>
 </ul>
 <div class="section" id="id1">
 <h2>数据下载<a class="headerlink" href="#id1" title="永久链接至标题">¶</a></h2>
@@ -232,8 +238,8 @@
 和 <code class="docutils literal notranslate"><span class="pre">PB2002_boundaries.dig.txt</span></code> 数据，并将其段头记录做了修改以供GMT用户使用。</p>
 <p>可供GMT直接使用的数据下载地址:</p>
 <ul class="simple">
-<li><a class="reference download internal" download="" href="../../_downloads/7380dd3b6de0df605b193d0987c81492/PB2002_plates.dig.txt"><code class="xref download docutils literal notranslate"><span class="pre">PB2002_plates.dig.txt</span></code></a></li>
-<li><a class="reference download internal" download="" href="../../_downloads/2c21d3cae73e71e583a0e402539901f8/PB2002_boundaries.dig.txt"><code class="xref download docutils literal notranslate"><span class="pre">PB2002_boundaries.dig.txt</span></code></a></li>
+<li><p><a class="reference download internal" download="" href="../../_downloads/e53c0ab92a657b49852ac4c3519375c5/PB2002_plates.dig.txt"><code class="xref download docutils literal notranslate"><span class="pre">PB2002_plates.dig.txt</span></code></a></p></li>
+<li><p><a class="reference download internal" download="" href="../../_downloads/75a2dd8fb85f0e6980091005c8f6f06f/PB2002_boundaries.dig.txt"><code class="xref download docutils literal notranslate"><span class="pre">PB2002_boundaries.dig.txt</span></code></a></p></li>
 </ul>
 <p>两个数据是等效的，区别在于 <strong>PB2002_plates.dig.txt</strong> 中数据分为52段，每段数据对应一个板块边界闭合多边形，每段数据的段头记录为该段数据的板块名称缩写。</p>
 <p><strong>PB2002_boundaries.dig.txt</strong> 中数据分为229段，其将相邻板块的共同边界分为不同的段列出来。段头记录中包含了两个板块的名称缩写，以及板块数据来源的参考文献。</p>
@@ -249,7 +255,7 @@ gmt end show
 </div>
 <div class="figure align-center" id="id4">
 <a class="reference internal image-reference" href="../../_images/index-gmtplot-0.png"><img alt="../../_images/index-gmtplot-0.png" src="../../_images/index-gmtplot-0.png" style="width: 80%;" /></a>
-<p class="caption"><span class="caption-text">PB2002 全球板块边界</span></p>
+<p class="caption"><span class="caption-text">PB2002 全球板块边界</span><a class="headerlink" href="#id4" title="永久链接至图片">¶</a></p>
 </div>
 </div>
 <div class="section" id="id3">
@@ -289,7 +295,7 @@ gitalk.render('gitalk-container');
   
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
       
-        <a href="../../chinese/" class="btn btn-neutral float-right" title="中文支持" accesskey="n" rel="next">下页 <span class="fa fa-arrow-circle-right"></span></a>
+        <a href="../../dataset-CN/" class="btn btn-neutral float-right" title="中国地学数据集" accesskey="n" rel="next">下页 <span class="fa fa-arrow-circle-right"></span></a>
       
       
         <a href="../gadm/" class="btn btn-neutral float-left" title="GADM: 全球行政区划数据库" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> 上页</a>
@@ -301,14 +307,22 @@ gitalk.render('gitalk-container');
 
   <div role="contentinfo">
     <p>
-        &copy; Copyright 2014 - 2020, GMT中文社区.
+        
+        &copy; 版权所有 2014 - 2020, GMT中文社区.
       <span class="lastupdated">
-        最后更新于 2020年07月05日.
+        最后更新于 2020年10月15日.
       </span>
 
     </p>
   </div>
-  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+    
+    
+    
+    Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a
+    
+    <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a>
+    
+    provided by <a href="https://readthedocs.org">Read the Docs</a>. 
 
 </footer>
 
@@ -319,7 +333,6 @@ gitalk.render('gitalk-container');
 
   </div>
   
-
 
   <script type="text/javascript">
       jQuery(function () {

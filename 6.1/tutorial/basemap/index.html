@@ -1,8 +1,7 @@
 
 
 <!DOCTYPE html>
-<!--[if IE 8]><html class="no-js lt-ie9" lang="zh-CN" > <![endif]-->
-<!--[if gt IE 8]><!--> <html class="no-js" lang="zh-CN" > <!--<![endif]-->
+<html class="writer-html5" lang="zh-CN" >
 <head>
   <meta charset="utf-8">
   
@@ -10,6 +9,11 @@
   
   <title>绘制底图 &mdash; GMT中文手册</title>
   
+
+  
+  <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../../_static/custom.css" type="text/css" />
 
   
   
@@ -21,25 +25,22 @@
   
 
   
-  <script type="text/javascript" src="../../_static/js/modernizr.min.js"></script>
+  <!--[if lt IE 9]>
+    <script src="../../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
   
     
       <script type="text/javascript" id="documentation_options" data-url_root="../../" src="../../_static/documentation_options.js"></script>
-        <script type="text/javascript" src="../../_static/jquery.js"></script>
-        <script type="text/javascript" src="../../_static/underscore.js"></script>
-        <script type="text/javascript" src="../../_static/doctools.js"></script>
-        <script type="text/javascript" src="../../_static/language_data.js"></script>
-        <script type="text/javascript" src="../../_static/translations.js"></script>
-        <script async="async" type="text/javascript" src="https://cdn.bootcss.com/mathjax/2.7.7/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+        <script src="../../_static/jquery.js"></script>
+        <script src="../../_static/underscore.js"></script>
+        <script src="../../_static/doctools.js"></script>
+        <script src="../../_static/language_data.js"></script>
+        <script src="../../_static/translations.js"></script>
+        <script async="async" src="https://cdn.bootcss.com/mathjax/2.7.7/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
     
     <script type="text/javascript" src="../../_static/js/theme.js"></script>
 
     
-
-  
-  <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
-  <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
-  <link rel="stylesheet" href="../../_static/custom.css" type="text/css" />
     <link rel="index" title="索引" href="../../genindex/" />
     <link rel="search" title="搜索" href="../../search/" />
     <link rel="next" title="绘制海岸线" href="../coastline/" />
@@ -90,6 +91,7 @@
 
         </div>
 
+        
         <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
           
     
@@ -136,9 +138,9 @@
 <li class="toctree-l1"><a class="reference internal" href="../../proj/">地图投影</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../conf/">配置参数</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../dataset/">地学数据集</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../dataset-CN/">中国地学数据集</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../chinese/">中文支持</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../module/">模块手册</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../gallery/">绘图示例</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../api/">API</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../appendix/">附录</a></li>
 </ul>
@@ -166,6 +168,7 @@
     
 
         </div>
+        
       </div>
     </nav>
 
@@ -204,7 +207,7 @@
 
   <ul class="wy-breadcrumbs">
     
-      <li><a href="../../">首页</a> &raquo;</li>
+      <li><a href="../../" class="icon icon-home"></a> &raquo;</li>
         
           <li><a href="../">入门教程</a> &raquo;</li>
         
@@ -244,12 +247,12 @@ gmt end show
 </div>
 <div class="figure align-center" id="id6">
 <a class="reference internal image-reference" href="../../_images/basemap-gmtplot-01.png"><img alt="../../_images/basemap-gmtplot-01.png" src="../../_images/basemap-gmtplot-01.png" style="width: 85%;" /></a>
-<p class="caption"><span class="caption-text">全球地图（无边框版）</span></p>
+<p class="caption"><span class="caption-text">全球地图（无边框版）</span><a class="headerlink" href="#id6" title="永久链接至图片">¶</a></p>
 </div>
 <p>先忽略后面的 <strong>-W0.5p -A10000</strong>（后面章节会介绍到），这里只关注 <strong>-J</strong> 和 <strong>-R</strong> 选项。此示例中：</p>
 <ol class="arabic simple">
-<li><strong>-JH180/12c</strong> 指定地图投影参数，<strong>H</strong> 表示使用Hammer投影，地图中心位于经度180°处，地图宽度为12厘米（<strong>12c</strong>，<strong>c</strong> 表示单位厘米）；</li>
-<li><strong>-R0/360/-90/90</strong> 指定要绘制的区域范围，即经度0°到360°，纬度-90°到90°，四个数字之间用斜杠 <strong>/</strong> 分隔。</li>
+<li><p><strong>-JH180/12c</strong> 指定地图投影参数，<strong>H</strong> 表示使用Hammer投影，地图中心位于经度180°处，地图宽度为12厘米（<strong>12c</strong>，<strong>c</strong> 表示单位厘米）；</p></li>
+<li><p><strong>-R0/360/-90/90</strong> 指定要绘制的区域范围，即经度0°到360°，纬度-90°到90°，四个数字之间用斜杠 <strong>/</strong> 分隔。</p></li>
 </ol>
 <p>上面使用了非常简单的GMT命令即绘制出了一张全球地图的底图，但其跟我们常见的全球地图比还缺了个底图边框。GMT中可以使用 <strong>-B</strong> 选项为地理底图加上边框并绘制经纬线。</p>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>gmt begin GlobalMap png,pdf
@@ -259,23 +262,23 @@ gmt end show
 </div>
 <div class="figure align-center" id="id7">
 <a class="reference internal image-reference" href="../../_images/basemap-gmtplot-11.png"><img alt="../../_images/basemap-gmtplot-11.png" src="../../_images/basemap-gmtplot-11.png" style="width: 85%;" /></a>
-<p class="caption"><span class="caption-text">全球地图（有边框版）</span></p>
+<p class="caption"><span class="caption-text">全球地图（有边框版）</span><a class="headerlink" href="#id7" title="永久链接至图片">¶</a></p>
 </div>
 <p>跟上一个脚本相比，此处我们做了两点修改：</p>
 <ol class="arabic simple">
-<li>使用 <strong>-Rg</strong> 代替了 <strong>-R0/360/-90/90</strong>。这二者是完全等效的。由于绘制全球地图是很常见的需求，因而GMT为其设计了一个更简单的写法。
-<strong>-Rg</strong> 中 <strong>g</strong> 代表 <strong>g</strong>lobal。</li>
-<li>增加了 <strong>-Bg</strong> 选项。<strong>-B</strong> 用于给底图加上边框，其中的 <strong>g</strong> 则用于向底图中加入网格线（<strong>g</strong> 代表 <strong>g</strong>rid）。</li>
+<li><p>使用 <strong>-Rg</strong> 代替了 <strong>-R0/360/-90/90</strong>。这二者是完全等效的。由于绘制全球地图是很常见的需求，因而GMT为其设计了一个更简单的写法。
+<strong>-Rg</strong> 中 <strong>g</strong> 代表 <strong>g</strong>lobal。</p></li>
+<li><p>增加了 <strong>-Bg</strong> 选项。<strong>-B</strong> 用于给底图加上边框，其中的 <strong>g</strong> 则用于向底图中加入网格线（<strong>g</strong> 代表 <strong>g</strong>rid）。</p></li>
 </ol>
 <div class="admonition tip">
-<p class="first admonition-title">小技巧</p>
+<p class="admonition-title">小技巧</p>
 <p>GMT支持30多种不同的地图投影方式，详情见 <a class="reference internal" href="../../proj/"><span class="doc">地图投影</span></a> 一章。将上面的示例脚本中 <strong>-JH180/12c</strong> 修改为下面列出的一些值以了解不同投影方式之间的差异：</p>
-<ul class="last simple">
-<li><strong>-JA280/30/12c</strong></li>
-<li><strong>-JI180/12c</strong></li>
-<li><strong>-JK180/12c</strong></li>
-<li><strong>-JN180/12c</strong></li>
-<li><strong>-JR180/12c</strong></li>
+<ul class="simple">
+<li><p><strong>-JA280/30/12c</strong></p></li>
+<li><p><strong>-JI180/12c</strong></p></li>
+<li><p><strong>-JK180/12c</strong></p></li>
+<li><p><strong>-JN180/12c</strong></p></li>
+<li><p><strong>-JR180/12c</strong></p></li>
 </ul>
 </div>
 </div>
@@ -290,13 +293,13 @@ gmt end show
 </div>
 <div class="figure align-center" id="id8">
 <a class="reference internal image-reference" href="../../_images/basemap-gmtplot-2.png"><img alt="../../_images/basemap-gmtplot-2.png" src="../../_images/basemap-gmtplot-2.png" style="width: 50%;" /></a>
-<p class="caption"><span class="caption-text">使用国家代码指定绘图区域</span></p>
+<p class="caption"><span class="caption-text">使用国家代码指定绘图区域</span><a class="headerlink" href="#id8" title="永久链接至图片">¶</a></p>
 </div>
 <p>这里我们使用了：</p>
 <ul class="simple">
-<li><strong>-JM12c</strong> 指定了使用墨卡托投影（绘制区域地图最常用的投影方式），地图宽度为12厘米；</li>
-<li><strong>-RNZ</strong> 指定了绘图区域范围，此处 <strong>NZ</strong> 是新西兰的国家代码，GMT会自动根据国家代码提取该国家的区域范围并用于绘图；</li>
-<li><strong>-Ba</strong> 用于给底图添加边框。对于某些地图投影，GMT默认使用图中所示的黑白相间的底图边框。<strong>a</strong> 用于添加标注（<strong>a</strong>nnotation，即图中的经纬度数字）。</li>
+<li><p><strong>-JM12c</strong> 指定了使用墨卡托投影（绘制区域地图最常用的投影方式），地图宽度为12厘米；</p></li>
+<li><p><strong>-RNZ</strong> 指定了绘图区域范围，此处 <strong>NZ</strong> 是新西兰的国家代码，GMT会自动根据国家代码提取该国家的区域范围并用于绘图；</p></li>
+<li><p><strong>-Ba</strong> 用于给底图添加边框。对于某些地图投影，GMT默认使用图中所示的黑白相间的底图边框。<strong>a</strong> 用于添加标注（<strong>a</strong>nnotation，即图中的经纬度数字）。</p></li>
 </ul>
 <p>如果对于根据国家代码自动确定的区域范围不太满意，我们也可以使用 <strong>-R</strong> 选项最原始的方式来指定区域范围。即依次给定绘图区域的最小经度、最大经度、最小纬度和最大纬度。记起来也很容易，可以记为 <em>xmin/xmax/ymin/ymax</em>，或者直接记“西东南北”。</p>
 <p>通过上面的图，我们大概知道了新西兰的经纬度范围。我们可以直接使用
@@ -308,15 +311,15 @@ gmt end show
 </div>
 <div class="figure align-center" id="id9">
 <a class="reference internal image-reference" href="../../_images/basemap-gmtplot-3.png"><img alt="../../_images/basemap-gmtplot-3.png" src="../../_images/basemap-gmtplot-3.png" style="width: 50%;" /></a>
-<p class="caption"><span class="caption-text">使用经纬度范围指定绘图区域</span></p>
+<p class="caption"><span class="caption-text">使用经纬度范围指定绘图区域</span><a class="headerlink" href="#id9" title="永久链接至图片">¶</a></p>
 </div>
 <p>上面的例子中我们还调整了 <strong>-B</strong> 选项，<strong>-Bafg</strong> 表示绘制底图边框的标注（<strong>a</strong>nnotation）、刻度线（<strong>f</strong>rame，即图中黑白线段的间隔）和网格线（<strong>g</strong>rid）。标注、刻度线以及网格线的间隔由GMT算法自动决定。</p>
 <p>对GMT自动算法确定的间隔不满意？你还可以任意指定自己想要的间隔。下面例子中，我们对底图进行了进一步的自定义，为X轴和Y轴分别指定了间隔，并给底图添加了标题：</p>
 <ul class="simple">
-<li><strong>-Bxa4g2</strong> 表示设置X轴（<strong>x</strong>）的标注间隔为4度、网格线间隔为2度（<strong>a4g2</strong>）</li>
-<li><strong>-Bya3g3</strong> 表示设置X轴（<strong>y</strong>）的标注间隔为3度、网格间隔为3度（<strong>a3g3</strong>）</li>
-<li><strong>-BWSen</strong> 中WSEN分别是西南东北四个方向的英文单词首字母，用于控制四条边的属性。大写的 <strong>WS</strong> 表示给西边和南边添加标注，而小写的 <strong>en</strong> 则表示对于东边和北边只绘制边框但不显示标注</li>
-<li><strong>-BWSen+t”New Zealand”</strong> 中 <strong>+t</strong> 用于给整张图添加标题（<strong>t</strong>itle）。由于标题 New Zealand 中含有空格，我们需要使用引号将其括起来</li>
+<li><p><strong>-Bxa4g2</strong> 表示设置X轴（<strong>x</strong>）的标注间隔为4度、网格线间隔为2度（<strong>a4g2</strong>）</p></li>
+<li><p><strong>-Bya3g3</strong> 表示设置X轴（<strong>y</strong>）的标注间隔为3度、网格间隔为3度（<strong>a3g3</strong>）</p></li>
+<li><p><strong>-BWSen</strong> 中WSEN分别是西南东北四个方向的英文单词首字母，用于控制四条边的属性。大写的 <strong>WS</strong> 表示给西边和南边添加标注，而小写的 <strong>en</strong> 则表示对于东边和北边只绘制边框但不显示标注</p></li>
+<li><p><strong>-BWSen+t”New Zealand”</strong> 中 <strong>+t</strong> 用于给整张图添加标题（<strong>t</strong>itle）。由于标题 New Zealand 中含有空格，我们需要使用引号将其括起来</p></li>
 </ul>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>gmt begin NewZealandMap png,pdf
     gmt coast -JM12c -R165/180/-48/-32 -Bxa4g2 -Bya3g3 -BWSen+t<span class="s2">&quot;New Zealand&quot;</span> -W0.5p -A10000
@@ -325,7 +328,7 @@ gmt end show
 </div>
 <div class="figure align-center" id="id10">
 <a class="reference internal image-reference" href="../../_images/basemap-gmtplot-4.png"><img alt="../../_images/basemap-gmtplot-4.png" src="../../_images/basemap-gmtplot-4.png" style="width: 50%;" /></a>
-<p class="caption"><span class="caption-text">为区域地图添加标题</span></p>
+<p class="caption"><span class="caption-text">为区域地图添加标题</span><a class="headerlink" href="#id10" title="永久链接至图片">¶</a></p>
 </div>
 </div>
 <div class="section" id="id4">
@@ -333,11 +336,11 @@ gmt end show
 <p>GMT最擅长绘制地图，同时也适合绘制最简单的线性坐标轴。同样的，要想绘制线性坐标轴，我们依然需要使用 <strong>-R</strong> 指定坐标轴范围，使用 <strong>-B</strong> 绘制边框并指定边框和坐标轴属性，同时，我们还需要使用 <strong>-JX</strong> 指定线性坐标轴的宽度和高度。</p>
 <p>下面的示例中，我们使用了：</p>
 <ul class="simple">
-<li><strong>-JX8c/5c</strong> 表明线性坐标轴的宽度为8厘米，高度为5厘米</li>
-<li><strong>-R10/70/-4/8</strong> 表明X轴范围为10到70，Y轴范围为-4到8</li>
-<li><strong>-Bxa10f5g10+l”X Label”</strong> 设置了X轴的属性，
+<li><p><strong>-JX8c/5c</strong> 表明线性坐标轴的宽度为8厘米，高度为5厘米</p></li>
+<li><p><strong>-R10/70/-4/8</strong> 表明X轴范围为10到70，Y轴范围为-4到8</p></li>
+<li><p><strong>-Bxa10f5g10+l”X Label”</strong> 设置了X轴的属性，
 <strong>a10f5g10</strong> 分别设置了标注（<strong>a</strong>nnotation）间隔为10，刻度（<strong>f</strong>rame）间隔为5，网格线（<strong>g</strong>rid ）间隔为10；
-<strong>+l”X Label”</strong> 则为X轴添加了标签；对于Y轴同理；</li>
+<strong>+l”X Label”</strong> 则为X轴添加了标签；对于Y轴同理；</p></li>
 </ul>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>gmt begin linearXY png,pdf
     gmt basemap -R10/70/-4/8 -JX8c/5c -Bxa10f5g10+l<span class="s2">&quot;X Label&quot;</span> -Bya4f2g2+l<span class="s2">&quot;Y Label&quot;</span> -BWSen+t<span class="s2">&quot;Linear X-Y Plot&quot;</span>
@@ -346,7 +349,7 @@ gmt end show
 </div>
 <div class="figure align-center" id="id11">
 <a class="reference internal image-reference" href="../../_images/basemap-gmtplot-5.png"><img alt="../../_images/basemap-gmtplot-5.png" src="../../_images/basemap-gmtplot-5.png" style="width: 60%;" /></a>
-<p class="caption"><span class="caption-text">线性坐标轴</span></p>
+<p class="caption"><span class="caption-text">线性坐标轴</span><a class="headerlink" href="#id11" title="永久链接至图片">¶</a></p>
 </div>
 <p>GMT同样也可以绘制对数轴、指数轴以及极坐标轴，在这一节中不再介绍。</p>
 </div>
@@ -355,11 +358,11 @@ gmt end show
 <p>三维坐标轴相对于二维坐标轴多了一个Z轴。与二维线性坐标轴类似，我们需要针对Z轴指定Z轴的范围、Z轴的高度以及三维视角。</p>
 <p>下面的命令绘制了一个三维线性坐标轴，相比于传统的二维线性坐标轴，其不同之处在于：</p>
 <ul class="simple">
-<li><strong>-R</strong> 选项中有6个数字，后面两个数字表示Z轴最小值和最大值</li>
-<li><strong>-JZ5c</strong> 指定了Z轴的高度为5厘米</li>
-<li><strong>-Bzaf</strong> 指定了Z轴的标注和刻度属性</li>
-<li><strong>-BSEwnZ+b</strong> 中 <strong>Z+b</strong> 表示绘制一条Z轴，并绘制出整个长方体的所有边</li>
-<li><strong>-p130/30</strong> 指定了看这个长方形的视角。130和30分别为三维视角的方位角和高度角。这个解释起来稍复杂，读者可以自己试试修改这两个参数并查看效果。方位角的取值范围为0到360度，高度角的取值范围为0到90度。</li>
+<li><p><strong>-R</strong> 选项中有6个数字，后面两个数字表示Z轴最小值和最大值</p></li>
+<li><p><strong>-JZ5c</strong> 指定了Z轴的高度为5厘米</p></li>
+<li><p><strong>-Bzaf</strong> 指定了Z轴的标注和刻度属性</p></li>
+<li><p><strong>-BSEwnZ+b</strong> 中 <strong>Z+b</strong> 表示绘制一条Z轴，并绘制出整个长方体的所有边</p></li>
+<li><p><strong>-p130/30</strong> 指定了看这个长方形的视角。130和30分别为三维视角的方位角和高度角。这个解释起来稍复杂，读者可以自己试试修改这两个参数并查看效果。方位角的取值范围为0到360度，高度角的取值范围为0到90度。</p></li>
 </ul>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>gmt begin 3DMap png,pdf
     gmt basemap -R10/70/-4/8/-10/10 -JX8c/5c -JZ5c -Bxa10+lX -Bya4+lY -Bzaf+lDepth -BSEwnZ+b+t<span class="s2">&quot;3D Plot&quot;</span> -p130/30
@@ -368,7 +371,7 @@ gmt end show
 </div>
 <div class="figure align-center" id="id12">
 <a class="reference internal image-reference" href="../../_images/basemap-gmtplot-6.png"><img alt="../../_images/basemap-gmtplot-6.png" src="../../_images/basemap-gmtplot-6.png" style="width: 50%;" /></a>
-<p class="caption"><span class="caption-text">三维线性坐标轴</span></p>
+<p class="caption"><span class="caption-text">三维线性坐标轴</span><a class="headerlink" href="#id12" title="永久链接至图片">¶</a></p>
 </div>
 </div>
 </div>
@@ -416,14 +419,22 @@ gitalk.render('gitalk-container');
 
   <div role="contentinfo">
     <p>
-        &copy; Copyright 2014 - 2020, GMT中文社区.
+        
+        &copy; 版权所有 2014 - 2020, GMT中文社区.
       <span class="lastupdated">
-        最后更新于 2020年07月05日.
+        最后更新于 2020年10月15日.
       </span>
 
     </p>
   </div>
-  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+    
+    
+    
+    Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a
+    
+    <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a>
+    
+    provided by <a href="https://readthedocs.org">Read the Docs</a>. 
 
 </footer>
 
@@ -434,7 +445,6 @@ gitalk.render('gitalk-container');
 
   </div>
   
-
 
   <script type="text/javascript">
       jQuery(function () {

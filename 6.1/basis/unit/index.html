@@ -1,8 +1,7 @@
 
 
 <!DOCTYPE html>
-<!--[if IE 8]><html class="no-js lt-ie9" lang="zh-CN" > <![endif]-->
-<!--[if gt IE 8]><!--> <html class="no-js" lang="zh-CN" > <!--<![endif]-->
+<html class="writer-html5" lang="zh-CN" >
 <head>
   <meta charset="utf-8">
   
@@ -10,6 +9,11 @@
   
   <title>单位 &mdash; GMT中文手册</title>
   
+
+  
+  <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../../_static/custom.css" type="text/css" />
 
   
   
@@ -21,25 +25,22 @@
   
 
   
-  <script type="text/javascript" src="../../_static/js/modernizr.min.js"></script>
+  <!--[if lt IE 9]>
+    <script src="../../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
   
     
       <script type="text/javascript" id="documentation_options" data-url_root="../../" src="../../_static/documentation_options.js"></script>
-        <script type="text/javascript" src="../../_static/jquery.js"></script>
-        <script type="text/javascript" src="../../_static/underscore.js"></script>
-        <script type="text/javascript" src="../../_static/doctools.js"></script>
-        <script type="text/javascript" src="../../_static/language_data.js"></script>
-        <script type="text/javascript" src="../../_static/translations.js"></script>
-        <script async="async" type="text/javascript" src="https://cdn.bootcss.com/mathjax/2.7.7/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+        <script src="../../_static/jquery.js"></script>
+        <script src="../../_static/underscore.js"></script>
+        <script src="../../_static/doctools.js"></script>
+        <script src="../../_static/language_data.js"></script>
+        <script src="../../_static/translations.js"></script>
+        <script async="async" src="https://cdn.bootcss.com/mathjax/2.7.7/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
     
     <script type="text/javascript" src="../../_static/js/theme.js"></script>
 
     
-
-  
-  <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
-  <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
-  <link rel="stylesheet" href="../../_static/custom.css" type="text/css" />
     <link rel="index" title="索引" href="../../genindex/" />
     <link rel="search" title="搜索" href="../../search/" />
     <link rel="next" title="颜色" href="../color/" />
@@ -90,6 +91,7 @@
 
         </div>
 
+        
         <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
           
     
@@ -123,6 +125,7 @@
 <li class="toctree-l2"><a class="reference internal" href="../anchor/">锚点</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../embellishment/">绘制修饰物</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../io-format/">数据类型</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../input-files/">寻找输入文件</a></li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="../../table/">表数据</a></li>
@@ -132,9 +135,9 @@
 <li class="toctree-l1"><a class="reference internal" href="../../proj/">地图投影</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../conf/">配置参数</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../dataset/">地学数据集</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../dataset-CN/">中国地学数据集</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../chinese/">中文支持</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../module/">模块手册</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../gallery/">绘图示例</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../api/">API</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../appendix/">附录</a></li>
 </ul>
@@ -162,6 +165,7 @@
     
 
         </div>
+        
       </div>
     </nav>
 
@@ -200,7 +204,7 @@
 
   <ul class="wy-breadcrumbs">
     
-      <li><a href="../../">首页</a> &raquo;</li>
+      <li><a href="../../" class="icon icon-home"></a> &raquo;</li>
         
           <li><a href="../">GMT基础</a> &raquo;</li>
         
@@ -229,8 +233,8 @@
 <h1>单位<a class="headerlink" href="#id1" title="永久链接至标题">¶</a></h1>
 <p>GMT 中的单位有两类：长度单位和距离单位。</p>
 <div class="admonition note">
-<p class="first admonition-title">注解</p>
-<p class="last">本手册中，长度单位专用于度量纸张上的距离，而距离单位则用于度量真实地球上的距离。</p>
+<p class="admonition-title">注解</p>
+<p>本手册中，长度单位专用于度量纸张上的距离，而距离单位则用于度量真实地球上的距离。</p>
 </div>
 <div class="section" id="id2">
 <h2>长度单位<a class="headerlink" href="#id2" title="永久链接至标题">¶</a></h2>
@@ -241,22 +245,22 @@
 <p>厘米、英寸和点，在 GMT 中分别用 <strong>c</strong>、<strong>i</strong> 和 <strong>p</strong> 表示。例如 <strong>5c</strong>
 表示5厘米，<strong>3i</strong> 表示3英寸，<strong>2p</strong> 表示2点。</p>
 <p>GMT 有两种方式可以指定长度量的单位，即显式指定单位和隐式指定单位。</p>
-<dl class="docutils">
-<dt>显式指定单位</dt>
-<dd>在长度量后直接加上单位以显式地指定当前长度量的单位。比如 <strong>-X4c</strong> 意味着传给 <strong>-X</strong> 选项的长度量是4厘米</dd>
-<dt>隐式指定单位</dt>
-<dd>若长度量后没有给定长度单位，则 GMT 会根据参数 <a class="reference internal" href="../../conf/proj/#term-proj-length-unit"><span class="xref std std-term">PROJ_LENGTH_UNIT</span></a>
-所指定的默认长度单位对该长度量进行解释。比如 <strong>-X4</strong> 中的长度量 4 会根据 <a class="reference internal" href="../../conf/proj/#term-proj-length-unit"><span class="xref std std-term">PROJ_LENGTH_UNIT</span></a>
-取值的不同而被解释为4厘米、4英寸或4点。</dd>
+<dl class="simple">
+<dt>显式指定单位</dt><dd><p>在长度量后直接加上单位以显式地指定当前长度量的单位。比如 <strong>-X4c</strong> 意味着传给 <strong>-X</strong> 选项的长度量是4厘米</p>
+</dd>
+<dt>隐式指定单位</dt><dd><p>若长度量后没有给定长度单位，则 GMT 会根据参数 <a class="reference internal" href="../../conf/proj/#term-PROJ_LENGTH_UNIT"><span class="xref std std-term">PROJ_LENGTH_UNIT</span></a>
+所指定的默认长度单位对该长度量进行解释。比如 <strong>-X4</strong> 中的长度量 4 会根据 <a class="reference internal" href="../../conf/proj/#term-PROJ_LENGTH_UNIT"><span class="xref std std-term">PROJ_LENGTH_UNIT</span></a>
+取值的不同而被解释为4厘米、4英寸或4点。</p>
+</dd>
 </dl>
 <div class="admonition tip">
-<p class="first admonition-title">小技巧</p>
+<p class="admonition-title">小技巧</p>
 <p>使用长度单位时，建议遵循如下几条：</p>
-<ul class="last simple">
-<li>始终显式指定长度量的单位，不依赖于 <a class="reference internal" href="../../conf/proj/#term-proj-length-unit"><span class="xref std std-term">PROJ_LENGTH_UNIT</span></a> 的值，以免导致同一脚本在不同机器上由于GMT参数配置的差异而导致结果不同</li>
-<li>长度单位 <strong>p</strong> 用于指定较小的长度量，比如线宽、文字大小等</li>
-<li>长度单位 <strong>c</strong> 和 <strong>i</strong> 用于指定较大的长度量，比如底图宽度、圆圈大小等</li>
-<li>尽量使用 SI 单位制（<strong>c</strong>）而不用 US 单位制（<strong>i</strong>），因为国人对于1厘米要比1英寸更有概念</li>
+<ul class="simple">
+<li><p>始终显式指定长度量的单位，不依赖于 <a class="reference internal" href="../../conf/proj/#term-PROJ_LENGTH_UNIT"><span class="xref std std-term">PROJ_LENGTH_UNIT</span></a> 的值，以免导致同一脚本在不同机器上由于GMT参数配置的差异而导致结果不同</p></li>
+<li><p>长度单位 <strong>p</strong> 用于指定较小的长度量，比如线宽、文字大小等</p></li>
+<li><p>长度单位 <strong>c</strong> 和 <strong>i</strong> 用于指定较大的长度量，比如底图宽度、圆圈大小等</p></li>
+<li><p>尽量使用 SI 单位制（<strong>c</strong>）而不用 US 单位制（<strong>i</strong>），因为国人对于1厘米要比1英寸更有概念</p></li>
 </ul>
 </div>
 </div>
@@ -264,31 +268,30 @@
 <h2>距离单位<a class="headerlink" href="#id3" title="永久链接至标题">¶</a></h2>
 <p>对于真实地球上的距离量而言，常用单位包括：</p>
 <ul class="simple">
-<li><strong>d</strong>：弧度（<strong>d</strong>egree of arc）</li>
-<li><strong>m</strong>：弧分（<strong>m</strong>inute of arc）</li>
-<li><strong>s</strong>：弧秒（<strong>s</strong>econd of arc）</li>
-<li><strong>k</strong>：千米（<strong>k</strong>ilometer）</li>
-<li><strong>e</strong>：米（m<strong>e</strong>ter） <strong>默认单位</strong></li>
+<li><p><strong>d</strong>：弧度（<strong>d</strong>egree of arc）</p></li>
+<li><p><strong>m</strong>：弧分（<strong>m</strong>inute of arc）</p></li>
+<li><p><strong>s</strong>：弧秒（<strong>s</strong>econd of arc）</p></li>
+<li><p><strong>k</strong>：千米（<strong>k</strong>ilometer）</p></li>
+<li><p><strong>e</strong>：米（m<strong>e</strong>ter） <strong>默认单位</strong></p></li>
 </ul>
 <p>还有几个不常用的单位：</p>
 <ul class="simple">
-<li><strong>f</strong>：英尺（<strong>f</strong>oot）</li>
-<li><strong>M</strong>：Statute mile</li>
-<li><strong>n</strong>：Nautical mile</li>
-<li><strong>u</strong>：US Survey foot</li>
+<li><p><strong>f</strong>：英尺（<strong>f</strong>oot）</p></li>
+<li><p><strong>M</strong>：Statute mile</p></li>
+<li><p><strong>n</strong>：Nautical mile</p></li>
+<li><p><strong>u</strong>：US Survey foot</p></li>
 </ul>
 <p>对于一个距离量而言，若不指定单位，则默认其单位为 <strong>e</strong> （即“米”）。当然还是建议为每个距离量显式指定其单位，使得命令更加清晰。比如在地球上以某点为中心画一个特定半径的圆，半径取 30 等效于 <strong>30e</strong> 表示30米，半径取 <strong>30k</strong> 则表示30千米。</p>
 </div>
 <div class="section" id="id4">
 <h2>小练习<a class="headerlink" href="#id4" title="永久链接至标题">¶</a></h2>
 <ol class="arabic">
-<li><p class="first">执行命令 <code class="docutils literal notranslate"><span class="pre">gmt</span> <span class="pre">get</span> <span class="pre">PROJ_LENGTH_UNIT</span></code> 查看 GMT 的默认长度单位。</p>
-</li>
-<li><p class="first">如下命令在一个长宽均为10厘米（由 <code class="docutils literal notranslate"><span class="pre">-JX10c/10c</span></code> 控制）的矩形底图中心，绘制了一个直径为3厘米（由 <code class="docutils literal notranslate"><span class="pre">-Sc3c</span></code> 控制）的圆:</p>
+<li><p>执行命令 <code class="docutils literal notranslate"><span class="pre">gmt</span> <span class="pre">get</span> <span class="pre">PROJ_LENGTH_UNIT</span></code> 查看 GMT 的默认长度单位。</p></li>
+<li><p>如下命令在一个长宽均为10厘米（由 <code class="docutils literal notranslate"><span class="pre">-JX10c/10c</span></code> 控制）的矩形底图中心，绘制了一个直径为3厘米（由 <code class="docutils literal notranslate"><span class="pre">-Sc3c</span></code> 控制）的圆:</p>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="nb">echo</span> <span class="m">5</span> <span class="m">5</span> <span class="p">|</span> gmt plot -JX10c/10c -R0/10/0/10 -Baf -Sc3c -W1p -pdf units
 </pre></div>
 </div>
-<p>将 <code class="docutils literal notranslate"><span class="pre">-Sc3c</span></code> 改成 <code class="docutils literal notranslate"><span class="pre">-Sc3i</span></code> 或 <code class="docutils literal notranslate"><span class="pre">-Sc3</span></code> 并绘图比较圆圈的大小差异。</p>
+<p>将 <code class="docutils literal notranslate"><span class="pre">-Sc3c</span></code> 改成 <code class="docutils literal notranslate"><span class="pre">-Sc3i</span></code> 或 <code class="docutils literal notranslate"><span class="pre">-Sc3</span></code> 并绘图，比较圆圈的大小差异以理解单位的作用。</p>
 </li>
 </ol>
 </div>
@@ -337,14 +340,22 @@ gitalk.render('gitalk-container');
 
   <div role="contentinfo">
     <p>
-        &copy; Copyright 2014 - 2020, GMT中文社区.
+        
+        &copy; 版权所有 2014 - 2020, GMT中文社区.
       <span class="lastupdated">
-        最后更新于 2020年07月05日.
+        最后更新于 2020年10月15日.
       </span>
 
     </p>
   </div>
-  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+    
+    
+    
+    Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a
+    
+    <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a>
+    
+    provided by <a href="https://readthedocs.org">Read the Docs</a>. 
 
 </footer>
 
@@ -355,7 +366,6 @@ gitalk.render('gitalk-container');
 
   </div>
   
-
 
   <script type="text/javascript">
       jQuery(function () {

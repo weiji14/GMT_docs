@@ -1,8 +1,7 @@
 
 
 <!DOCTYPE html>
-<!--[if IE 8]><html class="no-js lt-ie9" lang="zh-CN" > <![endif]-->
-<!--[if gt IE 8]><!--> <html class="no-js" lang="zh-CN" > <!--<![endif]-->
+<html class="writer-html5" lang="zh-CN" >
 <head>
   <meta charset="utf-8">
   
@@ -10,6 +9,11 @@
   
   <title>grdproject &mdash; GMT中文手册</title>
   
+
+  
+  <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../../_static/custom.css" type="text/css" />
 
   
   
@@ -21,25 +25,22 @@
   
 
   
-  <script type="text/javascript" src="../../_static/js/modernizr.min.js"></script>
+  <!--[if lt IE 9]>
+    <script src="../../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
   
     
       <script type="text/javascript" id="documentation_options" data-url_root="../../" src="../../_static/documentation_options.js"></script>
-        <script type="text/javascript" src="../../_static/jquery.js"></script>
-        <script type="text/javascript" src="../../_static/underscore.js"></script>
-        <script type="text/javascript" src="../../_static/doctools.js"></script>
-        <script type="text/javascript" src="../../_static/language_data.js"></script>
-        <script type="text/javascript" src="../../_static/translations.js"></script>
-        <script async="async" type="text/javascript" src="https://cdn.bootcss.com/mathjax/2.7.7/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+        <script src="../../_static/jquery.js"></script>
+        <script src="../../_static/underscore.js"></script>
+        <script src="../../_static/doctools.js"></script>
+        <script src="../../_static/language_data.js"></script>
+        <script src="../../_static/translations.js"></script>
+        <script async="async" src="https://cdn.bootcss.com/mathjax/2.7.7/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
     
     <script type="text/javascript" src="../../_static/js/theme.js"></script>
 
     
-
-  
-  <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
-  <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
-  <link rel="stylesheet" href="../../_static/custom.css" type="text/css" />
     <link rel="index" title="索引" href="../../genindex/" />
     <link rel="search" title="搜索" href="../../search/" />
     <link rel="next" title="grdsample" href="../grdsample/" />
@@ -90,6 +91,7 @@
 
         </div>
 
+        
         <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
           
     
@@ -112,6 +114,7 @@
 <li class="toctree-l1"><a class="reference internal" href="../../proj/">地图投影</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../conf/">配置参数</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../dataset/">地学数据集</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../dataset-CN/">中国地学数据集</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../chinese/">中文支持</a></li>
 <li class="toctree-l1 current"><a class="reference internal" href="../">模块手册</a><ul class="current">
 <li class="toctree-l2"><a class="reference internal" href="../basemap/">basemap</a></li>
@@ -184,7 +187,6 @@
 <li class="toctree-l2"><a class="reference internal" href="../xyz2grd/">xyz2grd</a></li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="../../gallery/">绘图示例</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../api/">API</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../appendix/">附录</a></li>
 </ul>
@@ -212,6 +214,7 @@
     
 
         </div>
+        
       </div>
     </nav>
 
@@ -250,7 +253,7 @@
 
   <ul class="wy-breadcrumbs">
     
-      <li><a href="../../">首页</a> &raquo;</li>
+      <li><a href="../../" class="icon icon-home"></a> &raquo;</li>
         
           <li><a href="../">模块手册</a> &raquo;</li>
         
@@ -277,42 +280,40 @@
             
   <div class="section" id="grdproject">
 <span id="index-0"></span><h1>grdproject<a class="headerlink" href="#grdproject" title="永久链接至标题">¶</a></h1>
-<table class="docutils field-list" frame="void" rules="none">
-<col class="field-name" />
-<col class="field-body" />
-<tbody valign="top">
-<tr class="field-odd field"><th class="field-name">官方文档:</th><td class="field-body"><a class="reference external" href="https://docs.generic-mapping-tools.org/6.0/grdproject.html" title="(在 GMT v6.0)"><span>grdproject</span></a></td>
-</tr>
-<tr class="field-even field"><th class="field-name">简介:</th><td class="field-body">对网格数据做地图变换和逆变换</td>
-</tr>
-</tbody>
-</table>
+<dl class="field-list simple">
+<dt class="field-odd">官方文档</dt>
+<dd class="field-odd"><p><a class="reference external" href="https://docs.generic-mapping-tools.org/6.1/grdproject.html" title="(在 GMT v6.1)"><span>grdproject</span></a></p>
+</dd>
+<dt class="field-even">简介</dt>
+<dd class="field-even"><p>对网格数据做地图变换和逆变换</p>
+</dd>
+</dl>
 <p>该命令可以将地理坐标下的网格数据投影到一个矩形网格中，也可以将一个矩形坐标系下的网格数据反投影到地理坐标下。</p>
 <div class="section" id="id1">
 <h2>必选选项<a class="headerlink" href="#id1" title="永久链接至标题">¶</a></h2>
-<dl class="docutils">
-<dt><code class="docutils literal notranslate"><span class="pre">&lt;in_grdfile&gt;</span></code></dt>
-<dd>要进行变换的2D网格数据</dd>
-<dt><code class="docutils literal notranslate"><span class="pre">-G&lt;out_grdfile&gt;</span></code></dt>
-<dd>输出的网格文件名</dd>
+<dl class="simple">
+<dt><code class="docutils literal notranslate"><span class="pre">&lt;in_grdfile&gt;</span></code></dt><dd><p>要进行变换的2D网格数据</p>
+</dd>
+<dt><code class="docutils literal notranslate"><span class="pre">-G&lt;out_grdfile&gt;</span></code></dt><dd><p>输出的网格文件名</p>
+</dd>
 </dl>
 </div>
 <div class="section" id="id2">
 <h2>可选选项<a class="headerlink" href="#id2" title="永久链接至标题">¶</a></h2>
-<dl class="docutils">
-<dt><code class="docutils literal notranslate"><span class="pre">-C[&lt;dx&gt;/&lt;dy&gt;]</span></code></dt>
-<dd>默认投影后的坐标是相对于区域的左下角，该选项使得投影后的坐标相对于投影的中心。
-<code class="docutils literal notranslate"><span class="pre">&lt;dx&gt;/&lt;dy&gt;</span></code> 是要加到投影后坐标的偏移量。</dd>
-<dt><code class="docutils literal notranslate"><span class="pre">-D&lt;xinc&gt;[&lt;unit&gt;][+e|n][/&lt;yinc&gt;[&lt;unit&gt;][+e|n]]</span></code></dt>
-<dd>指定新网格的网格间隔。</dd>
-<dt><code class="docutils literal notranslate"><span class="pre">-E&lt;dpi&gt;</span></code></dt>
-<dd>设置新网格的分辨率，即每英寸的点数。</dd>
-<dt><code class="docutils literal notranslate"><span class="pre">-F[c|i|p|e|f|k|M|n|u]</span></code></dt>
-<dd>强制1:1比例，即输出数据的单位是真实的投影长度，默认单位为m。也可以指定为其他单位。</dd>
-<dt><code class="docutils literal notranslate"><span class="pre">-I</span></code></dt>
-<dd>逆变换，将矩形区域变换成地理区域。</dd>
-<dt><code class="docutils literal notranslate"><span class="pre">-Mc|i|p</span></code></dt>
-<dd>指定投影后的测量单位，默认值由参数 <code class="docutils literal notranslate"><span class="pre">PROJ_LENGTH_UNIT</span></code> 决定。</dd>
+<dl class="simple">
+<dt><code class="docutils literal notranslate"><span class="pre">-C[&lt;dx&gt;/&lt;dy&gt;]</span></code></dt><dd><p>默认投影后的坐标是相对于区域的左下角，该选项使得投影后的坐标相对于投影的中心。
+<code class="docutils literal notranslate"><span class="pre">&lt;dx&gt;/&lt;dy&gt;</span></code> 是要加到投影后坐标的偏移量。</p>
+</dd>
+<dt><code class="docutils literal notranslate"><span class="pre">-D&lt;xinc&gt;[&lt;unit&gt;][+e|n][/&lt;yinc&gt;[&lt;unit&gt;][+e|n]]</span></code></dt><dd><p>指定新网格的网格间隔。</p>
+</dd>
+<dt><code class="docutils literal notranslate"><span class="pre">-E&lt;dpi&gt;</span></code></dt><dd><p>设置新网格的分辨率，即每英寸的点数。</p>
+</dd>
+<dt><code class="docutils literal notranslate"><span class="pre">-F[c|i|p|e|f|k|M|n|u]</span></code></dt><dd><p>强制1:1比例，即输出数据的单位是真实的投影长度，默认单位为m。也可以指定为其他单位。</p>
+</dd>
+<dt><code class="docutils literal notranslate"><span class="pre">-I</span></code></dt><dd><p>逆变换，将矩形区域变换成地理区域。</p>
+</dd>
+<dt><code class="docutils literal notranslate"><span class="pre">-Mc|i|p</span></code></dt><dd><p>指定投影后的测量单位，默认值由参数 <code class="docutils literal notranslate"><span class="pre">PROJ_LENGTH_UNIT</span></code> 决定。</p>
+</dd>
 </dl>
 </div>
 <div class="section" id="id3">
@@ -375,14 +376,22 @@ gitalk.render('gitalk-container');
 
   <div role="contentinfo">
     <p>
-        &copy; Copyright 2014 - 2020, GMT中文社区.
+        
+        &copy; 版权所有 2014 - 2020, GMT中文社区.
       <span class="lastupdated">
-        最后更新于 2020年07月05日.
+        最后更新于 2020年10月15日.
       </span>
 
     </p>
   </div>
-  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+    
+    
+    
+    Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a
+    
+    <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a>
+    
+    provided by <a href="https://readthedocs.org">Read the Docs</a>. 
 
 </footer>
 
@@ -393,7 +402,6 @@ gitalk.render('gitalk-container');
 
   </div>
   
-
 
   <script type="text/javascript">
       jQuery(function () {

@@ -1,8 +1,7 @@
 
 
 <!DOCTYPE html>
-<!--[if IE 8]><html class="no-js lt-ie9" lang="zh-CN" > <![endif]-->
-<!--[if gt IE 8]><!--> <html class="no-js" lang="zh-CN" > <!--<![endif]-->
+<html class="writer-html5" lang="zh-CN" >
 <head>
   <meta charset="utf-8">
   
@@ -10,6 +9,11 @@
   
   <title>经典模式 → 现代模式 &mdash; GMT中文手册</title>
   
+
+  
+  <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../../_static/custom.css" type="text/css" />
 
   
   
@@ -21,25 +25,22 @@
   
 
   
-  <script type="text/javascript" src="../../_static/js/modernizr.min.js"></script>
+  <!--[if lt IE 9]>
+    <script src="../../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
   
     
       <script type="text/javascript" id="documentation_options" data-url_root="../../" src="../../_static/documentation_options.js"></script>
-        <script type="text/javascript" src="../../_static/jquery.js"></script>
-        <script type="text/javascript" src="../../_static/underscore.js"></script>
-        <script type="text/javascript" src="../../_static/doctools.js"></script>
-        <script type="text/javascript" src="../../_static/language_data.js"></script>
-        <script type="text/javascript" src="../../_static/translations.js"></script>
-        <script async="async" type="text/javascript" src="https://cdn.bootcss.com/mathjax/2.7.7/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+        <script src="../../_static/jquery.js"></script>
+        <script src="../../_static/underscore.js"></script>
+        <script src="../../_static/doctools.js"></script>
+        <script src="../../_static/language_data.js"></script>
+        <script src="../../_static/translations.js"></script>
+        <script async="async" src="https://cdn.bootcss.com/mathjax/2.7.7/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
     
     <script type="text/javascript" src="../../_static/js/theme.js"></script>
 
     
-
-  
-  <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
-  <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
-  <link rel="stylesheet" href="../../_static/custom.css" type="text/css" />
     <link rel="index" title="索引" href="../../genindex/" />
     <link rel="search" title="搜索" href="../../search/" />
     <link rel="next" title="入门教程" href="../../tutorial/" />
@@ -90,6 +91,7 @@
 
         </div>
 
+        
         <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
           
     
@@ -122,9 +124,9 @@
 <li class="toctree-l1"><a class="reference internal" href="../../proj/">地图投影</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../conf/">配置参数</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../dataset/">地学数据集</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../dataset-CN/">中国地学数据集</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../chinese/">中文支持</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../module/">模块手册</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../gallery/">绘图示例</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../api/">API</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../appendix/">附录</a></li>
 </ul>
@@ -152,6 +154,7 @@
     
 
         </div>
+        
       </div>
     </nav>
 
@@ -190,7 +193,7 @@
 
   <ul class="wy-breadcrumbs">
     
-      <li><a href="../../">首页</a> &raquo;</li>
+      <li><a href="../../" class="icon icon-home"></a> &raquo;</li>
         
           <li><a href="../">版本迁移</a> &raquo;</li>
         
@@ -232,14 +235,14 @@ rm gmt.conf gmt.history mydata.cpt
 </div>
 <p>上面的示例脚本以及实际使用中会发现GMT经典模式存在一些明显的缺点或问题：</p>
 <ol class="arabic simple">
-<li>默认纸张大小为A4纸。如果不够大，则需要自行设定纸张大小</li>
-<li>需要使用 <strong>-P</strong> 选项决定画布的摆放方式（横着放或竖着放）</li>
-<li>需要使用 <strong>-K</strong> 和 <strong>-O</strong> 选项，极易出错</li>
-<li>每个绘图命令都需要使用重定向符号 <strong>&gt;</strong> 或 <strong>&gt;&gt;</strong></li>
-<li>每个绘图命令中都需要给定PS文件的名字</li>
-<li>每个绘图命令都需要重复使用 <strong>-J</strong> 和 <strong>-R</strong> 选项</li>
-<li>绘图结束时需要使用 <strong>psconvert</strong> 将生成的PS文件转换为PDF、JPG等格式</li>
-<li>绘图结束时要删除 <code class="file docutils literal notranslate"><span class="pre">gmt.conf</span></code> 和 <code class="file docutils literal notranslate"><span class="pre">gmt.history</span></code> 文件以免影响接下来的绘图结果</li>
+<li><p>默认纸张大小为A4纸。如果不够大，则需要自行设定纸张大小</p></li>
+<li><p>需要使用 <strong>-P</strong> 选项决定画布的摆放方式（横着放或竖着放）</p></li>
+<li><p>需要使用 <strong>-K</strong> 和 <strong>-O</strong> 选项，极易出错</p></li>
+<li><p>每个绘图命令都需要使用重定向符号 <strong>&gt;</strong> 或 <strong>&gt;&gt;</strong></p></li>
+<li><p>每个绘图命令中都需要给定PS文件的名字</p></li>
+<li><p>每个绘图命令都需要重复使用 <strong>-J</strong> 和 <strong>-R</strong> 选项</p></li>
+<li><p>绘图结束时需要使用 <strong>psconvert</strong> 将生成的PS文件转换为PDF、JPG等格式</p></li>
+<li><p>绘图结束时要删除 <code class="file docutils literal notranslate"><span class="pre">gmt.conf</span></code> 和 <code class="file docutils literal notranslate"><span class="pre">gmt.history</span></code> 文件以免影响接下来的绘图结果</p></li>
 </ol>
 </div>
 <div class="section" id="id3">
@@ -256,23 +259,23 @@ gmt end show
 </div>
 <p>很显然，现代模式下的GMT绘图脚本更加简洁。与经典模式相比，现代模式具有如下优点：</p>
 <ol class="arabic simple">
-<li>默认纸张无穷大，不需要再担心绘图超过纸张范围</li>
-<li>不再需要使用 <strong>-P</strong> 选项确定画布的摆放方式（因为纸张无穷大）</li>
-<li>不再需要考虑如何使用 <strong>-K</strong>, <strong>-O</strong> 选项</li>
-<li>不再需要使用重定向符号 <strong>&gt;</strong> 或 <strong>&gt;&gt;</strong>，也无需为每个绘图命令都指定PS文件名</li>
-<li>不再需要为每个绘图命令都使用 <strong>-R</strong> 和 <strong>-J</strong> 选项</li>
-<li>绘图结束时会自动生成PDF等格式的图片，无需调用 <strong>psconvert</strong> 做转换</li>
-<li>生成的图片会自动进行裁剪去除白边</li>
-<li>整个绘图过程在独立的临时文件下，多个脚本可以同时执行而不互相干扰，用户完全不需要意识到 PS 文件的存在，不需要再手动清理 <code class="file docutils literal notranslate"><span class="pre">gmt.conf</span></code> 和
-<code class="file docutils literal notranslate"><span class="pre">gmt.history</span></code> 等临时文件</li>
+<li><p>默认纸张无穷大，不需要再担心绘图超过纸张范围</p></li>
+<li><p>不再需要使用 <strong>-P</strong> 选项确定画布的摆放方式（因为纸张无穷大）</p></li>
+<li><p>不再需要考虑如何使用 <strong>-K</strong>, <strong>-O</strong> 选项</p></li>
+<li><p>不再需要使用重定向符号 <strong>&gt;</strong> 或 <strong>&gt;&gt;</strong>，也无需为每个绘图命令都指定PS文件名</p></li>
+<li><p>不再需要为每个绘图命令都使用 <strong>-R</strong> 和 <strong>-J</strong> 选项</p></li>
+<li><p>绘图结束时会自动生成PDF等格式的图片，无需调用 <strong>psconvert</strong> 做转换</p></li>
+<li><p>生成的图片会自动进行裁剪去除白边</p></li>
+<li><p>整个绘图过程在独立的临时文件下，多个脚本可以同时执行而不互相干扰，用户完全不需要意识到 PS 文件的存在，不需要再手动清理 <code class="file docutils literal notranslate"><span class="pre">gmt.conf</span></code> 和
+<code class="file docutils literal notranslate"><span class="pre">gmt.history</span></code> 等临时文件</p></li>
 </ol>
 <p>除了上面列出的优点外，GMT现代模式还提供了更多的模块/功能以简化代码，包括：</p>
 <ul class="simple">
-<li><a class="reference internal" href="../../module/subplot/"><span class="doc">subplot</span></a> 模块：极大简化了多子图的绘制</li>
-<li><a class="reference internal" href="../../module/inset/"><span class="doc">inset</span></a> 模块：极大简化了图中图的绘制</li>
-<li><a class="reference external" href="https://docs.generic-mapping-tools.org/6.0/movie.html" title="(在 GMT v6.0)"><span>movie</span></a> 模块：极大简化了动画的制作</li>
-<li><a class="reference internal" href="../../option/l/"><span class="doc">-l 选项</span></a>：极大简化了图例的设置与绘制</li>
-<li>提供了“当前CPT”的功能，多数情况下无须生成CPT到文件中</li>
+<li><p><a class="reference internal" href="../../module/subplot/"><span class="doc">subplot</span></a> 模块：极大简化了多子图的绘制</p></li>
+<li><p><a class="reference internal" href="../../module/inset/"><span class="doc">inset</span></a> 模块：极大简化了图中图的绘制</p></li>
+<li><p><a class="reference external" href="https://docs.generic-mapping-tools.org/6.1/movie.html" title="(在 GMT v6.1)"><span>movie</span></a> 模块：极大简化了动画的制作</p></li>
+<li><p><a class="reference internal" href="../../option/l/"><span class="doc">-l 选项</span></a>：极大简化了图例的设置与绘制</p></li>
+<li><p>提供了“当前CPT”的功能，多数情况下无须生成CPT到文件中</p></li>
 </ul>
 <p>这些更方便的功能会在后面的文档中更详细地介绍。</p>
 </div>
@@ -280,13 +283,13 @@ gmt end show
 <h2>从经典到现代<a class="headerlink" href="#id4" title="永久链接至标题">¶</a></h2>
 <p>将经典模式的脚本改成现代模式的脚本，基本可以遵循如下几点：</p>
 <ol class="arabic simple">
-<li>绘图脚本以 <strong>gmt begin</strong> <em>figure</em> 开头，以 <strong>gmt end show</strong> 结束</li>
-<li>去掉 <strong>-K</strong>, <strong>-O</strong>, <strong>-P</strong>, 重定向符号以及PS文件名</li>
-<li>去掉多余的 <strong>-J</strong>, <strong>-R</strong> 选项</li>
-<li>某些模块重新命名。经典模式下以 <strong>ps</strong> 开头的模块省略 <strong>ps</strong>，比如 <strong>pscoast</strong> → <strong>coast</strong>、<strong>psbasemap</strong> → <strong>basemap</strong>。个别几个模块是例外，<strong>psxy</strong> → <strong>plot</strong>, <strong>psxyz</strong> → <strong>plot3d</strong>,
-<strong>psscale</strong> → <strong>colorbar</strong></li>
-<li>在需要绘制多子图、图中图时，考虑使用 <strong>inset</strong> 和 <strong>subplot</strong> 改写</li>
-<li>现代模式下 <strong>makecpt</strong> 和 <strong>grd2cpt</strong> 默认将生成的CPT作为当前CPT，而不输出到文件中。这一特性在后面会具体介绍。如果需要生成CPT到文件中，需要额外使用 <strong>-H</strong> 选项。</li>
+<li><p>绘图脚本以 <strong>gmt begin</strong> <em>figure</em> 开头，以 <strong>gmt end show</strong> 结束</p></li>
+<li><p>去掉 <strong>-K</strong>, <strong>-O</strong>, <strong>-P</strong>, 重定向符号以及PS文件名</p></li>
+<li><p>去掉多余的 <strong>-J</strong>, <strong>-R</strong> 选项</p></li>
+<li><p>某些模块重新命名。经典模式下以 <strong>ps</strong> 开头的模块省略 <strong>ps</strong>，比如 <strong>pscoast</strong> → <strong>coast</strong>、<strong>psbasemap</strong> → <strong>basemap</strong>。个别几个模块是例外，<strong>psxy</strong> → <strong>plot</strong>, <strong>psxyz</strong> → <strong>plot3d</strong>,
+<strong>psscale</strong> → <strong>colorbar</strong></p></li>
+<li><p>在需要绘制多子图、图中图时，考虑使用 <strong>inset</strong> 和 <strong>subplot</strong> 改写</p></li>
+<li><p>现代模式下 <strong>makecpt</strong> 和 <strong>grd2cpt</strong> 默认将生成的CPT作为当前CPT，而不输出到文件中。这一特性在后面会具体介绍。如果需要生成CPT到文件中，需要额外使用 <strong>-H</strong> 选项。</p></li>
 </ol>
 </div>
 </div>
@@ -334,14 +337,22 @@ gitalk.render('gitalk-container');
 
   <div role="contentinfo">
     <p>
-        &copy; Copyright 2014 - 2020, GMT中文社区.
+        
+        &copy; 版权所有 2014 - 2020, GMT中文社区.
       <span class="lastupdated">
-        最后更新于 2020年07月05日.
+        最后更新于 2020年10月15日.
       </span>
 
     </p>
   </div>
-  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+    
+    
+    
+    Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a
+    
+    <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a>
+    
+    provided by <a href="https://readthedocs.org">Read the Docs</a>. 
 
 </footer>
 
@@ -352,7 +363,6 @@ gitalk.render('gitalk-container');
 
   </div>
   
-
 
   <script type="text/javascript">
       jQuery(function () {

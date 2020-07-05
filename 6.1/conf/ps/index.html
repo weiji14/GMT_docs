@@ -1,8 +1,7 @@
 
 
 <!DOCTYPE html>
-<!--[if IE 8]><html class="no-js lt-ie9" lang="zh-CN" > <![endif]-->
-<!--[if gt IE 8]><!--> <html class="no-js" lang="zh-CN" > <!--<![endif]-->
+<html class="writer-html5" lang="zh-CN" >
 <head>
   <meta charset="utf-8">
   
@@ -10,6 +9,11 @@
   
   <title>PS参数 &mdash; GMT中文手册</title>
   
+
+  
+  <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../../_static/custom.css" type="text/css" />
 
   
   
@@ -21,25 +25,22 @@
   
 
   
-  <script type="text/javascript" src="../../_static/js/modernizr.min.js"></script>
+  <!--[if lt IE 9]>
+    <script src="../../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
   
     
       <script type="text/javascript" id="documentation_options" data-url_root="../../" src="../../_static/documentation_options.js"></script>
-        <script type="text/javascript" src="../../_static/jquery.js"></script>
-        <script type="text/javascript" src="../../_static/underscore.js"></script>
-        <script type="text/javascript" src="../../_static/doctools.js"></script>
-        <script type="text/javascript" src="../../_static/language_data.js"></script>
-        <script type="text/javascript" src="../../_static/translations.js"></script>
-        <script async="async" type="text/javascript" src="https://cdn.bootcss.com/mathjax/2.7.7/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+        <script src="../../_static/jquery.js"></script>
+        <script src="../../_static/underscore.js"></script>
+        <script src="../../_static/doctools.js"></script>
+        <script src="../../_static/language_data.js"></script>
+        <script src="../../_static/translations.js"></script>
+        <script async="async" src="https://cdn.bootcss.com/mathjax/2.7.7/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
     
     <script type="text/javascript" src="../../_static/js/theme.js"></script>
 
     
-
-  
-  <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
-  <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
-  <link rel="stylesheet" href="../../_static/custom.css" type="text/css" />
     <link rel="index" title="索引" href="../../genindex/" />
     <link rel="search" title="搜索" href="../../search/" />
     <link rel="next" title="TIME参数" href="../time/" />
@@ -90,6 +91,7 @@
 
         </div>
 
+        
         <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
           
     
@@ -126,9 +128,9 @@
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="../../dataset/">地学数据集</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../dataset-CN/">中国地学数据集</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../chinese/">中文支持</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../module/">模块手册</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../gallery/">绘图示例</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../api/">API</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../appendix/">附录</a></li>
 </ul>
@@ -156,6 +158,7 @@
     
 
         </div>
+        
       </div>
     </nav>
 
@@ -194,7 +197,7 @@
 
   <ul class="wy-breadcrumbs">
     
-      <li><a href="../../">首页</a> &raquo;</li>
+      <li><a href="../../" class="icon icon-home"></a> &raquo;</li>
         
           <li><a href="../">配置参数</a> &raquo;</li>
         
@@ -222,242 +225,238 @@
   <div class="section" id="ps">
 <h1>PS参数<a class="headerlink" href="#ps" title="永久链接至标题">¶</a></h1>
 <p>本节列出所有与PS相关的参数，参数的默认值在中括号内列出。</p>
-<dl class="glossary docutils">
-<dt id="term-ps-char-encoding"><strong>PS_CHAR_ENCODING</strong></dt>
-<dd><p class="first">字符集编码方式 [<code class="docutils literal notranslate"><span class="pre">ISOLatin1+|Standard+</span></code>]</p>
+<dl class="glossary">
+<dt id="term-PS_CHAR_ENCODING"><strong>PS_CHAR_ENCODING</strong></dt><dd><p>设置文本字符集编码方式 [<strong>ISOLatin1+</strong>]</p>
 <p>GMT使用的字符集编码方式。可选值包括：</p>
 <ul class="simple">
-<li><code class="docutils literal notranslate"><span class="pre">Standard</span></code></li>
-<li><code class="docutils literal notranslate"><span class="pre">Standard+</span></code></li>
-<li><code class="docutils literal notranslate"><span class="pre">ISOLatin1</span></code></li>
-<li><code class="docutils literal notranslate"><span class="pre">ISOLatin1+</span></code></li>
-<li><code class="docutils literal notranslate"><span class="pre">ISO-8859-x</span></code>（x取值为1-10或13-15）</li>
+<li><p><strong>Standard</strong></p></li>
+<li><p><strong>Standard+</strong></p></li>
+<li><p><strong>ISOLatin1</strong></p></li>
+<li><p><strong>ISOLatin1+</strong></p></li>
+<li><p><strong>ISO-8859-</strong><em>x</em>（x取值为1-10或13-15）</p></li>
 </ul>
-<p class="last">若安装GMT时使用SI单位制，则默认值为ISOLatin1+编码；否则使用Standard+编码。</p>
+<p>若安装GMT时使用SI单位制，则默认值为 <strong>ISOLatin1+</strong> 编码；否则使用 <strong>Standard+</strong> 编码。</p>
+<div class="admonition note">
+<p class="admonition-title">注解</p>
+<p>字符集信息是写在PS文件头中的，因而若需要临时修改字符集，则需要使用
+<strong>--PS_CHAR_ENCODING=</strong>=<em>encoding</em> 临时修改字符集，而不能使用
+gmt set 修改。</p>
+</div>
 </dd>
-<dt id="term-ps-color-model"><strong>PS_COLOR_MODEL</strong></dt>
-<dd><p class="first">生成PS代码时颜色所使用的色彩模型 [<code class="docutils literal notranslate"><span class="pre">rgb</span></code>]</p>
-<p class="last">可以取RGB、HSV、CMYK或GRAY。若设置为HSV，其不会影响绘图过程中使用RGB指定的颜色；若设置为GRAY，则所有的颜色都将使用YIQ方法转换成灰度。</p>
+<dt id="term-PS_COLOR_MODEL"><strong>PS_COLOR_MODEL</strong></dt><dd><p>生成PS代码时颜色所使用的色彩模型 [<strong>rgb</strong>]</p>
+<p>可以取RGB、HSV、CMYK或GRAY。若设置为HSV，其不会影响绘图过程中使用RGB指定的颜色；若设置为GRAY，则所有的颜色都将使用YIQ方法转换成灰度。</p>
 </dd>
-<dt id="term-ps-comments"><strong>PS_COMMENTS</strong></dt>
-<dd><p class="first">生成的PS代码中是否包含注释信息 [false]</p>
-<p class="last">若为 <code class="docutils literal notranslate"><span class="pre">true</span></code>，则生成的PS文件中会包含注释，用于解释文件中操作的逻辑，当你需要手动编辑PS文件时比较有用。默认情况下，其值为 <code class="docutils literal notranslate"><span class="pre">false</span></code>，即PS文件中不会包含注释，此时生成的PS文件更小。</p>
+<dt id="term-PS_COMMENTS"><strong>PS_COMMENTS</strong></dt><dd><p>生成的PS代码中是否包含注释信息 [<strong>false</strong>]</p>
+<p>若为 <strong>true</strong>，则生成的PS文件中会包含注释，用于解释文件中操作的逻辑，当你需要手动编辑PS文件时比较有用。默认情况下，其值为 <strong>false</strong>，即PS文件中不会包含注释，此时生成的PS文件更小。</p>
 </dd>
-<dt id="term-ps-line-cap"><strong>PS_LINE_CAP</strong></dt>
-<dd><p class="first">控制线段的<strong>端点</strong>的绘制方式 [<code class="docutils literal notranslate"><span class="pre">butt</span></code>]</p>
+<dt id="term-PS_CONVERT"><strong>PS_CONVERT</strong></dt><dd><p>现在模式下在执行 <code class="docutils literal notranslate"><span class="pre">gmt</span> <span class="pre">end</span></code> 命令时GMT会自动调用 <a class="reference internal" href="../../module/psconvert/"><span class="doc">psconvert</span></a>
+生成用户指定格式的图片。该选项用于控制调用 <strong>psconvert</strong> 时的默认参数，多个参数之间以逗号分隔 [<strong>A</strong>]</p>
+</dd>
+<dt id="term-PS_IMAGE_COMPRESS"><strong>PS_IMAGE_COMPRESS</strong></dt><dd><p>设置PS中的图像压缩算法 [<strong>deflate,5</strong>]</p>
+<p>可以取值为：</p>
+<ul class="simple">
+<li><p><strong>rle</strong>：Run-Length Encoding scheme</p></li>
+<li><p><strong>lzw</strong>：Lempel-Ziv-Welch compression</p></li>
+<li><p><strong>deflate</strong>[,<em>level</em>]：DEFLATE 压缩，<em>level</em> 可以取1到9</p></li>
+<li><p><strong>none</strong>：不压缩，相当于 <strong>deflate,5</strong></p></li>
+</ul>
+</dd>
+<dt id="term-PS_LINE_CAP"><strong>PS_LINE_CAP</strong></dt><dd><p>控制线段的<strong>端点</strong>的绘制方式 [<strong>butt</strong>]</p>
 <p>可以取如下值：</p>
 <ul class="simple">
-<li><code class="docutils literal notranslate"><span class="pre">butt</span></code>：不对端点做特殊处理，即端点是矩形（默认值）</li>
-<li><code class="docutils literal notranslate"><span class="pre">round</span></code>：端点处为直径与线宽相等的半圆弧</li>
-<li><code class="docutils literal notranslate"><span class="pre">square</span></code>：端点处为边长与线宽相等的半个正方形</li>
+<li><p><strong>butt</strong>：不对端点做特殊处理，即端点是矩形（默认值）</p></li>
+<li><p><strong>round</strong>：端点处为直径与线宽相等的半圆弧</p></li>
+<li><p><strong>square</strong>：端点处为边长与线宽相等的半个正方形</p></li>
 </ul>
 <p>下图展示了该参数取不同值时线段端点的区别。需要注意，图中三条线段的长度是相同的，但因参数设置不同而导致线段看上去长度不同。</p>
-<p><a class="reference download internal" download="" href="../../_downloads/fe7d01f0d307519cbe8d6ce339473bcd/ps-gmtplot-0.sh"><code class="xref download docutils literal notranslate"><span class="pre">Source</span> <span class="pre">Code</span></code></a></p>
-<div class="last figure align-center">
-<img alt="../../_images/ps-gmtplot-0.png" src="../../_images/ps-gmtplot-0.png" />
+<p><a class="reference download internal" download="" href="../../_downloads/792f285d8c820ef540d67e91d0f9097f/ps-gmtplot-0.sh"><code class="xref download docutils literal notranslate"><span class="pre">Source</span> <span class="pre">Code</span></code></a></p>
+<div class="figure align-center" id="id1">
+<a class="reference internal image-reference" href="../../_images/ps-gmtplot-0.png"><img alt="../../_images/ps-gmtplot-0.png" src="../../_images/ps-gmtplot-0.png" style="width: 60%;" /></a>
+<p class="caption"><span class="caption-text"><strong>PS_LINE_CAP</strong> 控制线段端点绘图效果</span><a class="headerlink" href="#id1" title="永久链接至图片">¶</a></p>
 </div>
 </dd>
-<dt id="term-ps-line-join"><strong>PS_LINE_JOIN</strong></dt>
-<dd><p class="first">控制线段拐点的绘制方式 [<code class="docutils literal notranslate"><span class="pre">miter</span></code>]</p>
-<p>可以取 <code class="docutils literal notranslate"><span class="pre">miter</span></code>、<code class="docutils literal notranslate"><span class="pre">round</span></code>、<code class="docutils literal notranslate"><span class="pre">bevel</span></code></p>
-<p>下图展示了 <code class="docutils literal notranslate"><span class="pre">PS_LINE_JOIN</span></code> 取不同值时线段拐点的绘图效果。当线宽较小时，几乎看不出来区别，这里为了显示的效果，将线宽设置为 <code class="docutils literal notranslate"><span class="pre">20p</span></code>。</p>
-<p><a class="reference download internal" download="" href="../../_downloads/f390c051ace589a3ae620070be545462/ps-gmtplot-1.sh"><code class="xref download docutils literal notranslate"><span class="pre">Source</span> <span class="pre">Code</span></code></a></p>
-<div class="last figure align-center">
-<img alt="../../_images/ps-gmtplot-1.png" src="../../_images/ps-gmtplot-1.png" />
+<dt id="term-PS_LINE_JOIN"><strong>PS_LINE_JOIN</strong></dt><dd><p>控制线段拐点的绘制方式 [<strong>miter</strong>]</p>
+<p>可以取 <strong>miter</strong>、<strong>round</strong>、<strong>bevel</strong>。</p>
+<p>下图展示了 <strong>PS_LINE_JOIN</strong> 取不同值时线段拐点的绘图效果。当线宽较小时，几乎看不出来区别，这里为了显示的效果，将线宽设置为 20p。</p>
+<p><a class="reference download internal" download="" href="../../_downloads/178a8a9a6a283737ac1500c55a734101/ps-gmtplot-1.sh"><code class="xref download docutils literal notranslate"><span class="pre">Source</span> <span class="pre">Code</span></code></a></p>
+<div class="figure align-center" id="id2">
+<a class="reference internal image-reference" href="../../_images/ps-gmtplot-1.png"><img alt="../../_images/ps-gmtplot-1.png" src="../../_images/ps-gmtplot-1.png" style="width: 75%;" /></a>
+<p class="caption"><span class="caption-text"><strong>PS_LINE_JOIN</strong> 控制线段拐点绘制效果</span><a class="headerlink" href="#id2" title="永久链接至图片">¶</a></p>
 </div>
 </dd>
-<dt id="term-ps-miter-limit"><strong>PS_MITER_LIMIT</strong></dt>
-<dd><p class="first">设置mitered拐点的角度阈值 [35]</p>
-<p class="last">当两个相交的线段之间的夹角小于该阈值时，则该拐角会被bevelled而不是被mitered。该参数的取值范围为0到180。若设置为0，则使用PS的默认值（11度），若设置为180，则所有拐角都会被beveled。</p>
+<dt id="term-PS_MITER_LIMIT"><strong>PS_MITER_LIMIT</strong></dt><dd><p>设置 <a class="reference internal" href="#term-PS_LINE_JOIN"><span class="xref std std-term">PS_LINE_JOIN</span></a> 取 <strong>miter</strong> 时拐点的角度阈值 [35]</p>
+<p>当两个相交的线段之间的夹角小于该阈值时，则该拐角会被bevelled而不是被mitered。该参数的取值范围为0到180。若设置为0，则使用PS的默认值（11度），若设置为180，则所有拐角都会被beveled。</p>
 </dd>
-<dt id="term-ps-media"><strong>PS_MEDIA</strong></dt>
-<dd><p class="first">设置当前纸张的尺寸 [a4|letter]</p>
+<dt id="term-PS_MEDIA"><strong>PS_MEDIA</strong></dt><dd><p>设置当前纸张的尺寸 [a4]</p>
 <p>下表列出了GMT预定义的若干种纸张尺寸及其对应的宽度和高度（单位为points）。</p>
-<table border="1" class="docutils align-center" id="id1">
-<caption><span class="caption-text">GMT预定义纸张大小</span><a class="headerlink" href="#id1" title="永久链接至表格">¶</a></caption>
+<table class="docutils align-center" id="id3">
+<caption><span class="caption-text">GMT预定义纸张大小</span><a class="headerlink" href="#id3" title="永久链接至表格">¶</a></caption>
 <colgroup>
-<col width="18%" />
-<col width="16%" />
-<col width="16%" />
-<col width="18%" />
-<col width="16%" />
-<col width="16%" />
+<col style="width: 18%" />
+<col style="width: 16%" />
+<col style="width: 16%" />
+<col style="width: 18%" />
+<col style="width: 16%" />
+<col style="width: 16%" />
 </colgroup>
-<thead valign="bottom">
-<tr class="row-odd"><th class="head">Media</th>
-<th class="head">width</th>
-<th class="head">height</th>
-<th class="head">Media</th>
-<th class="head">width</th>
-<th class="head">height</th>
+<thead>
+<tr class="row-odd"><th class="head"><p>Media</p></th>
+<th class="head"><p>width</p></th>
+<th class="head"><p>height</p></th>
+<th class="head"><p>Media</p></th>
+<th class="head"><p>width</p></th>
+<th class="head"><p>height</p></th>
 </tr>
 </thead>
-<tbody valign="top">
-<tr class="row-even"><td>A0</td>
-<td>2380</td>
-<td>3368</td>
-<td>archA</td>
-<td>648</td>
-<td>864</td>
+<tbody>
+<tr class="row-even"><td><p>A0</p></td>
+<td><p>2380</p></td>
+<td><p>3368</p></td>
+<td><p>archA</p></td>
+<td><p>648</p></td>
+<td><p>864</p></td>
 </tr>
-<tr class="row-odd"><td>A1</td>
-<td>1684</td>
-<td>2380</td>
-<td>archB</td>
-<td>864</td>
-<td>1296</td>
+<tr class="row-odd"><td><p>A1</p></td>
+<td><p>1684</p></td>
+<td><p>2380</p></td>
+<td><p>archB</p></td>
+<td><p>864</p></td>
+<td><p>1296</p></td>
 </tr>
-<tr class="row-even"><td>A2</td>
-<td>1190</td>
-<td>1684</td>
-<td>archC</td>
-<td>1296</td>
-<td>1728</td>
+<tr class="row-even"><td><p>A2</p></td>
+<td><p>1190</p></td>
+<td><p>1684</p></td>
+<td><p>archC</p></td>
+<td><p>1296</p></td>
+<td><p>1728</p></td>
 </tr>
-<tr class="row-odd"><td>A3</td>
-<td>842</td>
-<td>1190</td>
-<td>archD</td>
-<td>1728</td>
-<td>2592</td>
+<tr class="row-odd"><td><p>A3</p></td>
+<td><p>842</p></td>
+<td><p>1190</p></td>
+<td><p>archD</p></td>
+<td><p>1728</p></td>
+<td><p>2592</p></td>
 </tr>
-<tr class="row-even"><td>A4</td>
-<td>595</td>
-<td>842</td>
-<td>archE</td>
-<td>2592</td>
-<td>3456</td>
+<tr class="row-even"><td><p>A4</p></td>
+<td><p>595</p></td>
+<td><p>842</p></td>
+<td><p>archE</p></td>
+<td><p>2592</p></td>
+<td><p>3456</p></td>
 </tr>
-<tr class="row-odd"><td>A5</td>
-<td>421</td>
-<td>595</td>
-<td>flsa</td>
-<td>612</td>
-<td>936</td>
+<tr class="row-odd"><td><p>A5</p></td>
+<td><p>421</p></td>
+<td><p>595</p></td>
+<td><p>flsa</p></td>
+<td><p>612</p></td>
+<td><p>936</p></td>
 </tr>
-<tr class="row-even"><td>A6</td>
-<td>297</td>
-<td>421</td>
-<td>halfletter</td>
-<td>396</td>
-<td>612</td>
+<tr class="row-even"><td><p>A6</p></td>
+<td><p>297</p></td>
+<td><p>421</p></td>
+<td><p>halfletter</p></td>
+<td><p>396</p></td>
+<td><p>612</p></td>
 </tr>
-<tr class="row-odd"><td>A7</td>
-<td>210</td>
-<td>297</td>
-<td>statement</td>
-<td>396</td>
-<td>612</td>
+<tr class="row-odd"><td><p>A7</p></td>
+<td><p>210</p></td>
+<td><p>297</p></td>
+<td><p>statement</p></td>
+<td><p>396</p></td>
+<td><p>612</p></td>
 </tr>
-<tr class="row-even"><td>A8</td>
-<td>148</td>
-<td>210</td>
-<td>note</td>
-<td>540</td>
-<td>720</td>
+<tr class="row-even"><td><p>A8</p></td>
+<td><p>148</p></td>
+<td><p>210</p></td>
+<td><p>note</p></td>
+<td><p>540</p></td>
+<td><p>720</p></td>
 </tr>
-<tr class="row-odd"><td>A9</td>
-<td>105</td>
-<td>148</td>
-<td>letter</td>
-<td>612</td>
-<td>792</td>
+<tr class="row-odd"><td><p>A9</p></td>
+<td><p>105</p></td>
+<td><p>148</p></td>
+<td><p>letter</p></td>
+<td><p>612</p></td>
+<td><p>792</p></td>
 </tr>
-<tr class="row-even"><td>A10</td>
-<td>74</td>
-<td>105</td>
-<td>legal</td>
-<td>612</td>
-<td>1008</td>
+<tr class="row-even"><td><p>A10</p></td>
+<td><p>74</p></td>
+<td><p>105</p></td>
+<td><p>legal</p></td>
+<td><p>612</p></td>
+<td><p>1008</p></td>
 </tr>
-<tr class="row-odd"><td>B0</td>
-<td>2836</td>
-<td>4008</td>
-<td>11x17</td>
-<td>792</td>
-<td>1224</td>
+<tr class="row-odd"><td><p>B0</p></td>
+<td><p>2836</p></td>
+<td><p>4008</p></td>
+<td><p>11x17</p></td>
+<td><p>792</p></td>
+<td><p>1224</p></td>
 </tr>
-<tr class="row-even"><td>B1</td>
-<td>2004</td>
-<td>2836</td>
-<td>tabloid</td>
-<td>792</td>
-<td>1224</td>
+<tr class="row-even"><td><p>B1</p></td>
+<td><p>2004</p></td>
+<td><p>2836</p></td>
+<td><p>tabloid</p></td>
+<td><p>792</p></td>
+<td><p>1224</p></td>
 </tr>
-<tr class="row-odd"><td>B2</td>
-<td>1418</td>
-<td>2004</td>
-<td>ledger</td>
-<td>1224</td>
-<td>792</td>
+<tr class="row-odd"><td><p>B2</p></td>
+<td><p>1418</p></td>
+<td><p>2004</p></td>
+<td><p>ledger</p></td>
+<td><p>1224</p></td>
+<td><p>792</p></td>
 </tr>
-<tr class="row-even"><td>B3</td>
-<td>1002</td>
-<td>1418</td>
-<td>&#160;</td>
-<td>&#160;</td>
-<td>&#160;</td>
+<tr class="row-even"><td><p>B3</p></td>
+<td><p>1002</p></td>
+<td><p>1418</p></td>
+<td></td>
+<td></td>
+<td></td>
 </tr>
-<tr class="row-odd"><td>B4</td>
-<td>709</td>
-<td>1002</td>
-<td>&#160;</td>
-<td>&#160;</td>
-<td>&#160;</td>
+<tr class="row-odd"><td><p>B4</p></td>
+<td><p>709</p></td>
+<td><p>1002</p></td>
+<td></td>
+<td></td>
+<td></td>
 </tr>
-<tr class="row-even"><td>B5</td>
-<td>501</td>
-<td>709</td>
-<td>&#160;</td>
-<td>&#160;</td>
-<td>&#160;</td>
+<tr class="row-even"><td><p>B5</p></td>
+<td><p>501</p></td>
+<td><p>709</p></td>
+<td></td>
+<td></td>
+<td></td>
 </tr>
 </tbody>
 </table>
-<p>用户还可以用 <code class="docutils literal notranslate"><span class="pre">WxH</span></code> 的格式完全自定义纸张尺寸，其中 <code class="docutils literal notranslate"><span class="pre">W</span></code> 和 <code class="docutils literal notranslate"><span class="pre">H</span></code> 分别为纸张的宽度和高度。比如 <code class="docutils literal notranslate"><span class="pre">12cx12c</span></code> 表示纸张为宽度和高度都为12厘米。</p>
+<p>用户还可以用 <em>W</em><strong>x</strong><em>H</em> 的格式完全自定义纸张尺寸，其中 <em>W</em> 和 <em>H</em> 分别为纸张的宽度和高度。比如 12cx12c 表示纸张为宽度和高度都为12厘米。</p>
 <p>若某些尺寸经常使用，用户还可以自定义纸张格式，只需要新建或编辑
-<code class="docutils literal notranslate"><span class="pre">~/.gmt/gmt_custom_media.conf</span></code> 即可，文件格式也很简单:</p>
+<code class="file docutils literal notranslate"><span class="pre">~/.gmt/gmt_custom_media.conf</span></code> 即可，文件格式也很简单:</p>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="c1"># 纸张格式名  宽度  高度</span>
 paper1        <span class="m">2000</span>  <span class="m">3000</span>
 paper2        <span class="m">3000</span>  <span class="m">0</span>
 </pre></div>
 </div>
-<p class="last">纸张高度为0，表示纸张可以向上无限延展。</p>
+<p>纸张高度为0，表示纸张可以向上无限延展。</p>
 </dd>
-<dt id="term-ps-page-color"><strong>PS_PAGE_COLOR</strong></dt>
-<dd>设置纸张的背景色 [<code class="docutils literal notranslate"><span class="pre">white</span></code>]</dd>
-<dt id="term-ps-page-orientation"><strong>PS_PAGE_ORIENTATION</strong></dt>
-<dd><p class="first">设置纸张方向 [<code class="docutils literal notranslate"><span class="pre">landscape</span></code>]</p>
+<dt id="term-PS_PAGE_COLOR"><strong>PS_PAGE_COLOR</strong></dt><dd><p>设置纸张的背景色 [<strong>white</strong>]</p>
+</dd>
+<dt id="term-PS_PAGE_ORIENTATION"><strong>PS_PAGE_ORIENTATION</strong></dt><dd><p>设置纸张方向 [<strong>landscape</strong>]</p>
 <div class="admonition note">
-<p class="first admonition-title">注解</p>
-<p class="last">仅GMT经典模式下有效，现代模式下纸张始终是 protrait 模式。</p>
+<p class="admonition-title">注解</p>
+<p>仅GMT经典模式下有效，现代模式下纸张始终是 protrait 模式。</p>
 </div>
-<p class="last">可以取 <code class="docutils literal notranslate"><span class="pre">portrait</span></code> 或 <code class="docutils literal notranslate"><span class="pre">landscape</span></code>。</p>
+<p>可以取 <strong>portrait</strong> 或 <strong>landscape</strong>。</p>
 </dd>
-<dt id="term-ps-scale-x"><strong>PS_SCALE_X</strong></dt>
-<dd><p class="first">绘图时X方向的全局比例 [1.0]</p>
-<p class="last">用于实现图像的整体缩放。</p>
+<dt id="term-PS_SCALE_X"><strong>PS_SCALE_X</strong></dt><dd><p>绘图时X方向的全局比例 [1.0]</p>
+<p>用于实现图像的整体缩放。</p>
 </dd>
-<dt id="term-ps-scale-y"><strong>PS_SCALE_Y</strong></dt>
-<dd><p class="first">绘图时Y方向的全局比例 [1.0]</p>
-<p class="last">用于实现图像的整体缩放。</p>
+<dt id="term-PS_SCALE_Y"><strong>PS_SCALE_Y</strong></dt><dd><p>绘图时Y方向的全局比例 [1.0]</p>
+<p>用于实现图像的整体缩放。</p>
 </dd>
-<dt id="term-ps-transparency"><strong>PS_TRANSPARENCY</strong></dt>
-<dd><p class="first">设置生成PS文件所使用的透明模式 [Normal]</p>
-<p class="last">可取值包括Color、ColorBurn、ColorDodge、Darken、Difference、Exclusion、HardLight、Hue、Lighten、Luminosity、Multiply、Normal、Overlay、Saturation、SoftLight、Screen</p>
-</dd>
-<dt id="term-ps-convert"><strong>PS_CONVERT</strong></dt>
-<dd>现在模式下在执行 <code class="docutils literal notranslate"><span class="pre">gmt</span> <span class="pre">end</span></code> 命令时GMT会自动调用 <a class="reference internal" href="../../module/psconvert/"><span class="doc">psconvert</span></a>
-生成用户指定格式的图片。该选项用于控制调用 <code class="docutils literal notranslate"><span class="pre">psconvert</span></code> 是的默认参数，多个参数之间以逗号分隔 [<code class="docutils literal notranslate"><span class="pre">A,P</span></code>]</dd>
-<dt id="term-ps-image-compress"><strong>PS_IMAGE_COMPRESS</strong></dt>
-<dd><p class="first">设置PS中的图像压缩算法 [deflate,5]</p>
-<p>可以取值为：</p>
-<ul class="last simple">
-<li><code class="docutils literal notranslate"><span class="pre">rle</span></code>：Run-Length Encoding scheme</li>
-<li><code class="docutils literal notranslate"><span class="pre">lzw</span></code>：Lempel-Ziv-Welch compression</li>
-<li><code class="docutils literal notranslate"><span class="pre">deflate[,level]</span></code>：DEFLATE compression，<code class="docutils literal notranslate"><span class="pre">level</span></code> 可以取1到9；</li>
-<li><code class="docutils literal notranslate"><span class="pre">none</span></code>：不压缩，相当于 <code class="docutils literal notranslate"><span class="pre">deflate,5</span></code> 。</li>
-</ul>
+<dt id="term-PS_TRANSPARENCY"><strong>PS_TRANSPARENCY</strong></dt><dd><p>设置生成PS文件所使用的透明模式 [Normal]</p>
+<p>可取值包括Color、ColorBurn、ColorDodge、Darken、Difference、Exclusion、HardLight、Hue、Lighten、Luminosity、Multiply、Normal、Overlay、Saturation、SoftLight、Screen</p>
 </dd>
 </dl>
 </div>
@@ -505,14 +504,22 @@ gitalk.render('gitalk-container');
 
   <div role="contentinfo">
     <p>
-        &copy; Copyright 2014 - 2020, GMT中文社区.
+        
+        &copy; 版权所有 2014 - 2020, GMT中文社区.
       <span class="lastupdated">
-        最后更新于 2020年07月05日.
+        最后更新于 2020年10月15日.
       </span>
 
     </p>
   </div>
-  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+    
+    
+    
+    Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a
+    
+    <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a>
+    
+    provided by <a href="https://readthedocs.org">Read the Docs</a>. 
 
 </footer>
 
@@ -523,7 +530,6 @@ gitalk.render('gitalk-container');
 
   </div>
   
-
 
   <script type="text/javascript">
       jQuery(function () {
